@@ -3,6 +3,13 @@
 import "./globals.css";
 import { useState, useRef } from 'react';
 import { Leaf, Upload, X, Image as ImageIcon, Scan, CheckCircle2, RefreshCw, AlertTriangle } from 'lucide-react';
+import dynamic from 'next/dynamic';
+
+// This forces the map to load ONLY on the client side (prevents crash)
+const LocationMap = dynamic(() => import('../components/LocationMap'), {
+  ssr: false,
+  loading: () => <div className="h-64 bg-gray-100 rounded-xl animate-pulse">Loading Map...</div>
+});
 
 export default function Home() {
   // --- STATE ---
@@ -12,6 +19,7 @@ export default function Home() {
   const [result, setResult] = useState<any>(null); // NEW: Store the answer from Python
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [coords, setCoords] = useState<{lat: number, lng: number} | null>(null);
 
   // --- LOGIC ---
   
@@ -30,10 +38,23 @@ export default function Home() {
   const handleAnalyze = async () => {
     if (!selectedFile) return;
 
+    if (!coords) {
+      alert("Please pin a location on the map first. An approximation is totally fine!");
+      // Stop the function here. Do not proceed to analysis.
+      return;
+    }
+
     setView('analyzing'); // Show the loading spinner
+    setResult(null);
 
     const formData = new FormData();
     formData.append('file', selectedFile); 
+
+  // If the user clicked the map, send the coordinates
+    if (coords) {
+      formData.append('latitude', coords.lat.toString());
+      formData.append('longitude', coords.lng.toString());
+    }
 
     try {
       // 1. Send to FastAPI (Port 8000)
@@ -43,19 +64,32 @@ export default function Home() {
       });
 
       // 2. Get the result
-      const data = await response.json();
+     const data = await response.json();
+      
+      // 1. Show the result to the user
+      setResult(data);
+      setView('result');
 
-      if (data.success) {
-        setResult(data); // Save the Python data
-        setView('result'); // Switch to result screen
-      } else {
-        alert("Server error: " + data.error);
-        setView('initial');
+      // 2. NEW: Save to Collection immediately
+      // We only save if coordinates exist (which we forced earlier)
+      if (coords && data.success) {
+        await fetch('http://127.0.0.1:8000/api/capture', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            species_name: data.result,
+            latitude: coords.lat,
+            longitude: coords.lng,
+            region: data.detected_region || "Unknown",
+            invasive_status: data.invasive_status
+          })
+        });
+        console.log("Saved to collection!");
       }
 
     } catch (error) {
       console.error(error);
-      alert("Could not connect to Python! Is the backend running?");
+      alert('Something went wrong!');
       setView('initial');
     }
   };
@@ -141,7 +175,21 @@ export default function Home() {
                         <X className="w-5 h-5" />
                       </button>
                     </div>
-                    {/* UPDATED BUTTON: Calls handleAnalyze now */}
+                 
+                    <div className="mb-6" onClick={(e) => e.stopPropagation()}>
+                       <label className="block text-sm font-medium text-gray-700 mb-2 text-left">
+                         Pin location (Required - an approximation is fine)
+                       </label>
+                       <LocationMap 
+                         onLocationSelect={(lat, lng) => setCoords({ lat, lng })} 
+                       />
+                       {coords && (
+                         <p className="text-xs text-gray-500 mt-1 text-left">
+                           Selected: {coords.lat.toFixed(2)}, {coords.lng.toFixed(2)}
+                         </p>
+                       )}
+                    </div>
+
                     <button 
                       onClick={(e) => { e.stopPropagation(); handleAnalyze(); }}
                       className="w-full py-3 px-6 bg-[#4f824f] text-white rounded-xl font-medium flex items-center justify-center gap-2 hover:bg-[#609e60] shadow-lg shadow-[#4f824f]/20 transition-colors"
