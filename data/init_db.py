@@ -74,10 +74,11 @@ def init_db():
         longitude REAL,
         region TEXT,
         timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
-        invasive_status BOOLEAN
+        invasive_status BOOLEAN,
+        image_path TEXT  -- <--- NEW COLUMN
     )
     ''')
-
+    
     # 4. Insert the data (only if table is empty to avoid duplicates)
     cursor.execute('SELECT count(*) FROM species')
     count = cursor.fetchone()[0]

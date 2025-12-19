@@ -4,6 +4,7 @@ import "./globals.css";
 import { useState, useRef } from 'react';
 import { Leaf, Upload, X, Image as ImageIcon, Scan, CheckCircle2, RefreshCw, AlertTriangle } from 'lucide-react';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 
 // This forces the map to load ONLY on the client side (prevents crash)
 const LocationMap = dynamic(() => import('../components/LocationMap'), {
@@ -81,7 +82,8 @@ export default function Home() {
             latitude: coords.lat,
             longitude: coords.lng,
             region: data.detected_region || "Unknown",
-            invasive_status: data.invasive_status
+            invasive_status: data.invasive_status,
+            image_path: data.image_path
           })
         });
         console.log("Saved to collection!");
@@ -118,7 +120,14 @@ export default function Home() {
       {/* Navbar */}
       <nav className="flex justify-between items-center mb-12">
         <div className="font-serif font-bold text-2xl text-[#1a2f1a]">Wildlife Dex</div>
-        <div className="text-sm font-medium text-[#4f824f]">v0.1.0 Beta</div>
+        
+        {/* NEW: Link to your collection page */}
+        <Link 
+          href="/anidex" 
+          className="text-sm font-medium text-[#4f824f] hover:text-[#2d4a2d] hover:underline transition-colors flex items-center gap-1"
+        >
+          My Collection →
+        </Link>
       </nav>
 
       <main className="flex-1 flex flex-col items-center gap-8 w-full">
