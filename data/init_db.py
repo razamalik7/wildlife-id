@@ -20,7 +20,7 @@ def init_db():
 
     # 3. The Data (Our Encyclopedia)
     animals = [
-        # --- NATIVES (20) ---
+        # --- NATIVES (22) ---
         # Large Mammals
         ("American Black Bear", "Ursus americanus", "Excellent tree climbers, often found in forests.", "North America"),
         ("Grizzly Bear", "Ursus arctos horribilis", "Identifiable by the distinct hump on their shoulders.", "North America"),
@@ -30,6 +30,7 @@ def init_db():
         ("Mountain Lion", "Puma concolor", "Also known as cougar, puma, or panther.", "North America, South America"),
         ("Coyote", "Canis latrans", "Highly adaptable and can be found in every US state except Hawaii.", "North America"),
         ("Bobcat", "Lynx rufus", "Named for their short, 'bobbed' tail.", "North America"),
+        ("Gray Wolf", "Canis lupus", "The largest member of the dog family and a social animal that lives in packs.", "North America, Europe, Asia"),
 
         # Small/Medium Mammals
         ("Raccoon", "Procyon lotor", "Known for its dexterity and 'masked' face.", "North America"),
@@ -37,6 +38,7 @@ def init_db():
         ("Striped Skunk", "Mephitis mephitis", "Can spray its defensive musk up to 10 feet.", "North America"),
         ("Virginia Opossum", "Didelphis virginiana", "The only marsupial (pouched mammal) found north of Mexico.", "North America"),
         ("Eastern Gray Squirrel", "Sciurus carolinensis", "Plays a crucial role in forest regeneration by burying nuts.", "North America"),
+        ("Red Fox", "Vulpes vulpes", "The largest of the true foxes and highly adaptable to urban environments.", "North America, Europe, Asia, North Africa"),
 
         # Birds
         ("Bald Eagle", "Haliaeetus leucocephalus", "Builds the largest nest of any North American bird.", "North America"),
@@ -48,9 +50,10 @@ def init_db():
         # Reptiles/Amphibians
         ("American Alligator", "Alligator mississippiensis", "Have been around for about 37 million years.", "North America"),
         ("Eastern Box Turtle", "Terrapene carolina", "Can live for over 100 years in the wild.", "North America"),
+        ("American Crocodile", "Crocodylus acutus", "Unlike the alligator's U-shaped snout, crocodiles have a V-shaped snout and visible lower teeth.", "North America, South America, Central America"),
 
         # --- INVASIVE VERTEBRATES (10) --- 
-        # These are all land-based animals introduced to North America.
+        # These are all animals introduced to North America.
         
         ("Burmese Python", "Python bivittatus", "Massive constrictors decimating mammals in the Florida Everglades.", "Asia"),
         ("Green Iguana", "Iguana iguana", "Cause damage to infrastructure by digging burrows; thrive in Florida.", "South America, Central America"),
@@ -78,7 +81,7 @@ def init_db():
         image_path TEXT  -- <--- NEW COLUMN
     )
     ''')
-    
+
     # 4. Insert the data (only if table is empty to avoid duplicates)
     cursor.execute('SELECT count(*) FROM species')
     count = cursor.fetchone()[0]

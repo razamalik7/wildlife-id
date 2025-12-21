@@ -213,3 +213,20 @@ out/
 build/
 .DS_Store
 *.local
+
+# Ignore the massive dataset
+api/training_data/
+training_data/
+
+# Ignore the trained brain (large binary file)
+*.pth
+*.pt
+
+# Ignore user uploads
+api/uploads/
+
+# Python junk
+__pycache__/
+*.pyc
+venv/
+.env
