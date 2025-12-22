@@ -4,24 +4,21 @@ import torch.optim as optim
 from torch.optim import lr_scheduler
 from torchvision import datasets, models, transforms
 import os
-import time
 
 # CONFIG
 DATA_DIR = 'training_data'
-SAVE_PATH = 'wildlife_model.pth'
-EPOCHS = 12  # A few more epochs to let the Scheduler work
-BATCH_SIZE = 32
+SAVE_PATH = 'wildlife_model_resnet.pth'
+EPOCHS = 20
+BATCH_SIZE = 32 # ResNet is lighter than B3, so we can double the batch size
 
-# STRONGER AUGMENTATION (Prevents memorization)
+# RESNET USES STANDARD 224x224
 data_transforms = {
     'train': transforms.Compose([
         transforms.Resize((256, 256)),
-        # RandomResizedCrop is harder than RandomCrop. It zooms in/out randomly.
-        transforms.RandomResizedCrop(224, scale=(0.6, 1.0)), 
+        transforms.RandomResizedCrop(224),
         transforms.RandomHorizontalFlip(),
-        transforms.RandomRotation(20),
-        # ColorJitter prevents it from memorizing "Bears are always dark brown"
-        transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
+        transforms.RandomRotation(15),
+        transforms.ColorJitter(brightness=0.2, contrast=0.2),
         transforms.ToTensor(),
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ]),
@@ -34,63 +31,56 @@ data_transforms = {
 }
 
 def train():
-    print("Loading Data...")
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"🚀 TRAINING ELDER 2 (ResNet50 + AdamW) ON: {device}")
+
     image_datasets = {x: datasets.ImageFolder(os.path.join(DATA_DIR, x), data_transforms[x]) 
                       for x in ['train', 'val']}
     
-    # num_workers=4 uses 4 CPU cores to prep data ahead of time
-# pin_memory=True speeds up the transfer from RAM to VRAM
-    dataloaders = {x: torch.utils.data.DataLoader(image_datasets[x], 
-                                              batch_size=BATCH_SIZE, 
-                                              shuffle=True, 
-                                              num_workers=4, 
-                                              pin_memory=True) 
-               for x in ['train', 'val']}
+    dataloaders = {x: torch.utils.data.DataLoader(image_datasets[x], batch_size=BATCH_SIZE, shuffle=True, num_workers=0, pin_memory=True) 
+                   for x in ['train', 'val']}
     
     class_names = image_datasets['train'].classes
-    print(f"Classes: {len(class_names)}")
     
-    print("Initializing EfficientNet B0...")
-    model = models.efficientnet_b0(weights='DEFAULT')
+    print("Initializing ResNet50...")
+    model = models.resnet50(weights='DEFAULT')
     
-    # 1. Freeze Base
+    # UNFREEZE STRATEGY: Train the last 2 chunks (Layer 3 and 4)
+    # This makes it smarter than a standard "Transfer Learning" run
     for param in model.parameters():
         param.requires_grad = False
         
-    # 2. DEEPER UNFREEZING (Unlock last 3 blocks for better texture learning)
-    # EfficientNet features are in blocks. We unlock the last few.
-    for param in model.features[-3:].parameters():
+    for param in model.layer3.parameters():
+        param.requires_grad = True
+    for param in model.layer4.parameters():
         param.requires_grad = True
         
-    # 3. REPLACE HEAD
-    num_ftrs = model.classifier[1].in_features
-    model.classifier[1] = nn.Sequential(
-        nn.Dropout(p=0.4), # Increased Dropout to 40%
+    num_ftrs = model.fc.in_features
+    model.fc = nn.Sequential(
+        nn.Dropout(0.5), 
         nn.Linear(num_ftrs, len(class_names))
     )
     
-    device = torch.device("cuda")
     model = model.to(device)
     
-    print(f"🚀 TRAINING ON DEVICE: {device}") # <--- Add this line
-    print(f"GPU Name: {torch.cuda.get_device_name(0)}") # <--- And this one
-
-    criterion = nn.CrossEntropyLoss()
+    # PRO TRICK 1: LABEL SMOOTHING (Prevents Overconfidence)
+    criterion = nn.CrossEntropyLoss(label_smoothing=0.1)
     
-    # OPTIMIZER UPGRADE: Added 'weight_decay' (L2 Regularization)
-    optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()), 
-                           lr=0.0001, 
-                           weight_decay=1e-4)
-                           
-    # SCHEDULER: If validation loss stops improving for 2 epochs, cut LR by 10x
-    # NEW (Fixed)
-    scheduler = lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=2)
+    # PRO TRICK 2: ADAMW (Better Generalization)
+    optimizer = optim.AdamW(filter(lambda p: p.requires_grad, model.parameters()), 
+                            lr=0.0003, 
+                            weight_decay=0.01)
+                            
+    scheduler = lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=3)
     
-    print("Starting Professional Training Run...")
+    print("Starting Training...")
     
     for epoch in range(EPOCHS):
         print(f'Epoch {epoch+1}/{EPOCHS}')
-        print('-' * 10)
+        
+        # Monitor Learning Rate
+        current_lr = optimizer.param_groups[0]['lr']
+        print(f"Current Learning Rate: {current_lr}")
 
         for phase in ['train', 'val']:
             if phase == 'train': model.train()
@@ -122,11 +112,10 @@ def train():
 
             print(f'{phase} Loss: {epoch_loss:.4f} Acc: {epoch_acc:.4f}')
 
-            # Step the scheduler on validation loss
             if phase == 'val':
                 scheduler.step(epoch_loss)
 
-    print(f"Saving Smart Model to {SAVE_PATH}")
+    print(f"Saving ResNet Model to {SAVE_PATH}")
     torch.save({
         'model_state_dict': model.state_dict(),
         'class_names': class_names

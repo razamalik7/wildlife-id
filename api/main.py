@@ -1,152 +1,120 @@
-from fastapi import FastAPI, File, UploadFile, Form
+from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles # <--- New import for serving images
-from pydantic import BaseModel
-import sqlite3
-import random
-import time
-import shutil # <--- New import for saving files
+import shutil
 import os
-import uuid   # <--- New import for unique filenames
-import reverse_geocoder as rg
+from ai_engine import predict_animal
 
 app = FastAPI()
 
-# 1. Enable CORS
+# --- CONFIGURATION ---
+origins = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "*"
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# 2. IMAGE VAULT SETUP
-# Create 'uploads' folder if it doesn't exist
-os.makedirs("uploads", exist_ok=True) 
-# "Mount" it so the frontend can access images at /uploads/filename.jpg
-app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
+# --- THE MASTER DATABASE ---
+# Format: (Common Name, Scientific Name, Fact, Origin)
+RAW_SPECIES_DATA = [
+    # Large Mammals
+    ("American Black Bear", "Ursus americanus", "Excellent tree climbers, often found in forests.", "North America"),
+    ("Grizzly Bear", "Ursus arctos horribilis", "Identifiable by the distinct hump on their shoulders.", "North America"),
+    ("Moose", "Alces alces", "The largest member of the deer family.", "North America, Europe, Asia"),
+    ("White-tailed Deer", "Odocoileus virginianus", "Raises its tail to show a white 'flag' when alarmed.", "North America, South America"),
+    ("American Bison", "Bison bison", "The national mammal of the United States.", "North America"),
+    ("Mountain Lion", "Puma concolor", "Also known as cougar, puma, or panther.", "North America, South America"),
+    ("Coyote", "Canis latrans", "Highly adaptable and can be found in every US state except Hawaii.", "North America"),
+    ("Bobcat", "Lynx rufus", "Named for their short, 'bobbed' tail.", "North America"),
+    ("Gray Wolf", "Canis lupus", "The largest member of the dog family and a social animal that lives in packs.", "North America, Europe, Asia"),
 
-# --- DATA MODELS ---
-class CaptureRequest(BaseModel):
-    species_name: str
-    latitude: float
-    longitude: float
-    region: str
-    invasive_status: bool
-    image_path: str # <--- Added this field
+    # Small/Medium Mammals
+    ("Raccoon", "Procyon lotor", "Known for its dexterity and 'masked' face.", "North America"),
+    ("North American Beaver", "Castor canadensis", "Their dams create wetlands that support thousands of other species.", "North America"),
+    ("Striped Skunk", "Mephitis mephitis", "Can spray its defensive musk up to 10 feet.", "North America"),
+    ("Virginia Opossum", "Didelphis virginiana", "The only marsupial (pouched mammal) found north of Mexico.", "North America"),
+    ("Eastern Gray Squirrel", "Sciurus carolinensis", "Plays a crucial role in forest regeneration by burying nuts.", "North America"),
+    ("Red Fox", "Vulpes vulpes", "The largest of the true foxes and highly adaptable to urban environments.", "North America, Europe, Asia, North Africa"),
 
-# --- HELPERS ---
-def get_region_from_code(cc):
-    north_america = ['US', 'CA', 'MX', 'GT', 'BZ', 'SV', 'HN', 'NI', 'CR', 'PA']
-    europe = ['GB', 'FR', 'DE', 'IT', 'ES', 'PT', 'NL', 'BE', 'CH', 'AT', 'SE', 'NO', 'DK', 'FI', 'PL', 'UA', 'RU']
-    asia = ['CN', 'JP', 'IN', 'KR', 'ID', 'TH', 'VN', 'MY', 'PH', 'PK', 'BD', 'IR', 'IQ', 'SA', 'IL', 'TR']
-    south_america = ['BR', 'AR', 'CO', 'PE', 'VE', 'CL', 'EC', 'BO', 'PY', 'UY', 'GY', 'SR']
-    africa = ['NG', 'ET', 'EG', 'CD', 'TZ', 'ZA', 'KE', 'UG', 'DZ', 'SD', 'MA']
-    australia = ['AU', 'NZ', 'PG']
+    # Birds
+    ("Bald Eagle", "Haliaeetus leucocephalus", "Builds the largest nest of any North American bird.", "North America"),
+    ("Red-tailed Hawk", "Buteo jamaicensis", "Known for its rasping scream, often used in movies as a generic eagle sound.", "North America"),
+    ("Great Blue Heron", "Ardea herodias", "Hunts by standing motionless in shallow water waiting for fish.", "North America"),
+    ("Wild Turkey", "Meleagris gallopavo", "Benjamin Franklin famously preferred this bird over the Bald Eagle.", "North America"),
+    ("Canada Goose", "Branta canadensis", "Famous for their V-shaped flying formation.", "North America, Europe"),
 
-    if cc in north_america: return "North America"
-    if cc in europe: return "Europe"
-    if cc in asia: return "Asia"
-    if cc in south_america: return "South America"
-    if cc in africa: return "Africa"
-    if cc in australia: return "Australia"
-    return "Unknown"
+    # Reptiles/Amphibians
+    ("American Alligator", "Alligator mississippiensis", "Have been around for about 37 million years.", "North America"),
+    ("Eastern Box Turtle", "Terrapene carolina", "Can live for over 100 years in the wild.", "North America"),
+    ("American Crocodile", "Crocodylus acutus", "Unlike the alligator's U-shaped snout, crocodiles have a V-shaped snout and visible lower teeth.", "North America, South America, Central America"),
 
-# --- ENDPOINTS ---
+    # --- INVASIVE SPECIES ---
+    ("Burmese Python", "Python bivittatus", "Massive constrictors decimating mammals in the Florida Everglades.", "Asia"),
+    ("Green Iguana", "Iguana iguana", "Cause damage to infrastructure by digging burrows; thrive in Florida.", "South America, Central America"),
+    ("Argentine Black and White Tegu", "Salvator merianae", "Large lizard that eats the eggs of native birds and reptiles.", "South America"),
+    ("Cane Toad", "Rhinella marina", "Toxic amphibian that kills pets and native predators who try to eat it.", "South America, Australia"),
+    ("European Starling", "Sturnus vulgaris", "Introduced to NY in 1890; huge flocks damage crops and airplanes.", "Europe, Asia"),
+    ("House Sparrow", "Passer domesticus", "Aggressively competes with native birds for nesting cavities.", "Europe, Asia"),
+    ("Rock Pigeon", "Columba livia", "The common city pigeon; carries diseases and damages buildings.", "Europe, Asia, Africa"),
+    ("Monk Parakeet", "Myiopsitta monachus", "Builds massive communal nests on power lines, causing outages.", "South America"),
+    ("Wild Boar", "Sus scrofa", "Highly destructive to crops and native habitats due to rooting behavior.", "Europe, Asia, North Africa"),
+    ("Nutria", "Myocastor coypus", "Large rodent that destroys wetlands; looks like a beaver with a rat tail.", "South America")
+]
 
-@app.post("/api/analyze")
-async def analyze_image(
-    file: UploadFile = File(...), 
-    latitude: float = Form(...), 
-    longitude: float = Form(...)
-):
-    print(f"Analyzing file: {file.filename}")
+# Create a set of invasive names for easy lookup
+INVASIVE_NAMES = {
+    "Burmese Python", "Green Iguana", "Argentine Black and White Tegu", "Cane Toad",
+    "European Starling", "House Sparrow", "Rock Pigeon", "Monk Parakeet", 
+    "Wild Boar", "Nutria"
+}
+
+@app.get("/")
+def read_root():
+    return {"Status": "Wildlife AI is Online 🟢"}
+
+@app.get("/species")
+def get_all_species():
+    """
+    Returns the Master List of animals so the frontend can 
+    display the Anidex (Locked/Unlocked) and Native/Invasive tabs.
+    """
+    structured_data = []
     
-    # STEP 1: Save the file to the hard drive
-    # Generate unique name (e.g., "a1b2c3d4_bear.jpg")
-    unique_filename = f"{uuid.uuid4()}_{file.filename}"
-    file_path = f"uploads/{unique_filename}"
-    
-    with open(file_path, "wb") as buffer:
-        shutil.copyfileobj(file.file, buffer)
+    for entry in RAW_SPECIES_DATA:
+        common_name = entry[0]
+        # Determine category based on our invasive list
+        category = "Invasive" if common_name in INVASIVE_NAMES else "Native"
         
-    time.sleep(1) 
-
-    # STEP 2: Geolocation Logic
-    coordinates = (latitude, longitude)
-    try:
-        results = rg.search(coordinates)
-        country_code = results[0]['cc']
-        user_region = get_region_from_code(country_code)
-    except:
-        user_region = "Unknown"
-
-    # STEP 3: Check the Database
-    conn = sqlite3.connect('../wildlife.db') 
-    conn.row_factory = sqlite3.Row 
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM species ORDER BY RANDOM() LIMIT 1")
-    row = cursor.fetchone()
-    conn.close()
-
-    if not row: return {"success": False, "error": "DB Empty"}
-
-    is_native = user_region in row["native_regions"]
-    
-    return {
-        "success": True,
-        "result": row["name"],
-        "confidence": "92%",
-        "invasive_status": not is_native,
-        "info": row["fact"],
-        "detected_region": user_region,
-        "image_path": unique_filename # <--- Send filename back to frontend
-    }
-
-@app.post("/api/capture")
-def save_capture(capture: CaptureRequest):
-    conn = sqlite3.connect('../wildlife.db')
-    cursor = conn.cursor()
-    
-    # Save the new capture WITH the image path
-    cursor.execute('''
-        INSERT INTO captures (species_name, latitude, longitude, region, invasive_status, image_path)
-        VALUES (?, ?, ?, ?, ?, ?)
-    ''', (capture.species_name, capture.latitude, capture.longitude, capture.region, capture.invasive_status, capture.image_path))
-    
-    conn.commit()
-    conn.close()
-    return {"success": True}
-
-@app.get("/api/anidex") 
-def get_anidex():
-    conn = sqlite3.connect('../wildlife.db')
-    conn.row_factory = sqlite3.Row
-    cursor = conn.cursor()
-    
-    # Get basic species info (The "Slots")
-    cursor.execute("SELECT * FROM species ORDER BY name")
-    all_species = [dict(row) for row in cursor.fetchall()]
-    
-    # Get user history (The "Stickers")
-    cursor.execute("SELECT * FROM captures ORDER BY timestamp DESC")
-    all_captures = [dict(row) for row in cursor.fetchall()]
-    
-    conn.close()
-    
-    # Merge them to create the "Locked/Unlocked" status
-    anidex = [] 
-    for animal in all_species:
-        # Find all sightings for this specific animal
-        my_sightings = [c for c in all_captures if c['species_name'] == animal['name']]
-        
-        anidex.append({
-            "id": animal['id'],
-            "name": animal['name'],
-            "fact": animal['fact'],
-            "unlocked": len(my_sightings) > 0, # True if we have found it at least once
-            "sightings": my_sightings 
+        structured_data.append({
+            "name": common_name,
+            "scientific_name": entry[1],
+            "description": entry[2],
+            "origin": entry[3],
+            "category": category
         })
         
-    return {"anidex": anidex}
+    return structured_data
+
+@app.post("/predict")
+async def predict(file: UploadFile = File(...)):
+    # 1. Save file temporarily
+    file_path = f"temp_{file.filename}"
+    with open(file_path, "wb") as buffer:
+        shutil.copyfileobj(file.file, buffer)
+
+    # 2. Run AI (Now returns a Dictionary with Top 3 Candidates)
+    result = predict_animal(file_path)
+    
+    # 3. Clean up
+    if os.path.exists(file_path):
+        os.remove(file_path)
+    
+    # 4. Return the result directly (Frontend expects .data.candidates)
+    return result
