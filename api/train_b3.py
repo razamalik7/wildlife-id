@@ -16,10 +16,13 @@ IMG_SIZE = 300       # EfficientNet B3 Native
 data_transforms = {
     'train': transforms.Compose([
         transforms.Resize((320, 320)),
-        transforms.RandomCrop(IMG_SIZE),
+        # SMART CROP: Zooms in/out to force model to look at details (ears/tails) not just "blob size"
+        transforms.RandomResizedCrop(IMG_SIZE, scale=(0.6, 1.0)), 
         transforms.RandomHorizontalFlip(),
         transforms.RandomRotation(15),
-        transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2),
+        # SHAPE BIAS: 20% of images are Black & White. Forces it to learn "Shape" not just "Brown".
+        transforms.RandomGrayscale(p=0.2), 
+        transforms.ColorJitter(brightness=0.3, contrast=0.3, saturation=0.3, hue=0.1),
         transforms.ToTensor(),
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ]),

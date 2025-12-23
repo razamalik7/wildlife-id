@@ -1,0 +1,702 @@
+[
+    {
+        "name": "American Black Bear",
+        "scientific_name": "Ursus americanus",
+        "description": "Excellent tree climbers, often found in forests.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Grizzly Bear",
+        "scientific_name": "Ursus arctos horribilis",
+        "description": "Identifiable by the distinct hump on their shoulders.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Moose",
+        "scientific_name": "Alces alces",
+        "description": "The largest member of the deer family.",
+        "origin": "North America, Europe, Asia",
+        "category": "Native"
+    },
+    {
+        "name": "White-tailed Deer",
+        "scientific_name": "Odocoileus virginianus",
+        "description": "Raises its tail to show a white 'flag' when alarmed.",
+        "origin": "North America, South America",
+        "category": "Native"
+    },
+    {
+        "name": "American Bison",
+        "scientific_name": "Bison bison",
+        "description": "The national mammal of the United States.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Mountain Lion",
+        "scientific_name": "Puma concolor",
+        "description": "Also known as cougar, puma, or panther.",
+        "origin": "North America, South America",
+        "category": "Native"
+    },
+    {
+        "name": "Coyote",
+        "scientific_name": "Canis latrans",
+        "description": "Highly adaptable and can be found in every US state except Hawaii.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Bobcat",
+        "scientific_name": "Lynx rufus",
+        "description": "Named for their short, 'bobbed' tail.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Gray Wolf",
+        "scientific_name": "Canis lupus",
+        "description": "The largest member of the dog family and a social animal that lives in packs.",
+        "origin": "North America, Europe, Asia",
+        "category": "Native"
+    },
+    {
+        "name": "Raccoon",
+        "scientific_name": "Procyon lotor",
+        "description": "Known for its dexterity and 'masked' face.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "North American Beaver",
+        "scientific_name": "Castor canadensis",
+        "description": "Their dams create wetlands that support thousands of other species.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Striped Skunk",
+        "scientific_name": "Mephitis mephitis",
+        "description": "Can spray its defensive musk up to 10 feet.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Virginia Opossum",
+        "scientific_name": "Didelphis virginiana",
+        "description": "The only marsupial (pouched mammal) found north of Mexico.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Eastern Gray Squirrel",
+        "scientific_name": "Sciurus carolinensis",
+        "description": "Plays a crucial role in forest regeneration by burying nuts.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Red Fox",
+        "scientific_name": "Vulpes vulpes",
+        "description": "The largest of the true foxes and highly adaptable to urban environments.",
+        "origin": "North America, Europe, Asia, North Africa",
+        "category": "Native"
+    },
+    {
+        "name": "Bald Eagle",
+        "scientific_name": "Haliaeetus leucocephalus",
+        "description": "Builds the largest nest of any North American bird.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Red-tailed Hawk",
+        "scientific_name": "Buteo jamaicensis",
+        "description": "Known for its rasping scream, often used in movies as a generic eagle sound.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Great Blue Heron",
+        "scientific_name": "Ardea herodias",
+        "description": "Hunts by standing motionless in shallow water waiting for fish.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Wild Turkey",
+        "scientific_name": "Meleagris gallopavo",
+        "description": "Benjamin Franklin famously preferred this bird over the Bald Eagle.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Canada Goose",
+        "scientific_name": "Branta canadensis",
+        "description": "Famous for their V-shaped flying formation.",
+        "origin": "North America, Europe",
+        "category": "Native"
+    },
+    {
+        "name": "American Alligator",
+        "scientific_name": "Alligator mississippiensis",
+        "description": "Have been around for about 37 million years.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Eastern Box Turtle",
+        "scientific_name": "Terrapene carolina",
+        "description": "Can live for over 100 years in the wild.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "American Crocodile",
+        "scientific_name": "Crocodylus acutus",
+        "description": "Unlike the alligator's U-shaped snout, crocodiles have a V-shaped snout and visible lower teeth.",
+        "origin": "North America, South America, Central America",
+        "category": "Native"
+    },
+    {
+        "name": "Burmese Python",
+        "scientific_name": "Python bivittatus",
+        "description": "Massive constrictors decimating mammals in the Florida Everglades.",
+        "origin": "Asia",
+        "category": "Invasive"
+    },
+    {
+        "name": "Green Iguana",
+        "scientific_name": "Iguana iguana",
+        "description": "Cause damage to infrastructure by digging burrows; thrive in Florida.",
+        "origin": "South America, Central America",
+        "category": "Invasive"
+    },
+    {
+        "name": "Argentine Black and White Tegu",
+        "scientific_name": "Salvator merianae",
+        "description": "Large lizard that eats the eggs of native birds and reptiles.",
+        "origin": "South America",
+        "category": "Invasive"
+    },
+    {
+        "name": "Cane Toad",
+        "scientific_name": "Rhinella marina",
+        "description": "Toxic amphibian that kills pets and native predators who try to eat it.",
+        "origin": "South America, Australia",
+        "category": "Invasive"
+    },
+    {
+        "name": "European Starling",
+        "scientific_name": "Sturnus vulgaris",
+        "description": "Introduced to NY in 1890; huge flocks damage crops and airplanes.",
+        "origin": "Europe, Asia",
+        "category": "Invasive"
+    },
+    {
+        "name": "House Sparrow",
+        "scientific_name": "Passer domesticus",
+        "description": "Aggressively competes with native birds for nesting cavities.",
+        "origin": "Europe, Asia",
+        "category": "Invasive"
+    },
+    {
+        "name": "Rock Pigeon",
+        "scientific_name": "Columba livia",
+        "description": "The common city pigeon; carries diseases and damages buildings.",
+        "origin": "Europe, Asia, Africa",
+        "category": "Invasive"
+    },
+    {
+        "name": "Monk Parakeet",
+        "scientific_name": "Myiopsitta monachus",
+        "description": "Builds massive communal nests on power lines, causing outages.",
+        "origin": "South America",
+        "category": "Invasive"
+    },
+    {
+        "name": "Wild Boar",
+        "scientific_name": "Sus scrofa",
+        "description": "Highly destructive to crops and native habitats due to rooting behavior.",
+        "origin": "Europe, Asia, North Africa",
+        "category": "Invasive"
+    },
+    {
+        "name": "Nutria",
+        "scientific_name": "Myocastor coypus",
+        "description": "Large rodent that destroys wetlands; looks like a beaver with a rat tail.",
+        "origin": "South America",
+        "category": "Invasive"
+    },
+    {
+        "name": "Elk",
+        "scientific_name": "Cervus canadensis",
+        "description": "One of the largest species within the deer family, known for massive antlers.",
+        "origin": "North America, Asia",
+        "category": "Native"
+    },
+    {
+        "name": "Pronghorn",
+        "scientific_name": "Antilocapra americana",
+        "description": "The fastest land mammal in the Western Hemisphere.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Northern Cardinal",
+        "scientific_name": "Cardinalis cardinalis",
+        "description": "Males are brilliant red; they don't migrate and brighten up winter landscapes.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "American Bullfrog",
+        "scientific_name": "Lithobates catesbeianus",
+        "description": "The largest frog in North America, with a distinctive deep call.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Gila Monster",
+        "scientific_name": "Heloderma suspectum",
+        "description": "One of the few venomous lizards in the world, found in the Southwest.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Nine-banded Armadillo",
+        "scientific_name": "Dasypus novemcinctus",
+        "description": "Known for its armor-like shell and tendency to jump when startled.",
+        "origin": "North America, South America",
+        "category": "Native"
+    },
+    {
+        "name": "Bighorn Sheep",
+        "scientific_name": "Ovis canadensis",
+        "description": "Known for their massive curved horns and ability to climb steep cliffs.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "North American River Otter",
+        "scientific_name": "Lontra canadensis",
+        "description": "Playful semi-aquatic mammals with thick, water-repellent fur.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Polar Bear",
+        "scientific_name": "Ursus maritimus",
+        "description": "The largest land carnivore, perfectly adapted for life on Arctic sea ice.",
+        "origin": "North America, Arctic",
+        "category": "Native"
+    },
+    {
+        "name": "Arctic Fox",
+        "scientific_name": "Vulpes lagopus",
+        "description": "Changes coat color from brown in summer to white in winter for camouflage.",
+        "origin": "North America, Arctic",
+        "category": "Native"
+    },
+    {
+        "name": "Caribou",
+        "scientific_name": "Rangifer tarandus",
+        "description": "Known as Reindeer globally; both males and females grow antlers.",
+        "origin": "North America, Europe, Asia",
+        "category": "Native"
+    },
+    {
+        "name": "Dall Sheep",
+        "scientific_name": "Ovis dalli",
+        "description": "White sheep found in mountain ranges of Alaska and northwest Canada.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Muskox",
+        "scientific_name": "Ovibos moschatus",
+        "description": "Large, shaggy mammal adapted to the frigid Arctic tundra.",
+        "origin": "North America, Greenland",
+        "category": "Native"
+    },
+    {
+        "name": "Wolverine",
+        "scientific_name": "Gulo gulo",
+        "description": "A powerful and aggressive scavenger, resembling a small bear but actually a weasel.",
+        "origin": "North America, Europe, Asia",
+        "category": "Native"
+    },
+    {
+        "name": "Spotted Salamander",
+        "scientific_name": "Ambystoma maculatum",
+        "description": "Large black salamander with distinct yellow or orange spots.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Red-spotted Newt",
+        "scientific_name": "Notophthalmus viridescens",
+        "description": "Has a bright orange terrestrial stage known as the 'red eft'.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Eastern Hellbender",
+        "scientific_name": "Cryptobranchus alleganiensis",
+        "description": "The largest aquatic salamander in the US, nicknamed 'snot otter'.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Snowy Owl",
+        "scientific_name": "Bubo scandiacus",
+        "description": "Large, white owl of the high Arctic, made famous by Harry Potter.",
+        "origin": "North America, Arctic",
+        "category": "Native"
+    },
+    {
+        "name": "Peregrine Falcon",
+        "scientific_name": "Falco peregrinus",
+        "description": "The fastest animal on the planet, reaching speeds over 200 mph in a dive.",
+        "origin": "Global",
+        "category": "Native"
+    },
+    {
+        "name": "Barn Owl",
+        "scientific_name": "Tyto alba",
+        "description": "Distinctive heart-shaped face and pale plumage, found worldwide.",
+        "origin": "Global",
+        "category": "Native"
+    },
+    {
+        "name": "Ring-necked Pheasant",
+        "scientific_name": "Phasianus colchicus",
+        "description": "Popular game bird with colorful plumage, introduced from Asia.",
+        "origin": "Asia",
+        "category": "Invasive"
+    },
+    {
+        "name": "Mute Swan",
+        "scientific_name": "Cygnus olor",
+        "description": "Large white swan with an orange beak; aggressively defends territory.",
+        "origin": "Europe, Asia",
+        "category": "Invasive"
+    },
+    {
+        "name": "Brown Anole",
+        "scientific_name": "Anolis sagrei",
+        "description": "Highly invasive lizard that displaces the native Green Anole.",
+        "origin": "Cuba, Bahamas",
+        "category": "Invasive"
+    },
+    {
+        "name": "Nile Monitor",
+        "scientific_name": "Varanus niloticus",
+        "description": "Large carnivorous lizard established in Florida, preying on native wildlife.",
+        "origin": "Africa",
+        "category": "Invasive"
+    },
+    {
+        "name": "Axis Deer",
+        "scientific_name": "Axis axis",
+        "description": "Originally from India, now invasive in Texas and Hawaii; spots persist into adulthood.",
+        "origin": "Asia",
+        "category": "Invasive"
+    },
+    {
+        "name": "Blue Jay",
+        "scientific_name": "Cyanocitta cristata",
+        "description": "Noisy and intelligent bird with bright blue plumage.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Harbor Seal",
+        "scientific_name": "Phoca vitulina",
+        "description": "True seal (no ear flaps); often seen resting on rocks.",
+        "origin": "Northern Hemisphere",
+        "category": "Native"
+    },
+    {
+        "name": "California Sea Lion",
+        "scientific_name": "Zalophus californianus",
+        "description": "Eared seal known for its intelligence and barking vocalization.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Walrus",
+        "scientific_name": "Odobenus rosmarus",
+        "description": "Massive Arctic marine mammal recognizable by prominent tusks.",
+        "origin": "Arctic",
+        "category": "Native"
+    },
+    {
+        "name": "Northern Elephant Seal",
+        "scientific_name": "Mirounga angustirostris",
+        "description": "Huge seal with a distinctive trunk-like proboscis in males.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Great Horned Owl",
+        "scientific_name": "Bubo virginianus",
+        "description": "Large owl with distinctive ear tufts.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Veiled Chameleon",
+        "scientific_name": "Chamaeleo calyptratus",
+        "description": "Invasive in Florida; distinguishable by the towering casque on its head.",
+        "origin": "Middle East",
+        "category": "Invasive"
+    },
+    {
+        "name": "Tokay Gecko",
+        "scientific_name": "Gekko gecko",
+        "description": "Large, aggressive gecko with blue skin and orange spots.",
+        "origin": "Asia",
+        "category": "Invasive"
+    },
+    {
+        "name": "Eastern Chipmunk",
+        "scientific_name": "Tamias striatus",
+        "description": "Small ground squirrel with distinct stripes along its back.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Osprey",
+        "scientific_name": "Pandion haliaetus",
+        "description": "The 'Fish Hawk', unique for diving feet-first into water.",
+        "origin": "Global",
+        "category": "Native"
+    },
+    {
+        "name": "Brown Pelican",
+        "scientific_name": "Pelecanus occidentalis",
+        "description": "Large water bird known for its massive throat pouch.",
+        "origin": "North America, South America",
+        "category": "Native"
+    },
+    {
+        "name": "Western Diamondback Rattlesnake",
+        "scientific_name": "Crotalus atrox",
+        "description": "Venomous pit viper with a distinctive rattle at the end of its tail.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Common Garter Snake",
+        "scientific_name": "Thamnophis sirtalis",
+        "description": "The most widely distributed snake in North America.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Eastern Copperhead",
+        "scientific_name": "Agkistrodon contortrix",
+        "description": "Venomous snake with a distinct hourglass pattern.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Domestic Cat",
+        "scientific_name": "Felis catus",
+        "description": "Common house cat; feral populations decimate local birdlife.",
+        "origin": "Global",
+        "category": "Invasive"
+    },
+    {
+        "name": "Domestic Dog",
+        "scientific_name": "Canis lupus familiaris",
+        "description": "Man's best friend; breeds vary wildly in appearance.",
+        "origin": "Global",
+        "category": "Invasive"
+    },
+    {
+        "name": "Common Snapping Turtle",
+        "scientific_name": "Chelydra serpentina",
+        "description": "Large freshwater turtle with a prehistoric look and powerful bite.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Painted Turtle",
+        "scientific_name": "Chrysemys picta",
+        "description": "The most widespread native turtle of North America.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Eastern Cottontail",
+        "scientific_name": "Sylvilagus floridanus",
+        "description": "The most common rabbit in North America, with a cotton-ball tail.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "American Mink",
+        "scientific_name": "Neogale vison",
+        "description": "Semi-aquatic carnivore with rich dark fur.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Black-tailed Prairie Dog",
+        "scientific_name": "Cynomys ludovicianus",
+        "description": "Keystone species of the Great Plains; lives in vast underground towns.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "North American Porcupine",
+        "scientific_name": "Erethizon dorsatum",
+        "description": "Protected by sharp quills; slow-moving and climbs trees.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Jaguar",
+        "scientific_name": "Panthera onca",
+        "description": "Largest cat in the Americas; rare individuals cross into Arizona.",
+        "origin": "North America, South America",
+        "category": "Native"
+    },
+    {
+        "name": "Eastern Fox Squirrel",
+        "scientific_name": "Sciurus niger",
+        "description": "Largest tree squirrel in North America, with orange-tinged fur.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "American Red Squirrel",
+        "scientific_name": "Tamiasciurus hudsonicus",
+        "description": "Small, territorial squirrel known for its loud, chattering call.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Groundhog",
+        "scientific_name": "Marmota monax",
+        "description": "Also known as Woodchuck; lowland cousin of the marmot.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Yellow-bellied Marmot",
+        "scientific_name": "Marmota flaviventris",
+        "description": "The 'Rock Chuck' of western mountains.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Desert Tortoise",
+        "scientific_name": "Gopherus agassizii",
+        "description": "Slow-moving reptile adapted to life in the Mojave and Sonoran deserts.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Rhesus Macaque",
+        "scientific_name": "Macaca mulatta",
+        "description": "Established feral populations exist in Florida (Silver Springs).",
+        "origin": "Asia",
+        "category": "Invasive"
+    },
+    {
+        "name": "American Badger",
+        "scientific_name": "Taxidea taxus",
+        "description": "Fierce fossorial carnivore with a distinctive facial stripe.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "American Marten",
+        "scientific_name": "Martes americana",
+        "description": "Tree-dwelling weasel found in northern forests.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Ocelot",
+        "scientific_name": "Leopardus pardalis",
+        "description": "Small wild cat with beautiful chain-like rosettes.",
+        "origin": "North America, South America",
+        "category": "Native"
+    },
+    {
+        "name": "Gemsbok",
+        "scientific_name": "Oryx gazella",
+        "description": "Distinctive antelope with long straight horns; introduced to White Sands, NM.",
+        "origin": "Africa",
+        "category": "Invasive"
+    },
+    {
+        "name": "Gray Fox",
+        "scientific_name": "Urocyon cinereoargenteus",
+        "description": "The only American canid that can climb trees.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Black-footed Ferret",
+        "scientific_name": "Mustela nigripes",
+        "description": "One of the most endangered mammals in North America.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Sea Otter",
+        "scientific_name": "Enhydra lutris",
+        "description": "Keystone marine mammal; keeps urchin populations in check.",
+        "origin": "North America, Asia",
+        "category": "Native"
+    },
+    {
+        "name": "American Flamingo",
+        "scientific_name": "Phoenicopterus ruber",
+        "description": "Iconic pink bird found in shallow lagoons and mudflats.",
+        "origin": "North America, South America",
+        "category": "Native"
+    },
+    {
+        "name": "Green Anole",
+        "scientific_name": "Anolis carolinensis",
+        "description": "The only anole native to the US; changes color from green to brown.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Whooping Crane",
+        "scientific_name": "Grus americana",
+        "description": "Tallest bird in North America; famous conservation success story.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Mountain Goat",
+        "scientific_name": "Oreamnos americanus",
+        "description": "Sure-footed climber found in high alpine environments.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Snowshoe Hare",
+        "scientific_name": "Lepus americanus",
+        "description": "Changes color from brown in summer to white in winter.",
+        "origin": "North America",
+        "category": "Native"
+    },
+    {
+        "name": "Mallard",
+        "scientific_name": "Anas platyrhynchos",
+        "description": "The most familiar duck; male has a glossy green head.",
+        "origin": "Global",
+        "category": "Native"
+    }
+]

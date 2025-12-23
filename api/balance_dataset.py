@@ -43,6 +43,14 @@ def balance_classes():
                 
                 shutil.copy(src_path, dst_path)
                 
+                # Clone Metadata (CRITICAL for Grandmaster)
+                # If src_image matches "001.jpg", json is "001.json"
+                src_json = os.path.splitext(src_path)[0] + ".json"
+                dst_json = os.path.splitext(dst_path)[0] + ".json"
+                
+                if os.path.exists(src_json):
+                    shutil.copy(src_json, dst_json)
+                
     print("✅ Dataset Balanced! All classes have equal weight.")
 
 if __name__ == "__main__":
