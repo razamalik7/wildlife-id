@@ -1,152 +1,275 @@
+
 import torch
 import torch.nn as nn
-from torchvision import datasets, models, transforms
+from torchvision import models, transforms
 from torch.utils.data import Dataset, DataLoader
-import os
-import argparse
-from tqdm import tqdm
 from PIL import Image
+import os, json, math, random
+from tqdm import tqdm
+import numpy as np
+from collections import defaultdict
 
-# CONFIG
-DATA_DIR = 'training_data'
-BATCH_SIZE = 16 
+# --- CONFIGURATION ---
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR = os.path.join(BASE_DIR, 'training_data_v2')
+BATCH_SIZE = 16
+DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# --- A. CUSTOM DATASET FOR DUAL INPUTS (B3 + ConvNeXt) ---
-class DualModelDataset(Dataset):
-    def __init__(self, root_dir, transform_b3, transform_hero):
-        self.dataset = datasets.ImageFolder(root_dir)
+# --- MODEL DEFINITION (Must match training!) ---
+class WildlifeLateFusion(nn.Module):
+    """Late Fusion: Image pathway + Metadata pathway with hierarchical outputs."""
+    
+    def __init__(self, num_species, num_families, num_classes, model_type='b3'):
+        super().__init__()
+        self.model_type = model_type
+        
+        if model_type == 'b3':
+            self.image_model = models.efficientnet_b3(weights=None)
+            in_features = self.image_model.classifier[1].in_features
+            self.image_model.classifier = self.image_model.classifier[:-1]
+            feature_dim = in_features
+        elif model_type == 'convnext':
+            self.image_model = models.convnext_tiny(weights=None)
+            in_features = self.image_model.classifier[2].in_features
+            self.image_model.classifier = self.image_model.classifier[:-1]
+            feature_dim = in_features
+        
+        # Metadata MLP
+        self.meta_mlp = nn.Sequential(
+            nn.Linear(4, 64), nn.ReLU(), nn.Dropout(0.3),
+            nn.Linear(64, 128), nn.ReLU(), nn.Dropout(0.3),
+            nn.Linear(128, feature_dim)
+        )
+        
+        # Hierarchical prediction heads
+        self.species_head = nn.Linear(feature_dim, num_species)
+        self.family_head = nn.Linear(feature_dim, num_families)
+        self.class_head = nn.Linear(feature_dim, num_classes)
+        
+        self.fusion_weight = nn.Parameter(torch.tensor(0.1))
+    
+    def forward(self, x, meta):
+        image_features = self.image_model(x)
+        meta_features = self.meta_mlp(meta)
+        combined_features = image_features + self.fusion_weight * meta_features
+        
+        return {
+            'species': self.species_head(combined_features),
+            'family': self.family_head(combined_features),
+            'class': self.class_head(combined_features)
+        }
+
+# --- DATASET LOADER ---
+class EvaluationDataset(Dataset):
+    def __init__(self, root_dir, transform_b3, transform_convnext):
+        self.root_dir = root_dir
         self.transform_b3 = transform_b3
-        self.transform_hero = transform_hero
-        self.classes = self.dataset.classes
+        self.transform_convnext = transform_convnext
+        self.samples = []
+        
+        if os.path.exists(root_dir):
+            self.classes = sorted([d for d in os.listdir(root_dir) if os.path.isdir(os.path.join(root_dir, d))])
+        else:
+            self.classes = []
+            
+        self.class_to_idx = {cls: idx for idx, cls in enumerate(self.classes)}
+        
+        for class_name in self.classes:
+            class_dir = os.path.join(root_dir, class_name)
+            for img_name in os.listdir(class_dir):
+                if img_name.lower().endswith(('.jpg', '.jpeg', '.png')):
+                    img_path = os.path.join(class_dir, img_name)
+                    json_path = os.path.splitext(img_path)[0] + '.json'
+                    self.samples.append((img_path, json_path, self.class_to_idx[class_name]))
 
     def __len__(self):
-        return len(self.dataset)
+        return len(self.samples)
 
     def __getitem__(self, idx):
-        path, label = self.dataset.samples[idx]
-        img = Image.open(path).convert('RGB')
+        img_path, json_path, label = self.samples[idx]
         
-        # 1. Standard Center Crop (No TTA base)
-        img_b3 = self.transform_b3(img)
-        img_hero = self.transform_hero(img)
+        try:
+            image = Image.open(img_path).convert('RGB')
+        except:
+            image = Image.new('RGB', (300, 300))
+            
+        # 1. Models need different transforms/sizes
+        img_b3 = self.transform_b3(image)
+        img_convnext = self.transform_convnext(image)
         
-        # 2. TTA: We return the raw image too if we want to do TTA inside the loop, 
-        # but for simplicity/speed in PyTorch, standard TTA usually happens via 
-        # FiveCrop/TenCrop inside the transform or handled in the loop. 
-        # Let's do a "Poor Man's TTA" (Horizontal Flip) manually in the loop 
-        # to keep memory usage low, or use TenCrop if batch size allows.
+        # 2. Load Metadata
+        lat, lng, month = 0.0, 0.0, 6
+        if os.path.exists(json_path):
+            try:
+                meta = json.load(open(json_path))
+                lat = meta.get('lat', 0.0) or 0.0
+                lng = meta.get('lng', 0.0) or 0.0
+                # Date parsing skipped for speed/simplicity here, assuming mid-year
+            except: pass
+            
+        meta_vector = torch.tensor([
+            math.sin(2 * math.pi * month / 12),
+            math.cos(2 * math.pi * month / 12),
+            lat / 90.0,
+            lng / 180.0
+        ], dtype=torch.float32)
         
-        return img_b3, img_hero, label
+        return img_b3, img_convnext, meta_vector, label
 
-# --- B. MODEL LOADERS ---
-def get_b3(num_classes, device):
-    model = models.efficientnet_b3(weights=None)
-    num_ftrs = model.classifier[1].in_features
-    model.classifier[1] = nn.Sequential(nn.Dropout(0.5), nn.Linear(num_ftrs, num_classes))
+def load_model(path, model_type, device):
+    print(f"Loading {model_type} from {path}...")
+    checkpoint = torch.load(path, map_location=device)
     
-    ckpt = torch.load('wildlife_model_b3_hero.pth', map_location=device)
-    model.load_state_dict(ckpt['model_state_dict'])
-    model.to(device)
-    model.eval()
-    return model
-
-def get_hero(num_classes, device):
-    model = models.convnext_tiny(weights=None)
-    num_ftrs = model.classifier[2].in_features
-    model.classifier[2] = nn.Sequential(nn.Dropout(0.5), nn.Linear(num_ftrs, num_classes))
+    # Handle both old and new checkpoint formats
+    class_names = checkpoint.get('class_names') or checkpoint.get('classes')
+    families = checkpoint.get('families', [None] * 57)  # Default 57 families
+    tax_classes = checkpoint.get('tax_classes', [None] * 4)  # Default 4 classes
     
-    ckpt = torch.load('wildlife_model_hero.pth', map_location=device)
-    model.load_state_dict(ckpt['model_state_dict'])
+    # Use fixed sizes if not in checkpoint (finetuned models)
+    num_species = len(class_names) if class_names else 100
+    num_families = len(families) if families and families[0] else 57
+    num_classes = len(tax_classes) if tax_classes and tax_classes[0] else 4
+    
+    model = WildlifeLateFusion(num_species, num_families, num_classes, model_type=model_type)
+    
+    # Handle state dict (remove 'module.' prefix if from SWA/DataParallel)
+    state_dict = checkpoint['model_state_dict']
+    new_state_dict = {}
+    for k, v in state_dict.items():
+        if k.startswith('module.'):
+            new_state_dict[k[7:]] = v
+        else:
+            new_state_dict[k] = v
+            
+    model.load_state_dict(new_state_dict, strict=False)
     model.to(device)
     model.eval()
     return model
 
 def main():
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print(f"🦁 ASSEMBLING THE COUNCIL (Ensemble Evaluation) ON: {device}")
+    print(f"\n🦁 OOGWAY ENSEMBLE EVALUATION")
+    print(f"Device: {DEVICE}")
     
-    # 1. Verify Models Exist
-    if not os.path.exists('wildlife_model_b3_hero.pth') or not os.path.exists('wildlife_model_hero.pth'):
-        print("❌ Models not ready yet. Please wait for training to finish.")
-        return
-
-    # 2. Setup Transforms (Standard Evaluation)
-    # Note: TTA will be applied by running the model twice: once on x, once on flip(x)
-    trans_b3 = transforms.Compose([
+    # 1. Define Transforms
+    # B3: 300x300
+    tf_b3 = transforms.Compose([
         transforms.Resize((320, 320)),
         transforms.CenterCrop(300),
         transforms.ToTensor(),
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ])
     
-    trans_hero = transforms.Compose([
+    # ConvNeXt: 224x224
+    tf_cx = transforms.Compose([
         transforms.Resize((256, 256)),
         transforms.CenterCrop(224),
         transforms.ToTensor(),
         transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ])
-
-    val_dir = os.path.join(DATA_DIR, 'val')
-    test_ds = DualModelDataset(val_dir, trans_b3, trans_hero)
-    test_loader = DataLoader(test_ds, batch_size=BATCH_SIZE, shuffle=False, num_workers=4, pin_memory=True)
     
-    class_names = test_ds.classes
-    print(f"📂 Loaded {len(test_ds)} validation images.")
-
+    # 2. Load Dataset
+    val_dir = os.path.join(DATA_DIR, 'val')
+    dataset = EvaluationDataset(val_dir, tf_b3, tf_cx)
+    loader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=4)
+    print(f"📂 Evaluating on {len(dataset)} validation images")
+    
     # 3. Load Models
-    print("🧠 Loading Models...")
-    model_b3 = get_b3(len(class_names), device)
-    model_hero = get_hero(len(class_names), device)
-    print("✅ Models Loaded.")
+    # Look for best/final models
+    b3_path = 'oogway_b3_best.pth'
+    cx_path = 'oogway_convnext_final.pth' # Or _best or _swa
+    
+    if not os.path.exists(b3_path) or not os.path.exists(cx_path):
+        print("❌ Model files missing!")
+        return
 
-    # 4. Evaluation Loop with TTA (2-View: Normal + Flip)
+    model_b3 = load_model(b3_path, 'b3', DEVICE)
+    model_cx = load_model(cx_path, 'convnext', DEVICE)
+    
     correct_b3 = 0
-    correct_hero = 0
-    correct_ensemble = 0
+    correct_cx = 0
+    correct_ens = 0
     total = 0
     
-    # TTA Flip Transform
-    # We will just flip the tensor batch manually
-    
-    print("🚀 Starting Inference with TTA (2-View)...")
-    
+    # 4. Evaluation Loop
+    print("\n🚀 Starting Evaluation...")
     with torch.no_grad():
-        for b3_imgs, hero_imgs, labels in tqdm(test_loader):
-            b3_imgs = b3_imgs.to(device)
-            hero_imgs = hero_imgs.to(device)
-            labels = labels.to(device)
+        for b3_imgs, cx_imgs, meta, labels in tqdm(loader):
+            b3_imgs, cx_imgs = b3_imgs.to(DEVICE), cx_imgs.to(DEVICE)
+            meta, labels = meta.to(DEVICE), labels.to(DEVICE)
             
-            # --- VIEW 1: STANDARD ---
-            out_b3_1 = torch.nn.functional.softmax(model_b3(b3_imgs), dim=1)
-            out_hero_1 = torch.nn.functional.softmax(model_hero(hero_imgs), dim=1)
+            # --- MODEL 1: B3 ---
+            out_b3 = model_b3(b3_imgs, meta)
+            probs_b3 = torch.softmax(out_b3['species'], dim=1)
             
-            # --- VIEW 2: FLIPPED (Horizontal Flip) ---
-            # torch.flip(tensor, dims) -> dims=3 is width
-            out_b3_2 = torch.nn.functional.softmax(model_b3(torch.flip(b3_imgs, [3])), dim=1)
-            out_hero_2 = torch.nn.functional.softmax(model_hero(torch.flip(hero_imgs, [3])), dim=1)
+            # --- MODEL 2: CONVNEXT ---
+            out_cx = model_cx(cx_imgs, meta)
+            probs_cx = torch.softmax(out_cx['species'], dim=1)
             
-            # --- AVERAGE VIEWS (TTA) ---
-            probs_b3 = (out_b3_1 + out_b3_2) / 2
-            probs_hero = (out_hero_1 + out_hero_2) / 2
+            # --- EXPERT OVERRIDE LOGIC (From ai_engine.py) ---
             
-            # --- ENSEMBLE ---
-            # You can weight them 0.6/0.4 if one is stronger, but 0.5/0.5 is safe
-            probs_ensemble = (probs_b3 + probs_hero) / 2
+            # 1. Get initial class predictions
+            _, idx_b3 = torch.max(probs_b3, 1)
+            _, idx_cx = torch.max(probs_cx, 1)
             
+            # 2. DEFINITIVE EXPERT OVERRIDE SETS
+            EXPERT_OVERRIDES = {
+                ('striped_skunk', 'wild_boar'),        # Skunk/Boar
+                ('sea_otter', 'harbor_seal'),          # Otter/Seal
+                ('coyote', 'gray_wolf'),               # Canids
+                ('american_alligator', 'american_crocodile'), # Crocs
+                ('nile_monitor', 'argentine_black_and_white_tegu'), # Monitors
+                ('white-tailed_deer', 'moose'),        # Deer/Moose
+                ('california_sea_lion', 'northern_elephant_seal'), # Seals
+                ('burmese_python', 'western_diamondback_rattlesnake') # Snake
+            }
+            
+            B3_SUPERIOR_CLASSES = {
+                'nile_monitor', 'yellow-bellied_marmot', 'harbor_seal', 
+                'virginia_opossum', 'thinhorn_sheep', 'spotted_salamander',
+                'western_diamondback_rattlesnake', 'mountain_lion', 
+                'american_marten', 'common_box_turtle', 'great_horned_owl'
+            }
+            
+            # Dynamic weighting loop
+            probs_ens = torch.zeros_like(probs_cx)
+            
+            for i in range(len(labels)):
+                idx_b3_i = idx_b3[i].item()
+                idx_cx_i = idx_cx[i].item()
+                
+                pred_b3_name = dataset.classes[idx_b3_i]
+                pred_cx_name = dataset.classes[idx_cx_i]
+                
+                # CASE 1: Specific Conflict Pair
+                if (pred_cx_name, pred_b3_name) in EXPERT_OVERRIDES:
+                    # Trust B3 heavily (70/30)
+                    probs_ens[i] = (0.7 * probs_b3[i]) + (0.3 * probs_cx[i])
+                    
+                # CASE 2: B3 is a known specialist for this class
+                elif pred_b3_name in B3_SUPERIOR_CLASSES:
+                    # Trust B3 moderately (60/40)
+                    probs_ens[i] = (0.6 * probs_b3[i]) + (0.4 * probs_cx[i])
+                    
+                # CASE 3: Standard (ConvNeXt is stronger generally)
+                else:
+                    probs_ens[i] = (0.4 * probs_b3[i]) + (0.6 * probs_cx[i])
+
             # --- PREDICTIONS ---
-            _, preds_b3 = torch.max(probs_b3, 1)
-            _, preds_hero = torch.max(probs_hero, 1)
-            _, preds_ensemble = torch.max(probs_ensemble, 1)
+            _, pred_b3 = torch.max(probs_b3, 1)
+            _, pred_cx = torch.max(probs_cx, 1)
+            _, pred_ens = torch.max(probs_ens, 1)
             
             total += labels.size(0)
-            correct_b3 += (preds_b3 == labels).sum().item()
-            correct_hero += (preds_hero == labels).sum().item()
-            correct_ensemble += (preds_ensemble == labels).sum().item()
-
-    print("\n🏆 FINAL RESULTS (Validation Set) 🏆")
-    print(f"EfficientNet B3 (TTA):  {100 * correct_b3 / total:.2f}%")
-    print(f"ConvNeXt Hero (TTA):    {100 * correct_hero / total:.2f}%")
-    print(f"🌟 ENSEMBLE (Combined): {100 * correct_ensemble / total:.2f}%")
+            correct_b3 += (pred_b3 == labels).sum().item()
+            correct_cx += (pred_cx == labels).sum().item()
+            correct_ens += (pred_ens == labels).sum().item()
+            
+    print("\n🏆 FINAL RESULTS")
+    print(f"{'='*40}")
+    print(f"EfficientNet-B3:   {100*correct_b3/total:.2f}%")
+    print(f"ConvNeXt-Tiny:     {100*correct_cx/total:.2f}%")
+    print(f"🌟 ENSEMBLE:       {100*correct_ens/total:.2f}%")
+    print(f"{'='*40}")
 
 if __name__ == "__main__":
     main()

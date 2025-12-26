@@ -1,0 +1,596 @@
+{
+  "verified": [
+    {
+      "name": "American Black Bear",
+      "taxon_id": 41638,
+      "inat_name": "Ursus americanus",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Grizzly Bear",
+      "taxon_id": 125461,
+      "inat_name": "Ursus arctos horribilis",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "White-tailed Deer",
+      "taxon_id": 42223,
+      "inat_name": "Odocoileus virginianus",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Mountain Lion",
+      "taxon_id": 42007,
+      "inat_name": "Puma concolor",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Coyote",
+      "taxon_id": 42051,
+      "inat_name": "Canis latrans",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Bobcat",
+      "taxon_id": 41976,
+      "inat_name": "Lynx rufus",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Gray Wolf",
+      "taxon_id": 47144,
+      "inat_name": "Canis familiaris",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Raccoon",
+      "taxon_id": 41663,
+      "inat_name": "Procyon lotor",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "North American Beaver",
+      "taxon_id": 43794,
+      "inat_name": "Castor canadensis",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Virginia Opossum",
+      "taxon_id": 42652,
+      "inat_name": "Didelphis virginiana",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Eastern Gray Squirrel",
+      "taxon_id": 46017,
+      "inat_name": "Sciurus carolinensis",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Bald Eagle",
+      "taxon_id": 5305,
+      "inat_name": "Haliaeetus leucocephalus",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "Red-tailed Hawk",
+      "taxon_id": 5212,
+      "inat_name": "Buteo jamaicensis",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "Great Blue Heron",
+      "taxon_id": 4956,
+      "inat_name": "Ardea herodias",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "Wild Turkey",
+      "taxon_id": 906,
+      "inat_name": "Meleagris gallopavo",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "Canada Goose",
+      "taxon_id": 7089,
+      "inat_name": "Branta canadensis",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "American Alligator",
+      "taxon_id": 26159,
+      "inat_name": "Alligator mississippiensis",
+      "iconic_taxon": "Reptilia"
+    },
+    {
+      "name": "Eastern Box Turtle",
+      "taxon_id": 39814,
+      "inat_name": "Terrapene carolina",
+      "iconic_taxon": "Reptilia"
+    },
+    {
+      "name": "American Crocodile",
+      "taxon_id": 26085,
+      "inat_name": "Crocodylus acutus",
+      "iconic_taxon": "Reptilia"
+    },
+    {
+      "name": "Burmese Python",
+      "taxon_id": 238252,
+      "inat_name": "Python bivittatus",
+      "iconic_taxon": "Reptilia"
+    },
+    {
+      "name": "Argentine Black and White Tegu",
+      "taxon_id": 318758,
+      "inat_name": "Salvator merianae",
+      "iconic_taxon": "Reptilia"
+    },
+    {
+      "name": "Cane Toad",
+      "taxon_id": 553515,
+      "inat_name": "Rhinella marina",
+      "iconic_taxon": "Amphibia"
+    },
+    {
+      "name": "European Starling",
+      "taxon_id": 14850,
+      "inat_name": "Sturnus vulgaris",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "House Sparrow",
+      "taxon_id": 13858,
+      "inat_name": "Passer domesticus",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "Rock Pigeon",
+      "taxon_id": 3017,
+      "inat_name": "Columba livia",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "Monk Parakeet",
+      "taxon_id": 19349,
+      "inat_name": "Myiopsitta monachus",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "Wild Boar",
+      "taxon_id": 42134,
+      "inat_name": "Sus scrofa",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Nutria",
+      "taxon_id": 43997,
+      "inat_name": "Myocastor coypus",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Elk",
+      "taxon_id": 204114,
+      "inat_name": "Cervus canadensis",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Pronghorn",
+      "taxon_id": 42429,
+      "inat_name": "Antilocapra americana",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "American Bullfrog",
+      "taxon_id": 65979,
+      "inat_name": "Lithobates catesbeianus",
+      "iconic_taxon": "Amphibia"
+    },
+    {
+      "name": "Gila Monster",
+      "taxon_id": 35003,
+      "inat_name": "Heloderma suspectum",
+      "iconic_taxon": "Reptilia"
+    },
+    {
+      "name": "Nine-banded Armadillo",
+      "taxon_id": 47075,
+      "inat_name": "Dasypus novemcinctus",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Bighorn Sheep",
+      "taxon_id": 42391,
+      "inat_name": "Ovis canadensis",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "North American River Otter",
+      "taxon_id": 41777,
+      "inat_name": "Lontra canadensis",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Polar Bear",
+      "taxon_id": 41644,
+      "inat_name": "Ursus maritimus",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Arctic Fox",
+      "taxon_id": 233598,
+      "inat_name": "Vulpes lagopus",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Caribou",
+      "taxon_id": 42199,
+      "inat_name": "Rangifer tarandus",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Dall Sheep",
+      "taxon_id": 42390,
+      "inat_name": "Ovis dalli",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Muskox",
+      "taxon_id": 42412,
+      "inat_name": "Ovibos moschatus",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Wolverine",
+      "taxon_id": 7004,
+      "inat_name": "Mergus merganser",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "Spotted Salamander",
+      "taxon_id": 26790,
+      "inat_name": "Ambystoma maculatum",
+      "iconic_taxon": "Amphibia"
+    },
+    {
+      "name": "Red-spotted Newt",
+      "taxon_id": 27805,
+      "inat_name": "Notophthalmus viridescens",
+      "iconic_taxon": "Amphibia"
+    },
+    {
+      "name": "Eastern Hellbender",
+      "taxon_id": 26804,
+      "inat_name": "Cryptobranchus alleganiensis",
+      "iconic_taxon": "Amphibia"
+    },
+    {
+      "name": "Snowy Owl",
+      "taxon_id": 144594,
+      "inat_name": "Bubo scandiacus",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "Peregrine Falcon",
+      "taxon_id": 4647,
+      "inat_name": "Falco peregrinus",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "Barn Owl",
+      "taxon_id": 20445,
+      "inat_name": "Tyto alba",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "Ring-necked Pheasant",
+      "taxon_id": 981,
+      "inat_name": "Phasianus colchicus",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "Mute Swan",
+      "taxon_id": 6921,
+      "inat_name": "Cygnus olor",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "Brown Anole",
+      "taxon_id": 116461,
+      "inat_name": "Anolis sagrei",
+      "iconic_taxon": "Reptilia"
+    },
+    {
+      "name": "Nile Monitor",
+      "taxon_id": 71085,
+      "inat_name": "Varanus niloticus",
+      "iconic_taxon": "Reptilia"
+    },
+    {
+      "name": "Blue Jay",
+      "taxon_id": 8229,
+      "inat_name": "Cyanocitta cristata",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "Harbor Seal",
+      "taxon_id": 41708,
+      "inat_name": "Phoca vitulina",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "California Sea Lion",
+      "taxon_id": 41740,
+      "inat_name": "Zalophus californianus",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Walrus",
+      "taxon_id": 41766,
+      "inat_name": "Odobenus rosmarus",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Northern Elephant Seal",
+      "taxon_id": 41728,
+      "inat_name": "Mirounga angustirostris",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Great Horned Owl",
+      "taxon_id": 20044,
+      "inat_name": "Bubo virginianus",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "Veiled Chameleon",
+      "taxon_id": 32873,
+      "inat_name": "Chamaeleo calyptratus",
+      "iconic_taxon": "Reptilia"
+    },
+    {
+      "name": "Tokay Gecko",
+      "taxon_id": 34615,
+      "inat_name": "Gekko gecko",
+      "iconic_taxon": "Reptilia"
+    },
+    {
+      "name": "Eastern Chipmunk",
+      "taxon_id": 46217,
+      "inat_name": "Tamias striatus",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Brown Pelican",
+      "taxon_id": 4328,
+      "inat_name": "Pelecanus occidentalis",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "Common Garter Snake",
+      "taxon_id": 28362,
+      "inat_name": "Thamnophis sirtalis",
+      "iconic_taxon": "Reptilia"
+    },
+    {
+      "name": "Domestic Cat",
+      "taxon_id": 118552,
+      "inat_name": "Felis catus",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Common Snapping Turtle",
+      "taxon_id": 39682,
+      "inat_name": "Chelydra serpentina",
+      "iconic_taxon": "Reptilia"
+    },
+    {
+      "name": "Eastern Cottontail",
+      "taxon_id": 43111,
+      "inat_name": "Sylvilagus floridanus",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Black-tailed Prairie Dog",
+      "taxon_id": 46179,
+      "inat_name": "Cynomys ludovicianus",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Jaguar",
+      "taxon_id": 41970,
+      "inat_name": "Panthera onca",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "American Red Squirrel",
+      "taxon_id": 46260,
+      "inat_name": "Tamiasciurus hudsonicus",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Yellow-bellied Marmot",
+      "taxon_id": 46086,
+      "inat_name": "Marmota flaviventris",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Rhesus Macaque",
+      "taxon_id": 43460,
+      "inat_name": "Macaca mulatta",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "American Marten",
+      "taxon_id": 41798,
+      "inat_name": "Martes americana",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Gemsbok",
+      "taxon_id": 42308,
+      "inat_name": "Oryx gazella",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "Black-footed Ferret",
+      "taxon_id": 41809,
+      "inat_name": "Mustela nigripes",
+      "iconic_taxon": "Mammalia"
+    },
+    {
+      "name": "American Flamingo",
+      "taxon_id": 73222,
+      "inat_name": "Phoenicopterus roseus",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "Whooping Crane",
+      "taxon_id": 34,
+      "inat_name": "Grus americana",
+      "iconic_taxon": "Aves"
+    },
+    {
+      "name": "Snowshoe Hare",
+      "taxon_id": 43132,
+      "inat_name": "Lepus americanus",
+      "iconic_taxon": "Mammalia"
+    }
+  ],
+  "missing": [
+    "American Bison",
+    "Green Iguana"
+  ],
+  "issues": [
+    {
+      "name": "Moose",
+      "taxon_id": 42196,
+      "inat_name": "Alces",
+      "inat_common": "True Moose",
+      "iconic_taxon": "Mammalia",
+      "rank": "genus",
+      "problem": "Bad rank: genus"
+    },
+    {
+      "name": "Striped Skunk",
+      "taxon_id": 41878,
+      "inat_name": "Mephitis",
+      "inat_common": "Striped and Hooded Skunks",
+      "iconic_taxon": "Mammalia",
+      "rank": "genus",
+      "problem": "Bad rank: genus"
+    },
+    {
+      "name": "Red Fox",
+      "taxon_id": 42054,
+      "inat_name": "Vulpes",
+      "inat_common": "Typical Foxes",
+      "iconic_taxon": "Mammalia",
+      "rank": "genus",
+      "problem": "Bad rank: genus"
+    },
+    {
+      "name": "Northern Cardinal",
+      "taxon_id": 9080,
+      "inat_name": "Cardinalis",
+      "inat_common": "Typical Cardinals",
+      "iconic_taxon": "Aves",
+      "rank": "genus",
+      "problem": "Bad rank: genus"
+    },
+    {
+      "name": "Axis Deer",
+      "taxon_id": 42162,
+      "inat_name": "Axis",
+      "inat_common": "Axis Deer",
+      "iconic_taxon": "Mammalia",
+      "rank": "genus",
+      "problem": "Bad rank: genus"
+    },
+    {
+      "name": "Osprey",
+      "taxon_id": 116999,
+      "problem": "HTTP 429"
+    },
+    {
+      "name": "Western Diamondback Rattlesnake",
+      "taxon_id": 30764,
+      "problem": "HTTP 429"
+    },
+    {
+      "name": "Eastern Copperhead",
+      "taxon_id": 912622,
+      "problem": "HTTP 429"
+    },
+    {
+      "name": "Domestic Dog",
+      "taxon_id": 47144,
+      "problem": "HTTP 429"
+    },
+    {
+      "name": "Painted Turtle",
+      "taxon_id": 39771,
+      "problem": "HTTP 429"
+    },
+    {
+      "name": "American Mink",
+      "taxon_id": 1264432,
+      "problem": "HTTP 429"
+    },
+    {
+      "name": "North American Porcupine",
+      "taxon_id": 44026,
+      "problem": "HTTP 429"
+    },
+    {
+      "name": "Eastern Fox Squirrel",
+      "taxon_id": 46020,
+      "problem": "HTTP 429"
+    },
+    {
+      "name": "Groundhog",
+      "taxon_id": 46095,
+      "problem": "HTTP 429"
+    },
+    {
+      "name": "Desert Tortoise",
+      "taxon_id": 40086,
+      "problem": "HTTP 429"
+    },
+    {
+      "name": "American Badger",
+      "taxon_id": 41789,
+      "problem": "HTTP 429"
+    },
+    {
+      "name": "Ocelot",
+      "taxon_id": 41997,
+      "problem": "HTTP 429"
+    },
+    {
+      "name": "Gray Fox",
+      "taxon_id": 42076,
+      "problem": "HTTP 429"
+    },
+    {
+      "name": "Sea Otter",
+      "taxon_id": 41860,
+      "problem": "HTTP 429"
+    },
+    {
+      "name": "Green Anole",
+      "taxon_id": 36514,
+      "problem": "HTTP 429"
+    },
+    {
+      "name": "Mountain Goat",
+      "taxon_id": 42414,
+      "problem": "HTTP 429"
+    },
+    {
+      "name": "Mallard",
+      "taxon_id": 6930,
+      "problem": "HTTP 429"
+    }
+  ]
+}

@@ -1,0 +1,602 @@
+{
+  "american_alligator": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 4639,
+    "top_prediction_count": 2
+  },
+  "american_badger": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 5978,
+    "top_prediction_count": 3
+  },
+  "american_bison": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 4356,
+    "top_prediction_count": 3
+  },
+  "american_black_bear": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 7715,
+    "top_prediction_count": 3
+  },
+  "american_bullfrog": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 3006,
+    "top_prediction_count": 3
+  },
+  "american_crocodile": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 3205,
+    "top_prediction_count": 3
+  },
+  "american_flamingo": {
+    "consistency": 0.3,
+    "total_checked": 30,
+    "top_prediction_idx": 6673,
+    "top_prediction_count": 9
+  },
+  "american_marten": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 4024,
+    "top_prediction_count": 2
+  },
+  "american_mink": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 3714,
+    "top_prediction_count": 3
+  },
+  "american_red_squirrel": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 5094,
+    "top_prediction_count": 2
+  },
+  "arctic_fox": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 7983,
+    "top_prediction_count": 2
+  },
+  "argentine_black_and_white_tegu": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 6962,
+    "top_prediction_count": 3
+  },
+  "axis_deer": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 7095,
+    "top_prediction_count": 3
+  },
+  "bald_eagle": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 884,
+    "top_prediction_count": 3
+  },
+  "barn_owl": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 3208,
+    "top_prediction_count": 2
+  },
+  "bighorn_sheep": {
+    "consistency": 0.13333333333333333,
+    "total_checked": 30,
+    "top_prediction_idx": 338,
+    "top_prediction_count": 4
+  },
+  "black-footed_ferret": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 3714,
+    "top_prediction_count": 3
+  },
+  "black-tailed_prairie_dog": {
+    "consistency": 0.16666666666666666,
+    "total_checked": 30,
+    "top_prediction_idx": 7480,
+    "top_prediction_count": 5
+  },
+  "blue_jay": {
+    "consistency": 0.13333333333333333,
+    "total_checked": 30,
+    "top_prediction_idx": 6683,
+    "top_prediction_count": 4
+  },
+  "bobcat": {
+    "consistency": 0.26666666666666666,
+    "total_checked": 30,
+    "top_prediction_idx": 5772,
+    "top_prediction_count": 8
+  },
+  "brown_anole": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 3041,
+    "top_prediction_count": 2
+  },
+  "brown_pelican": {
+    "consistency": 0.13333333333333333,
+    "total_checked": 30,
+    "top_prediction_idx": 5567,
+    "top_prediction_count": 4
+  },
+  "burmese_python": {
+    "consistency": 0.2,
+    "total_checked": 30,
+    "top_prediction_idx": 3610,
+    "top_prediction_count": 6
+  },
+  "california_sea_lion": {
+    "consistency": 0.13333333333333333,
+    "total_checked": 30,
+    "top_prediction_idx": 5158,
+    "top_prediction_count": 4
+  },
+  "canada_goose": {
+    "consistency": 0.23333333333333334,
+    "total_checked": 30,
+    "top_prediction_idx": 7480,
+    "top_prediction_count": 7
+  },
+  "cane_toad": {
+    "consistency": 0.16666666666666666,
+    "total_checked": 30,
+    "top_prediction_idx": 7148,
+    "top_prediction_count": 5
+  },
+  "caribou": {
+    "consistency": 0.13333333333333333,
+    "total_checked": 30,
+    "top_prediction_idx": 2056,
+    "top_prediction_count": 4
+  },
+  "common_garter_snake": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 908,
+    "top_prediction_count": 3
+  },
+  "common_snapping_turtle": {
+    "consistency": 0.16666666666666666,
+    "total_checked": 30,
+    "top_prediction_idx": 4581,
+    "top_prediction_count": 5
+  },
+  "coyote": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 145,
+    "top_prediction_count": 2
+  },
+  "dall_sheep": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 5072,
+    "top_prediction_count": 2
+  },
+  "desert_tortoise": {
+    "consistency": 0.2,
+    "total_checked": 30,
+    "top_prediction_idx": 924,
+    "top_prediction_count": 6
+  },
+  "domestic_cat": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 5887,
+    "top_prediction_count": 3
+  },
+  "domestic_dog": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 2757,
+    "top_prediction_count": 2
+  },
+  "eastern_box_turtle": {
+    "consistency": 0.3333333333333333,
+    "total_checked": 30,
+    "top_prediction_idx": 2006,
+    "top_prediction_count": 10
+  },
+  "eastern_chipmunk": {
+    "consistency": 0.13333333333333333,
+    "total_checked": 30,
+    "top_prediction_idx": 5094,
+    "top_prediction_count": 4
+  },
+  "eastern_copperhead": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 6947,
+    "top_prediction_count": 3
+  },
+  "eastern_cottontail": {
+    "consistency": 0.3,
+    "total_checked": 30,
+    "top_prediction_idx": 9286,
+    "top_prediction_count": 9
+  },
+  "eastern_fox_squirrel": {
+    "consistency": 0.23333333333333334,
+    "total_checked": 30,
+    "top_prediction_idx": 5643,
+    "top_prediction_count": 7
+  },
+  "eastern_gray_squirrel": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 5643,
+    "top_prediction_count": 3
+  },
+  "eastern_hellbender": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 5823,
+    "top_prediction_count": 2
+  },
+  "elk": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 8760,
+    "top_prediction_count": 2
+  },
+  "european_starling": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 164,
+    "top_prediction_count": 2
+  },
+  "gemsbok": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 2852,
+    "top_prediction_count": 2
+  },
+  "gila_monster": {
+    "consistency": 0.13333333333333333,
+    "total_checked": 30,
+    "top_prediction_idx": 3307,
+    "top_prediction_count": 4
+  },
+  "gray_fox": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 6391,
+    "top_prediction_count": 3
+  },
+  "gray_wolf": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 5862,
+    "top_prediction_count": 3
+  },
+  "great_blue_heron": {
+    "consistency": 0.16666666666666666,
+    "total_checked": 30,
+    "top_prediction_idx": 6787,
+    "top_prediction_count": 5
+  },
+  "great_horned_owl": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 9138,
+    "top_prediction_count": 3
+  },
+  "green_anole": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 4326,
+    "top_prediction_count": 3
+  },
+  "green_iguana": {
+    "consistency": 0.13333333333333333,
+    "total_checked": 30,
+    "top_prediction_idx": 2794,
+    "top_prediction_count": 4
+  },
+  "grizzly_bear": {
+    "consistency": 0.23333333333333334,
+    "total_checked": 30,
+    "top_prediction_idx": 358,
+    "top_prediction_count": 7
+  },
+  "groundhog": {
+    "consistency": 0.2,
+    "total_checked": 30,
+    "top_prediction_idx": 9964,
+    "top_prediction_count": 6
+  },
+  "harbor_seal": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 1384,
+    "top_prediction_count": 3
+  },
+  "house_sparrow": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 812,
+    "top_prediction_count": 3
+  },
+  "jaguar": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 1458,
+    "top_prediction_count": 2
+  },
+  "mallard": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 184,
+    "top_prediction_count": 3
+  },
+  "monk_parakeet": {
+    "consistency": 0.2,
+    "total_checked": 30,
+    "top_prediction_idx": 893,
+    "top_prediction_count": 6
+  },
+  "moose": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 8948,
+    "top_prediction_count": 2
+  },
+  "mountain_goat": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 1702,
+    "top_prediction_count": 2
+  },
+  "mountain_lion": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 9180,
+    "top_prediction_count": 2
+  },
+  "muskox": {
+    "consistency": 0.13333333333333333,
+    "total_checked": 30,
+    "top_prediction_idx": 8000,
+    "top_prediction_count": 4
+  },
+  "mute_swan": {
+    "consistency": 0.4666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 4349,
+    "top_prediction_count": 14
+  },
+  "nile_monitor": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 3307,
+    "top_prediction_count": 2
+  },
+  "nine-banded_armadillo": {
+    "consistency": 0.3333333333333333,
+    "total_checked": 30,
+    "top_prediction_idx": 9328,
+    "top_prediction_count": 10
+  },
+  "north_american_beaver": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 1750,
+    "top_prediction_count": 3
+  },
+  "north_american_porcupine": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 8753,
+    "top_prediction_count": 2
+  },
+  "north_american_river_otter": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 4021,
+    "top_prediction_count": 3
+  },
+  "northern_cardinal": {
+    "consistency": 0.16666666666666666,
+    "total_checked": 30,
+    "top_prediction_idx": 5052,
+    "top_prediction_count": 5
+  },
+  "northern_elephant_seal": {
+    "consistency": 0.16666666666666666,
+    "total_checked": 30,
+    "top_prediction_idx": 7920,
+    "top_prediction_count": 5
+  },
+  "nutria": {
+    "consistency": 0.13333333333333333,
+    "total_checked": 30,
+    "top_prediction_idx": 495,
+    "top_prediction_count": 4
+  },
+  "ocelot": {
+    "consistency": 0.13333333333333333,
+    "total_checked": 30,
+    "top_prediction_idx": 1438,
+    "top_prediction_count": 4
+  },
+  "osprey": {
+    "consistency": 0.2,
+    "total_checked": 30,
+    "top_prediction_idx": 6224,
+    "top_prediction_count": 6
+  },
+  "painted_turtle": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 4443,
+    "top_prediction_count": 3
+  },
+  "peregrine_falcon": {
+    "consistency": 0.16666666666666666,
+    "total_checked": 30,
+    "top_prediction_idx": 6224,
+    "top_prediction_count": 5
+  },
+  "polar_bear": {
+    "consistency": 0.13333333333333333,
+    "total_checked": 30,
+    "top_prediction_idx": 4131,
+    "top_prediction_count": 4
+  },
+  "pronghorn": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 3027,
+    "top_prediction_count": 3
+  },
+  "raccoon": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 1426,
+    "top_prediction_count": 2
+  },
+  "red-spotted_newt": {
+    "consistency": 0.13333333333333333,
+    "total_checked": 30,
+    "top_prediction_idx": 3358,
+    "top_prediction_count": 4
+  },
+  "red-tailed_hawk": {
+    "consistency": 0.3,
+    "total_checked": 30,
+    "top_prediction_idx": 6224,
+    "top_prediction_count": 9
+  },
+  "red_fox": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 5978,
+    "top_prediction_count": 3
+  },
+  "rhesus_macaque": {
+    "consistency": 0.2,
+    "total_checked": 30,
+    "top_prediction_idx": 1139,
+    "top_prediction_count": 6
+  },
+  "ring-necked_pheasant": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 1426,
+    "top_prediction_count": 3
+  },
+  "rock_pigeon": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 6961,
+    "top_prediction_count": 2
+  },
+  "sea_otter": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 9593,
+    "top_prediction_count": 2
+  },
+  "snowshoe_hare": {
+    "consistency": 0.16666666666666666,
+    "total_checked": 30,
+    "top_prediction_idx": 4868,
+    "top_prediction_count": 5
+  },
+  "snowy_owl": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 9276,
+    "top_prediction_count": 2
+  },
+  "spotted_salamander": {
+    "consistency": 0.16666666666666666,
+    "total_checked": 30,
+    "top_prediction_idx": 2275,
+    "top_prediction_count": 5
+  },
+  "striped_skunk": {
+    "consistency": 0.03333333333333333,
+    "total_checked": 30,
+    "top_prediction_idx": 2165,
+    "top_prediction_count": 1
+  },
+  "tokay_gecko": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 8659,
+    "top_prediction_count": 3
+  },
+  "veiled_chameleon": {
+    "consistency": 0.26666666666666666,
+    "total_checked": 30,
+    "top_prediction_idx": 3041,
+    "top_prediction_count": 8
+  },
+  "virginia_opossum": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 3445,
+    "top_prediction_count": 2
+  },
+  "walrus": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 4136,
+    "top_prediction_count": 2
+  },
+  "western_diamondback_rattlesnake": {
+    "consistency": 0.13333333333333333,
+    "total_checked": 30,
+    "top_prediction_idx": 990,
+    "top_prediction_count": 4
+  },
+  "white-tailed_deer": {
+    "consistency": 0.13333333333333333,
+    "total_checked": 30,
+    "top_prediction_idx": 1426,
+    "top_prediction_count": 4
+  },
+  "whooping_crane": {
+    "consistency": 0.16666666666666666,
+    "total_checked": 30,
+    "top_prediction_idx": 8463,
+    "top_prediction_count": 5
+  },
+  "wild_boar": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 972,
+    "top_prediction_count": 2
+  },
+  "wild_turkey": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 7874,
+    "top_prediction_count": 3
+  },
+  "wolverine": {
+    "consistency": 0.06666666666666667,
+    "total_checked": 30,
+    "top_prediction_idx": 4007,
+    "top_prediction_count": 2
+  },
+  "yellow-bellied_marmot": {
+    "consistency": 0.1,
+    "total_checked": 30,
+    "top_prediction_idx": 9964,
+    "top_prediction_count": 3
+  }
+}

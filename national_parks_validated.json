@@ -1,0 +1,498 @@
+[
+  {
+    "name": "Acadia NP",
+    "id": 49610,
+    "state": "US",
+    "found_name": "Acadia National Park, US, ME",
+    "lat": 44.3102529552,
+    "lng": -68.2909584996
+  },
+  {
+    "name": "NP of American Samoa",
+    "id": 73645,
+    "state": "",
+    "found_name": "National Park of American Samoa",
+    "lat": -14.2449488354,
+    "lng": -169.926539672
+  },
+  {
+    "name": "Arches NP",
+    "id": 53642,
+    "state": "US",
+    "found_name": "Arches National Park, US, UT",
+    "lat": 38.722541281,
+    "lng": -109.5863548625
+  },
+  {
+    "name": "Badlands NP",
+    "id": 72792,
+    "state": "US",
+    "found_name": "Badlands National Park, US, SD",
+    "lat": 43.6854402012,
+    "lng": -102.4832364387
+  },
+  {
+    "name": "Big Bend NP",
+    "id": 55071,
+    "state": "US",
+    "found_name": "Big Bend National Park, US, TX",
+    "lat": 29.2977770156,
+    "lng": -103.2298548718
+  },
+  {
+    "name": "Biscayne NP",
+    "id": 95108,
+    "state": "US",
+    "found_name": "Biscayne National Park, US, FL",
+    "lat": 25.4904982522,
+    "lng": -80.2102497024
+  },
+  {
+    "name": "Black Canyon of the Gunnison NP",
+    "id": 72635,
+    "state": "US",
+    "found_name": "Black Canyon of the Gunnison National Park, US, CO",
+    "lat": 38.5777750372,
+    "lng": -107.7242615973
+  },
+  {
+    "name": "Bryce Canyon NP",
+    "id": 69110,
+    "state": "US",
+    "found_name": "Bryce Canyon National Park, US, UT",
+    "lat": 37.5838820567,
+    "lng": -112.1827196444
+  },
+  {
+    "name": "Canyonlands NP",
+    "id": 95131,
+    "state": "US",
+    "found_name": "Canyonlands National Park, US, UT",
+    "lat": 38.2451488769,
+    "lng": -109.8800996606
+  },
+  {
+    "name": "Capitol Reef NP",
+    "id": 69282,
+    "state": "US",
+    "found_name": "Capitol Reef National Park, US, UT",
+    "lat": 38.1773126224,
+    "lng": -111.1763977826
+  },
+  {
+    "name": "Carlsbad Caverns NP",
+    "id": 69109,
+    "state": "US",
+    "found_name": "Carlsbad Caverns National Park, US, NM",
+    "lat": 32.1408676064,
+    "lng": -104.5530066362
+  },
+  {
+    "name": "Channel Islands NP",
+    "id": 3157,
+    "state": "US",
+    "found_name": "Channel Islands National Park, US, CA",
+    "lat": 33.9867131515,
+    "lng": -119.9113246962
+  },
+  {
+    "name": "Congaree NP",
+    "id": 53620,
+    "state": "US",
+    "found_name": "Congaree National Park, US, SC",
+    "lat": 33.791640292,
+    "lng": -80.7477607445
+  },
+  {
+    "name": "Crater Lake NP",
+    "id": 52923,
+    "state": "US",
+    "found_name": "Crater Lake National Park, US, OR",
+    "lat": 42.9410865803,
+    "lng": -122.1328204721
+  },
+  {
+    "name": "Cuyahoga Valley NP",
+    "id": 72639,
+    "state": "US",
+    "found_name": "Cuyahoga Valley National Park, US, OH",
+    "lat": 41.2591064186,
+    "lng": -81.570912662
+  },
+  {
+    "name": "Death Valley NP",
+    "id": 4504,
+    "state": "US",
+    "found_name": "Death Valley National Park, US, CA",
+    "lat": 36.4838985555,
+    "lng": -117.1325935498
+  },
+  {
+    "name": "Denali NP",
+    "id": 71077,
+    "state": "US",
+    "found_name": "Denali National Park, US, AK",
+    "lat": 63.2877031102,
+    "lng": -151.0582196012
+  },
+  {
+    "name": "Dry Tortugas NP",
+    "id": 70571,
+    "state": "US",
+    "found_name": "Dry Tortugas National Park, US, FL",
+    "lat": 24.6488287579,
+    "lng": -82.8717701235
+  },
+  {
+    "name": "Everglades NP",
+    "id": 53957,
+    "state": "US",
+    "found_name": "Everglades National Park, US, FL",
+    "lat": 25.3721678198,
+    "lng": -80.8818228286
+  },
+  {
+    "name": "Gates of the Arctic NP",
+    "id": 69111,
+    "state": "US",
+    "found_name": "Gates of the Arctic National Park, US, AK",
+    "lat": 67.7489354723,
+    "lng": -153.3006340072
+  },
+  {
+    "name": "Gateway Arch NP",
+    "id": 137962,
+    "state": "MO",
+    "found_name": "Gateway Arch National Park, MO, US",
+    "lat": 38.6244856841,
+    "lng": -90.1857696181
+  },
+  {
+    "name": "Glacier NP",
+    "id": 72841,
+    "state": "US",
+    "found_name": "Glacier National Park, US, MT",
+    "lat": 48.6831858383,
+    "lng": -113.8001746078
+  },
+  {
+    "name": "Glacier Bay NP",
+    "id": 69113,
+    "state": "US",
+    "found_name": "Glacier Bay National Park, US, AK",
+    "lat": 58.797434516,
+    "lng": -136.8381195665
+  },
+  {
+    "name": "Grand Canyon NP",
+    "id": 69216,
+    "state": "US",
+    "found_name": "Grand Canyon National Park, US, AZ",
+    "lat": 36.1721460932,
+    "lng": -112.6845881638
+  },
+  {
+    "name": "Grand Teton NP",
+    "id": 69099,
+    "state": "US",
+    "found_name": "Grand Teton National Park, US, WY",
+    "lat": 43.8181626131,
+    "lng": -110.7054884405
+  },
+  {
+    "name": "Great Basin NP",
+    "id": 69699,
+    "state": "US",
+    "found_name": "Great Basin National Park, US, NV",
+    "lat": 38.9460928664,
+    "lng": -114.2579622312
+  },
+  {
+    "name": "Great Sand Dunes NP",
+    "id": 53632,
+    "state": "US",
+    "found_name": "Great Sand Dunes National Park, US, CO",
+    "lat": 37.7924743363,
+    "lng": -105.5919527143
+  },
+  {
+    "name": "Great Smoky Mountains NP",
+    "id": 72645,
+    "state": "NC",
+    "found_name": "Great Smoky Mountains National Park, NC, US",
+    "lat": 35.6010364844,
+    "lng": -83.5083063035
+  },
+  {
+    "name": "Guadalupe Mountains NP",
+    "id": 69313,
+    "state": "US",
+    "found_name": "Guadalupe Mountains National Park, US, TX",
+    "lat": 31.9229932368,
+    "lng": -104.8855426713
+  },
+  {
+    "name": "Haleakala NP",
+    "id": 56788,
+    "state": "US",
+    "found_name": "Haleakala National Park, US, HI",
+    "lat": 20.7069255007,
+    "lng": -156.159192095
+  },
+  {
+    "name": "Hawaii Volcanoes NP",
+    "id": 7222,
+    "state": "US",
+    "found_name": "Hawaii Volcanoes National Park, US, HI",
+    "lat": 19.3394958866,
+    "lng": -155.4640594098
+  },
+  {
+    "name": "Hot Springs NP",
+    "id": 56706,
+    "state": "US",
+    "found_name": "Hot Springs National Park, US, AR",
+    "lat": 34.5241367423,
+    "lng": -93.0633313493
+  },
+  {
+    "name": "Isle Royale NP",
+    "id": 95245,
+    "state": "US",
+    "found_name": "Isle Royale National Park, US, MI",
+    "lat": 48.0109564323,
+    "lng": -88.8284163569
+  },
+  {
+    "name": "Joshua Tree NP",
+    "id": 3680,
+    "state": "US",
+    "found_name": "Joshua Tree National Park, US, CA",
+    "lat": 33.9139692648,
+    "lng": -115.8397560616
+  },
+  {
+    "name": "Katmai NP",
+    "id": 95257,
+    "state": "US",
+    "found_name": "Katmai National Park, US, AK",
+    "lat": 58.6181671939,
+    "lng": -155.0136296551
+  },
+  {
+    "name": "Kenai Fjords NP",
+    "id": 95258,
+    "state": "US",
+    "found_name": "Kenai Fjords National Park, US, AK",
+    "lat": 59.8158304247,
+    "lng": -150.1082342425
+  },
+  {
+    "name": "Kings Canyon NP",
+    "id": 3378,
+    "state": "US",
+    "found_name": "Kings Canyon National Park, US, CA",
+    "lat": 36.8917133729,
+    "lng": -118.5980774683
+  },
+  {
+    "name": "Kobuk Valley NP",
+    "id": 69115,
+    "state": "AK",
+    "found_name": "Kobuk Valley National Park, AK, US",
+    "lat": 67.3533681646,
+    "lng": -159.1989090274
+  },
+  {
+    "name": "Lake Clark NP",
+    "id": 69114,
+    "state": "AK",
+    "found_name": "Lake Clark National Park, AK, US",
+    "lat": 60.5662095218,
+    "lng": -153.5566660452
+  },
+  {
+    "name": "Lassen Volcanic NP",
+    "id": 4509,
+    "state": "US",
+    "found_name": "Lassen Volcanic National Park, US, CA",
+    "lat": 40.4935031756,
+    "lng": -121.4075835157
+  },
+  {
+    "name": "Mammoth Cave NP",
+    "id": 72649,
+    "state": "US",
+    "found_name": "Mammoth Cave National Park, US, KY",
+    "lat": 37.1975900141,
+    "lng": -86.1309071463
+  },
+  {
+    "name": "Mesa Verde NP",
+    "id": 69108,
+    "state": "US",
+    "found_name": "Mesa Verde National Park, US, CO",
+    "lat": 37.2390451641,
+    "lng": -108.4624178017
+  },
+  {
+    "name": "Mount Rainier NP",
+    "id": 8838,
+    "state": "US",
+    "found_name": "Mount Rainier National Park, US, WA",
+    "lat": 46.860920063,
+    "lng": -121.7056276725
+  },
+  {
+    "name": "New River Gorge NP",
+    "id": 95209,
+    "state": "US",
+    "found_name": "New River Gorge National Park and Preserve, US, WV",
+    "lat": 37.8734456216,
+    "lng": -81.0015516167
+  },
+  {
+    "name": "North Cascades NP",
+    "id": 69097,
+    "state": "US",
+    "found_name": "North Cascades National Park, US, WA",
+    "lat": 48.7112507743,
+    "lng": -121.2055112653
+  },
+  {
+    "name": "Olympic NP",
+    "id": 69094,
+    "state": "",
+    "found_name": "Olympic National Park",
+    "lat": 47.8032404172,
+    "lng": -123.666118523
+  },
+  {
+    "name": "Petrified Forest NP",
+    "id": 57573,
+    "state": "US",
+    "found_name": "Petrified Forest National Park, US, AZ",
+    "lat": 34.9836910181,
+    "lng": -109.7877892252
+  },
+  {
+    "name": "Pinnacles NP",
+    "id": 5737,
+    "state": "US",
+    "found_name": "Pinnacles National Park, US, CA",
+    "lat": 36.4903927982,
+    "lng": -121.1811665164
+  },
+  {
+    "name": "Redwood NP",
+    "id": 6021,
+    "state": "US",
+    "found_name": "Redwood National Park, US, CA",
+    "lat": 41.3712006553,
+    "lng": -124.0316415825
+  },
+  {
+    "name": "Rocky Mountain NP",
+    "id": 49676,
+    "state": "US",
+    "found_name": "Rocky Mountain National Park, US, CO",
+    "lat": 40.3554525675,
+    "lng": -105.6973084089
+  },
+  {
+    "name": "Saguaro NP",
+    "id": 65739,
+    "state": "US",
+    "found_name": "Saguaro National Park, US, AZ",
+    "lat": 32.2093035404,
+    "lng": -110.7576691175
+  },
+  {
+    "name": "Sequoia NP",
+    "id": 95321,
+    "state": "US",
+    "found_name": "Sequoia National Park, US, CA",
+    "lat": 36.5076910152,
+    "lng": -118.5752170554
+  },
+  {
+    "name": "Shenandoah NP",
+    "id": 9012,
+    "state": "US",
+    "found_name": "Shenandoah National Park, US, VA",
+    "lat": 38.4917866995,
+    "lng": -78.4691065347
+  },
+  {
+    "name": "Theodore Roosevelt NP",
+    "id": 72793,
+    "state": "US",
+    "found_name": "Theodore Roosevelt National Park, US, ND",
+    "lat": 47.1751759155,
+    "lng": -103.4300899534
+  },
+  {
+    "name": "Virgin Islands NP",
+    "id": 95336,
+    "state": "",
+    "found_name": "Virgin Islands National Park",
+    "lat": 18.3427954307,
+    "lng": -64.7419329315
+  },
+  {
+    "name": "Voyageurs NP",
+    "id": 69101,
+    "state": "US",
+    "found_name": "Voyageurs National Park, US, MN",
+    "lat": 48.4835418907,
+    "lng": -92.8380984641
+  },
+  {
+    "name": "White Sands NP",
+    "id": 62621,
+    "state": "US",
+    "found_name": "White Sands National Park, US, NM",
+    "lat": 32.7790275431,
+    "lng": -106.333358958
+  },
+  {
+    "name": "Wind Cave NP",
+    "id": 72794,
+    "state": "US",
+    "found_name": "Wind Cave National Park, US, SD",
+    "lat": 43.5800613892,
+    "lng": -103.4394556948
+  },
+  {
+    "name": "Wrangell-St Elias NP",
+    "id": 72658,
+    "state": "US",
+    "found_name": "Wrangell-St. Elias National Park, US, AK",
+    "lat": 61.3911342394,
+    "lng": -142.5853566199
+  },
+  {
+    "name": "Yellowstone NP",
+    "id": 10211,
+    "state": "US",
+    "found_name": "Yellowstone National Park, US, WY",
+    "lat": 44.596413865,
+    "lng": -110.5471101058
+  },
+  {
+    "name": "Yosemite NP",
+    "id": 68542,
+    "state": "US",
+    "found_name": "Yosemite National Park, US, CA",
+    "lat": 37.8483345604,
+    "lng": -119.5569911426
+  },
+  {
+    "name": "Zion NP",
+    "id": 50634,
+    "state": "US",
+    "found_name": "Zion National Park, US, UT",
+    "lat": 37.2982228432,
+    "lng": -113.0264472831
+  }
+]

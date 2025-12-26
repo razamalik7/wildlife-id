@@ -5,6 +5,7 @@ import os
 import json
 from ai_engine import predict_animal
 
+# Trigger Hot Reload for Taxonomy ✨
 app = FastAPI()
 
 # --- CONFIGURATION ---
@@ -43,13 +44,9 @@ def get_all_species():
     """
     Returns the Master List of animals so the frontend can 
     display the Anidex (Locked/Unlocked) and Native/Invasive tabs.
+    Reloads from file to pick up taxonomy changes.
     """
-    """
-    Returns the Master List of animals so the frontend can 
-    display the Anidex (Locked/Unlocked) and Native/Invasive tabs.
-    """
-    # The JSON data is already structured perfectly for the frontend
-    return SPECIES_DATA
+    return load_species_data()
 
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):

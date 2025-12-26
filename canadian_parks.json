@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Banff National Park",
+    "id": 77932,
+    "lat": 51.5429648593,
+    "lng": -116.123782316,
+    "state": "Canada"
+  },
+  {
+    "name": "Jasper National Park",
+    "id": 66307,
+    "lat": 52.8514559197,
+    "lng": -117.9842044214,
+    "state": "Canada"
+  },
+  {
+    "name": "Algonquin Provincial Park",
+    "id": 90295,
+    "lat": 45.7841110755,
+    "lng": -78.3877931628,
+    "state": "Canada"
+  },
+  {
+    "name": "Yoho National Park",
+    "id": 112797,
+    "lat": 51.3839490674,
+    "lng": -116.5263729694,
+    "state": "Canada"
+  },
+  {
+    "name": "Kootenay National Park",
+    "id": 112799,
+    "lat": 50.9620143698,
+    "lng": -116.0413791881,
+    "state": "Canada"
+  },
+  {
+    "name": "Waterton Lakes National Park",
+    "id": 55198,
+    "lat": 49.081342305,
+    "lng": -113.9331541499,
+    "state": "Canada"
+  },
+  {
+    "name": "Pacific Rim National Park Reserve",
+    "id": 68850,
+    "lat": 48.831045,
+    "lng": -125.147423,
+    "state": "Canada"
+  }
+]

@@ -7,7 +7,7 @@ import os
 import numpy as np
 
 # CONFIG
-DATA_DIR = 'training_data'
+DATA_DIR = 'training_data_cropped'
 SAVE_PATH = 'wildlife_model_b3_hero.pth' # The Upgraded B3
 EPOCHS = 20 # B3 converges faster
 BATCH_SIZE = 16 # B3 is VRAM hungry, 16 is safer even for 5070, but 5070 might handle 32. Let's stick to 24 to be safe.

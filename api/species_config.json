@@ -4,699 +4,2257 @@
         "scientific_name": "Ursus americanus",
         "description": "Excellent tree climbers, often found in forests.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Great Smoky Mountains National Park, TN",
+            "Shenandoah National Park, VA",
+            "Yosemite National Park, CA"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Ursidae",
+            "genus": "Ursus",
+            "species": "Ursus americanus",
+            "common_name": "American Black Bear",
+            "taxon_id": 41638
+        }
     },
     {
         "name": "Grizzly Bear",
         "scientific_name": "Ursus arctos horribilis",
         "description": "Identifiable by the distinct hump on their shoulders.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Yellowstone National Park, WY",
+            "Glacier National Park, MT",
+            "Denali National Park, AK"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Ursidae",
+            "genus": "Ursus",
+            "species": "Ursus arctos horribilis",
+            "common_name": "Grizzly Bear",
+            "taxon_id": 125461
+        }
     },
     {
         "name": "Moose",
         "scientific_name": "Alces alces",
         "description": "The largest member of the deer family.",
         "origin": "North America, Europe, Asia",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Grand Teton National Park, WY",
+            "Isle Royale National Park, MI",
+            "Baxter State Park, ME"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Cervidae",
+            "genus": null,
+            "species": "Alces",
+            "common_name": "True Moose",
+            "taxon_id": 522193
+        }
     },
     {
         "name": "White-tailed Deer",
         "scientific_name": "Odocoileus virginianus",
         "description": "Raises its tail to show a white 'flag' when alarmed.",
         "origin": "North America, South America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America, South America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Cervidae",
+            "genus": "Odocoileus",
+            "species": "Odocoileus virginianus",
+            "common_name": "White-tailed Deer",
+            "taxon_id": 42223
+        }
     },
     {
         "name": "American Bison",
         "scientific_name": "Bison bison",
         "description": "The national mammal of the United States.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Near Threatened",
+        "hotspots": [
+            "Yellowstone National Park, WY",
+            "Custer State Park, SD",
+            "Antelope Island State Park, UT"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": null,
+            "order": null,
+            "family": null,
+            "genus": "Bison",
+            "species": "Bison bison",
+            "taxon_id": 42408
+        }
     },
     {
         "name": "Mountain Lion",
         "scientific_name": "Puma concolor",
         "description": "Also known as cougar, puma, or panther.",
         "origin": "North America, South America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America, South America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Felidae",
+            "genus": "Puma",
+            "species": "Puma concolor",
+            "common_name": "Mountain Lion",
+            "taxon_id": 42007
+        }
     },
     {
         "name": "Coyote",
         "scientific_name": "Canis latrans",
         "description": "Highly adaptable and can be found in every US state except Hawaii.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Joshua Tree National Park, CA",
+            "Yellowstone National Park, WY",
+            "Death Valley National Park, CA"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Canidae",
+            "genus": "Canis",
+            "species": "Canis latrans",
+            "common_name": "Coyote",
+            "taxon_id": 42051
+        }
     },
     {
         "name": "Bobcat",
         "scientific_name": "Lynx rufus",
         "description": "Named for their short, 'bobbed' tail.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Point Reyes National Seashore, CA",
+            "Big Cypress National Preserve, FL",
+            "Kiawah Island, SC"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Felidae",
+            "genus": "Lynx",
+            "species": "Lynx rufus",
+            "common_name": "Bobcat",
+            "taxon_id": 41976
+        }
     },
     {
         "name": "Gray Wolf",
         "scientific_name": "Canis lupus",
         "description": "The largest member of the dog family and a social animal that lives in packs.",
         "origin": "North America, Europe, Asia",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Yellowstone National Park, WY",
+            "Isle Royale National Park, MI",
+            "Voyageurs National Park, MN"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Canidae",
+            "genus": "Canis",
+            "species": "Canis familiaris",
+            "common_name": "Domestic Dog",
+            "taxon_id": 42048
+        }
     },
     {
         "name": "Raccoon",
         "scientific_name": "Procyon lotor",
         "description": "Known for its dexterity and 'masked' face.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Golden Gate Park, CA",
+            "Central Park, NY",
+            "Everglades National Park, FL"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Procyonidae",
+            "genus": "Procyon",
+            "species": "Procyon lotor",
+            "common_name": "Common Raccoon",
+            "taxon_id": 41663
+        }
     },
     {
         "name": "North American Beaver",
         "scientific_name": "Castor canadensis",
         "description": "Their dams create wetlands that support thousands of other species.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Rodentia",
+            "family": "Castoridae",
+            "genus": "Castor",
+            "species": "Castor canadensis",
+            "common_name": "American Beaver",
+            "taxon_id": 43794
+        }
     },
     {
         "name": "Striped Skunk",
         "scientific_name": "Mephitis mephitis",
         "description": "Can spray its defensive musk up to 10 feet.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Suburban Areas (North America)",
+            "Shenandoah National Park, VA",
+            "Point Reyes, CA"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Mephitidae",
+            "genus": null,
+            "species": "Mephitis",
+            "common_name": "Striped and Hooded Skunks",
+            "taxon_id": 41880
+        }
     },
     {
         "name": "Virginia Opossum",
         "scientific_name": "Didelphis virginiana",
         "description": "The only marsupial (pouched mammal) found north of Mexico.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Suburban Areas (Eastern US)",
+            "Great Smoky Mountains, TN",
+            "Ozark National Forest, AR"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Didelphimorphia",
+            "family": "Didelphidae",
+            "genus": "Didelphis",
+            "species": "Didelphis virginiana",
+            "common_name": "Virginia Opossum",
+            "taxon_id": 42652
+        }
     },
     {
         "name": "Eastern Gray Squirrel",
         "scientific_name": "Sciurus carolinensis",
         "description": "Plays a crucial role in forest regeneration by burying nuts.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Rodentia",
+            "family": "Sciuridae",
+            "genus": "Sciurus",
+            "species": "Sciurus carolinensis",
+            "common_name": "Eastern Gray Squirrel",
+            "taxon_id": 46017
+        }
     },
     {
         "name": "Red Fox",
         "scientific_name": "Vulpes vulpes",
         "description": "The largest of the true foxes and highly adaptable to urban environments.",
         "origin": "North America, Europe, Asia, North Africa",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "San Juan Island National Historical Park, WA",
+            "Acadia National Park, ME",
+            "Prince Edward Island National Park, Canada"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Canidae",
+            "genus": null,
+            "species": "Vulpes",
+            "common_name": "Typical Foxes",
+            "taxon_id": 42069
+        }
     },
     {
         "name": "Bald Eagle",
         "scientific_name": "Haliaeetus leucocephalus",
         "description": "Builds the largest nest of any North American bird.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Haines, AK (Chilkat Bald Eagle Preserve)",
+            "Upper Mississippi River, IA/IL",
+            "Klamath Basin, OR/CA"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Accipitriformes",
+            "family": "Accipitridae",
+            "genus": "Haliaeetus",
+            "species": "Haliaeetus leucocephalus",
+            "common_name": "Bald Eagle",
+            "taxon_id": 5305
+        }
     },
     {
         "name": "Red-tailed Hawk",
         "scientific_name": "Buteo jamaicensis",
         "description": "Known for its rasping scream, often used in movies as a generic eagle sound.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Accipitriformes",
+            "family": "Accipitridae",
+            "genus": "Buteo",
+            "species": "Buteo jamaicensis",
+            "common_name": "Red-tailed Hawk",
+            "taxon_id": 5212
+        }
     },
     {
         "name": "Great Blue Heron",
         "scientific_name": "Ardea herodias",
         "description": "Hunts by standing motionless in shallow water waiting for fish.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Pelecaniformes",
+            "family": "Ardeidae",
+            "genus": "Ardea",
+            "species": "Ardea herodias",
+            "common_name": "Great Blue Heron",
+            "taxon_id": 4956
+        }
     },
     {
         "name": "Wild Turkey",
         "scientific_name": "Meleagris gallopavo",
         "description": "Benjamin Franklin famously preferred this bird over the Bald Eagle.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Great Smoky Mountains, TN",
+            "Land Between the Lakes, KY/TN",
+            "Suburban Northeast US"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Galliformes",
+            "family": "Phasianidae",
+            "genus": "Meleagris",
+            "species": "Meleagris gallopavo",
+            "common_name": "Wild Turkey",
+            "taxon_id": 906
+        }
     },
     {
         "name": "Canada Goose",
         "scientific_name": "Branta canadensis",
         "description": "Famous for their V-shaped flying formation.",
         "origin": "North America, Europe",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America, Europe"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Anseriformes",
+            "family": "Anatidae",
+            "genus": "Branta",
+            "species": "Branta canadensis",
+            "common_name": "Canada Goose",
+            "taxon_id": 7089
+        }
     },
     {
         "name": "American Alligator",
         "scientific_name": "Alligator mississippiensis",
         "description": "Have been around for about 37 million years.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Everglades National Park, FL",
+            "Okefenokee Swamp, GA",
+            "Brazos Bend State Park, TX"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Reptilia",
+            "order": "Crocodylia",
+            "family": "Alligatoridae",
+            "genus": "Alligator",
+            "species": "Alligator mississippiensis",
+            "common_name": "American Alligator",
+            "taxon_id": 26159
+        }
     },
     {
-        "name": "Eastern Box Turtle",
+        "name": "Common Box Turtle",
         "scientific_name": "Terrapene carolina",
         "description": "Can live for over 100 years in the wild.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Vulnerable",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Reptilia",
+            "order": "Testudines",
+            "family": "Emydidae",
+            "genus": "Terrapene",
+            "species": "Terrapene carolina",
+            "common_name": "Common Box Turtle",
+            "taxon_id": 39814
+        }
     },
     {
         "name": "American Crocodile",
         "scientific_name": "Crocodylus acutus",
         "description": "Unlike the alligator's U-shaped snout, crocodiles have a V-shaped snout and visible lower teeth.",
         "origin": "North America, South America, Central America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Vulnerable",
+        "hotspots": [
+            "Everglades National Park (Flamingo), FL",
+            "Crocodile Lake National Wildlife Refuge, FL",
+            "Biscayne National Park, FL"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Reptilia",
+            "order": "Crocodylia",
+            "family": "Crocodylidae",
+            "genus": "Crocodylus",
+            "species": "Crocodylus acutus",
+            "common_name": "American Crocodile",
+            "taxon_id": 26085
+        }
     },
     {
         "name": "Burmese Python",
         "scientific_name": "Python bivittatus",
         "description": "Massive constrictors decimating mammals in the Florida Everglades.",
         "origin": "Asia",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Vulnerable",
+        "hotspots": [
+            "Everglades National Park, FL",
+            "Big Cypress National Preserve, FL",
+            "Southern Florida Waterways"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Reptilia",
+            "order": "Squamata",
+            "family": "Pythonidae",
+            "genus": "Python",
+            "species": "Python bivittatus",
+            "common_name": "Burmese Python",
+            "taxon_id": 238252
+        }
     },
     {
         "name": "Green Iguana",
         "scientific_name": "Iguana iguana",
         "description": "Cause damage to infrastructure by digging burrows; thrive in Florida.",
         "origin": "South America, Central America",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Key West, FL",
+            "Miami, FL (Suburban Areas)",
+            "Puerto Rico"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": null,
+            "order": null,
+            "family": null,
+            "genus": "Iguana",
+            "species": "Iguana iguana",
+            "taxon_id": 35342
+        }
     },
     {
         "name": "Argentine Black and White Tegu",
         "scientific_name": "Salvator merianae",
         "description": "Large lizard that eats the eggs of native birds and reptiles.",
         "origin": "South America",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in South America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Reptilia",
+            "order": "Squamata",
+            "family": "Teiidae",
+            "genus": "Salvator",
+            "species": "Salvator merianae",
+            "common_name": "Argentine Black-and-white Tegu",
+            "taxon_id": 318758
+        }
     },
     {
         "name": "Cane Toad",
         "scientific_name": "Rhinella marina",
         "description": "Toxic amphibian that kills pets and native predators who try to eat it.",
         "origin": "South America, Australia",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in South America, Australia"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Amphibia",
+            "order": "Anura",
+            "family": "Bufonidae",
+            "genus": "Rhinella",
+            "species": "Rhinella marina",
+            "common_name": "Cane Toad",
+            "taxon_id": 553515
+        }
     },
     {
         "name": "European Starling",
         "scientific_name": "Sturnus vulgaris",
         "description": "Introduced to NY in 1890; huge flocks damage crops and airplanes.",
         "origin": "Europe, Asia",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in Europe, Asia"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Sturnidae",
+            "genus": "Sturnus",
+            "species": "Sturnus vulgaris",
+            "common_name": "European Starling",
+            "taxon_id": 14850
+        }
     },
     {
         "name": "House Sparrow",
         "scientific_name": "Passer domesticus",
         "description": "Aggressively competes with native birds for nesting cavities.",
         "origin": "Europe, Asia",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in Europe, Asia"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Passeridae",
+            "genus": "Passer",
+            "species": "Passer domesticus",
+            "common_name": "House Sparrow",
+            "taxon_id": 13858
+        }
     },
     {
         "name": "Rock Pigeon",
         "scientific_name": "Columba livia",
         "description": "The common city pigeon; carries diseases and damages buildings.",
         "origin": "Europe, Asia, Africa",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in Europe, Asia, Africa"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Columbiformes",
+            "family": "Columbidae",
+            "genus": "Columba",
+            "species": "Columba livia",
+            "common_name": "Rock Pigeon",
+            "taxon_id": 3017
+        }
     },
     {
         "name": "Monk Parakeet",
         "scientific_name": "Myiopsitta monachus",
         "description": "Builds massive communal nests on power lines, causing outages.",
         "origin": "South America",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in South America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Psittaciformes",
+            "family": "Psittacidae",
+            "genus": "Myiopsitta",
+            "species": "Myiopsitta monachus",
+            "common_name": "Monk Parakeet",
+            "taxon_id": 19349
+        }
     },
     {
         "name": "Wild Boar",
         "scientific_name": "Sus scrofa",
         "description": "Highly destructive to crops and native habitats due to rooting behavior.",
         "origin": "Europe, Asia, North Africa",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Great Smoky Mountains, TN",
+            "Big South Fork, TN/KY",
+            "Congaree National Park, SC"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Suidae",
+            "genus": "Sus",
+            "species": "Sus scrofa",
+            "common_name": "Wild Boar",
+            "taxon_id": 42134
+        }
     },
     {
         "name": "Nutria",
         "scientific_name": "Myocastor coypus",
         "description": "Large rodent that destroys wetlands; looks like a beaver with a rat tail.",
         "origin": "South America",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Blackwater National Wildlife Refuge, MD",
+            "Jean Lafitte National Historical Park, LA",
+            "Willamette Valley, OR"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Rodentia",
+            "family": "Echimyidae",
+            "genus": "Myocastor",
+            "species": "Myocastor coypus",
+            "common_name": "Coypu",
+            "taxon_id": 43997
+        }
     },
     {
         "name": "Elk",
         "scientific_name": "Cervus canadensis",
         "description": "One of the largest species within the deer family, known for massive antlers.",
         "origin": "North America, Asia",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Rocky Mountain National Park, CO",
+            "Yellowstone National Park, WY",
+            "Olympic National Park, WA"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Cervidae",
+            "genus": "Cervus",
+            "species": "Cervus canadensis",
+            "common_name": "Wapiti",
+            "taxon_id": 204114
+        }
     },
     {
         "name": "Pronghorn",
         "scientific_name": "Antilocapra americana",
         "description": "The fastest land mammal in the Western Hemisphere.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Antilocapridae",
+            "genus": "Antilocapra",
+            "species": "Antilocapra americana",
+            "common_name": "Pronghorn",
+            "taxon_id": 42429
+        }
     },
     {
         "name": "Northern Cardinal",
         "scientific_name": "Cardinalis cardinalis",
         "description": "Males are brilliant red; they don't migrate and brighten up winter landscapes.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Cardinalidae",
+            "genus": null,
+            "species": "Cardinalis",
+            "common_name": "Typical Cardinals",
+            "taxon_id": 9083
+        }
     },
     {
         "name": "American Bullfrog",
         "scientific_name": "Lithobates catesbeianus",
         "description": "The largest frog in North America, with a distinctive deep call.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Amphibia",
+            "order": "Anura",
+            "family": "Ranidae",
+            "genus": "Lithobates",
+            "species": "Lithobates catesbeianus",
+            "common_name": "American Bullfrog",
+            "taxon_id": 65979
+        }
     },
     {
         "name": "Gila Monster",
         "scientific_name": "Heloderma suspectum",
         "description": "One of the few venomous lizards in the world, found in the Southwest.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Near Threatened",
+        "hotspots": [
+            "Saguaro National Park, AZ",
+            "Sonoran Desert National Monument, AZ",
+            "Tonto National Monument, AZ"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Reptilia",
+            "order": "Squamata",
+            "family": "Helodermatidae",
+            "genus": "Heloderma",
+            "species": "Heloderma suspectum",
+            "common_name": "Gila Monster",
+            "taxon_id": 35003
+        }
     },
     {
         "name": "Nine-banded Armadillo",
         "scientific_name": "Dasypus novemcinctus",
         "description": "Known for its armor-like shell and tendency to jump when startled.",
         "origin": "North America, South America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America, South America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Cingulata",
+            "family": "Dasypodidae",
+            "genus": "Dasypus",
+            "species": "Dasypus novemcinctus",
+            "common_name": "Southern Long-nosed Armadillo",
+            "taxon_id": 47075
+        }
     },
     {
         "name": "Bighorn Sheep",
         "scientific_name": "Ovis canadensis",
         "description": "Known for their massive curved horns and ability to climb steep cliffs.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Rocky Mountain National Park, CO",
+            "Badlands National Park, SD",
+            "Zion National Park, UT"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Bovidae",
+            "genus": "Ovis",
+            "species": "Ovis canadensis",
+            "common_name": "Bighorn Sheep",
+            "taxon_id": 42391
+        }
     },
     {
         "name": "North American River Otter",
         "scientific_name": "Lontra canadensis",
         "description": "Playful semi-aquatic mammals with thick, water-repellent fur.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Mustelidae",
+            "genus": "Lontra",
+            "species": "Lontra canadensis",
+            "common_name": "North American River Otter",
+            "taxon_id": 41777
+        }
     },
     {
         "name": "Polar Bear",
         "scientific_name": "Ursus maritimus",
         "description": "The largest land carnivore, perfectly adapted for life on Arctic sea ice.",
         "origin": "North America, Arctic",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Vulnerable",
+        "hotspots": [
+            "Churchill, Manitoba (Canada)",
+            "Kaktovik, AK",
+            "Svalbard (Norway)"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Ursidae",
+            "genus": "Ursus",
+            "species": "Ursus maritimus",
+            "common_name": "Polar Bear",
+            "taxon_id": 41644
+        }
     },
     {
         "name": "Arctic Fox",
         "scientific_name": "Vulpes lagopus",
         "description": "Changes coat color from brown in summer to white in winter for camouflage.",
         "origin": "North America, Arctic",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Arctic National Wildlife Refuge, AK",
+            "Pribilof Islands, AK",
+            "Churchill, Manitoba"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Canidae",
+            "genus": "Vulpes",
+            "species": "Vulpes lagopus",
+            "common_name": "Arctic Fox",
+            "taxon_id": 233598
+        }
     },
     {
         "name": "Caribou",
         "scientific_name": "Rangifer tarandus",
         "description": "Known as Reindeer globally; both males and females grow antlers.",
         "origin": "North America, Europe, Asia",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Vulnerable",
+        "hotspots": [
+            "Natural Reserves in North America, Europe, Asia"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Cervidae",
+            "genus": "Rangifer",
+            "species": "Rangifer tarandus",
+            "common_name": "Caribou",
+            "taxon_id": 42199
+        }
     },
     {
-        "name": "Dall Sheep",
+        "name": "Thinhorn Sheep",
         "scientific_name": "Ovis dalli",
         "description": "White sheep found in mountain ranges of Alaska and northwest Canada.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Bovidae",
+            "genus": "Ovis",
+            "species": "Ovis dalli",
+            "common_name": "Thinhorn Sheep",
+            "taxon_id": 42390
+        }
     },
     {
         "name": "Muskox",
         "scientific_name": "Ovibos moschatus",
         "description": "Large, shaggy mammal adapted to the frigid Arctic tundra.",
         "origin": "North America, Greenland",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America, Greenland"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Bovidae",
+            "genus": "Ovibos",
+            "species": "Ovibos moschatus",
+            "common_name": "Muskox",
+            "taxon_id": 42412
+        }
     },
     {
         "name": "Wolverine",
         "scientific_name": "Gulo gulo",
         "description": "A powerful and aggressive scavenger, resembling a small bear but actually a weasel.",
         "origin": "North America, Europe, Asia",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America, Europe, Asia"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Anseriformes",
+            "family": "Anatidae",
+            "genus": "Mergus",
+            "species": "Mergus merganser",
+            "common_name": "Common Merganser",
+            "taxon_id": 41852
+        }
     },
     {
         "name": "Spotted Salamander",
         "scientific_name": "Ambystoma maculatum",
         "description": "Large black salamander with distinct yellow or orange spots.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Amphibia",
+            "order": "Caudata",
+            "family": "Ambystomatidae",
+            "genus": "Ambystoma",
+            "species": "Ambystoma maculatum",
+            "common_name": "Spotted Salamander",
+            "taxon_id": 26790
+        }
     },
     {
-        "name": "Red-spotted Newt",
+        "name": "Eastern Newt",
         "scientific_name": "Notophthalmus viridescens",
         "description": "Has a bright orange terrestrial stage known as the 'red eft'.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Amphibia",
+            "order": "Caudata",
+            "family": "Salamandridae",
+            "genus": "Notophthalmus",
+            "species": "Notophthalmus viridescens",
+            "common_name": "Eastern Newt",
+            "taxon_id": 27805
+        }
     },
     {
         "name": "Eastern Hellbender",
         "scientific_name": "Cryptobranchus alleganiensis",
         "description": "The largest aquatic salamander in the US, nicknamed 'snot otter'.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Vulnerable",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Amphibia",
+            "order": "Caudata",
+            "family": "Cryptobranchidae",
+            "genus": "Cryptobranchus",
+            "species": "Cryptobranchus alleganiensis",
+            "common_name": "Hellbender",
+            "taxon_id": 26804
+        }
     },
     {
         "name": "Snowy Owl",
         "scientific_name": "Bubo scandiacus",
         "description": "Large, white owl of the high Arctic, made famous by Harry Potter.",
         "origin": "North America, Arctic",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Vulnerable",
+        "hotspots": [
+            "Logan Airport, MA",
+            "Duluth Harbor, MN",
+            "Jones Beach State Park, NY"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Strigiformes",
+            "family": "Strigidae",
+            "genus": "Bubo",
+            "species": "Bubo scandiacus",
+            "common_name": "Snowy Owl",
+            "taxon_id": 144594
+        }
     },
     {
         "name": "Peregrine Falcon",
         "scientific_name": "Falco peregrinus",
         "description": "The fastest animal on the planet, reaching speeds over 200 mph in a dive.",
         "origin": "Global",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Acadia National Park, ME",
+            "Zion National Park, UT",
+            "New York City Skyscrapers, NY"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Falconiformes",
+            "family": "Falconidae",
+            "genus": "Falco",
+            "species": "Falco peregrinus",
+            "common_name": "Peregrine Falcon",
+            "taxon_id": 4647
+        }
     },
     {
         "name": "Barn Owl",
         "scientific_name": "Tyto alba",
         "description": "Distinctive heart-shaped face and pale plumage, found worldwide.",
         "origin": "Global",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in Global"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Strigiformes",
+            "family": "Tytonidae",
+            "genus": "Tyto",
+            "species": "Tyto alba",
+            "common_name": "Western Barn Owl",
+            "taxon_id": 20445
+        }
     },
     {
         "name": "Ring-necked Pheasant",
         "scientific_name": "Phasianus colchicus",
         "description": "Popular game bird with colorful plumage, introduced from Asia.",
         "origin": "Asia",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in Asia"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Galliformes",
+            "family": "Phasianidae",
+            "genus": "Phasianus",
+            "species": "Phasianus colchicus",
+            "common_name": "Ring-necked Pheasant",
+            "taxon_id": 981
+        }
     },
     {
         "name": "Mute Swan",
         "scientific_name": "Cygnus olor",
         "description": "Large white swan with an orange beak; aggressively defends territory.",
         "origin": "Europe, Asia",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in Europe, Asia"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Anseriformes",
+            "family": "Anatidae",
+            "genus": "Cygnus",
+            "species": "Cygnus olor",
+            "common_name": "Mute Swan",
+            "taxon_id": 6921
+        }
     },
     {
         "name": "Brown Anole",
         "scientific_name": "Anolis sagrei",
         "description": "Highly invasive lizard that displaces the native Green Anole.",
         "origin": "Cuba, Bahamas",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in Cuba, Bahamas"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Reptilia",
+            "order": "Squamata",
+            "family": "Anolidae",
+            "genus": "Anolis",
+            "species": "Anolis sagrei",
+            "common_name": "Brown Anole",
+            "taxon_id": 116461
+        }
     },
     {
         "name": "Nile Monitor",
         "scientific_name": "Varanus niloticus",
         "description": "Large carnivorous lizard established in Florida, preying on native wildlife.",
         "origin": "Africa",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in Africa"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Reptilia",
+            "order": "Squamata",
+            "family": "Varanidae",
+            "genus": "Varanus",
+            "species": "Varanus niloticus",
+            "common_name": "Nile Monitor",
+            "taxon_id": 71085
+        }
     },
     {
         "name": "Axis Deer",
         "scientific_name": "Axis axis",
         "description": "Originally from India, now invasive in Texas and Hawaii; spots persist into adulthood.",
         "origin": "Asia",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in Asia"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Cervidae",
+            "genus": null,
+            "species": "Axis",
+            "common_name": "Axis Deer",
+            "taxon_id": 42166
+        }
     },
     {
         "name": "Blue Jay",
         "scientific_name": "Cyanocitta cristata",
         "description": "Noisy and intelligent bird with bright blue plumage.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Passeriformes",
+            "family": "Corvidae",
+            "genus": "Cyanocitta",
+            "species": "Cyanocitta cristata",
+            "common_name": "Blue Jay",
+            "taxon_id": 8229
+        }
     },
     {
         "name": "Harbor Seal",
         "scientific_name": "Phoca vitulina",
         "description": "True seal (no ear flaps); often seen resting on rocks.",
         "origin": "Northern Hemisphere",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in Northern Hemisphere"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Phocidae",
+            "genus": "Phoca",
+            "species": "Phoca vitulina",
+            "common_name": "Harbor Seal",
+            "taxon_id": 41708
+        }
     },
     {
         "name": "California Sea Lion",
         "scientific_name": "Zalophus californianus",
         "description": "Eared seal known for its intelligence and barking vocalization.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Otariidae",
+            "genus": "Zalophus",
+            "species": "Zalophus californianus",
+            "common_name": "California Sea Lion",
+            "taxon_id": 41740
+        }
     },
     {
         "name": "Walrus",
         "scientific_name": "Odobenus rosmarus",
         "description": "Massive Arctic marine mammal recognizable by prominent tusks.",
         "origin": "Arctic",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Vulnerable",
+        "hotspots": [
+            "Natural Reserves in Arctic"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Odobenidae",
+            "genus": "Odobenus",
+            "species": "Odobenus rosmarus",
+            "common_name": "Walrus",
+            "taxon_id": 41766
+        }
     },
     {
         "name": "Northern Elephant Seal",
         "scientific_name": "Mirounga angustirostris",
         "description": "Huge seal with a distinctive trunk-like proboscis in males.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Phocidae",
+            "genus": "Mirounga",
+            "species": "Mirounga angustirostris",
+            "common_name": "Northern Elephant Seal",
+            "taxon_id": 41728
+        }
     },
     {
         "name": "Great Horned Owl",
         "scientific_name": "Bubo virginianus",
         "description": "Large owl with distinctive ear tufts.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Forest Park, MO",
+            "Sax-Zim Bog, MN",
+            "Everywhere in North America (Nocturnal)"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Strigiformes",
+            "family": "Strigidae",
+            "genus": "Bubo",
+            "species": "Bubo virginianus",
+            "common_name": "Great Horned Owl",
+            "taxon_id": 20044
+        }
     },
     {
         "name": "Veiled Chameleon",
         "scientific_name": "Chamaeleo calyptratus",
         "description": "Invasive in Florida; distinguishable by the towering casque on its head.",
         "origin": "Middle East",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in Middle East"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Reptilia",
+            "order": "Squamata",
+            "family": "Chamaeleonidae",
+            "genus": "Chamaeleo",
+            "species": "Chamaeleo calyptratus",
+            "common_name": "Veiled Chameleon",
+            "taxon_id": 32873
+        }
     },
     {
         "name": "Tokay Gecko",
         "scientific_name": "Gekko gecko",
         "description": "Large, aggressive gecko with blue skin and orange spots.",
         "origin": "Asia",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in Asia"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Reptilia",
+            "order": "Squamata",
+            "family": "Gekkonidae",
+            "genus": "Gekko",
+            "species": "Gekko gecko",
+            "common_name": "Tokay Gecko",
+            "taxon_id": 34615
+        }
     },
     {
         "name": "Eastern Chipmunk",
         "scientific_name": "Tamias striatus",
         "description": "Small ground squirrel with distinct stripes along its back.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Rodentia",
+            "family": "Sciuridae",
+            "genus": "Tamias",
+            "species": "Tamias striatus",
+            "common_name": "Eastern Chipmunk",
+            "taxon_id": 46217
+        }
     },
     {
         "name": "Osprey",
         "scientific_name": "Pandion haliaetus",
         "description": "The 'Fish Hawk', unique for diving feet-first into water.",
         "origin": "Global",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in Global"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Accipitriformes",
+            "family": "Pandionidae",
+            "genus": "Pandion",
+            "species": "Pandion haliaetus",
+            "common_name": "Osprey",
+            "taxon_id": 116999
+        }
     },
     {
         "name": "Brown Pelican",
         "scientific_name": "Pelecanus occidentalis",
         "description": "Large water bird known for its massive throat pouch.",
         "origin": "North America, South America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America, South America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Pelecaniformes",
+            "family": "Pelecanidae",
+            "genus": "Pelecanus",
+            "species": "Pelecanus occidentalis",
+            "common_name": "Brown Pelican",
+            "taxon_id": 4328
+        }
     },
     {
         "name": "Western Diamondback Rattlesnake",
         "scientific_name": "Crotalus atrox",
         "description": "Venomous pit viper with a distinctive rattle at the end of its tail.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Reptilia",
+            "order": "Squamata",
+            "family": "Viperidae",
+            "genus": "Crotalus",
+            "species": "Crotalus atrox",
+            "common_name": "Western Diamond-backed Rattlesnake",
+            "taxon_id": 30764
+        }
     },
     {
         "name": "Common Garter Snake",
         "scientific_name": "Thamnophis sirtalis",
         "description": "The most widely distributed snake in North America.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Reptilia",
+            "order": "Squamata",
+            "family": "Colubridae",
+            "genus": "Thamnophis",
+            "species": "Thamnophis sirtalis",
+            "common_name": "Common Garter Snake",
+            "taxon_id": 28362
+        }
     },
     {
         "name": "Eastern Copperhead",
         "scientific_name": "Agkistrodon contortrix",
         "description": "Venomous snake with a distinct hourglass pattern.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Reptilia",
+            "order": "Squamata",
+            "family": "Viperidae",
+            "genus": "Agkistrodon",
+            "species": "Agkistrodon contortrix",
+            "common_name": "Eastern Copperhead",
+            "taxon_id": 912622
+        }
     },
     {
         "name": "Domestic Cat",
         "scientific_name": "Felis catus",
         "description": "Common house cat; feral populations decimate local birdlife.",
         "origin": "Global",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Not Evaluated",
+        "hotspots": [
+            "Natural Reserves in Global"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Felidae",
+            "genus": "Felis",
+            "species": "Felis catus",
+            "common_name": "Domestic Cat",
+            "taxon_id": 118552
+        }
     },
     {
         "name": "Domestic Dog",
         "scientific_name": "Canis lupus familiaris",
         "description": "Man's best friend; breeds vary wildly in appearance.",
         "origin": "Global",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Not Evaluated",
+        "hotspots": [
+            "Natural Reserves in Global"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Canidae",
+            "genus": "Canis",
+            "species": "Canis familiaris",
+            "common_name": "Domestic Dog",
+            "taxon_id": 47144
+        }
     },
     {
         "name": "Common Snapping Turtle",
         "scientific_name": "Chelydra serpentina",
         "description": "Large freshwater turtle with a prehistoric look and powerful bite.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Reptilia",
+            "order": "Testudines",
+            "family": "Chelydridae",
+            "genus": "Chelydra",
+            "species": "Chelydra serpentina",
+            "common_name": "Common Snapping Turtle",
+            "taxon_id": 39682
+        }
     },
     {
         "name": "Painted Turtle",
         "scientific_name": "Chrysemys picta",
         "description": "The most widespread native turtle of North America.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Reptilia",
+            "order": "Testudines",
+            "family": "Emydidae",
+            "genus": "Chrysemys",
+            "species": "Chrysemys picta",
+            "common_name": "Painted Turtle",
+            "taxon_id": 39771
+        }
     },
     {
         "name": "Eastern Cottontail",
         "scientific_name": "Sylvilagus floridanus",
         "description": "The most common rabbit in North America, with a cotton-ball tail.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Lagomorpha",
+            "family": "Leporidae",
+            "genus": "Sylvilagus",
+            "species": "Sylvilagus floridanus",
+            "common_name": "Eastern Cottontail",
+            "taxon_id": 43111
+        }
     },
     {
         "name": "American Mink",
         "scientific_name": "Neogale vison",
         "description": "Semi-aquatic carnivore with rich dark fur.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Mustelidae",
+            "genus": "Neogale",
+            "species": "Neogale vison",
+            "common_name": "American Mink",
+            "taxon_id": 1264432
+        }
     },
     {
         "name": "Black-tailed Prairie Dog",
         "scientific_name": "Cynomys ludovicianus",
         "description": "Keystone species of the Great Plains; lives in vast underground towns.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Rodentia",
+            "family": "Sciuridae",
+            "genus": "Cynomys",
+            "species": "Cynomys ludovicianus",
+            "common_name": "Black-tailed Prairie Dog",
+            "taxon_id": 46179
+        }
     },
     {
         "name": "North American Porcupine",
         "scientific_name": "Erethizon dorsatum",
         "description": "Protected by sharp quills; slow-moving and climbs trees.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Rodentia",
+            "family": "Erethizontidae",
+            "genus": "Erethizon",
+            "species": "Erethizon dorsatum",
+            "common_name": "North American Porcupine",
+            "taxon_id": 44026
+        }
     },
     {
         "name": "Jaguar",
         "scientific_name": "Panthera onca",
         "description": "Largest cat in the Americas; rare individuals cross into Arizona.",
         "origin": "North America, South America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Near Threatened",
+        "hotspots": [
+            "Natural Reserves in North America, South America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Felidae",
+            "genus": "Panthera",
+            "species": "Panthera onca",
+            "common_name": "Jaguar",
+            "taxon_id": 41970
+        }
     },
     {
         "name": "Eastern Fox Squirrel",
         "scientific_name": "Sciurus niger",
         "description": "Largest tree squirrel in North America, with orange-tinged fur.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Rodentia",
+            "family": "Sciuridae",
+            "genus": "Sciurus",
+            "species": "Sciurus niger",
+            "common_name": "Eastern Fox Squirrel",
+            "taxon_id": 46020
+        }
     },
     {
         "name": "American Red Squirrel",
         "scientific_name": "Tamiasciurus hudsonicus",
         "description": "Small, territorial squirrel known for its loud, chattering call.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Rodentia",
+            "family": "Sciuridae",
+            "genus": "Tamiasciurus",
+            "species": "Tamiasciurus hudsonicus",
+            "common_name": "American Red Squirrel",
+            "taxon_id": 46260
+        }
     },
     {
         "name": "Groundhog",
         "scientific_name": "Marmota monax",
         "description": "Also known as Woodchuck; lowland cousin of the marmot.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Rodentia",
+            "family": "Sciuridae",
+            "genus": "Marmota",
+            "species": "Marmota monax",
+            "common_name": "Groundhog",
+            "taxon_id": 46095
+        }
     },
     {
         "name": "Yellow-bellied Marmot",
         "scientific_name": "Marmota flaviventris",
         "description": "The 'Rock Chuck' of western mountains.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Rodentia",
+            "family": "Sciuridae",
+            "genus": "Marmota",
+            "species": "Marmota flaviventris",
+            "common_name": "Yellow-bellied Marmot",
+            "taxon_id": 46086
+        }
     },
     {
         "name": "Desert Tortoise",
         "scientific_name": "Gopherus agassizii",
         "description": "Slow-moving reptile adapted to life in the Mojave and Sonoran deserts.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Critically Endangered",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Reptilia",
+            "order": "Testudines",
+            "family": "Testudinidae",
+            "genus": "Gopherus",
+            "species": "Gopherus agassizii",
+            "common_name": "Mojave Desert Tortoise",
+            "taxon_id": 40086
+        }
     },
     {
         "name": "Rhesus Macaque",
         "scientific_name": "Macaca mulatta",
         "description": "Established feral populations exist in Florida (Silver Springs).",
         "origin": "Asia",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in Asia"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Primates",
+            "family": "Cercopithecidae",
+            "genus": "Macaca",
+            "species": "Macaca mulatta",
+            "common_name": "Rhesus Macaque",
+            "taxon_id": 43460
+        }
     },
     {
         "name": "American Badger",
         "scientific_name": "Taxidea taxus",
         "description": "Fierce fossorial carnivore with a distinctive facial stripe.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Mustelidae",
+            "genus": "Taxidea",
+            "species": "Taxidea taxus",
+            "common_name": "American Badger",
+            "taxon_id": 41789
+        }
     },
     {
         "name": "American Marten",
         "scientific_name": "Martes americana",
         "description": "Tree-dwelling weasel found in northern forests.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Mustelidae",
+            "genus": "Martes",
+            "species": "Martes americana",
+            "common_name": "American Marten",
+            "taxon_id": 41798
+        }
     },
     {
         "name": "Ocelot",
         "scientific_name": "Leopardus pardalis",
         "description": "Small wild cat with beautiful chain-like rosettes.",
         "origin": "North America, South America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America, South America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Felidae",
+            "genus": "Leopardus",
+            "species": "Leopardus pardalis",
+            "common_name": "Ocelot",
+            "taxon_id": 41997
+        }
     },
     {
         "name": "Gemsbok",
         "scientific_name": "Oryx gazella",
         "description": "Distinctive antelope with long straight horns; introduced to White Sands, NM.",
         "origin": "Africa",
-        "category": "Invasive"
+        "category": "Invasive",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in Africa"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Bovidae",
+            "genus": "Oryx",
+            "species": "Oryx gazella",
+            "common_name": "Gemsbok",
+            "taxon_id": 42308
+        }
     },
     {
         "name": "Gray Fox",
         "scientific_name": "Urocyon cinereoargenteus",
         "description": "The only American canid that can climb trees.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Canidae",
+            "genus": "Urocyon",
+            "species": "Urocyon cinereoargenteus",
+            "common_name": "Gray Fox",
+            "taxon_id": 42076
+        }
     },
     {
         "name": "Black-footed Ferret",
         "scientific_name": "Mustela nigripes",
         "description": "One of the most endangered mammals in North America.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Endangered",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Mustelidae",
+            "genus": "Mustela",
+            "species": "Mustela nigripes",
+            "common_name": "Black-footed Ferret",
+            "taxon_id": 41809
+        }
     },
     {
         "name": "Sea Otter",
         "scientific_name": "Enhydra lutris",
         "description": "Keystone marine mammal; keeps urchin populations in check.",
         "origin": "North America, Asia",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Endangered",
+        "hotspots": [
+            "Monterey Bay, CA",
+            "Kenai Fjords National Park, AK",
+            "Olympic Coast, WA"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Carnivora",
+            "family": "Mustelidae",
+            "genus": "Enhydra",
+            "species": "Enhydra lutris",
+            "common_name": "Sea Otter",
+            "taxon_id": 41860
+        }
     },
     {
         "name": "American Flamingo",
         "scientific_name": "Phoenicopterus ruber",
         "description": "Iconic pink bird found in shallow lagoons and mudflats.",
         "origin": "North America, South America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America, South America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Phoenicopteriformes",
+            "family": "Phoenicopteridae",
+            "genus": "Phoenicopterus",
+            "species": "Phoenicopterus roseus",
+            "common_name": "Greater Flamingo",
+            "taxon_id": 4257
+        }
     },
     {
         "name": "Green Anole",
         "scientific_name": "Anolis carolinensis",
         "description": "The only anole native to the US; changes color from green to brown.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Reptilia",
+            "order": "Squamata",
+            "family": "Anolidae",
+            "genus": "Anolis",
+            "species": "Anolis carolinensis",
+            "common_name": "Green Anole",
+            "taxon_id": 36514
+        }
     },
     {
         "name": "Whooping Crane",
         "scientific_name": "Grus americana",
         "description": "Tallest bird in North America; famous conservation success story.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Endangered",
+        "hotspots": [
+            "Aransas National Wildlife Refuge, TX",
+            "Wood Buffalo National Park (Canada)",
+            "Necedah National Wildlife Refuge, WI"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Gruiformes",
+            "family": "Gruidae",
+            "genus": "Grus",
+            "species": "Grus americana",
+            "common_name": "Whooping Crane",
+            "taxon_id": 34
+        }
     },
     {
         "name": "Mountain Goat",
         "scientific_name": "Oreamnos americanus",
         "description": "Sure-footed climber found in high alpine environments.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Glacier National Park, MT",
+            "Mount Rainier National Park, WA",
+            "Olympic National Park, WA"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Bovidae",
+            "genus": "Oreamnos",
+            "species": "Oreamnos americanus",
+            "common_name": "Mountain Goat",
+            "taxon_id": 42414
+        }
     },
     {
         "name": "Snowshoe Hare",
         "scientific_name": "Lepus americanus",
         "description": "Changes color from brown in summer to white in winter.",
         "origin": "North America",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in North America"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Mammalia",
+            "order": "Lagomorpha",
+            "family": "Leporidae",
+            "genus": "Lepus",
+            "species": "Lepus americanus",
+            "common_name": "Snowshoe Hare",
+            "taxon_id": 43132
+        }
     },
     {
         "name": "Mallard",
         "scientific_name": "Anas platyrhynchos",
         "description": "The most familiar duck; male has a glossy green head.",
         "origin": "Global",
-        "category": "Native"
+        "category": "Native",
+        "iucn": "Least Concern",
+        "hotspots": [
+            "Natural Reserves in Global"
+        ],
+        "taxonomy": {
+            "kingdom": "Animalia",
+            "phylum": "Chordata",
+            "class": "Aves",
+            "order": "Anseriformes",
+            "family": "Anatidae",
+            "genus": "Anas",
+            "species": "Anas platyrhynchos",
+            "common_name": "Mallard",
+            "taxon_id": 6930
+        }
     }
 ]

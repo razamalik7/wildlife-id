@@ -1,0 +1,101 @@
+Our Name,taxon_id,Rank,Class,Order,Family,Genus,iNat Species,Iconic,iNat Common
+American Black Bear,41638,species,Mammalia,Carnivora,Ursidae,Ursus,Ursus americanus,Mammalia,American Black Bear
+Grizzly Bear,125461,subspecies,Mammalia,Carnivora,Ursidae,Ursus,Ursus arctos horribilis,Mammalia,Grizzly Bear
+Moose,42196,genus,Mammalia,Artiodactyla,Cervidae,,Alces,Mammalia,True Moose
+White-tailed Deer,42223,species,Mammalia,Artiodactyla,Cervidae,Odocoileus,Odocoileus virginianus,Mammalia,White-tailed Deer
+American Bison,None,,,,,,MISSING ID,,
+Mountain Lion,42007,species,Mammalia,Carnivora,Felidae,Puma,Puma concolor,Mammalia,Mountain Lion
+Coyote,42051,species,Mammalia,Carnivora,Canidae,Canis,Canis latrans,Mammalia,Coyote
+Bobcat,41976,species,Mammalia,Carnivora,Felidae,Lynx,Lynx rufus,Mammalia,Bobcat
+Gray Wolf,47144,species,Mammalia,Carnivora,Canidae,Canis,Canis familiaris,Mammalia,Domestic Dog
+Raccoon,41663,species,Mammalia,Carnivora,Procyonidae,Procyon,Procyon lotor,Mammalia,Common Raccoon
+North American Beaver,43794,species,Mammalia,Rodentia,Castoridae,Castor,Castor canadensis,Mammalia,American Beaver
+Striped Skunk,41878,genus,Mammalia,Carnivora,Mephitidae,,Mephitis,Mammalia,Striped and Hooded Skunks
+Virginia Opossum,42652,species,Mammalia,Didelphimorphia,Didelphidae,Didelphis,Didelphis virginiana,Mammalia,Virginia Opossum
+Eastern Gray Squirrel,46017,species,Mammalia,Rodentia,Sciuridae,Sciurus,Sciurus carolinensis,Mammalia,Eastern Gray Squirrel
+Red Fox,42054,genus,Mammalia,Carnivora,Canidae,,Vulpes,Mammalia,Typical Foxes
+Bald Eagle,5305,species,Aves,Accipitriformes,Accipitridae,Haliaeetus,Haliaeetus leucocephalus,Aves,Bald Eagle
+Red-tailed Hawk,5212,species,Aves,Accipitriformes,Accipitridae,Buteo,Buteo jamaicensis,Aves,Red-tailed Hawk
+Great Blue Heron,4956,species,Aves,Pelecaniformes,Ardeidae,Ardea,Ardea herodias,Aves,Great Blue Heron
+Wild Turkey,906,species,Aves,Galliformes,Phasianidae,Meleagris,Meleagris gallopavo,Aves,Wild Turkey
+Canada Goose,7089,species,Aves,Anseriformes,Anatidae,Branta,Branta canadensis,Aves,Canada Goose
+American Alligator,26159,species,Reptilia,Crocodylia,Alligatoridae,Alligator,Alligator mississippiensis,Reptilia,American Alligator
+Eastern Box Turtle,39814,species,Reptilia,Testudines,Emydidae,Terrapene,Terrapene carolina,Reptilia,Common Box Turtle
+American Crocodile,26085,species,Reptilia,Crocodylia,Crocodylidae,Crocodylus,Crocodylus acutus,Reptilia,American Crocodile
+Burmese Python,238252,species,Reptilia,Squamata,Pythonidae,Python,Python bivittatus,Reptilia,Burmese Python
+Green Iguana,None,,,,,,MISSING ID,,
+Argentine Black and White Tegu,318758,species,Reptilia,Squamata,Teiidae,Salvator,Salvator merianae,Reptilia,Argentine Black-and-white Tegu
+Cane Toad,553515,species,Amphibia,Anura,Bufonidae,Rhinella,Rhinella marina,Amphibia,Cane Toad
+European Starling,14850,species,Aves,Passeriformes,Sturnidae,Sturnus,Sturnus vulgaris,Aves,European Starling
+House Sparrow,13858,species,Aves,Passeriformes,Passeridae,Passer,Passer domesticus,Aves,House Sparrow
+Rock Pigeon,3017,species,Aves,Columbiformes,Columbidae,Columba,Columba livia,Aves,Rock Pigeon
+Monk Parakeet,19349,species,Aves,Psittaciformes,Psittacidae,Myiopsitta,Myiopsitta monachus,Aves,Monk Parakeet
+Wild Boar,42134,species,Mammalia,Artiodactyla,Suidae,Sus,Sus scrofa,Mammalia,Wild Boar
+Nutria,43997,species,Mammalia,Rodentia,Echimyidae,Myocastor,Myocastor coypus,Mammalia,Coypu
+Elk,204114,species,Mammalia,Artiodactyla,Cervidae,Cervus,Cervus canadensis,Mammalia,Wapiti
+Pronghorn,42429,species,Mammalia,Artiodactyla,Antilocapridae,Antilocapra,Antilocapra americana,Mammalia,Pronghorn
+Northern Cardinal,9080,genus,Aves,Passeriformes,Cardinalidae,,Cardinalis,Aves,Typical Cardinals
+American Bullfrog,65979,species,Amphibia,Anura,Ranidae,Lithobates,Lithobates catesbeianus,Amphibia,American Bullfrog
+Gila Monster,35003,species,Reptilia,Squamata,Helodermatidae,Heloderma,Heloderma suspectum,Reptilia,Gila Monster
+Nine-banded Armadillo,47075,species,Mammalia,Cingulata,Dasypodidae,Dasypus,Dasypus novemcinctus,Mammalia,Southern Long-nosed Armadillo
+Bighorn Sheep,42391,species,Mammalia,Artiodactyla,Bovidae,Ovis,Ovis canadensis,Mammalia,Bighorn Sheep
+North American River Otter,41777,species,Mammalia,Carnivora,Mustelidae,Lontra,Lontra canadensis,Mammalia,North American River Otter
+Polar Bear,41644,species,Mammalia,Carnivora,Ursidae,Ursus,Ursus maritimus,Mammalia,Polar Bear
+Arctic Fox,233598,species,Mammalia,Carnivora,Canidae,Vulpes,Vulpes lagopus,Mammalia,Arctic Fox
+Caribou,42199,species,Mammalia,Artiodactyla,Cervidae,Rangifer,Rangifer tarandus,Mammalia,Caribou
+Dall Sheep,42390,species,Mammalia,Artiodactyla,Bovidae,Ovis,Ovis dalli,Mammalia,Thinhorn Sheep
+Muskox,42412,species,Mammalia,Artiodactyla,Bovidae,Ovibos,Ovibos moschatus,Mammalia,Muskox
+Wolverine,7004,species,Aves,Anseriformes,Anatidae,Mergus,Mergus merganser,Aves,Common Merganser
+Spotted Salamander,26790,species,Amphibia,Caudata,Ambystomatidae,Ambystoma,Ambystoma maculatum,Amphibia,Spotted Salamander
+Red-spotted Newt,27805,species,Amphibia,Caudata,Salamandridae,Notophthalmus,Notophthalmus viridescens,Amphibia,Eastern Newt
+Eastern Hellbender,26804,species,Amphibia,Caudata,Cryptobranchidae,Cryptobranchus,Cryptobranchus alleganiensis,Amphibia,Hellbender
+Snowy Owl,144594,species,Aves,Strigiformes,Strigidae,Bubo,Bubo scandiacus,Aves,Snowy Owl
+Peregrine Falcon,4647,species,Aves,Falconiformes,Falconidae,Falco,Falco peregrinus,Aves,Peregrine Falcon
+Barn Owl,20445,species,Aves,Strigiformes,Tytonidae,Tyto,Tyto alba,Aves,Western Barn Owl
+Ring-necked Pheasant,981,species,Aves,Galliformes,Phasianidae,Phasianus,Phasianus colchicus,Aves,Ring-necked Pheasant
+Mute Swan,6921,species,Aves,Anseriformes,Anatidae,Cygnus,Cygnus olor,Aves,Mute Swan
+Brown Anole,116461,species,Reptilia,Squamata,Anolidae,Anolis,Anolis sagrei,Reptilia,Brown Anole
+Nile Monitor,71085,species,Reptilia,Squamata,Varanidae,Varanus,Varanus niloticus,Reptilia,Nile Monitor
+Axis Deer,42162,genus,Mammalia,Artiodactyla,Cervidae,,Axis,Mammalia,Axis Deer
+Blue Jay,8229,species,Aves,Passeriformes,Corvidae,Cyanocitta,Cyanocitta cristata,Aves,Blue Jay
+Harbor Seal,41708,species,Mammalia,Carnivora,Phocidae,Phoca,Phoca vitulina,Mammalia,Harbor Seal
+California Sea Lion,41740,species,Mammalia,Carnivora,Otariidae,Zalophus,Zalophus californianus,Mammalia,California Sea Lion
+Walrus,41766,species,Mammalia,Carnivora,Odobenidae,Odobenus,Odobenus rosmarus,Mammalia,Walrus
+Northern Elephant Seal,41728,species,Mammalia,Carnivora,Phocidae,Mirounga,Mirounga angustirostris,Mammalia,Northern Elephant Seal
+Great Horned Owl,20044,species,Aves,Strigiformes,Strigidae,Bubo,Bubo virginianus,Aves,Great Horned Owl
+Veiled Chameleon,32873,species,Reptilia,Squamata,Chamaeleonidae,Chamaeleo,Chamaeleo calyptratus,Reptilia,Veiled Chameleon
+Tokay Gecko,34615,species,Reptilia,Squamata,Gekkonidae,Gekko,Gekko gecko,Reptilia,Tokay Gecko
+Eastern Chipmunk,46217,species,Mammalia,Rodentia,Sciuridae,Tamias,Tamias striatus,Mammalia,Eastern Chipmunk
+Osprey,116999,species,Aves,Accipitriformes,Pandionidae,Pandion,Pandion haliaetus,Aves,Osprey
+Brown Pelican,4328,species,Aves,Pelecaniformes,Pelecanidae,Pelecanus,Pelecanus occidentalis,Aves,Brown Pelican
+Western Diamondback Rattlesnake,30764,,,,,,HTTP 429,,
+Common Garter Snake,28362,species,Reptilia,Squamata,Colubridae,Thamnophis,Thamnophis sirtalis,Reptilia,Common Garter Snake
+Eastern Copperhead,912622,,,,,,HTTP 429,,
+Domestic Cat,118552,species,Mammalia,Carnivora,Felidae,Felis,Felis catus,Mammalia,Domestic Cat
+Domestic Dog,47144,species,Mammalia,Carnivora,Canidae,Canis,Canis familiaris,Mammalia,Domestic Dog
+Common Snapping Turtle,39682,,,,,,HTTP 429,,
+Painted Turtle,39771,species,Reptilia,Testudines,Emydidae,Chrysemys,Chrysemys picta,Reptilia,Painted Turtle
+Eastern Cottontail,43111,,,,,,HTTP 429,,
+American Mink,1264432,species,Mammalia,Carnivora,Mustelidae,Neogale,Neogale vison,Mammalia,American Mink
+Black-tailed Prairie Dog,46179,,,,,,HTTP 429,,
+North American Porcupine,44026,species,Mammalia,Rodentia,Erethizontidae,Erethizon,Erethizon dorsatum,Mammalia,North American Porcupine
+Jaguar,41970,,,,,,HTTP 429,,
+Eastern Fox Squirrel,46020,species,Mammalia,Rodentia,Sciuridae,Sciurus,Sciurus niger,Mammalia,Eastern Fox Squirrel
+American Red Squirrel,46260,,,,,,HTTP 429,,
+Groundhog,46095,species,Mammalia,Rodentia,Sciuridae,Marmota,Marmota monax,Mammalia,Groundhog
+Yellow-bellied Marmot,46086,,,,,,HTTP 429,,
+Desert Tortoise,40086,species,Reptilia,Testudines,Testudinidae,Gopherus,Gopherus agassizii,Reptilia,Mojave Desert Tortoise
+Rhesus Macaque,43460,,,,,,HTTP 429,,
+American Badger,41789,species,Mammalia,Carnivora,Mustelidae,Taxidea,Taxidea taxus,Mammalia,American Badger
+American Marten,41798,,,,,,HTTP 429,,
+Ocelot,41997,species,Mammalia,Carnivora,Felidae,Leopardus,Leopardus pardalis,Mammalia,Ocelot
+Gemsbok,42308,,,,,,HTTP 429,,
+Gray Fox,42076,species,Mammalia,Carnivora,Canidae,Urocyon,Urocyon cinereoargenteus,Mammalia,Gray Fox
+Black-footed Ferret,41809,,,,,,HTTP 429,,
+Sea Otter,41860,species,Mammalia,Carnivora,Mustelidae,Enhydra,Enhydra lutris,Mammalia,Sea Otter
+American Flamingo,73222,,,,,,HTTP 429,,
+Green Anole,36514,species,Reptilia,Squamata,Anolidae,Anolis,Anolis carolinensis,Reptilia,Green Anole
+Whooping Crane,34,,,,,,HTTP 429,,
+Mountain Goat,42414,species,Mammalia,Artiodactyla,Bovidae,Oreamnos,Oreamnos americanus,Mammalia,Mountain Goat
+Snowshoe Hare,43132,species,Mammalia,Lagomorpha,Leporidae,Lepus,Lepus americanus,Mammalia,Snowshoe Hare
+Mallard,6930,species,Aves,Anseriformes,Anatidae,Anas,Anas platyrhynchos,Aves,Mallard

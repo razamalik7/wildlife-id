@@ -1,0 +1,30 @@
+{
+  "Moose": {
+    "taxon_id": 522193,
+    "scientific": "Alces alces"
+  },
+  "Striped Skunk": {
+    "taxon_id": 41880,
+    "scientific": "Mephitis mephitis"
+  },
+  "Red Fox": {
+    "taxon_id": 42069,
+    "scientific": "Vulpes vulpes"
+  },
+  "Northern Cardinal": {
+    "taxon_id": 9083,
+    "scientific": "Cardinalis cardinalis"
+  },
+  "Axis Deer": {
+    "taxon_id": 42166,
+    "scientific": "Axis axis"
+  },
+  "American Bison": {
+    "taxon_id": 75475,
+    "scientific": "Anthoxanthum odoratum"
+  },
+  "Green Iguana": {
+    "taxon_id": 35342,
+    "scientific": "Iguana iguana"
+  }
+}

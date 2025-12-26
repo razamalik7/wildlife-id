@@ -6,7 +6,7 @@ from torchvision import datasets, models, transforms
 import os
 
 # CONFIG
-DATA_DIR = 'training_data'
+DATA_DIR = 'training_data_cropped'
 SAVE_PATH = 'wildlife_model_resnet.pth'
 EPOCHS = 20
 BATCH_SIZE = 32 # ResNet is lighter than B3, so we can double the batch size

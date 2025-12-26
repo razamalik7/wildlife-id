@@ -1,0 +1,178 @@
+[
+  {
+    "name": "Custer State Park",
+    "id": 158608,
+    "found_name": "Custer State Park",
+    "state": "SD",
+    "lat": 43.7352036577,
+    "lng": -103.424369961
+  },
+  {
+    "name": "Baxter State Park",
+    "id": 70218,
+    "found_name": "Baxter State Park",
+    "state": "",
+    "lat": 46.0255618193,
+    "lng": -68.9457054415
+  },
+  {
+    "name": "Adirondack Park",
+    "id": 77159,
+    "found_name": "Adirondack Park",
+    "state": "NY",
+    "lat": 43.9651313821,
+    "lng": -74.3065869008
+  },
+  {
+    "name": "Harriman State Park",
+    "id": 119781,
+    "found_name": "Harriman State Park of Idaho",
+    "state": "",
+    "lat": 44.3393623372,
+    "lng": -111.4489981193
+  },
+  {
+    "name": "Porcupine Mountains Wilderness State Park",
+    "id": 147606,
+    "found_name": "Porcupine Mountains Wilderness State Park",
+    "state": "",
+    "lat": 46.7619989817,
+    "lng": -89.7753242955
+  },
+  {
+    "name": "Itasca State Park",
+    "id": 117396,
+    "found_name": "Itasca State Park",
+    "state": "",
+    "lat": 47.1886803544,
+    "lng": -95.2225205843
+  },
+  {
+    "name": "Watkins Glen State Park",
+    "id": 146133,
+    "found_name": "Watkins Glen State Park",
+    "state": "NY",
+    "lat": 42.3679157608,
+    "lng": -76.8985093717
+  },
+  {
+    "name": "Starved Rock State Park",
+    "id": 129021,
+    "found_name": "Starved Rock State Park",
+    "state": "LaSalle County",
+    "lat": 41.3132604014,
+    "lng": -88.996134861
+  },
+  {
+    "name": "Pisgah National Forest",
+    "id": 68063,
+    "found_name": "Pisgah National Forest",
+    "state": "NC",
+    "lat": 35.6645545128,
+    "lng": -82.3406420746
+  },
+  {
+    "name": "Nantahala National Forest",
+    "id": 154466,
+    "found_name": "Nantahala National Forest - Fires Creek Picnic Area HotSpot",
+    "state": "",
+    "lat": 35.0964694692,
+    "lng": -83.8579759607
+  },
+  {
+    "name": "George Washington & Jefferson National Forest",
+    "id": 159938,
+    "found_name": "George Washington National Forest",
+    "state": "VA",
+    "lat": 38.212261644,
+    "lng": -79.3389558773
+  },
+  {
+    "name": "Ocala National Forest",
+    "id": 111968,
+    "found_name": "Ocala National Forest",
+    "state": "US",
+    "lat": 29.2074256936,
+    "lng": -81.7301414201
+  },
+  {
+    "name": "White Mountain National Forest",
+    "id": 124485,
+    "found_name": "White Mountain National Forest",
+    "state": "",
+    "lat": 44.1491774261,
+    "lng": -71.417579231
+  },
+  {
+    "name": "Green Mountain National Forest",
+    "id": 55713,
+    "found_name": "Green Mountain National Forest",
+    "state": "VT",
+    "lat": 43.45243,
+    "lng": -72.79659
+  },
+  {
+    "name": "Monongahela National Forest",
+    "id": 123834,
+    "found_name": "Monongahela National Forest, Cranberry Area",
+    "state": "US",
+    "lat": 38.2879366677,
+    "lng": -80.3770456855
+  },
+  {
+    "name": "Allegheny National Forest",
+    "id": 151485,
+    "found_name": "Allegheny National Forest, USA",
+    "state": "Allegheny National Forest",
+    "lat": 41.6522001384,
+    "lng": -79.0212023179
+  },
+  {
+    "name": "Superior National Forest",
+    "id": 178553,
+    "found_name": "Superior National Forest",
+    "state": "",
+    "lat": 47.8866609821,
+    "lng": -91.6737119343
+  },
+  {
+    "name": "Okefenokee National Wildlife Refuge",
+    "id": 119523,
+    "found_name": "Okefenokee National Wildlife Refuge",
+    "state": "",
+    "lat": 30.7992209988,
+    "lng": -82.3050015673
+  },
+  {
+    "name": "Merritt Island National Wildlife Refuge",
+    "id": 119468,
+    "found_name": "Merritt Island National Wildlife Refuge",
+    "state": "",
+    "lat": 28.6330683769,
+    "lng": -80.7030599043
+  },
+  {
+    "name": "Chincoteague National Wildlife Refuge",
+    "id": 119263,
+    "found_name": "Chincoteague National Wildlife Refuge",
+    "state": "",
+    "lat": 37.9002712407,
+    "lng": -75.3700594775
+  },
+  {
+    "name": "Bear River Migratory Bird Refuge",
+    "id": 119204,
+    "found_name": "Bear River Migratory Bird Refuge",
+    "state": "",
+    "lat": 41.4700980839,
+    "lng": -112.2648652429
+  },
+  {
+    "name": "Bosque del Apache National Wildlife Refuge",
+    "id": 63600,
+    "found_name": "Bosque del Apache National Wildlife Refuge",
+    "state": "NM",
+    "lat": 33.7579640337,
+    "lng": -106.8283081055
+  }
+]

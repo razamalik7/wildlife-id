@@ -1,0 +1,6 @@
+ENSEMBLE HIERARCHICAL ACCURACY
+============================================================
+Species: 90.40%
+Family: 90.57%
+Class: 95.69%
+Errors: SameFam=138, SameCls=358, DiffCls=176

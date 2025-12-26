@@ -6,25 +6,29 @@ import shutil
 from PIL import Image
 
 # CONFIG
-DATA_DIR = 'training_data'
+# Updated to v2 (Oogway era)
+DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'training_data_v2')
 MODEL_PATH = 'wildlife_model_resnet.pth'
 CONFIDENCE_THRESHOLD = 0.05 # If model is less than 5% sure it's the right class, it's garbage.
 QUARANTINE_DIR = 'quarantine'
 
 def get_model(num_classes, device):
-    # Load the ResNet we just trained
-    model = models.resnet50(weights=None)
-    num_ftrs = model.fc.in_features
-    model.fc = nn.Sequential(
-        nn.Dropout(0.5),
-        nn.Linear(num_ftrs, num_classes)
+    # Load the B3 Hero model - it has classifier with dropout + 2 linear layers
+    model = models.efficientnet_b3(weights=None)
+    num_ftrs = model.classifier[1].in_features
+    
+    # Recreate Hero's classifier structure
+    model.classifier = nn.Sequential(
+        model.classifier[0],  # Dropout
+        nn.Sequential(
+            nn.Linear(num_ftrs, num_ftrs),  # Extra layer in Hero
+            nn.ReLU(),
+            nn.Linear(num_ftrs, num_classes)
+        )
     )
     
-    ckpt = torch.load(MODEL_PATH, map_location=device)
-    if 'model_state_dict' in ckpt:
-        model.load_state_dict(ckpt['model_state_dict'])
-    else:
-        model.load_state_dict(ckpt)
+    ckpt = torch.load('wildlife_model_b3_hero.pth', map_location=device)
+    model.load_state_dict(ckpt['model_state_dict'])
         
     model.to(device)
     model.eval()
@@ -48,7 +52,7 @@ def clean_data():
     class_to_idx = {cls_name: i for i, cls_name in enumerate(classes)}
     
     # 3. Load Model
-    print("Loading Judge Model (ResNet)...")
+    print("Loading Judge Model (B3 Hero)...")
     model = get_model(len(classes), device)
     
     # 4. Iterate and Judge

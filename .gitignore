@@ -216,6 +216,9 @@ build/
 
 # Ignore the massive dataset
 api/training_data/
+api/training_data_v2/
+api/training_data_refined/
+api/training_data_cropped/
 training_data/
 
 # Ignore the trained brain (large binary file)

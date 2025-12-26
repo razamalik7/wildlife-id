@@ -12,8 +12,8 @@ except ImportError:
     exit()
 
 # CONFIG
-SOURCE_DIR = "../training_data"
-TARGET_DIR = "../training_data_cropped"
+SOURCE_DIR = "./training_data"
+TARGET_DIR = "./training_data_cropped"
 MODEL_NAME = "yolov8m.pt" # Medium model for better accuracy
 CONF_THRESHOLD = 0.4
 MARGIN_PCT = 0.10 # Add 10% context around the box

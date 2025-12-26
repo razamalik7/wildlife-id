@@ -1,0 +1,399 @@
+{
+  "class_to_species": {
+    "Mammalia": [
+      "american_black_bear",
+      "grizzly_bear",
+      "moose",
+      "white-tailed_deer",
+      "mountain_lion",
+      "coyote",
+      "bobcat",
+      "gray_wolf",
+      "raccoon",
+      "north_american_beaver",
+      "striped_skunk",
+      "virginia_opossum",
+      "eastern_gray_squirrel",
+      "red_fox",
+      "wild_boar",
+      "nutria",
+      "elk",
+      "pronghorn",
+      "nine-banded_armadillo",
+      "bighorn_sheep",
+      "north_american_river_otter",
+      "polar_bear",
+      "arctic_fox",
+      "caribou",
+      "thinhorn_sheep",
+      "muskox",
+      "axis_deer",
+      "harbor_seal",
+      "california_sea_lion",
+      "walrus",
+      "northern_elephant_seal",
+      "eastern_chipmunk",
+      "domestic_cat",
+      "domestic_dog",
+      "eastern_cottontail",
+      "american_mink",
+      "black-tailed_prairie_dog",
+      "north_american_porcupine",
+      "jaguar",
+      "eastern_fox_squirrel",
+      "american_red_squirrel",
+      "groundhog",
+      "yellow-bellied_marmot",
+      "rhesus_macaque",
+      "american_badger",
+      "american_marten",
+      "ocelot",
+      "gemsbok",
+      "gray_fox",
+      "black-footed_ferret",
+      "sea_otter",
+      "mountain_goat",
+      "snowshoe_hare"
+    ],
+    "null": [
+      "american_bison",
+      "green_iguana"
+    ],
+    "Aves": [
+      "bald_eagle",
+      "red-tailed_hawk",
+      "great_blue_heron",
+      "wild_turkey",
+      "canada_goose",
+      "european_starling",
+      "house_sparrow",
+      "rock_pigeon",
+      "monk_parakeet",
+      "northern_cardinal",
+      "wolverine",
+      "snowy_owl",
+      "peregrine_falcon",
+      "barn_owl",
+      "ring-necked_pheasant",
+      "mute_swan",
+      "blue_jay",
+      "great_horned_owl",
+      "osprey",
+      "brown_pelican",
+      "american_flamingo",
+      "whooping_crane",
+      "mallard"
+    ],
+    "Reptilia": [
+      "american_alligator",
+      "common_box_turtle",
+      "american_crocodile",
+      "burmese_python",
+      "argentine_black_and_white_tegu",
+      "gila_monster",
+      "brown_anole",
+      "nile_monitor",
+      "veiled_chameleon",
+      "tokay_gecko",
+      "western_diamondback_rattlesnake",
+      "common_garter_snake",
+      "eastern_copperhead",
+      "common_snapping_turtle",
+      "painted_turtle",
+      "desert_tortoise",
+      "green_anole"
+    ],
+    "Amphibia": [
+      "cane_toad",
+      "american_bullfrog",
+      "spotted_salamander",
+      "eastern_newt",
+      "eastern_hellbender"
+    ]
+  },
+  "family_to_species": {
+    "Ursidae": [
+      "american_black_bear",
+      "grizzly_bear",
+      "polar_bear"
+    ],
+    "Cervidae": [
+      "moose",
+      "white-tailed_deer",
+      "elk",
+      "caribou",
+      "axis_deer"
+    ],
+    "null": [
+      "american_bison",
+      "green_iguana"
+    ],
+    "Felidae": [
+      "mountain_lion",
+      "bobcat",
+      "domestic_cat",
+      "jaguar",
+      "ocelot"
+    ],
+    "Canidae": [
+      "coyote",
+      "gray_wolf",
+      "red_fox",
+      "arctic_fox",
+      "domestic_dog",
+      "gray_fox"
+    ],
+    "Procyonidae": [
+      "raccoon"
+    ],
+    "Castoridae": [
+      "north_american_beaver"
+    ],
+    "Mephitidae": [
+      "striped_skunk"
+    ],
+    "Didelphidae": [
+      "virginia_opossum"
+    ],
+    "Sciuridae": [
+      "eastern_gray_squirrel",
+      "eastern_chipmunk",
+      "black-tailed_prairie_dog",
+      "eastern_fox_squirrel",
+      "american_red_squirrel",
+      "groundhog",
+      "yellow-bellied_marmot"
+    ],
+    "Accipitridae": [
+      "bald_eagle",
+      "red-tailed_hawk"
+    ],
+    "Ardeidae": [
+      "great_blue_heron"
+    ],
+    "Phasianidae": [
+      "wild_turkey",
+      "ring-necked_pheasant"
+    ],
+    "Anatidae": [
+      "canada_goose",
+      "wolverine",
+      "mute_swan",
+      "mallard"
+    ],
+    "Alligatoridae": [
+      "american_alligator"
+    ],
+    "Emydidae": [
+      "common_box_turtle",
+      "painted_turtle"
+    ],
+    "Crocodylidae": [
+      "american_crocodile"
+    ],
+    "Pythonidae": [
+      "burmese_python"
+    ],
+    "Teiidae": [
+      "argentine_black_and_white_tegu"
+    ],
+    "Bufonidae": [
+      "cane_toad"
+    ],
+    "Sturnidae": [
+      "european_starling"
+    ],
+    "Passeridae": [
+      "house_sparrow"
+    ],
+    "Columbidae": [
+      "rock_pigeon"
+    ],
+    "Psittacidae": [
+      "monk_parakeet"
+    ],
+    "Suidae": [
+      "wild_boar"
+    ],
+    "Echimyidae": [
+      "nutria"
+    ],
+    "Antilocapridae": [
+      "pronghorn"
+    ],
+    "Cardinalidae": [
+      "northern_cardinal"
+    ],
+    "Ranidae": [
+      "american_bullfrog"
+    ],
+    "Helodermatidae": [
+      "gila_monster"
+    ],
+    "Dasypodidae": [
+      "nine-banded_armadillo"
+    ],
+    "Bovidae": [
+      "bighorn_sheep",
+      "thinhorn_sheep",
+      "muskox",
+      "gemsbok",
+      "mountain_goat"
+    ],
+    "Mustelidae": [
+      "north_american_river_otter",
+      "american_mink",
+      "american_badger",
+      "american_marten",
+      "black-footed_ferret",
+      "sea_otter"
+    ],
+    "Ambystomatidae": [
+      "spotted_salamander"
+    ],
+    "Salamandridae": [
+      "eastern_newt"
+    ],
+    "Cryptobranchidae": [
+      "eastern_hellbender"
+    ],
+    "Strigidae": [
+      "snowy_owl",
+      "great_horned_owl"
+    ],
+    "Falconidae": [
+      "peregrine_falcon"
+    ],
+    "Tytonidae": [
+      "barn_owl"
+    ],
+    "Anolidae": [
+      "brown_anole",
+      "green_anole"
+    ],
+    "Varanidae": [
+      "nile_monitor"
+    ],
+    "Corvidae": [
+      "blue_jay"
+    ],
+    "Phocidae": [
+      "harbor_seal",
+      "northern_elephant_seal"
+    ],
+    "Otariidae": [
+      "california_sea_lion"
+    ],
+    "Odobenidae": [
+      "walrus"
+    ],
+    "Chamaeleonidae": [
+      "veiled_chameleon"
+    ],
+    "Gekkonidae": [
+      "tokay_gecko"
+    ],
+    "Pandionidae": [
+      "osprey"
+    ],
+    "Pelecanidae": [
+      "brown_pelican"
+    ],
+    "Viperidae": [
+      "western_diamondback_rattlesnake",
+      "eastern_copperhead"
+    ],
+    "Colubridae": [
+      "common_garter_snake"
+    ],
+    "Chelydridae": [
+      "common_snapping_turtle"
+    ],
+    "Leporidae": [
+      "eastern_cottontail",
+      "snowshoe_hare"
+    ],
+    "Erethizontidae": [
+      "north_american_porcupine"
+    ],
+    "Testudinidae": [
+      "desert_tortoise"
+    ],
+    "Cercopithecidae": [
+      "rhesus_macaque"
+    ],
+    "Phoenicopteridae": [
+      "american_flamingo"
+    ],
+    "Gruidae": [
+      "whooping_crane"
+    ]
+  },
+  "class_names": [
+    "Mammalia",
+    null,
+    "Aves",
+    "Reptilia",
+    "Amphibia"
+  ],
+  "family_names": [
+    "Ursidae",
+    "Cervidae",
+    null,
+    "Felidae",
+    "Canidae",
+    "Procyonidae",
+    "Castoridae",
+    "Mephitidae",
+    "Didelphidae",
+    "Sciuridae",
+    "Accipitridae",
+    "Ardeidae",
+    "Phasianidae",
+    "Anatidae",
+    "Alligatoridae",
+    "Emydidae",
+    "Crocodylidae",
+    "Pythonidae",
+    "Teiidae",
+    "Bufonidae",
+    "Sturnidae",
+    "Passeridae",
+    "Columbidae",
+    "Psittacidae",
+    "Suidae",
+    "Echimyidae",
+    "Antilocapridae",
+    "Cardinalidae",
+    "Ranidae",
+    "Helodermatidae",
+    "Dasypodidae",
+    "Bovidae",
+    "Mustelidae",
+    "Ambystomatidae",
+    "Salamandridae",
+    "Cryptobranchidae",
+    "Strigidae",
+    "Falconidae",
+    "Tytonidae",
+    "Anolidae",
+    "Varanidae",
+    "Corvidae",
+    "Phocidae",
+    "Otariidae",
+    "Odobenidae",
+    "Chamaeleonidae",
+    "Gekkonidae",
+    "Pandionidae",
+    "Pelecanidae",
+    "Viperidae",
+    "Colubridae",
+    "Chelydridae",
+    "Leporidae",
+    "Erethizontidae",
+    "Testudinidae",
+    "Cercopithecidae",
+    "Phoenicopteridae",
+    "Gruidae"
+  ]
+}

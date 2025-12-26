@@ -1,0 +1,11 @@
+HIERARCHICAL ACCURACY REPORT
+Model: oogway_convnext_final_finetuned.pth
+============================================================
+Species-Level: 90.73%
+Family-Level:  92.74%
+Class-Level:   97.63%
+============================================================
+Error Distances (649 total):
+  Same Family:     129 (19.9%)
+  Same Class:      355 (54.7%)
+  Different Class: 165 (25.4%)
