@@ -19,4 +19,6 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         # REPLACE 'YOUR_HF_USERNAME/YOUR_SPACE_NAME' BELOW with your actual Space path!
         # Example: nars7/wildlife-id
-        run: git push --force https://oauth2:$HF_TOKEN@huggingface.co/spaces/raza44/aniML main
+        run: |
+          git config lfs.allowincompletepush true
+          git push --force https://oauth2:$HF_TOKEN@huggingface.co/spaces/raza44/aniML main
