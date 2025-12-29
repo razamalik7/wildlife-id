@@ -230,6 +230,8 @@ training_data/
 # Ignore user uploads
 api/uploads/
 api/quarantine/
+api/quarantine_blur/
+api/confusion_matrix*.png
 
 # Python junk
 __pycache__/
