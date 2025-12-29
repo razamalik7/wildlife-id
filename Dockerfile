@@ -16,9 +16,9 @@ COPY api ./api
 # We recreate the folder structure so the relative path "../frontend/public/parks.json" still works
 COPY frontend/public/parks.json ./frontend/public/parks.json
 
-# Hugging Face Spaces expects port 7860
-EXPOSE 7860
+# Start from /app/api so imports like "from ai_engine" work
+WORKDIR /app/api
 
 # Start command
-# We run from root so "api.main" module path works
-CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "7860"]
+# Now we use "main:app" because we are inside the api directory
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]
