@@ -3,7 +3,7 @@
 import { useParams, useRouter } from 'next/navigation';
 import { useApp } from '@/lib/AppContext';
 import { useState, useEffect } from 'react';
-import { ArrowLeft, MapPin, CheckCircle, AlertTriangle, Globe, Dna, ExternalLink } from 'lucide-react';
+import { ArrowLeft, MapPin, CheckCircle, AlertTriangle, Globe, Dna, ExternalLink, PawPrint } from 'lucide-react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import axios from 'axios';
