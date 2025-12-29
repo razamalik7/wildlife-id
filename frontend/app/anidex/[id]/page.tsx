@@ -86,26 +86,13 @@ export default function SpeciesDetailPage() {
                 <div className="bg-white rounded-3xl shadow-xl overflow-hidden mb-6">
                     <div className="flex flex-col md:flex-row">
                         {/* Image */}
-                        <div className="md:w-1/3 bg-stone-100 p-0 flex items-center justify-center relative min-h-[300px] md:min-h-0">
-                            {unlocked && latestEntry?.imageUrl ? (
-                                <img
-                                    src={latestEntry.imageUrl}
-                                    alt="Your observation"
-                                    className="w-full h-full object-cover absolute inset-0"
-                                />
-                            ) : (
-                                <img
-                                    src={getIconPath(speciesName)}
-                                    alt={speciesName}
-                                    className={`w-48 h-48 object-contain ${!unlocked ? 'grayscale opacity-60' : ''}`}
-                                />
-                            )}
-
-                            {unlocked && latestEntry?.imageUrl && (
-                                <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold border border-white/20">
-                                    YOUR PHOTO
-                                </div>
-                            )}
+                        {/* Image */}
+                        <div className="md:w-1/3 bg-stone-100 p-8 flex items-center justify-center">
+                            <img
+                                src={getIconPath(speciesName)}
+                                alt={speciesName}
+                                className={`w-48 h-48 object-contain ${!unlocked ? 'grayscale opacity-60' : ''}`}
+                            />
                         </div>
 
                         {/* Info */}
