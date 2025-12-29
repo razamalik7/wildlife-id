@@ -231,6 +231,7 @@ training_data/
 api/uploads/
 api/quarantine/
 api/quarantine_blur/
+api/quarantine_tiny/
 api/confusion_matrix*.png
 
 # Python junk
