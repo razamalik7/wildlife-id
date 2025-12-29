@@ -1,3 +1,12 @@
+---
+title: AniML
+emoji: 🐻
+colorFrom: green
+colorTo: blue
+sdk: docker
+app_port: 7860
+---
+
 # Wildlife ID 🦁
 
 A robust, full-stack application that uses **Computer Vision** (PyTorch) to identify wildlife species and a **Real-time Backend Proxy** to locate recent sightings in national parks.
