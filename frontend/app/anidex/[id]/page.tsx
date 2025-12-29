@@ -86,12 +86,26 @@ export default function SpeciesDetailPage() {
                 <div className="bg-white rounded-3xl shadow-xl overflow-hidden mb-6">
                     <div className="flex flex-col md:flex-row">
                         {/* Image */}
-                        <div className="md:w-1/3 bg-stone-100 p-8 flex items-center justify-center">
-                            <img
-                                src={getIconPath(speciesName)}
-                                alt={speciesName}
-                                className={`w-48 h-48 object-contain ${!unlocked ? 'grayscale opacity-60' : ''}`}
-                            />
+                        <div className="md:w-1/3 bg-stone-100 p-0 flex items-center justify-center relative min-h-[300px] md:min-h-0">
+                            {unlocked && latestEntry?.imageUrl ? (
+                                <img
+                                    src={latestEntry.imageUrl}
+                                    alt="Your observation"
+                                    className="w-full h-full object-cover absolute inset-0"
+                                />
+                            ) : (
+                                <img
+                                    src={getIconPath(speciesName)}
+                                    alt={speciesName}
+                                    className={`w-48 h-48 object-contain ${!unlocked ? 'grayscale opacity-60' : ''}`}
+                                />
+                            )}
+
+                            {unlocked && latestEntry?.imageUrl && (
+                                <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-white text-xs font-bold border border-white/20">
+                                    YOUR PHOTO
+                                </div>
+                            )}
                         </div>
 
                         {/* Info */}
@@ -114,6 +128,20 @@ export default function SpeciesDetailPage() {
                                     </span>
                                 )}
                             </div>
+
+                            {/* User Observation Details */}
+                            {unlocked && latestEntry && (
+                                <div className="mb-6 bg-stone-50 rounded-2xl p-4 border border-stone-100">
+                                    <p className="text-xs font-bold text-stone-400 uppercase tracking-wider mb-2">Last Sighted By You</p>
+                                    <div className="flex items-center gap-2 text-stone-700 font-semibold">
+                                        <span className="text-lg">📅 {new Date(latestEntry.timestamp).toLocaleDateString()}</span>
+                                    </div>
+                                    <div className="flex items-center gap-2 text-stone-500 text-sm mt-1">
+                                        <MapPin size={14} />
+                                        <span>{latestEntry.lat?.toFixed(4)}, {latestEntry.lng?.toFixed(4)}</span>
+                                    </div>
+                                </div>
+                            )}
 
                             {speciesInfo.description && (
                                 <p className="text-stone-600 text-sm mb-4">{speciesInfo.description}</p>
@@ -253,6 +281,57 @@ export default function SpeciesDetailPage() {
                         </div>
                     )}
                 </div>
+
+                {/* Observation History List */}
+                {unlocked && entries.length > 0 && (
+                    <div className="mt-8">
+                        <h2 className="text-xl font-bold text-stone-800 mb-4 flex items-center gap-2">
+                            <CheckCircle className="text-emerald-600" /> Observation History
+                        </h2>
+                        <div className="space-y-4">
+                            {entries.map((entry) => (
+                                <div key={entry.id} className="bg-white rounded-2xl p-4 shadow-sm border border-stone-200 flex items-center gap-4">
+                                    {/* Thumbnail */}
+                                    <div className="w-20 h-20 bg-stone-100 rounded-xl overflow-hidden flex-shrink-0">
+                                        {entry.imageUrl ? (
+                                            <img src={entry.imageUrl} alt=" Observation" className="w-full h-full object-cover" />
+                                        ) : (
+                                            <div className="w-full h-full flex items-center justify-center text-stone-300">
+                                                <PawPrint size={24} />
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {/* Details */}
+                                    <div className="flex-1">
+                                        <p className="font-bold text-stone-800">
+                                            {new Date(entry.timestamp).toLocaleDateString(undefined, {
+                                                year: 'numeric',
+                                                month: 'long',
+                                                day: 'numeric',
+                                                hour: '2-digit',
+                                                minute: '2-digit'
+                                            })}
+                                        </p>
+                                        <div className="flex flex-wrap gap-4 mt-1">
+                                            {entry.lat && entry.lng && (
+                                                <div className="flex items-center gap-1 text-sm text-stone-500">
+                                                    <MapPin size={14} className="text-emerald-500" />
+                                                    {entry.lat.toFixed(4)}, {entry.lng.toFixed(4)}
+                                                </div>
+                                            )}
+                                            {entry.verified && (
+                                                <div className="flex items-center gap-1 text-sm text-emerald-600 font-medium">
+                                                    <CheckCircle size={14} /> VerifiedID
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
         </main>
     );
