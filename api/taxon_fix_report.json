@@ -1,4 +1,200 @@
 {
-  "verified": 100,
-  "issues": []
+  "verified": 61,
+  "issues": [
+    {
+      "name": "Eastern Hellbender",
+      "taxon_id": 26804,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Snowy Owl",
+      "taxon_id": 144594,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Peregrine Falcon",
+      "taxon_id": 4647,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Ring-necked Pheasant",
+      "taxon_id": 981,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Mute Swan",
+      "taxon_id": 6921,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Brown Anole",
+      "taxon_id": 116461,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Axis Deer",
+      "taxon_id": 42166,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Blue Jay",
+      "taxon_id": 8229,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Harbor Seal",
+      "taxon_id": 41708,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Walrus",
+      "taxon_id": 41766,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Northern Elephant Seal",
+      "taxon_id": 41728,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Great Horned Owl",
+      "taxon_id": 20044,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Tokay Gecko",
+      "taxon_id": 34615,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Eastern Chipmunk",
+      "taxon_id": 46217,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Osprey",
+      "taxon_id": 116999,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Western Diamondback Rattlesnake",
+      "taxon_id": 30764,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Common Garter Snake",
+      "taxon_id": 28362,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Eastern Copperhead",
+      "taxon_id": 912622,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Domestic Dog",
+      "taxon_id": 47144,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Common Snapping Turtle",
+      "taxon_id": 39682,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Painted Turtle",
+      "taxon_id": 39771,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "American Mink",
+      "taxon_id": 1264432,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Black-tailed Prairie Dog",
+      "taxon_id": 46179,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "North American Porcupine",
+      "taxon_id": 44026,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Eastern Fox Squirrel",
+      "taxon_id": 46020,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "American Red Squirrel",
+      "taxon_id": 46260,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Groundhog",
+      "taxon_id": 46095,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Desert Tortoise",
+      "taxon_id": 40086,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Rhesus Macaque",
+      "taxon_id": 43460,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "American Badger",
+      "taxon_id": 41789,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Ocelot",
+      "taxon_id": 41997,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Gemsbok",
+      "taxon_id": 42308,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Gray Fox",
+      "taxon_id": 42076,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Sea Otter",
+      "taxon_id": 41860,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "American Flamingo",
+      "taxon_id": 4257,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Green Anole",
+      "taxon_id": 36514,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Mountain Goat",
+      "taxon_id": 42414,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Snowshoe Hare",
+      "taxon_id": 43132,
+      "problem": "Rate limited - retry later"
+    },
+    {
+      "name": "Mallard",
+      "taxon_id": 6930,
+      "problem": "Rate limited - retry later"
+    }
+  ]
 }

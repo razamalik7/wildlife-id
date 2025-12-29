@@ -22,9 +22,9 @@ interface Props {
 }
 
 export default function SpeciesMap({ taxonId, userLat, userLng, animalName, observations = [] }: Props) {
-  // Use observation location or default to center US for map center
-  const centerLat = userLat ?? (observations[0]?.lat ?? 39.8);
-  const centerLng = userLng ?? (observations[0]?.lng ?? -98.5);
+  // Center on observation location first, then user location, then default US
+  const centerLat = observations[0]?.lat ?? userLat ?? 39.8;
+  const centerLng = observations[0]?.lng ?? userLng ?? -98.5;
   const [hasIUCNRange, setHasIUCNRange] = useState(false);
 
   // Check if IUCN range data exists for this taxon
@@ -50,14 +50,13 @@ export default function SpeciesMap({ taxonId, userLat, userLng, animalName, obse
 
     checkIUCN();
   }, [taxonId]);
-  // Dynamic icon for user observations
   const getAnimalIcon = () => {
     const slug = animalName.toLowerCase().replace(/ /g, "_");
     return L.icon({
       iconUrl: `/icons/${slug}.png`,
-      iconSize: [40, 40],
-      iconAnchor: [20, 20],
-      className: "drop-shadow-lg opacity-50 grayscale",
+      iconSize: [48, 48],
+      iconAnchor: [24, 24],
+      className: "drop-shadow-xl",  // Colorful, no grayscale
     });
   };
 
@@ -72,14 +71,14 @@ export default function SpeciesMap({ taxonId, userLat, userLng, animalName, obse
         <LayersControl position="topright">
 
           {/* BASE LAYERS */}
-          <LayersControl.BaseLayer checked name="Dark">
+          <LayersControl.BaseLayer name="Dark">
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
               url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
             />
           </LayersControl.BaseLayer>
 
-          <LayersControl.BaseLayer name="Light">
+          <LayersControl.BaseLayer checked name="Light">
             <TileLayer
               url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
               attribution='&copy; OSM'

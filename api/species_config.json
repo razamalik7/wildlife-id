@@ -205,8 +205,8 @@
             "order": "Carnivora",
             "family": "Canidae",
             "genus": "Canis",
-            "species": "Canis familiaris",
-            "common_name": "Domestic Dog",
+            "species": "Canis lupus",
+            "common_name": "Gray Wolf",
             "taxon_id": 42048
         }
     },
@@ -1076,7 +1076,7 @@
             "genus": "Mergus",
             "species": "Mergus merganser",
             "common_name": "Common Merganser",
-            "taxon_id": 41852
+            "taxon_id": 7004
         }
     },
     {

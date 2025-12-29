@@ -58,8 +58,8 @@ def main():
     class_names = dataset.classes
     num_classes = len(class_names)
     
-    model_b3 = load_model('oogway_b3_final_finetuned.pth', 'b3', DEVICE)
-    model_cx = load_model('oogway_convnext_final_finetuned.pth', 'convnext', DEVICE)
+    model_b3 = load_model('oogway_b3_best.pth', 'b3', DEVICE)
+    model_cx = load_model('oogway_convnext_final.pth', 'convnext', DEVICE)
     
     # 2. Track Confusions
     conf_b3 = np.zeros((num_classes, num_classes), dtype=int)

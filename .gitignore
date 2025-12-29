@@ -14,7 +14,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+/lib/
 lib64/
 parts/
 sdist/
@@ -223,10 +223,13 @@ training_data/
 
 # Ignore the trained brain (large binary file)
 *.pth
+!api/oogway_b3_best.pth
+!api/oogway_convnext_final.pth
 *.pt
 
 # Ignore user uploads
 api/uploads/
+api/quarantine/
 
 # Python junk
 __pycache__/

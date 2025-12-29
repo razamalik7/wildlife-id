@@ -1,0 +1,2882 @@
+[
+  {
+    "original": {
+      "id": 3157,
+      "name": "Channel Islands NP",
+      "state": "CA",
+      "country": "US",
+      "lat": 33.987,
+      "lng": -119.911
+    },
+    "fixed_id": 3157,
+    "fixed_name": "Channel Islands National Park, US, CA"
+  },
+  {
+    "original": {
+      "id": 53620,
+      "name": "Congaree NP",
+      "state": "SC",
+      "country": "US",
+      "lat": 33.792,
+      "lng": -80.748
+    },
+    "fixed_id": 53620,
+    "fixed_name": "Congaree National Park, US, SC"
+  },
+  {
+    "original": {
+      "id": 52923,
+      "name": "Crater Lake NP",
+      "state": "OR",
+      "country": "US",
+      "lat": 42.941,
+      "lng": -122.133
+    },
+    "fixed_id": 52923,
+    "fixed_name": "Crater Lake National Park, US, OR"
+  },
+  {
+    "original": {
+      "id": 72639,
+      "name": "Cuyahoga Valley NP",
+      "state": "OH",
+      "country": "US",
+      "lat": 41.259,
+      "lng": -81.571
+    },
+    "fixed_id": 72639,
+    "fixed_name": "Cuyahoga Valley National Park, US, OH"
+  },
+  {
+    "original": {
+      "id": 4504,
+      "name": "Death Valley NP",
+      "state": "CA",
+      "country": "US",
+      "lat": 36.484,
+      "lng": -117.133
+    },
+    "fixed_id": 4504,
+    "fixed_name": "Death Valley National Park, US, CA"
+  },
+  {
+    "original": {
+      "id": 71077,
+      "name": "Denali NP",
+      "state": "AK",
+      "country": "US",
+      "lat": 63.288,
+      "lng": -151.058
+    },
+    "fixed_id": 71077,
+    "fixed_name": "Denali National Park, US, AK"
+  },
+  {
+    "original": {
+      "id": 70571,
+      "name": "Dry Tortugas NP",
+      "state": "FL",
+      "country": "US",
+      "lat": 24.649,
+      "lng": -82.872
+    },
+    "fixed_id": 70571,
+    "fixed_name": "Dry Tortugas National Park, US, FL"
+  },
+  {
+    "original": {
+      "id": 53957,
+      "name": "Everglades NP",
+      "state": "FL",
+      "country": "US",
+      "lat": 25.372,
+      "lng": -80.882
+    },
+    "fixed_id": 53957,
+    "fixed_name": "Everglades National Park, US, FL"
+  },
+  {
+    "original": {
+      "id": 69111,
+      "name": "Gates of the Arctic NP",
+      "state": "AK",
+      "country": "US",
+      "lat": 67.749,
+      "lng": -153.301
+    },
+    "fixed_id": 69111,
+    "fixed_name": "Gates of the Arctic National Park, US, AK"
+  },
+  {
+    "original": {
+      "id": 137962,
+      "name": "Gateway Arch NP",
+      "state": "MO",
+      "country": "US",
+      "lat": 38.624,
+      "lng": -90.186
+    },
+    "fixed_id": 137962,
+    "fixed_name": "Gateway Arch National Park, MO, US"
+  },
+  {
+    "original": {
+      "id": 72841,
+      "name": "Glacier NP",
+      "state": "MT",
+      "country": "US",
+      "lat": 48.683,
+      "lng": -113.8
+    },
+    "fixed_id": 69113,
+    "fixed_name": "Glacier Bay National Park, US, AK"
+  },
+  {
+    "original": {
+      "id": 69113,
+      "name": "Glacier Bay NP",
+      "state": "AK",
+      "country": "US",
+      "lat": 58.797,
+      "lng": -136.838
+    },
+    "fixed_id": 69113,
+    "fixed_name": "Glacier Bay National Park, US, AK"
+  },
+  {
+    "original": {
+      "id": 69216,
+      "name": "Grand Canyon NP",
+      "state": "AZ",
+      "country": "US",
+      "lat": 36.172,
+      "lng": -112.685
+    },
+    "fixed_id": 69216,
+    "fixed_name": "Grand Canyon National Park, US, AZ"
+  },
+  {
+    "original": {
+      "id": 69099,
+      "name": "Grand Teton NP",
+      "state": "WY",
+      "country": "US",
+      "lat": 43.818,
+      "lng": -110.705
+    },
+    "fixed_id": 69099,
+    "fixed_name": "Grand Teton National Park, US, WY"
+  },
+  {
+    "original": {
+      "id": 69699,
+      "name": "Great Basin NP",
+      "state": "NV",
+      "country": "US",
+      "lat": 38.946,
+      "lng": -114.258
+    },
+    "fixed_id": 69699,
+    "fixed_name": "Great Basin National Park, US, NV"
+  },
+  {
+    "original": {
+      "id": 53632,
+      "name": "Great Sand Dunes NP",
+      "state": "CO",
+      "country": "US",
+      "lat": 37.792,
+      "lng": -105.592
+    },
+    "fixed_id": 53632,
+    "fixed_name": "Great Sand Dunes National Park, US, CO"
+  },
+  {
+    "original": {
+      "id": 72645,
+      "name": "Great Smoky Mountains NP",
+      "state": "TN",
+      "country": "US",
+      "lat": 35.601,
+      "lng": -83.508
+    },
+    "fixed_id": 72645,
+    "fixed_name": "Great Smoky Mountains National Park, NC, US"
+  },
+  {
+    "original": {
+      "id": 69313,
+      "name": "Guadalupe Mountains NP",
+      "state": "TX",
+      "country": "US",
+      "lat": 31.923,
+      "lng": -104.886
+    },
+    "fixed_id": 69313,
+    "fixed_name": "Guadalupe Mountains National Park, US, TX"
+  },
+  {
+    "original": {
+      "id": 56788,
+      "name": "Haleakala NP",
+      "state": "HI",
+      "country": "US",
+      "lat": 20.707,
+      "lng": -156.159
+    },
+    "fixed_id": 56788,
+    "fixed_name": "Haleakala National Park, US, HI"
+  },
+  {
+    "original": {
+      "id": 7222,
+      "name": "Hawaii Volcanoes NP",
+      "state": "HI",
+      "country": "US",
+      "lat": 19.339,
+      "lng": -155.464
+    },
+    "fixed_id": 7222,
+    "fixed_name": "Hawaii Volcanoes National Park, US, HI"
+  },
+  {
+    "original": {
+      "id": 56706,
+      "name": "Hot Springs NP",
+      "state": "AR",
+      "country": "US",
+      "lat": 34.524,
+      "lng": -93.063
+    },
+    "fixed_id": 56706,
+    "fixed_name": "Hot Springs National Park, US, AR"
+  },
+  {
+    "original": {
+      "id": 95245,
+      "name": "Isle Royale NP",
+      "state": "MI",
+      "country": "US",
+      "lat": 48.011,
+      "lng": -88.828
+    },
+    "fixed_id": 95245,
+    "fixed_name": "Isle Royale National Park, US, MI"
+  },
+  {
+    "original": {
+      "id": 3680,
+      "name": "Joshua Tree NP",
+      "state": "CA",
+      "country": "US",
+      "lat": 33.914,
+      "lng": -115.84
+    },
+    "fixed_id": 3680,
+    "fixed_name": "Joshua Tree National Park, US, CA"
+  },
+  {
+    "original": {
+      "id": 95257,
+      "name": "Katmai NP",
+      "state": "AK",
+      "country": "US",
+      "lat": 58.618,
+      "lng": -155.014
+    },
+    "fixed_id": 95257,
+    "fixed_name": "Katmai National Park, US, AK"
+  },
+  {
+    "original": {
+      "id": 95258,
+      "name": "Kenai Fjords NP",
+      "state": "AK",
+      "country": "US",
+      "lat": 59.816,
+      "lng": -150.108
+    },
+    "fixed_id": 95258,
+    "fixed_name": "Kenai Fjords National Park, US, AK"
+  },
+  {
+    "original": {
+      "id": 3378,
+      "name": "Kings Canyon NP",
+      "state": "CA",
+      "country": "US",
+      "lat": 36.892,
+      "lng": -118.598
+    },
+    "fixed_id": 3378,
+    "fixed_name": "Kings Canyon National Park, US, CA"
+  },
+  {
+    "original": {
+      "id": 69115,
+      "name": "Kobuk Valley NP",
+      "state": "AK",
+      "country": "US",
+      "lat": 67.353,
+      "lng": -159.199
+    },
+    "fixed_id": 69115,
+    "fixed_name": "Kobuk Valley National Park, AK, US"
+  },
+  {
+    "original": {
+      "id": 69114,
+      "name": "Lake Clark NP",
+      "state": "AK",
+      "country": "US",
+      "lat": 60.566,
+      "lng": -153.557
+    },
+    "fixed_id": 69114,
+    "fixed_name": "Lake Clark National Park, AK, US"
+  },
+  {
+    "original": {
+      "id": 4509,
+      "name": "Lassen Volcanic NP",
+      "state": "CA",
+      "country": "US",
+      "lat": 40.494,
+      "lng": -121.408
+    },
+    "fixed_id": 4509,
+    "fixed_name": "Lassen Volcanic National Park, US, CA"
+  },
+  {
+    "original": {
+      "id": 72649,
+      "name": "Mammoth Cave NP",
+      "state": "KY",
+      "country": "US",
+      "lat": 37.198,
+      "lng": -86.131
+    },
+    "fixed_id": 72649,
+    "fixed_name": "Mammoth Cave National Park, US, KY"
+  },
+  {
+    "original": {
+      "id": 69108,
+      "name": "Mesa Verde NP",
+      "state": "CO",
+      "country": "US",
+      "lat": 37.239,
+      "lng": -108.462
+    },
+    "fixed_id": 69108,
+    "fixed_name": "Mesa Verde National Park, US, CO"
+  },
+  {
+    "original": {
+      "id": 8838,
+      "name": "Mount Rainier NP",
+      "state": "WA",
+      "country": "US",
+      "lat": 46.861,
+      "lng": -121.706
+    },
+    "fixed_id": 8838,
+    "fixed_name": "Mount Rainier National Park, US, WA"
+  },
+  {
+    "original": {
+      "id": 95209,
+      "name": "New River Gorge NP",
+      "state": "WV",
+      "country": "US",
+      "lat": 37.873,
+      "lng": -81.002
+    },
+    "fixed_id": 95209,
+    "fixed_name": "New River Gorge National Park and Preserve, US, WV"
+  },
+  {
+    "original": {
+      "id": 69097,
+      "name": "North Cascades NP",
+      "state": "WA",
+      "country": "US",
+      "lat": 48.711,
+      "lng": -121.206
+    },
+    "fixed_id": 69097,
+    "fixed_name": "North Cascades National Park, US, WA"
+  },
+  {
+    "original": {
+      "id": 69094,
+      "name": "Olympic NP",
+      "state": "WA",
+      "country": "US",
+      "lat": 47.803,
+      "lng": -123.666
+    },
+    "fixed_id": 69094,
+    "fixed_name": "Olympic National Park"
+  },
+  {
+    "original": {
+      "id": 57573,
+      "name": "Petrified Forest NP",
+      "state": "AZ",
+      "country": "US",
+      "lat": 34.984,
+      "lng": -109.788
+    },
+    "fixed_id": 57573,
+    "fixed_name": "Petrified Forest National Park, US, AZ"
+  },
+  {
+    "original": {
+      "id": 5737,
+      "name": "Pinnacles NP",
+      "state": "CA",
+      "country": "US",
+      "lat": 36.49,
+      "lng": -121.181
+    },
+    "fixed_id": 5737,
+    "fixed_name": "Pinnacles National Park, US, CA"
+  },
+  {
+    "original": {
+      "id": 6021,
+      "name": "Redwood NP",
+      "state": "CA",
+      "country": "US",
+      "lat": 41.371,
+      "lng": -124.032
+    },
+    "fixed_id": 6021,
+    "fixed_name": "Redwood National Park, US, CA"
+  },
+  {
+    "original": {
+      "id": 49676,
+      "name": "Rocky Mountain NP",
+      "state": "CO",
+      "country": "US",
+      "lat": 40.355,
+      "lng": -105.697
+    },
+    "fixed_id": 49676,
+    "fixed_name": "Rocky Mountain National Park, US, CO"
+  },
+  {
+    "original": {
+      "id": 65739,
+      "name": "Saguaro NP",
+      "state": "AZ",
+      "country": "US",
+      "lat": 32.209,
+      "lng": -110.758
+    },
+    "fixed_id": 65739,
+    "fixed_name": "Saguaro National Park, US, AZ"
+  },
+  {
+    "original": {
+      "id": 95321,
+      "name": "Sequoia NP",
+      "state": "CA",
+      "country": "US",
+      "lat": 36.508,
+      "lng": -118.575
+    },
+    "fixed_id": 95321,
+    "fixed_name": "Sequoia National Park, US, CA"
+  },
+  {
+    "original": {
+      "id": 9012,
+      "name": "Shenandoah NP",
+      "state": "VA",
+      "country": "US",
+      "lat": 38.492,
+      "lng": -78.469
+    },
+    "fixed_id": 9012,
+    "fixed_name": "Shenandoah National Park, US, VA"
+  },
+  {
+    "original": {
+      "id": 72793,
+      "name": "Theodore Roosevelt NP",
+      "state": "ND",
+      "country": "US",
+      "lat": 47.175,
+      "lng": -103.43
+    },
+    "fixed_id": 72793,
+    "fixed_name": "Theodore Roosevelt National Park, US, ND"
+  },
+  {
+    "original": {
+      "id": 95336,
+      "name": "Virgin Islands NP",
+      "state": "VI",
+      "country": "US",
+      "lat": 18.343,
+      "lng": -64.742
+    },
+    "fixed_id": 95336,
+    "fixed_name": "Virgin Islands National Park"
+  },
+  {
+    "original": {
+      "id": 69101,
+      "name": "Voyageurs NP",
+      "state": "MN",
+      "country": "US",
+      "lat": 48.484,
+      "lng": -92.838
+    },
+    "fixed_id": 69101,
+    "fixed_name": "Voyageurs National Park, US, MN"
+  },
+  {
+    "original": {
+      "id": 62621,
+      "name": "White Sands NP",
+      "state": "NM",
+      "country": "US",
+      "lat": 32.779,
+      "lng": -106.333
+    },
+    "fixed_id": 62621,
+    "fixed_name": "White Sands National Park, US, NM"
+  },
+  {
+    "original": {
+      "id": 72794,
+      "name": "Wind Cave NP",
+      "state": "SD",
+      "country": "US",
+      "lat": 43.58,
+      "lng": -103.439
+    },
+    "fixed_id": 72794,
+    "fixed_name": "Wind Cave National Park, US, SD"
+  },
+  {
+    "original": {
+      "id": 72658,
+      "name": "Wrangell-St Elias NP",
+      "state": "AK",
+      "country": "US",
+      "lat": 61.391,
+      "lng": -142.585
+    },
+    "fixed_id": 72658,
+    "fixed_name": "Wrangell-St. Elias National Park, US, AK"
+  },
+  {
+    "original": {
+      "id": 10211,
+      "name": "Yellowstone NP",
+      "state": "WY",
+      "country": "US",
+      "lat": 44.596,
+      "lng": -110.547
+    },
+    "fixed_id": 10211,
+    "fixed_name": "Yellowstone National Park, US, WY"
+  },
+  {
+    "original": {
+      "id": 68542,
+      "name": "Yosemite NP",
+      "state": "CA",
+      "country": "US",
+      "lat": 37.848,
+      "lng": -119.557
+    },
+    "fixed_id": 68542,
+    "fixed_name": "Yosemite National Park, US, CA"
+  },
+  {
+    "original": {
+      "id": 50634,
+      "name": "Zion NP",
+      "state": "UT",
+      "country": "US",
+      "lat": 37.298,
+      "lng": -113.026
+    },
+    "fixed_id": 50634,
+    "fixed_name": "Zion National Park, US, UT"
+  },
+  {
+    "original": {
+      "id": 95125,
+      "name": "Big Cypress National Preserve",
+      "state": "FL",
+      "country": "US",
+      "lat": 25.976,
+      "lng": -81.098
+    },
+    "fixed_id": 95106,
+    "fixed_name": "Big Cypress National Preserve, US, FL"
+  },
+  {
+    "original": {
+      "id": 71194,
+      "name": "Big Thicket National Preserve",
+      "state": "TX",
+      "country": "US",
+      "lat": 30.455,
+      "lng": -94.386
+    },
+    "fixed_id": 95110,
+    "fixed_name": "Big Thicket National Preserve, US, TX"
+  },
+  {
+    "original": {
+      "id": 69119,
+      "name": "Mojave National Preserve",
+      "state": "CA",
+      "country": "US",
+      "lat": 35.141,
+      "lng": -115.51
+    },
+    "fixed_id": 3958,
+    "fixed_name": "Mojave National Preserve, US, CA"
+  },
+  {
+    "original": {
+      "id": 69118,
+      "name": "Tallgrass Prairie National Preserve",
+      "state": "KS",
+      "country": "US",
+      "lat": 38.432,
+      "lng": -96.556
+    },
+    "fixed_id": 95330,
+    "fixed_name": "Tallgrass Prairie National Preserve, KS, US"
+  },
+  {
+    "original": {
+      "id": 95270,
+      "name": "Timucuan Ecological & Historic Preserve",
+      "state": "FL",
+      "country": "US",
+      "lat": 30.418,
+      "lng": -81.459
+    },
+    "fixed_id": 95147,
+    "fixed_name": "Timucuan Ecological and Historic Preserve, US, FL"
+  },
+  {
+    "original": {
+      "id": 69324,
+      "name": "Padre Island National Seashore",
+      "state": "TX",
+      "country": "US",
+      "lat": 26.929,
+      "lng": -97.397
+    },
+    "fixed_id": 95300,
+    "fixed_name": "Padre Island National Seashore, US, TX"
+  },
+  {
+    "original": {
+      "id": 95178,
+      "name": "Cape Cod National Seashore",
+      "state": "MA",
+      "country": "US",
+      "lat": 41.901,
+      "lng": -70.006
+    },
+    "fixed_id": 95121,
+    "fixed_name": "Cape Cod National Seashore, US, MA"
+  },
+  {
+    "original": {
+      "id": 95168,
+      "name": "Assateague Island National Seashore",
+      "state": "MD",
+      "country": "US",
+      "lat": 38.055,
+      "lng": -75.167
+    },
+    "fixed_id": 62831,
+    "fixed_name": "Assateague Island National Seashore, MD, US"
+  },
+  {
+    "original": {
+      "id": 72799,
+      "name": "Point Reyes National Seashore",
+      "state": "CA",
+      "country": "US",
+      "lat": 38.07,
+      "lng": -122.833
+    },
+    "fixed_id": 5781,
+    "fixed_name": "Point Reyes National Seashore, US, CA"
+  },
+  {
+    "original": {
+      "id": 95179,
+      "name": "Cape Hatteras National Seashore",
+      "state": "NC",
+      "country": "US",
+      "lat": 35.232,
+      "lng": -75.672
+    },
+    "fixed_id": 95125,
+    "fixed_name": "Cape Hatteras National Seashore, US, NC"
+  },
+  {
+    "original": {
+      "id": 95180,
+      "name": "Cape Lookout National Seashore",
+      "state": "NC",
+      "country": "US",
+      "lat": 34.662,
+      "lng": -76.515
+    },
+    "fixed_id": 95087,
+    "fixed_name": "Cape Lookout National Seashore, US, NC"
+  },
+  {
+    "original": {
+      "id": 95183,
+      "name": "Cumberland Island National Seashore",
+      "state": "GA",
+      "country": "US",
+      "lat": 30.833,
+      "lng": -81.443
+    },
+    "fixed_id": 95150,
+    "fixed_name": "Cumberland Island National Seashore, US, FL"
+  },
+  {
+    "original": {
+      "id": 95185,
+      "name": "Fire Island National Seashore",
+      "state": "NY",
+      "country": "US",
+      "lat": 40.673,
+      "lng": -73.0
+    },
+    "fixed_id": 95160,
+    "fixed_name": "Fire Island National Seashore, US, NY"
+  },
+  {
+    "original": {
+      "id": 95187,
+      "name": "Gulf Islands National Seashore",
+      "state": "FL",
+      "country": "US",
+      "lat": 30.315,
+      "lng": -87.295
+    },
+    "fixed_id": 95223,
+    "fixed_name": "Gulf Islands National Seashore, US, FL"
+  },
+  {
+    "original": {
+      "id": 95162,
+      "name": "Apostle Islands National Lakeshore",
+      "state": "WI",
+      "country": "US",
+      "lat": 46.979,
+      "lng": -90.663
+    },
+    "fixed_id": 95096,
+    "fixed_name": "Apostle Islands National Lakeshore, US, WI"
+  },
+  {
+    "original": {
+      "id": 95200,
+      "name": "Indiana Dunes National Lakeshore",
+      "state": "IN",
+      "country": "US",
+      "lat": 41.65,
+      "lng": -87.053
+    },
+    "fixed_id": 95241,
+    "fixed_name": "Indiana Dunes National Lakeshore, US, IN"
+  },
+  {
+    "original": {
+      "id": 95231,
+      "name": "Pictured Rocks National Lakeshore",
+      "state": "MI",
+      "country": "US",
+      "lat": 46.558,
+      "lng": -86.362
+    },
+    "fixed_id": 95250,
+    "fixed_name": "Pictured Rocks National Lakeshore, US, MI"
+  },
+  {
+    "original": {
+      "id": 95238,
+      "name": "Sleeping Bear Dunes National Lakeshore",
+      "state": "MI",
+      "country": "US",
+      "lat": 44.865,
+      "lng": -86.053
+    },
+    "fixed_id": 95326,
+    "fixed_name": "Sleeping Bear Dunes National Lakeshore, US, MI"
+  },
+  {
+    "original": {
+      "id": 119204,
+      "name": "Bear River Migratory Bird Refuge",
+      "state": "UT",
+      "country": "US",
+      "lat": 41.47,
+      "lng": -112.265
+    },
+    "fixed_id": 119204,
+    "fixed_name": "Bear River Migratory Bird Refuge"
+  },
+  {
+    "original": {
+      "id": 77932,
+      "name": "Banff National Park",
+      "state": "AB",
+      "country": "CA",
+      "lat": 51.543,
+      "lng": -116.124
+    },
+    "fixed_id": 77932,
+    "fixed_name": "Banff National Park"
+  },
+  {
+    "original": {
+      "id": 66307,
+      "name": "Jasper National Park",
+      "state": "AB",
+      "country": "CA",
+      "lat": 52.851,
+      "lng": -117.984
+    },
+    "fixed_id": 162742,
+    "fixed_name": "Jasper National Park dunes, AB, CA"
+  },
+  {
+    "original": {
+      "id": 90295,
+      "name": "Algonquin Provincial Park",
+      "state": "ON",
+      "country": "CA",
+      "lat": 45.784,
+      "lng": -78.388
+    },
+    "fixed_id": 90295,
+    "fixed_name": "Algonquin Provincial Park, ON, CA"
+  },
+  {
+    "original": {
+      "id": 112797,
+      "name": "Yoho National Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 51.384,
+      "lng": -116.526
+    },
+    "fixed_id": 112797,
+    "fixed_name": "Yoho National Park, CA, BC"
+  },
+  {
+    "original": {
+      "id": 112799,
+      "name": "Kootenay National Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 50.962,
+      "lng": -116.041
+    },
+    "fixed_id": 112799,
+    "fixed_name": "Kootenay National Park, CA, BC"
+  },
+  {
+    "original": {
+      "id": 55198,
+      "name": "Waterton Lakes NP",
+      "state": "AB",
+      "country": "CA",
+      "lat": 49.081,
+      "lng": -113.933
+    },
+    "fixed_id": 55198,
+    "fixed_name": "Waterton Lakes National Park, AB, CA"
+  },
+  {
+    "original": {
+      "id": 68850,
+      "name": "Pacific Rim NP Reserve",
+      "state": "BC",
+      "country": "CA",
+      "lat": 48.831,
+      "lng": -125.147
+    },
+    "fixed_id": 68850,
+    "fixed_name": "Pacific Rim National Park Reserve, CA, BC"
+  },
+  {
+    "original": {
+      "name": "Area de Proteccion Canon de Santa Elena",
+      "id": 55218,
+      "lat": 29.107,
+      "lng": -103.802,
+      "state": "MX",
+      "country": "MX"
+    },
+    "fixed_id": 55218,
+    "fixed_name": "\u00c1rea de Protecci\u00f3n de Flora y Fauna Ca\u00f1\u00f3n de Santa Elena, MX"
+  },
+  {
+    "original": {
+      "id": 95201,
+      "name": "First State National Historical Park",
+      "state": "US",
+      "country": "US",
+      "lat": 39.830836043,
+      "lng": -75.5635482778
+    },
+    "fixed_id": 95201,
+    "fixed_name": "First State National Historical Park, US, DE"
+  },
+  {
+    "original": {
+      "id": 3862,
+      "name": "Malibu Creek State Park - Bennet",
+      "state": "CA",
+      "country": "US",
+      "lat": 34.0942993164,
+      "lng": -118.7710037231
+    },
+    "fixed_id": 3862,
+    "fixed_name": "Malibu Creek State Park - Bennet, CA, US"
+  },
+  {
+    "original": {
+      "id": 3864,
+      "name": "Malibu Creek State Park - Randa House",
+      "state": "CA",
+      "country": "US",
+      "lat": 34.0979995728,
+      "lng": -118.7689971924
+    },
+    "fixed_id": 3864,
+    "fixed_name": "Malibu Creek State Park - Randa House, CA, US"
+  },
+  {
+    "original": {
+      "id": 3866,
+      "name": "Malibu Creek State Park - Rez",
+      "state": "CA",
+      "country": "US",
+      "lat": 34.0970993042,
+      "lng": -118.7730026245
+    },
+    "fixed_id": 3866,
+    "fixed_name": "Malibu Creek State Park - Rez, CA, US"
+  },
+  {
+    "original": {
+      "id": 4087,
+      "name": "Watts Towers of Simon Rodia State Historic Park",
+      "state": "CA",
+      "country": "US",
+      "lat": 33.9388008118,
+      "lng": -118.2409973145
+    },
+    "fixed_id": 4087,
+    "fixed_name": "Watts Towers of Simon Rodia State Historic Park, CA, US"
+  },
+  {
+    "original": {
+      "id": 81860,
+      "name": "Pilot Mountain State Park",
+      "state": "NC",
+      "country": "US",
+      "lat": 36.345501,
+      "lng": -80.47847
+    },
+    "fixed_id": 81860,
+    "fixed_name": "Pilot Mountain State Park, NC, US"
+  },
+  {
+    "original": {
+      "id": 56081,
+      "name": "Brainard Homestead State Park Scenic Reserve",
+      "state": "CT",
+      "country": "US",
+      "lat": 41.4670710542,
+      "lng": -72.4622902595
+    },
+    "fixed_id": 56081,
+    "fixed_name": "Brainard Homestead State Park Scenic Reserve, CT, US"
+  },
+  {
+    "original": {
+      "id": 56107,
+      "name": "Dart Island State Park Scenic Reserve",
+      "state": "CT",
+      "country": "US",
+      "lat": 41.5525699497,
+      "lng": -72.5626861623
+    },
+    "fixed_id": 56107,
+    "fixed_name": "Dart Island State Park Scenic Reserve, CT, US"
+  },
+  {
+    "original": {
+      "id": 56030,
+      "name": "Above All State Park Scenic Reserve",
+      "state": "CT",
+      "country": "US",
+      "lat": 41.7265101781,
+      "lng": -73.3540649538
+    },
+    "fixed_id": 56030,
+    "fixed_name": "Above All State Park Scenic Reserve, CT, US"
+  },
+  {
+    "original": {
+      "id": 56157,
+      "name": "Haddam Island State Park Scenic Reserve",
+      "state": "CT",
+      "country": "US",
+      "lat": 41.4919480203,
+      "lng": -72.5186529314
+    },
+    "fixed_id": 56157,
+    "fixed_name": "Haddam Island State Park Scenic Reserve, CT, US"
+  },
+  {
+    "original": {
+      "id": 56183,
+      "name": "Humaston Brook State Park Scenic Reserve",
+      "state": "CT",
+      "country": "US",
+      "lat": 41.7024778192,
+      "lng": -73.1060908845
+    },
+    "fixed_id": 56183,
+    "fixed_name": "Humaston Brook State Park Scenic Reserve, CT, US"
+  },
+  {
+    "original": {
+      "id": 56187,
+      "name": "Ivy Mountain State Park",
+      "state": "CT",
+      "country": "US",
+      "lat": 41.8725235328,
+      "lng": -73.2253327549
+    },
+    "fixed_id": 56187,
+    "fixed_name": "Ivy Mountain State Park, CT, US"
+  },
+  {
+    "original": {
+      "id": 56428,
+      "name": "Ross Pond State Park",
+      "state": "CT",
+      "country": "US",
+      "lat": 41.7734874458,
+      "lng": -71.8690264605
+    },
+    "fixed_id": 56428,
+    "fixed_name": "Ross Pond State Park, CT, US"
+  },
+  {
+    "original": {
+      "id": 56370,
+      "name": "Sunset Rock State Park Scenic Reserve",
+      "state": "CT",
+      "country": "US",
+      "lat": 41.6623442171,
+      "lng": -72.8464361403
+    },
+    "fixed_id": 56370,
+    "fixed_name": "Sunset Rock State Park Scenic Reserve, CT, US"
+  },
+  {
+    "original": {
+      "id": 56423,
+      "name": "Hop River State Park",
+      "state": "CT",
+      "country": "US",
+      "lat": 41.7790452077,
+      "lng": -72.433360515
+    },
+    "fixed_id": 56423,
+    "fixed_name": "Hop River State Park, CT, US"
+  },
+  {
+    "original": {
+      "id": 56227,
+      "name": "Minnie Island State Park Scenic Reserve",
+      "state": "CT",
+      "country": "US",
+      "lat": 41.5058718822,
+      "lng": -72.221750588
+    },
+    "fixed_id": 56227,
+    "fixed_name": "Minnie Island State Park Scenic Reserve, CT, US"
+  },
+  {
+    "original": {
+      "id": 66616,
+      "name": "Dead Horse Point State Park",
+      "state": "UT",
+      "country": "US",
+      "lat": 38.510319,
+      "lng": -109.729462
+    },
+    "fixed_id": 66616,
+    "fixed_name": "Dead Horse Point State Park, UT, US"
+  },
+  {
+    "original": {
+      "id": 143125,
+      "name": "Neso Lake Provincial Park",
+      "state": "MB",
+      "country": "CA",
+      "lat": 54.6571768219,
+      "lng": -101.5478411936
+    },
+    "fixed_id": 143125,
+    "fixed_name": "Neso Lake Provincial Park, MB, CA"
+  },
+  {
+    "original": {
+      "id": 143126,
+      "name": "Twin Lakes Provincial Park",
+      "state": "MB",
+      "country": "CA",
+      "lat": 54.6571470662,
+      "lng": -101.4778719317
+    },
+    "fixed_id": 143126,
+    "fixed_name": "Twin Lakes Provincial Park, MB, CA"
+  },
+  {
+    "original": {
+      "id": 132869,
+      "name": "Allison Harbour Marine Provincial Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 51.0515732322,
+      "lng": -127.5052252288
+    },
+    "fixed_id": 132869,
+    "fixed_name": "Allison Harbour Marine Provincial Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 132446,
+      "name": "Lower Nimpkish Provincial Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 50.536747922,
+      "lng": -127.0093832616
+    },
+    "fixed_id": 132446,
+    "fixed_name": "Lower Nimpkish Provincial Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 132453,
+      "name": "Nimpkish Lake Provincial Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 50.3377711874,
+      "lng": -127.0046675642
+    },
+    "fixed_id": 132453,
+    "fixed_name": "Nimpkish Lake Provincial Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 135954,
+      "name": "Santa Gertrudis - Boca del Infierno Marine Provincial Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 49.6108882586,
+      "lng": -126.6279343013
+    },
+    "fixed_id": 135954,
+    "fixed_name": "Santa Gertrudis - Boca del Infierno Marine Provincial Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 135957,
+      "name": "Scatter River Old Growth Provincial Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 59.6273130959,
+      "lng": -124.6786242781
+    },
+    "fixed_id": 135957,
+    "fixed_name": "Scatter River Old Growth Provincial Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 135354,
+      "name": "Mudzenchoot Provincial Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 55.0361985683,
+      "lng": -124.4417535804
+    },
+    "fixed_id": 135354,
+    "fixed_name": "Mudzenchoot Provincial Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 135355,
+      "name": "Muscovite Lakes Provincial Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 55.9743937536,
+      "lng": -124.139952402
+    },
+    "fixed_id": 135355,
+    "fixed_name": "Muscovite Lakes Provincial Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 135360,
+      "name": "Netalzul Meadows Provincial Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 55.2365884027,
+      "lng": -127.0329810806
+    },
+    "fixed_id": 135360,
+    "fixed_name": "Netalzul Meadows Provincial Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 135364,
+      "name": "Nilkitkwa Lake Provincial Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 55.3898148493,
+      "lng": -126.6569530822
+    },
+    "fixed_id": 135364,
+    "fixed_name": "Nilkitkwa Lake Provincial Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 135369,
+      "name": "North Thompson Islands Provincial Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 51.3710264595,
+      "lng": -120.1794738225
+    },
+    "fixed_id": 135369,
+    "fixed_name": "North Thompson Islands Provincial Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 135370,
+      "name": "North Thompson Oxbows East Provincial Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 52.4813352588,
+      "lng": -119.2434217044
+    },
+    "fixed_id": 135370,
+    "fixed_name": "North Thompson Oxbows East Provincial Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 135371,
+      "name": "North Thompson Oxbows Jensen Island Provincial Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 50.8687474409,
+      "lng": -120.2835273404
+    },
+    "fixed_id": 135371,
+    "fixed_name": "North Thompson Oxbows Jensen Island Provincial Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 132473,
+      "name": "Iskut River Hot Springs Provincial Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 57.0837047669,
+      "lng": -130.3605913024
+    },
+    "fixed_id": 132473,
+    "fixed_name": "Iskut River Hot Springs Provincial Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 134150,
+      "name": "Cedar Point Provincial Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 52.5769454242,
+      "lng": -121.5376973576
+    },
+    "fixed_id": 134150,
+    "fixed_name": "Cedar Point Provincial Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 134018,
+      "name": "Shuswap River Islands Provincial Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 50.5531957801,
+      "lng": -118.8922568643
+    },
+    "fixed_id": 134018,
+    "fixed_name": "Shuswap River Islands Provincial Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 134058,
+      "name": "Taweel Provincial Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 51.6390683326,
+      "lng": -120.3676426535
+    },
+    "fixed_id": 134058,
+    "fixed_name": "Taweel Provincial Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 134061,
+      "name": "Topley Landing Provincial Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 54.8109856961,
+      "lng": -126.1434380035
+    },
+    "fixed_id": 134061,
+    "fixed_name": "Topley Landing Provincial Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 134062,
+      "name": "Trembleur Lake Provincial Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 54.8277143702,
+      "lng": -125.2324629417
+    },
+    "fixed_id": 134062,
+    "fixed_name": "Trembleur Lake Provincial Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 5534,
+      "name": "Cleveland National Forest, Exp 1",
+      "state": "CA",
+      "country": "US",
+      "lat": 33.8237991333,
+      "lng": -117.6669998169
+    },
+    "fixed_id": 5534,
+    "fixed_name": "Cleveland National Forest, Exp 1, CA, US"
+  },
+  {
+    "original": {
+      "id": 5463,
+      "name": "Los Padres National Forest (MT)",
+      "state": "CA",
+      "country": "US",
+      "lat": 36.2033996582,
+      "lng": -121.5759963989
+    },
+    "fixed_id": 5463,
+    "fixed_name": "Los Padres National Forest (MT), CA, US"
+  },
+  {
+    "original": {
+      "id": 175738,
+      "name": "Roosevelt National Forest (Panhandle Creek and Deadman area) ",
+      "state": "CO",
+      "country": "US",
+      "lat": 40.8416500934,
+      "lng": -105.6922009413
+    },
+    "fixed_id": 175738,
+    "fixed_name": "Roosevelt National Forest (Panhandle Creek and Deadman area) , CO, US"
+  },
+  {
+    "original": {
+      "id": 123768,
+      "name": "Petrified Forest National Wilderness Area",
+      "state": "US",
+      "country": "US",
+      "lat": 35.0740456132,
+      "lng": -109.8111572849
+    },
+    "fixed_id": 123768,
+    "fixed_name": "Petrified Forest National Wilderness Area, US, AZ"
+  },
+  {
+    "original": {
+      "id": 157298,
+      "name": "Mirror Lake, Wasatch National Forest",
+      "state": "UT",
+      "country": "US",
+      "lat": 40.703474746,
+      "lng": -110.8874566728
+    },
+    "fixed_id": 157298,
+    "fixed_name": "Mirror Lake, Wasatch National Forest, UT, US"
+  },
+  {
+    "original": {
+      "id": 118227,
+      "name": "Deadman Canyon, Big Burro Mountains, Gila National Forest",
+      "state": "NM",
+      "country": "US",
+      "lat": 32.6105666146,
+      "lng": -108.4145689602
+    },
+    "fixed_id": 118227,
+    "fixed_name": "Deadman Canyon, Big Burro Mountains, Gila National Forest, NM, US"
+  },
+  {
+    "original": {
+      "id": 215314,
+      "name": "Yampa Ranger District, Routt National Forest, CO, US",
+      "state": "CO",
+      "country": "US",
+      "lat": 40.1553741067,
+      "lng": -106.9335974602
+    },
+    "fixed_id": 215314,
+    "fixed_name": "Yampa Ranger District, Routt National Forest, CO, US"
+  },
+  {
+    "original": {
+      "id": 158323,
+      "name": "Samuel R. McKelvie National Forest",
+      "state": "NE",
+      "country": "US",
+      "lat": 42.7118426049,
+      "lng": -101.0414052335
+    },
+    "fixed_id": 158323,
+    "fixed_name": "Samuel R. McKelvie National Forest, NE, US"
+  },
+  {
+    "original": {
+      "id": 208219,
+      "name": "Daniel Boone National Forest Climbing Areas With Official Trails",
+      "state": "KY",
+      "country": "US",
+      "lat": 37.8354246177,
+      "lng": -83.6470852748
+    },
+    "fixed_id": 208219,
+    "fixed_name": "Daniel Boone National Forest Climbing Areas With Official Trails, KY, US"
+  },
+  {
+    "original": {
+      "id": 3737,
+      "name": "Carmel River Lagoon & Wetlands Natural Preserve",
+      "state": "CA",
+      "country": "US",
+      "lat": 36.5304985046,
+      "lng": -121.9250030518
+    },
+    "fixed_id": 3737,
+    "fixed_name": "Carmel River Lagoon & Wetlands Natural Preserve, CA, US"
+  },
+  {
+    "original": {
+      "id": 3817,
+      "name": "Bumpy Camp Nature Preserve",
+      "state": "CA",
+      "country": "US",
+      "lat": 38.4048995972,
+      "lng": -122.4530029297
+    },
+    "fixed_id": 3817,
+    "fixed_name": "Bumpy Camp Nature Preserve, CA, US"
+  },
+  {
+    "original": {
+      "id": 56315,
+      "name": "Reeves Lot Natural Area Preserve",
+      "state": "CT",
+      "country": "US",
+      "lat": 41.6238014396,
+      "lng": -72.5716768415
+    },
+    "fixed_id": 56315,
+    "fixed_name": "Reeves Lot Natural Area Preserve, CT, US"
+  },
+  {
+    "original": {
+      "id": 66885,
+      "name": "Smithneck Creek Nature Preserve",
+      "state": "CA",
+      "country": "US",
+      "lat": 39.6791836481,
+      "lng": -120.2537512779
+    },
+    "fixed_id": 66885,
+    "fixed_name": "Smithneck Creek Nature Preserve, CA, US"
+  },
+  {
+    "original": {
+      "id": 137832,
+      "name": "Cypress Creek Nature Preserve",
+      "state": "TX",
+      "country": "US",
+      "lat": 29.9981329338,
+      "lng": -98.0936829318
+    },
+    "fixed_id": 137832,
+    "fixed_name": "Cypress Creek Nature Preserve, TX, US"
+  },
+  {
+    "original": {
+      "id": 126163,
+      "name": "NC Creek Side Nature Preserve",
+      "state": "NC",
+      "country": "US",
+      "lat": 35.3433476082,
+      "lng": -80.6155503845
+    },
+    "fixed_id": 126163,
+    "fixed_name": "NC Creek Side Nature Preserve, NC, US"
+  },
+  {
+    "original": {
+      "id": 123797,
+      "name": "Massassauga Prairie Nature Preserve",
+      "state": "US",
+      "country": "US",
+      "lat": 40.7602533721,
+      "lng": -90.5686667736
+    },
+    "fixed_id": 123797,
+    "fixed_name": "Massassauga Prairie Nature Preserve, US, IL"
+  },
+  {
+    "original": {
+      "id": 95348,
+      "name": "Yukon-Charley Rivers National Preserve",
+      "state": "US",
+      "country": "US",
+      "lat": 65.0897826685,
+      "lng": -142.7984363038
+    },
+    "fixed_id": 95348,
+    "fixed_name": "Yukon-Charley Rivers National Preserve, US, AK"
+  },
+  {
+    "original": {
+      "id": 95288,
+      "name": "Noatak National Preserve",
+      "state": "US",
+      "country": "US",
+      "lat": 68.0042120491,
+      "lng": -159.8326831495
+    },
+    "fixed_id": 95288,
+    "fixed_name": "Noatak National Preserve, US, AK"
+  },
+  {
+    "original": {
+      "id": 95100,
+      "name": "Bering Land Bridge National Preserve",
+      "state": "US",
+      "country": "US",
+      "lat": 65.9546125805,
+      "lng": -164.4038137346
+    },
+    "fixed_id": 95100,
+    "fixed_name": "Bering Land Bridge National Preserve, US, AK"
+  },
+  {
+    "original": {
+      "id": 95330,
+      "name": "Tallgrass Prairie National Preserve",
+      "state": "KS",
+      "country": "US",
+      "lat": 38.4402570818,
+      "lng": -96.5672295863
+    },
+    "fixed_id": 95330,
+    "fixed_name": "Tallgrass Prairie National Preserve, KS, US"
+  },
+  {
+    "original": {
+      "id": 95106,
+      "name": "Big Cypress National Preserve",
+      "state": "US",
+      "country": "US",
+      "lat": 25.9704302921,
+      "lng": -81.0811506057
+    },
+    "fixed_id": 95106,
+    "fixed_name": "Big Cypress National Preserve, US, FL"
+  },
+  {
+    "original": {
+      "id": 95234,
+      "name": "Little River Canyon National Preserve",
+      "state": "US",
+      "country": "US",
+      "lat": 34.4146762277,
+      "lng": -85.6172763475
+    },
+    "fixed_id": 95234,
+    "fixed_name": "Little River Canyon National Preserve, US, AL"
+  },
+  {
+    "original": {
+      "id": 54005,
+      "name": "Jean Lafitte National Historical Park and Preserve",
+      "state": "US",
+      "country": "US",
+      "lat": 29.817211404,
+      "lng": -90.1399622266
+    },
+    "fixed_id": 54005,
+    "fixed_name": "Jean Lafitte National Historical Park and Preserve, US, LA"
+  },
+  {
+    "original": {
+      "id": 95110,
+      "name": "Big Thicket National Preserve",
+      "state": "US",
+      "country": "US",
+      "lat": 30.4231828562,
+      "lng": -94.3385322002
+    },
+    "fixed_id": 95110,
+    "fixed_name": "Big Thicket National Preserve, US, TX"
+  },
+  {
+    "original": {
+      "id": 3958,
+      "name": "Mojave National Preserve",
+      "state": "US",
+      "country": "US",
+      "lat": 35.1242050993,
+      "lng": -115.5168129904
+    },
+    "fixed_id": 3958,
+    "fixed_name": "Mojave National Preserve, US, CA"
+  },
+  {
+    "original": {
+      "id": 6073,
+      "name": "Stone Lakes National Wildife Preserve",
+      "state": "CA",
+      "country": "US",
+      "lat": 38.4480018616,
+      "lng": -121.46900177
+    },
+    "fixed_id": 6073,
+    "fixed_name": "Stone Lakes National Wildife Preserve, CA, US"
+  },
+  {
+    "original": {
+      "id": 95160,
+      "name": "Fire Island National Seashore",
+      "state": "US",
+      "country": "US",
+      "lat": 40.6966467822,
+      "lng": -73.0001839174
+    },
+    "fixed_id": 95160,
+    "fixed_name": "Fire Island National Seashore, US, NY"
+  },
+  {
+    "original": {
+      "id": 95130,
+      "name": "Canaveral National Seashore",
+      "state": "US",
+      "country": "US",
+      "lat": 28.7862735358,
+      "lng": -80.754145444
+    },
+    "fixed_id": 95130,
+    "fixed_name": "Canaveral National Seashore, US, FL"
+  },
+  {
+    "original": {
+      "id": 95223,
+      "name": "Gulf Islands National Seashore",
+      "state": "US",
+      "country": "US",
+      "lat": 30.2991818506,
+      "lng": -87.7507640686
+    },
+    "fixed_id": 95223,
+    "fixed_name": "Gulf Islands National Seashore, US, FL"
+  },
+  {
+    "original": {
+      "id": 62831,
+      "name": "Assateague Island National Seashore",
+      "state": "MD",
+      "country": "US",
+      "lat": 38.0556055751,
+      "lng": -75.2453859363
+    },
+    "fixed_id": 62831,
+    "fixed_name": "Assateague Island National Seashore, MD, US"
+  },
+  {
+    "original": {
+      "id": 95150,
+      "name": "Cumberland Island National Seashore",
+      "state": "US",
+      "country": "US",
+      "lat": 30.8585155802,
+      "lng": -81.4525456353
+    },
+    "fixed_id": 95150,
+    "fixed_name": "Cumberland Island National Seashore, US, FL"
+  },
+  {
+    "original": {
+      "id": 95121,
+      "name": "Cape Cod National Seashore",
+      "state": "US",
+      "country": "US",
+      "lat": 41.9348627128,
+      "lng": -70.0451298116
+    },
+    "fixed_id": 95121,
+    "fixed_name": "Cape Cod National Seashore, US, MA"
+  },
+  {
+    "original": {
+      "id": 5781,
+      "name": "Point Reyes National Seashore",
+      "state": "US",
+      "country": "US",
+      "lat": 38.0550606614,
+      "lng": -122.8797850842
+    },
+    "fixed_id": 5781,
+    "fixed_name": "Point Reyes National Seashore, US, CA"
+  },
+  {
+    "original": {
+      "id": 95300,
+      "name": "Padre Island National Seashore",
+      "state": "US",
+      "country": "US",
+      "lat": 27.0527813503,
+      "lng": -97.3590170694
+    },
+    "fixed_id": 95300,
+    "fixed_name": "Padre Island National Seashore, US, TX"
+  },
+  {
+    "original": {
+      "id": 95087,
+      "name": "Cape Lookout National Seashore",
+      "state": "US",
+      "country": "US",
+      "lat": 34.8263961869,
+      "lng": -76.3434846978
+    },
+    "fixed_id": 95087,
+    "fixed_name": "Cape Lookout National Seashore, US, NC"
+  },
+  {
+    "original": {
+      "id": 95142,
+      "name": "Curecanti National Recreation Area",
+      "state": "US",
+      "country": "US",
+      "lat": 38.4658289544,
+      "lng": -107.3303634394
+    },
+    "fixed_id": 95142,
+    "fixed_name": "Curecanti National Recreation Area, US, CO"
+  },
+  {
+    "original": {
+      "id": 95202,
+      "name": "Gauley River National Recreation Area",
+      "state": "US",
+      "country": "US",
+      "lat": 38.2061421693,
+      "lng": -81.0042102677
+    },
+    "fixed_id": 95202,
+    "fixed_name": "Gauley River National Recreation Area, US, WV"
+  },
+  {
+    "original": {
+      "id": 95272,
+      "name": "Lake Roosevelt National Recreation Area",
+      "state": "US",
+      "country": "US",
+      "lat": 48.1771841431,
+      "lng": -118.3294507547
+    },
+    "fixed_id": 95272,
+    "fixed_name": "Lake Roosevelt National Recreation Area, US, WA"
+  },
+  {
+    "original": {
+      "id": 95271,
+      "name": "Lake Meredith National Recreation Area",
+      "state": "US",
+      "country": "US",
+      "lat": 35.6191720563,
+      "lng": -101.6820554302
+    },
+    "fixed_id": 95271,
+    "fixed_name": "Lake Meredith National Recreation Area, US, TX"
+  },
+  {
+    "original": {
+      "id": 95266,
+      "name": "Lake Chelan National Recreation Area",
+      "state": "US",
+      "country": "US",
+      "lat": 48.3538115092,
+      "lng": -120.6837308918
+    },
+    "fixed_id": 95266,
+    "fixed_name": "Lake Chelan National Recreation Area, US, WA"
+  },
+  {
+    "original": {
+      "id": 95102,
+      "name": "Bighorn Canyon National Recreation Area",
+      "state": "US",
+      "country": "US",
+      "lat": 45.0339407204,
+      "lng": -108.2049263874
+    },
+    "fixed_id": 95102,
+    "fixed_name": "Bighorn Canyon National Recreation Area, US, MT"
+  },
+  {
+    "original": {
+      "id": 95199,
+      "name": "Glen Canyon National Recreation Area",
+      "state": "US",
+      "country": "US",
+      "lat": 37.5155635115,
+      "lng": -110.7736294846
+    },
+    "fixed_id": 95199,
+    "fixed_name": "Glen Canyon National Recreation Area, US, AZ"
+  },
+  {
+    "original": {
+      "id": 95140,
+      "name": "Chickasaw National Recreation Area",
+      "state": "US",
+      "country": "US",
+      "lat": 34.4604913449,
+      "lng": -97.0071585336
+    },
+    "fixed_id": 95140,
+    "fixed_name": "Chickasaw National Recreation Area, US, OK"
+  },
+  {
+    "original": {
+      "id": 95137,
+      "name": "Chattahoochee River National Recreation Area",
+      "state": "US",
+      "country": "US",
+      "lat": 33.9965354559,
+      "lng": -84.2903504689
+    },
+    "fixed_id": 95137,
+    "fixed_name": "Chattahoochee River National Recreation Area, US, GA"
+  },
+  {
+    "original": {
+      "id": 95116,
+      "name": "Boston Harbor Islands National Recreation Area",
+      "state": "US",
+      "country": "US",
+      "lat": 42.309171262,
+      "lng": -70.9399616402
+    },
+    "fixed_id": 95116,
+    "fixed_name": "Boston Harbor Islands National Recreation Area, US, MA"
+  },
+  {
+    "original": {
+      "id": 95153,
+      "name": "Mississippi National River and Recreation Area",
+      "state": "US",
+      "country": "US",
+      "lat": 44.873941451,
+      "lng": -93.0464523057
+    },
+    "fixed_id": 95153,
+    "fixed_name": "Mississippi National River and Recreation Area, US, MN"
+  },
+  {
+    "original": {
+      "id": 95109,
+      "name": "Big South Fork National River and Recreation Area",
+      "state": "US",
+      "country": "US",
+      "lat": 36.5346688487,
+      "lng": -84.6651192133
+    },
+    "fixed_id": 95109,
+    "fixed_name": "Big South Fork National River and Recreation Area, US, KY"
+  },
+  {
+    "original": {
+      "id": 9912,
+      "name": "Golden Gate National Recreation Area",
+      "state": "US",
+      "country": "US",
+      "lat": 37.7785515673,
+      "lng": -122.5507087159
+    },
+    "fixed_id": 9912,
+    "fixed_name": "Golden Gate National Recreation Area, US, CA"
+  },
+  {
+    "original": {
+      "id": 95085,
+      "name": "Amistad National Recreation Area",
+      "state": "US",
+      "country": "US",
+      "lat": 29.5356595804,
+      "lng": -101.0763133914
+    },
+    "fixed_id": 95085,
+    "fixed_name": "Amistad National Recreation Area, US, TX"
+  },
+  {
+    "original": {
+      "id": 72641,
+      "name": "Delaware Water Gap National Recreation Area",
+      "state": "NJ",
+      "country": "US",
+      "lat": 41.1264863442,
+      "lng": -74.9482639545
+    },
+    "fixed_id": 72641,
+    "fixed_name": "Delaware Water Gap National Recreation Area, NJ, US"
+  },
+  {
+    "original": {
+      "id": 3730,
+      "name": "Santa Monica Mountains National Recreation Area",
+      "state": "US",
+      "country": "US",
+      "lat": 34.0976714409,
+      "lng": -118.771017313
+    },
+    "fixed_id": 3730,
+    "fixed_name": "Santa Monica Mountains National Recreation Area, US, CA"
+  },
+  {
+    "original": {
+      "id": 95269,
+      "name": "Lake Mead National Recreation Area",
+      "state": "Lake Mead National Recreation Area",
+      "country": "US",
+      "lat": 35.9436983441,
+      "lng": -114.4805914667
+    },
+    "fixed_id": 95269,
+    "fixed_name": "Lake Mead National Recreation Area, US"
+  },
+  {
+    "original": {
+      "id": 95282,
+      "name": "Ross Lake National Recreation Area",
+      "state": "US",
+      "country": "US",
+      "lat": 48.7814512633,
+      "lng": -121.1040321012
+    },
+    "fixed_id": 95282,
+    "fixed_name": "Ross Lake National Recreation Area, US, WA"
+  },
+  {
+    "original": {
+      "id": 69314,
+      "name": "Gateway National Recreation Area",
+      "state": "NJ",
+      "country": "US",
+      "lat": 40.5717206258,
+      "lng": -73.9096912774
+    },
+    "fixed_id": 69314,
+    "fixed_name": "Gateway National Recreation Area, NJ, US"
+  },
+  {
+    "original": {
+      "id": 4518,
+      "name": "Whiskeytown-Shasta-Trinity National Recreation Area",
+      "state": "US",
+      "country": "US",
+      "lat": 40.6135812591,
+      "lng": -122.6022604132
+    },
+    "fixed_id": 4518,
+    "fixed_name": "Whiskeytown-Shasta-Trinity National Recreation Area, US, CA"
+  },
+  {
+    "original": {
+      "id": 13430,
+      "name": "Manassas Park",
+      "state": "US",
+      "country": "US",
+      "lat": 38.7717467396,
+      "lng": -77.4447504773
+    },
+    "fixed_id": 13430,
+    "fixed_name": "Manassas Park County, US, VA"
+  },
+  {
+    "original": {
+      "id": 1010,
+      "name": "Parke",
+      "state": "US",
+      "country": "US",
+      "lat": 39.7736249614,
+      "lng": -87.2063597862
+    },
+    "fixed_id": 96884,
+    "fixed_name": "Northeast Greenland National Park, GL"
+  },
+  {
+    "original": {
+      "id": 3827,
+      "name": "Los Robles County Park",
+      "state": "CA",
+      "country": "US",
+      "lat": 34.009601593,
+      "lng": -117.986000061
+    },
+    "fixed_id": 3827,
+    "fixed_name": "Los Robles County Park, CA, US"
+  },
+  {
+    "original": {
+      "id": 5301,
+      "name": "Isla Vista County Park",
+      "state": "CA",
+      "country": "US",
+      "lat": 34.4094009399,
+      "lng": -119.8600006104
+    },
+    "fixed_id": 5301,
+    "fixed_name": "Isla Vista County Park, CA, US"
+  },
+  {
+    "original": {
+      "id": 5117,
+      "name": "Di Giorgio County Park",
+      "state": "CA",
+      "country": "US",
+      "lat": 35.2036018372,
+      "lng": -118.8320007324
+    },
+    "fixed_id": 5117,
+    "fixed_name": "Di Giorgio County Park, CA, US"
+  },
+  {
+    "original": {
+      "id": 5111,
+      "name": "Casa Loma County Park",
+      "state": "CA",
+      "country": "US",
+      "lat": 35.3358001709,
+      "lng": -118.9960021973
+    },
+    "fixed_id": 5111,
+    "fixed_name": "Casa Loma County Park, CA, US"
+  },
+  {
+    "original": {
+      "id": 4836,
+      "name": "Thirty Eighth Street County Park",
+      "state": "AZ",
+      "country": "US",
+      "lat": 33.4345016479,
+      "lng": -114.6279983521
+    },
+    "fixed_id": 4836,
+    "fixed_name": "Thirty Eighth Street County Park, AZ, US"
+  },
+  {
+    "original": {
+      "id": 5380,
+      "name": "O'Bannion County Park",
+      "state": "CA",
+      "country": "US",
+      "lat": 36.9929008484,
+      "lng": -120.625
+    },
+    "fixed_id": 5380,
+    "fixed_name": "O'Bannion County Park, CA, US"
+  },
+  {
+    "original": {
+      "id": 4409,
+      "name": "Palo Verde County Park",
+      "state": "CA",
+      "country": "US",
+      "lat": 33.3997993469,
+      "lng": -114.7249984741
+    },
+    "fixed_id": 4409,
+    "fixed_name": "Palo Verde County Park, CA, US"
+  },
+  {
+    "original": {
+      "id": 6609,
+      "name": "Cottonwood One County Park",
+      "state": "CA",
+      "country": "US",
+      "lat": 32.7543983459,
+      "lng": -116.9130020142
+    },
+    "fixed_id": 6609,
+    "fixed_name": "Cottonwood One County Park, CA, US"
+  },
+  {
+    "original": {
+      "id": 6630,
+      "name": "Kelseyville County Park",
+      "state": "CA",
+      "country": "US",
+      "lat": 38.9780006409,
+      "lng": -122.8330001831
+    },
+    "fixed_id": 6630,
+    "fixed_name": "Kelseyville County Park, CA, US"
+  },
+  {
+    "original": {
+      "id": 6632,
+      "name": "Upper Lake County Park",
+      "state": "CA",
+      "country": "US",
+      "lat": 39.1605987549,
+      "lng": -122.90599823
+    },
+    "fixed_id": 6632,
+    "fixed_name": "Upper Lake County Park, CA, US"
+  },
+  {
+    "original": {
+      "id": 131721,
+      "name": "Fish Lake County Park",
+      "state": "WI",
+      "country": "US",
+      "lat": 43.2862379427,
+      "lng": -89.6611260076
+    },
+    "fixed_id": 131721,
+    "fixed_name": "Fish Lake County Park, WI, US"
+  },
+  {
+    "original": {
+      "id": 171156,
+      "name": "Plum Creek Dam County Park",
+      "state": "IA",
+      "country": "US",
+      "lat": 43.1096577255,
+      "lng": -94.2077776541
+    },
+    "fixed_id": 171156,
+    "fixed_name": "Plum Creek Dam County Park, IA, US"
+  },
+  {
+    "original": {
+      "id": 161381,
+      "name": "Van Cleve County Park",
+      "state": "IA",
+      "country": "US",
+      "lat": 41.9348611656,
+      "lng": -93.0204787611
+    },
+    "fixed_id": 161381,
+    "fixed_name": "Van Cleve County Park, IA, US"
+  },
+  {
+    "original": {
+      "id": 4906,
+      "name": "Valley-Wide Regional Park",
+      "state": "CA",
+      "country": "US",
+      "lat": 33.7747993469,
+      "lng": -116.9759979248
+    },
+    "fixed_id": 4906,
+    "fixed_name": "Valley-Wide Regional Park, CA, US"
+  },
+  {
+    "original": {
+      "id": 5424,
+      "name": "Mossdale Crossing Regional Park",
+      "state": "CA",
+      "country": "US",
+      "lat": 37.7892990112,
+      "lng": -121.3050003052
+    },
+    "fixed_id": 5424,
+    "fixed_name": "Mossdale Crossing Regional Park, CA, US"
+  },
+  {
+    "original": {
+      "id": 5655,
+      "name": "Tuolumne River Regional Park",
+      "state": "CA",
+      "country": "US",
+      "lat": 37.6242980957,
+      "lng": -120.9680023193
+    },
+    "fixed_id": 5655,
+    "fixed_name": "Tuolumne River Regional Park, CA, US"
+  },
+  {
+    "original": {
+      "id": 6419,
+      "name": "Desert Regional Park",
+      "state": "CA",
+      "country": "US",
+      "lat": 33.7588005066,
+      "lng": -116.233001709
+    },
+    "fixed_id": 6419,
+    "fixed_name": "Desert Regional Park, CA, US"
+  },
+  {
+    "original": {
+      "id": 4084,
+      "name": "Jesse Owens Community Regional Park",
+      "state": "CA",
+      "country": "US",
+      "lat": 33.9472999573,
+      "lng": -118.3109970093
+    },
+    "fixed_id": 4084,
+    "fixed_name": "Jesse Owens Community Regional Park, CA, US"
+  },
+  {
+    "original": {
+      "id": 164284,
+      "name": "The Great Trail: Melville to York Lake Regional Park Connector",
+      "state": "SK",
+      "country": "CA",
+      "lat": 51.0121199419,
+      "lng": -102.5947505318
+    },
+    "fixed_id": 164284,
+    "fixed_name": "The Great Trail: Melville to York Lake Regional Park Connector, SK, CA"
+  },
+  {
+    "original": {
+      "id": 182242,
+      "name": "Bunker Hills Regional Park - McKay Lake",
+      "state": "MN",
+      "country": "US",
+      "lat": 45.1987298405,
+      "lng": -93.2897566991
+    },
+    "fixed_id": 182242,
+    "fixed_name": "Bunker Hills Regional Park - McKay Lake, MN, US"
+  },
+  {
+    "original": {
+      "id": 210215,
+      "name": "South Langley Regional Park - east block",
+      "state": "BC",
+      "country": "CA",
+      "lat": 49.0113086688,
+      "lng": -122.5845012976
+    },
+    "fixed_id": 210215,
+    "fixed_name": "South Langley Regional Park - east block, BC, CA"
+  },
+  {
+    "original": {
+      "id": 4152,
+      "name": "Olinda Regional Park",
+      "state": "CA",
+      "country": "US",
+      "lat": 33.9355010986,
+      "lng": -117.8229980469
+    },
+    "fixed_id": 4152,
+    "fixed_name": "Olinda Regional Park, CA, US"
+  },
+  {
+    "original": {
+      "id": 160458,
+      "name": "White's Ford Regional Park",
+      "state": "VA",
+      "country": "US",
+      "lat": 39.1932101363,
+      "lng": -77.4858944111
+    },
+    "fixed_id": 160458,
+    "fixed_name": "White's Ford Regional Park, VA, US"
+  },
+  {
+    "original": {
+      "id": 196907,
+      "name": "Richard O'Connor Memorial Park, Otonabee Region Conservation Authority",
+      "state": "ON",
+      "country": "CA",
+      "lat": 44.2413093141,
+      "lng": -78.3392052295
+    },
+    "fixed_id": 196907,
+    "fixed_name": "Richard O'Connor Memorial Park, Otonabee Region Conservation Authority, ON, CA"
+  },
+  {
+    "original": {
+      "id": 216537,
+      "name": "Piscataway Crossing Regional Park",
+      "state": "VA",
+      "country": "US",
+      "lat": 39.1932181696,
+      "lng": -77.4858946239
+    },
+    "fixed_id": 216537,
+    "fixed_name": "Piscataway Crossing Regional Park, VA, US"
+  },
+  {
+    "original": {
+      "id": 4386,
+      "name": "Escondido Creek Regional Park",
+      "state": "CA",
+      "country": "US",
+      "lat": 33.0783004761,
+      "lng": -117.1650009155
+    },
+    "fixed_id": 4386,
+    "fixed_name": "Escondido Creek Regional Park, San Diego, CA, US"
+  },
+  {
+    "original": {
+      "id": 3874,
+      "name": "Swartz County Regional Park",
+      "state": "CA",
+      "country": "US",
+      "lat": 32.8092002869,
+      "lng": -116.6449966431
+    },
+    "fixed_id": 3874,
+    "fixed_name": "Swartz County Regional Park, CA, US"
+  },
+  {
+    "original": {
+      "id": 202583,
+      "name": "Fraser Islands Regional Park Reserve",
+      "state": "BC",
+      "country": "CA",
+      "lat": 49.2130481238,
+      "lng": -122.801498759
+    },
+    "fixed_id": 202583,
+    "fixed_name": "Fraser Islands Regional Park Reserve, BC, CA"
+  },
+  {
+    "original": {
+      "id": 149964,
+      "name": "Iona Beach Regional Park - east side",
+      "state": "BC",
+      "country": "CA",
+      "lat": 49.2149606826,
+      "lng": -123.1900649101
+    },
+    "fixed_id": 149964,
+    "fixed_name": "Iona Beach Regional Park - east side, BC, CA"
+  },
+  {
+    "original": {
+      "id": 128502,
+      "name": "Wedekind Regional Park",
+      "state": "US",
+      "country": "US",
+      "lat": 39.5705186985,
+      "lng": -119.7364823074
+    },
+    "fixed_id": 128502,
+    "fixed_name": "Wedekind Regional Park, US, NV"
+  },
+  {
+    "original": {
+      "id": 146264,
+      "name": "Glen Valley Regional Park",
+      "state": "BC",
+      "country": "CA",
+      "lat": 49.1665059066,
+      "lng": -122.478677692
+    },
+    "fixed_id": 146264,
+    "fixed_name": "Glen Valley Regional Park, BC, CA"
+  },
+  {
+    "original": {
+      "id": 156399,
+      "name": "Black River State Forest",
+      "state": "WI",
+      "country": "US",
+      "lat": 44.2898521136,
+      "lng": -90.6556176026
+    },
+    "fixed_id": 156399,
+    "fixed_name": "Black River State Forest, WI, US"
+  },
+  {
+    "original": {
+      "id": 6093,
+      "name": "Ellen Pickett State Forest",
+      "state": "CA",
+      "country": "US",
+      "lat": 40.6473007202,
+      "lng": -122.8010025024
+    },
+    "fixed_id": 6093,
+    "fixed_name": "Ellen Pickett State Forest, CA, US"
+  },
+  {
+    "original": {
+      "id": 3245,
+      "name": "United States Forest Service",
+      "state": "CA",
+      "country": "US",
+      "lat": 38.0621986389,
+      "lng": -120.2310028076
+    },
+    "fixed_id": 3245,
+    "fixed_name": "United States Forest Service, CA, US"
+  },
+  {
+    "original": {
+      "id": 115855,
+      "name": "Two Lakes Pine-Oak Forest State Natural Area",
+      "state": "WI",
+      "country": "US",
+      "lat": 45.7839148982,
+      "lng": -89.6240647405
+    },
+    "fixed_id": 115855,
+    "fixed_name": "Two Lakes Pine-Oak Forest State Natural Area, WI, US"
+  },
+  {
+    "original": {
+      "id": 115868,
+      "name": "Upper Nemadji Floodplain Forest State Natural Area",
+      "state": "US",
+      "country": "US",
+      "lat": 46.5418861729,
+      "lng": -92.2538054502
+    },
+    "fixed_id": 115868,
+    "fixed_name": "Upper Nemadji Floodplain Forest State Natural Area, US, WI"
+  },
+  {
+    "original": {
+      "id": 113905,
+      "name": "Erickson Creek Forest & Wetlands State Natural Area",
+      "state": "US",
+      "country": "US",
+      "lat": 46.4334921348,
+      "lng": -92.0252021977
+    },
+    "fixed_id": 113905,
+    "fixed_name": "Erickson Creek Forest & Wetlands State Natural Area, US, WI"
+  },
+  {
+    "original": {
+      "id": 113923,
+      "name": "Flambeau River Hardwood Forest State Natural Area",
+      "state": "US",
+      "country": "US",
+      "lat": 45.7133140813,
+      "lng": -90.7791123208
+    },
+    "fixed_id": 113923,
+    "fixed_name": "Flambeau River Hardwood Forest State Natural Area, US, WI"
+  },
+  {
+    "original": {
+      "id": 127953,
+      "name": "Young Forest Habitat Wyantenock State Forest",
+      "state": "US",
+      "country": "US",
+      "lat": 41.7236939291,
+      "lng": -73.3085139918
+    },
+    "fixed_id": 127953,
+    "fixed_name": "Young Forest Habitat Wyantenock State Forest, US, CT"
+  },
+  {
+    "original": {
+      "id": 115926,
+      "name": "Whitman Bottoms Floodplain Forest State Natural Area",
+      "state": "US",
+      "country": "US",
+      "lat": 44.1657113116,
+      "lng": -91.7988790445
+    },
+    "fixed_id": 115926,
+    "fixed_name": "Whitman Bottoms Floodplain Forest State Natural Area, US, WI"
+  },
+  {
+    "original": {
+      "id": 115946,
+      "name": "Yellow River Floodplain Forest State Natural Area",
+      "state": "US",
+      "country": "US",
+      "lat": 44.3107193077,
+      "lng": -90.1192419521
+    },
+    "fixed_id": 115946,
+    "fixed_name": "Yellow River Floodplain Forest State Natural Area, US, WI"
+  },
+  {
+    "original": {
+      "id": 115176,
+      "name": "Hawkins Hemlock-Hardwood Forest State Natural Area",
+      "state": "US",
+      "country": "US",
+      "lat": 45.4195326061,
+      "lng": -90.6811818133
+    },
+    "fixed_id": 115176,
+    "fixed_name": "Hawkins Hemlock-Hardwood Forest State Natural Area, US, WI"
+  },
+  {
+    "original": {
+      "id": 112128,
+      "name": "LTC Old-Growth Forest State Natural Area",
+      "state": "US",
+      "country": "US",
+      "lat": 43.9268226432,
+      "lng": -87.7494792026
+    },
+    "fixed_id": 112128,
+    "fixed_name": "LTC Old-Growth Forest State Natural Area, US, WI"
+  },
+  {
+    "original": {
+      "id": 114361,
+      "name": "Baraboo River Floodplain Forest State Natural Area",
+      "state": "WI",
+      "country": "US",
+      "lat": 43.504067207,
+      "lng": -89.486953171
+    },
+    "fixed_id": 114361,
+    "fixed_name": "Baraboo River Floodplain Forest State Natural Area, WI, US"
+  },
+  {
+    "original": {
+      "id": 115475,
+      "name": "Nemadji River Floodplain Forest State Natural Area",
+      "state": "US",
+      "country": "US",
+      "lat": 46.6131709676,
+      "lng": -92.0993056708
+    },
+    "fixed_id": 115475,
+    "fixed_name": "Nemadji River Floodplain Forest State Natural Area, US, WI"
+  },
+  {
+    "original": {
+      "id": 93220,
+      "name": "Mukwa Bottomland Forest State Natural Area",
+      "state": "US",
+      "country": "US",
+      "lat": 44.385281271,
+      "lng": -88.7990879117
+    },
+    "fixed_id": 93220,
+    "fixed_name": "Mukwa Bottomland Forest State Natural Area, US, WI"
+  },
+  {
+    "original": {
+      "id": 168696,
+      "name": "Beartown State Forest",
+      "state": "NY",
+      "country": "US",
+      "lat": 43.9781602595,
+      "lng": -75.4826343235
+    },
+    "fixed_id": 168696,
+    "fixed_name": "Beartown State Forest, NY, US"
+  },
+  {
+    "original": {
+      "id": 168811,
+      "name": "Cobb Brook State Forest",
+      "state": "NY",
+      "country": "US",
+      "lat": 43.3462706519,
+      "lng": -75.6729350851
+    },
+    "fixed_id": 168811,
+    "fixed_name": "Cobb Brook State Forest, NY, US"
+  },
+  {
+    "original": {
+      "id": 168828,
+      "name": "Brookhaven Pine Barrens State Forest",
+      "state": "NY",
+      "country": "US",
+      "lat": 40.9011402018,
+      "lng": -72.8785695829
+    },
+    "fixed_id": 168828,
+    "fixed_name": "Brookhaven Pine Barrens State Forest, NY, US"
+  },
+  {
+    "original": {
+      "id": 120119,
+      "name": "Cedar Mountain Wilderness Study Area",
+      "state": "NM",
+      "country": "US",
+      "lat": 31.9680993864,
+      "lng": -108.1492431907
+    },
+    "fixed_id": 120119,
+    "fixed_name": "Cedar Mountain Wilderness Study Area, NM, US"
+  },
+  {
+    "original": {
+      "id": 135982,
+      "name": "Purcell Wilderness Conservancy Park Corridor Protected Area",
+      "state": "BC",
+      "country": "CA",
+      "lat": 50.1399613633,
+      "lng": -116.2409106123
+    },
+    "fixed_id": 135982,
+    "fixed_name": "Purcell Wilderness Conservancy Park Corridor Protected Area, BC, CA"
+  },
+  {
+    "original": {
+      "id": 135490,
+      "name": "Ruiss Noir Wilderness Area",
+      "state": "NS",
+      "country": "CA",
+      "lat": 46.4745028405,
+      "lng": -61.0149961126
+    },
+    "fixed_id": 135490,
+    "fixed_name": "Ruiss Noir Wilderness Area, NS, CA"
+  },
+  {
+    "original": {
+      "id": 135491,
+      "name": "Scrag Lake Wilderness Area",
+      "state": "NS",
+      "country": "CA",
+      "lat": 44.5872281223,
+      "lng": -64.9144511499
+    },
+    "fixed_id": 135491,
+    "fixed_name": "Scrag Lake Wilderness Area, NS, CA"
+  },
+  {
+    "original": {
+      "id": 135494,
+      "name": "Ship Harbour Long Lake Wilderness Area",
+      "state": "NS",
+      "country": "CA",
+      "lat": 44.8932275685,
+      "lng": -62.9934543088
+    },
+    "fixed_id": 135494,
+    "fixed_name": "Ship Harbour Long Lake Wilderness Area, NS, CA"
+  },
+  {
+    "original": {
+      "id": 135502,
+      "name": "The Big Bog Wilderness Area",
+      "state": "NS",
+      "country": "CA",
+      "lat": 45.1828357274,
+      "lng": -62.0982139115
+    },
+    "fixed_id": 135502,
+    "fixed_name": "The Big Bog Wilderness Area, NS, CA"
+  },
+  {
+    "original": {
+      "id": 135505,
+      "name": "Toadfish Lakes Wilderness Area",
+      "state": "NS",
+      "country": "CA",
+      "lat": 45.0575461173,
+      "lng": -62.3734085056
+    },
+    "fixed_id": 135505,
+    "fixed_name": "Toadfish Lakes Wilderness Area, NS, CA"
+  },
+  {
+    "original": {
+      "id": 135506,
+      "name": "Trout Brook Wilderness Area",
+      "state": "NS",
+      "country": "CA",
+      "lat": 46.0845327187,
+      "lng": -61.0660408009
+    },
+    "fixed_id": 135506,
+    "fixed_name": "Trout Brook Wilderness Area, NS, CA"
+  },
+  {
+    "original": {
+      "id": 135509,
+      "name": "Twelve Mile Stream Wilderness Area",
+      "state": "NS",
+      "country": "CA",
+      "lat": 45.0862141774,
+      "lng": -62.5875776853
+    },
+    "fixed_id": 135509,
+    "fixed_name": "Twelve Mile Stream Wilderness Area, NS, CA"
+  },
+  {
+    "original": {
+      "id": 135397,
+      "name": "Alder Ground Wilderness Area",
+      "state": "NS",
+      "country": "CA",
+      "lat": 45.1247339619,
+      "lng": -62.2869911387
+    },
+    "fixed_id": 135397,
+    "fixed_name": "Alder Ground Wilderness Area, NS, CA"
+  },
+  {
+    "original": {
+      "id": 135398,
+      "name": "Alder Ground Wilderness Area 2",
+      "state": "NS",
+      "country": "CA",
+      "lat": 45.1435939229,
+      "lng": -62.301166905
+    },
+    "fixed_id": 135398,
+    "fixed_name": "Alder Ground Wilderness Area 2, NS, CA"
+  },
+  {
+    "original": {
+      "id": 135407,
+      "name": "Clattenburgh Brook Wilderness Area",
+      "state": "NS",
+      "country": "CA",
+      "lat": 44.8675660474,
+      "lng": -63.4103773444
+    },
+    "fixed_id": 135407,
+    "fixed_name": "Clattenburgh Brook Wilderness Area, NS, CA"
+  },
+  {
+    "original": {
+      "id": 135439,
+      "name": "Lake Rossignol Wilderness Area",
+      "state": "NS",
+      "country": "CA",
+      "lat": 44.2384481023,
+      "lng": -65.0561834265
+    },
+    "fixed_id": 135439,
+    "fixed_name": "Lake Rossignol Wilderness Area, NS, CA"
+  },
+  {
+    "original": {
+      "id": 135441,
+      "name": "Liscomb River Wilderness Area",
+      "state": "NS",
+      "country": "CA",
+      "lat": 45.0782450056,
+      "lng": -62.1109896243
+    },
+    "fixed_id": 135441,
+    "fixed_name": "Liscomb River Wilderness Area, NS, CA"
+  },
+  {
+    "original": {
+      "id": 135444,
+      "name": "McGill Lake Wilderness Area",
+      "state": "NS",
+      "country": "CA",
+      "lat": 44.694906801,
+      "lng": -65.035465182
+    },
+    "fixed_id": 135444,
+    "fixed_name": "McGill Lake Wilderness Area, NS, CA"
+  },
+  {
+    "original": {
+      "id": 135451,
+      "name": "North Mountain Wilderness Area",
+      "state": "NS",
+      "country": "CA",
+      "lat": 45.7920399148,
+      "lng": -61.1692241217
+    },
+    "fixed_id": 135451,
+    "fixed_name": "North Mountain Wilderness Area, NS, CA"
+  },
+  {
+    "original": {
+      "id": 135456,
+      "name": "Ogden Round Lake Wilderness Area",
+      "state": "NS",
+      "country": "CA",
+      "lat": 45.4042478995,
+      "lng": -61.6461029554
+    },
+    "fixed_id": 135456,
+    "fixed_name": "Ogden Round Lake Wilderness Area, NS, CA"
+  },
+  {
+    "original": {
+      "id": 160745,
+      "name": "Bridge Coulee Wilderness Study Area",
+      "state": "MT",
+      "country": "US",
+      "lat": 47.2307573297,
+      "lng": -107.9129408918
+    },
+    "fixed_id": 160745,
+    "fixed_name": "Bridge Coulee Wilderness Study Area, MT, US"
+  },
+  {
+    "original": {
+      "id": 171584,
+      "name": "Black Ridge Canyon West Wilderness Study Area",
+      "state": "UT",
+      "country": "US",
+      "lat": 39.1028096412,
+      "lng": -109.0770348778
+    },
+    "fixed_id": 171584,
+    "fixed_name": "Black Ridge Canyon West Wilderness Study Area, UT, US"
+  }
+]

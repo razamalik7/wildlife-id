@@ -1,0 +1,10 @@
+{
+    "rewrites": [
+        {
+            "source": "/api/(.*)",
+            "destination": "https://raza44-animl.hf.space/:match*"
+        }
+    ],
+    "framework": "nextjs",
+    "cleanUrls": true
+}

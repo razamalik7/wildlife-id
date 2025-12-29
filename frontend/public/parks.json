@@ -168,7 +168,7 @@
     "lng": -90.186
   },
   {
-    "id": 72841,
+    "id": 69113,
     "name": "Glacier NP",
     "state": "MT",
     "country": "US",
@@ -504,7 +504,7 @@
     "lng": -113.026
   },
   {
-    "id": 95125,
+    "id": 95106,
     "name": "Big Cypress National Preserve",
     "state": "FL",
     "country": "US",
@@ -512,7 +512,7 @@
     "lng": -81.098
   },
   {
-    "id": 71194,
+    "id": 95110,
     "name": "Big Thicket National Preserve",
     "state": "TX",
     "country": "US",
@@ -520,7 +520,7 @@
     "lng": -94.386
   },
   {
-    "id": 69119,
+    "id": 3958,
     "name": "Mojave National Preserve",
     "state": "CA",
     "country": "US",
@@ -528,7 +528,7 @@
     "lng": -115.51
   },
   {
-    "id": 69118,
+    "id": 95330,
     "name": "Tallgrass Prairie National Preserve",
     "state": "KS",
     "country": "US",
@@ -536,7 +536,7 @@
     "lng": -96.556
   },
   {
-    "id": 95270,
+    "id": 95147,
     "name": "Timucuan Ecological & Historic Preserve",
     "state": "FL",
     "country": "US",
@@ -544,7 +544,7 @@
     "lng": -81.459
   },
   {
-    "id": 69324,
+    "id": 95300,
     "name": "Padre Island National Seashore",
     "state": "TX",
     "country": "US",
@@ -552,7 +552,7 @@
     "lng": -97.397
   },
   {
-    "id": 95178,
+    "id": 95121,
     "name": "Cape Cod National Seashore",
     "state": "MA",
     "country": "US",
@@ -560,7 +560,7 @@
     "lng": -70.006
   },
   {
-    "id": 95168,
+    "id": 62831,
     "name": "Assateague Island National Seashore",
     "state": "MD",
     "country": "US",
@@ -568,7 +568,7 @@
     "lng": -75.167
   },
   {
-    "id": 72799,
+    "id": 5781,
     "name": "Point Reyes National Seashore",
     "state": "CA",
     "country": "US",
@@ -576,7 +576,7 @@
     "lng": -122.833
   },
   {
-    "id": 95179,
+    "id": 95125,
     "name": "Cape Hatteras National Seashore",
     "state": "NC",
     "country": "US",
@@ -584,7 +584,7 @@
     "lng": -75.672
   },
   {
-    "id": 95180,
+    "id": 95087,
     "name": "Cape Lookout National Seashore",
     "state": "NC",
     "country": "US",
@@ -592,7 +592,7 @@
     "lng": -76.515
   },
   {
-    "id": 95183,
+    "id": 95150,
     "name": "Cumberland Island National Seashore",
     "state": "GA",
     "country": "US",
@@ -600,15 +600,15 @@
     "lng": -81.443
   },
   {
-    "id": 95185,
+    "id": 95160,
     "name": "Fire Island National Seashore",
     "state": "NY",
     "country": "US",
     "lat": 40.673,
-    "lng": -73.0
+    "lng": -73
   },
   {
-    "id": 95187,
+    "id": 95223,
     "name": "Gulf Islands National Seashore",
     "state": "FL",
     "country": "US",
@@ -616,7 +616,7 @@
     "lng": -87.295
   },
   {
-    "id": 95162,
+    "id": 95096,
     "name": "Apostle Islands National Lakeshore",
     "state": "WI",
     "country": "US",
@@ -624,7 +624,7 @@
     "lng": -90.663
   },
   {
-    "id": 95200,
+    "id": 95241,
     "name": "Indiana Dunes National Lakeshore",
     "state": "IN",
     "country": "US",
@@ -632,7 +632,7 @@
     "lng": -87.053
   },
   {
-    "id": 95231,
+    "id": 95250,
     "name": "Pictured Rocks National Lakeshore",
     "state": "MI",
     "country": "US",
@@ -640,7 +640,7 @@
     "lng": -86.362
   },
   {
-    "id": 95238,
+    "id": 95326,
     "name": "Sleeping Bear Dunes National Lakeshore",
     "state": "MI",
     "country": "US",
@@ -696,7 +696,7 @@
     "lng": -116.124
   },
   {
-    "id": 66307,
+    "id": 162742,
     "name": "Jasper National Park",
     "state": "AB",
     "country": "CA",
@@ -1240,22 +1240,6 @@
     "lng": -164.4038137346
   },
   {
-    "id": 95330,
-    "name": "Tallgrass Prairie National Preserve",
-    "state": "KS",
-    "country": "US",
-    "lat": 38.4402570818,
-    "lng": -96.5672295863
-  },
-  {
-    "id": 95106,
-    "name": "Big Cypress National Preserve",
-    "state": "US",
-    "country": "US",
-    "lat": 25.9704302921,
-    "lng": -81.0811506057
-  },
-  {
     "id": 95234,
     "name": "Little River Canyon National Preserve",
     "state": "US",
@@ -1272,22 +1256,6 @@
     "lng": -90.1399622266
   },
   {
-    "id": 95110,
-    "name": "Big Thicket National Preserve",
-    "state": "US",
-    "country": "US",
-    "lat": 30.4231828562,
-    "lng": -94.3385322002
-  },
-  {
-    "id": 3958,
-    "name": "Mojave National Preserve",
-    "state": "US",
-    "country": "US",
-    "lat": 35.1242050993,
-    "lng": -115.5168129904
-  },
-  {
     "id": 6073,
     "name": "Stone Lakes National Wildife Preserve",
     "state": "CA",
@@ -1296,76 +1264,12 @@
     "lng": -121.46900177
   },
   {
-    "id": 95160,
-    "name": "Fire Island National Seashore",
-    "state": "US",
-    "country": "US",
-    "lat": 40.6966467822,
-    "lng": -73.0001839174
-  },
-  {
     "id": 95130,
     "name": "Canaveral National Seashore",
     "state": "US",
     "country": "US",
     "lat": 28.7862735358,
     "lng": -80.754145444
-  },
-  {
-    "id": 95223,
-    "name": "Gulf Islands National Seashore",
-    "state": "US",
-    "country": "US",
-    "lat": 30.2991818506,
-    "lng": -87.7507640686
-  },
-  {
-    "id": 62831,
-    "name": "Assateague Island National Seashore",
-    "state": "MD",
-    "country": "US",
-    "lat": 38.0556055751,
-    "lng": -75.2453859363
-  },
-  {
-    "id": 95150,
-    "name": "Cumberland Island National Seashore",
-    "state": "US",
-    "country": "US",
-    "lat": 30.8585155802,
-    "lng": -81.4525456353
-  },
-  {
-    "id": 95121,
-    "name": "Cape Cod National Seashore",
-    "state": "US",
-    "country": "US",
-    "lat": 41.9348627128,
-    "lng": -70.0451298116
-  },
-  {
-    "id": 5781,
-    "name": "Point Reyes National Seashore",
-    "state": "US",
-    "country": "US",
-    "lat": 38.0550606614,
-    "lng": -122.8797850842
-  },
-  {
-    "id": 95300,
-    "name": "Padre Island National Seashore",
-    "state": "US",
-    "country": "US",
-    "lat": 27.0527813503,
-    "lng": -97.3590170694
-  },
-  {
-    "id": 95087,
-    "name": "Cape Lookout National Seashore",
-    "state": "US",
-    "country": "US",
-    "lat": 34.8263961869,
-    "lng": -76.3434846978
   },
   {
     "id": 95142,
@@ -1536,7 +1440,7 @@
     "lng": -77.4447504773
   },
   {
-    "id": 1010,
+    "id": 96884,
     "name": "Parke",
     "state": "US",
     "country": "US",
