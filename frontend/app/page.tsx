@@ -199,23 +199,23 @@ export default function IdentifyPage() {
 
             <div className="flex justify-center gap-8 text-xs text-emerald-700/80 bg-stone-200/50 py-3 rounded-xl max-w-lg mx-auto border border-stone-200">
               <div className="flex flex-col">
-                <span className="font-bold text-lg">90.7%</span>
+                <span className="font-bold text-lg">90.4%</span>
                 <span className="uppercase tracking-wider opacity-70">Species Acc</span>
               </div>
               <div className="w-px bg-stone-300" />
               <div className="flex flex-col">
-                <span className="font-bold text-lg">97.6%</span>
+                <span className="font-bold text-lg">90.6%</span>
+                <span className="uppercase tracking-wider opacity-70">Family Acc</span>
+              </div>
+              <div className="w-px bg-stone-300" />
+              <div className="flex flex-col">
+                <span className="font-bold text-lg">95.7%</span>
                 <span className="uppercase tracking-wider opacity-70">Class Acc</span>
               </div>
               <div className="w-px bg-stone-300" />
               <div className="flex flex-col">
-                <span className="font-bold text-lg">200+</span>
+                <span className="font-bold text-lg">100</span>
                 <span className="uppercase tracking-wider opacity-70">Species</span>
-              </div>
-              <div className="w-px bg-stone-300" />
-              <div className="flex flex-col">
-                <span className="font-bold text-lg">130k+</span>
-                <span className="uppercase tracking-wider opacity-70">Images</span>
               </div>
             </div>
           </div>
