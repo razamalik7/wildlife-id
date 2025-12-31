@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AniML - Wildlife Identification",
+  title: "aniML vision - Wildlife Identification",
   description: "AI-powered wildlife identification using computer vision",
 };
 

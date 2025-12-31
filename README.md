@@ -1,5 +1,5 @@
 ---
-title: AniML
+title: aniML vision
 emoji: 🐻
 colorFrom: green
 colorTo: blue
@@ -7,7 +7,7 @@ sdk: docker
 app_port: 7860
 ---
 
-# Wildlife ID 🦁
+# aniML vision 🦁
 
 A robust, full-stack application that uses **Computer Vision** (PyTorch) to identify wildlife species and a **Real-time Backend Proxy** to locate recent sightings in national parks.
 
@@ -56,7 +56,7 @@ Uses Supabase to cache common queries, ensuring the application remains fast and
 ```mermaid
 graph LR
     User[User] -->|Upload Image| FE[Next.js Frontend]
-    FE -->|POST /predict| AI[FastAPI Service (Hugging Face)]
+    FE -->|POST /predict| AI["FastAPI Service (Hugging Face)"]
     AI -->|Inference| Model[PyTorch Ensemble]
     
     User -->|Where to see?| FE
