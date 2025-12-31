@@ -28,11 +28,8 @@ export default function AppHeader({ observedCount, totalCount, filter }: AppHead
                     </div>
                     <div className="flex flex-col leading-none justify-center">
                         <h1 className="text-3xl font-black tracking-tighter text-white">
-                            Ani<span className="text-emerald-400 font-mono">ML</span>
+                            aniML <span className="text-emerald-400 font-mono">vision</span>
                         </h1>
-                        <span className="text-[10px] font-bold text-emerald-500 tracking-[0.2em] uppercase mt-0.5">
-                            Computer Vision
-                        </span>
                     </div>
                 </Link>
 
