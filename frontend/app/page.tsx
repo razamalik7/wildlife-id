@@ -23,6 +23,7 @@ export default function IdentifyPage() {
   const [isLocationConfirmed, setIsLocationConfirmed] = useState(false);
 
   const [predictionResult, setPredictionResult] = useState<any>(null);
+  const [selectedCandidate, setSelectedCandidate] = useState<any>(null);
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -34,6 +35,7 @@ export default function IdentifyPage() {
       setObservationLocation(null);
       setIsLocationConfirmed(false);
       setPredictionResult(null);
+      setSelectedCandidate(null);
     }
   };
 
@@ -52,6 +54,7 @@ export default function IdentifyPage() {
     setObservationLocation(null);
     setIsLocationConfirmed(false);
     setPredictionResult(null);
+    setSelectedCandidate(null);
   };
 
   const identifyAnimal = async () => {
@@ -127,6 +130,7 @@ export default function IdentifyPage() {
         bestTaxonId,
         taxonId: bestTaxonId // Just to be safe
       });
+      setSelectedCandidate(candidates[0]);
 
     } catch (error) {
       alert('Backend Error. Is Python running?');
@@ -145,84 +149,100 @@ export default function IdentifyPage() {
         <div className="transition-all duration-500">
 
           {/* 1. RESULT VIEW */}
-          {predictionResult && preview ? (
+          {predictionResult && selectedCandidate && preview ? (
             <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden animate-in zoom-in-95 duration-300">
-              <div className="relative h-64 bg-stone-900">
-                <img src={preview} alt="Identified" className="w-full h-full object-cover opacity-90" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+              <div className="relative h-64 bg-stone-900 group">
+                <img src={preview} alt="Identified" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-6 text-white w-full">
-                  {predictionResult.candidates[0].score < 40 && (
+                  {selectedCandidate.score < 40 && (
                     <div className="mb-2 inline-flex items-center gap-2 px-3 py-1 bg-amber-500/90 text-amber-50 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-md">
                       <span>⚠️ Low Confidence</span>
                     </div>
                   )}
-                  <h2 className="text-3xl font-black tracking-tight">{predictionResult.candidates[0].name}</h2>
-                  <p className="opacity-80 font-mono text-sm uppercase tracking-widest">{predictionResult.candidates[0].scientific_name}</p>
+                  <h2 className="text-4xl font-black tracking-tighter mb-1">{selectedCandidate.name}</h2>
+                  <p className="opacity-80 font-mono text-sm uppercase tracking-widest">{selectedCandidate.scientific_name}</p>
                 </div>
               </div>
 
-              <div className="p-6 space-y-6">
+              <div className="p-6 space-y-8">
                 {/* Confidence Bar */}
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm font-bold text-stone-600">
-                    <span>Confidence Match</span>
-                    <span>{predictionResult.candidates[0].score.toFixed(1)}%</span>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-end text-stone-600">
+                    <span className="text-sm font-bold uppercase tracking-wider opacity-70">Confidence Match</span>
+                    <span className="text-2xl font-black text-emerald-600">{selectedCandidate.score.toFixed(1)}%</span>
                   </div>
-                  <div className="h-4 bg-stone-100 rounded-full overflow-hidden border border-stone-200">
+                  <div className="h-5 bg-stone-100 rounded-full overflow-hidden border border-stone-200 shadow-inner">
                     <div
-                      className={`h-full rounded-full transition-all duration-1000 ${predictionResult.candidates[0].score > 80 ? 'bg-emerald-500' :
-                        predictionResult.candidates[0].score > 40 ? 'bg-amber-400' : 'bg-red-400'
+                      className={`h-full rounded-full transition-all duration-1000 ${selectedCandidate.score > 80 ? 'bg-gradient-to-r from-emerald-500 to-emerald-400' :
+                          selectedCandidate.score > 40 ? 'bg-gradient-to-r from-amber-400 to-amber-300' : 'bg-red-400'
                         }`}
-                      style={{ width: `${predictionResult.candidates[0].score}%` }}
+                      style={{ width: `${selectedCandidate.score}%` }}
                     />
                   </div>
-                  {predictionResult.candidates[0].score < 40 && (
-                    <p className="text-xs text-amber-700 bg-amber-50 p-3 rounded-lg border border-amber-100">
-                      Our model is unsure about this identification. It might be a species we haven't trained on yet, or the image quality is low.
+                  {selectedCandidate.score < 40 && (
+                    <p className="text-sm text-amber-800 bg-amber-50 p-4 rounded-xl border border-amber-100 flex items-start gap-3">
+                      <span className="text-xl">🤔</span>
+                      <span>Our model is unsure about this identification. It might be a species we haven't trained on yet, or the image quality is low.</span>
                     </p>
                   )}
                 </div>
 
                 {/* Taxonomy Grid */}
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="p-4 bg-stone-50 rounded-2xl border border-stone-100">
-                    <p className="text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Family</p>
-                    <p className="font-bold text-stone-700">{predictionResult.candidates[0].taxonomy.family || 'Unknown'}</p>
+                  <div className="p-5 bg-stone-50 rounded-2xl border border-stone-100">
+                    <p className="text-xs uppercase tracking-wider text-stone-400 font-bold mb-2">My Family</p>
+                    <p className="font-bold text-xl text-stone-700">{selectedCandidate.taxonomy.family || 'Unknown'}</p>
                   </div>
-                  <div className="p-4 bg-stone-50 rounded-2xl border border-stone-100">
-                    <p className="text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Class</p>
-                    <p className="font-bold text-stone-700">{predictionResult.candidates[0].taxonomy.class || 'Unknown'}</p>
+                  <div className="p-5 bg-stone-50 rounded-2xl border border-stone-100">
+                    <p className="text-xs uppercase tracking-wider text-stone-400 font-bold mb-2">My Class</p>
+                    <p className="font-bold text-xl text-stone-700">{selectedCandidate.taxonomy.class || 'Unknown'}</p>
                   </div>
                 </div>
 
-                {/* Alternative Candidates - Subtle */}
+                {/* Alternative Candidates - Interactive Cards */}
                 {predictionResult.candidates.length > 1 && (
-                  <div className="pt-2 border-t border-stone-100">
-                    <p className="text-xs font-bold text-stone-400 uppercase tracking-widest mb-3">Other Possibilities</p>
-                    <div className="space-y-2">
-                      {predictionResult.candidates.slice(1).map((candidate: any, idx: number) => (
-                        <div key={idx} className="flex justify-between items-center text-sm text-stone-500">
-                          <span>{candidate.name}</span>
-                          <span className="font-mono text-xs opacity-70">{candidate.score.toFixed(1)}%</span>
-                        </div>
-                      ))}
+                  <div className="pt-4 border-t border-stone-100">
+                    <p className="text-xs font-bold text-stone-400 uppercase tracking-widest mb-4">Other Potential Matches</p>
+                    <div className="space-y-3">
+                      {predictionResult.candidates
+                        .filter((c: any) => c.name !== selectedCandidate.name)
+                        .map((candidate: any, idx: number) => (
+                          <div
+                            key={idx}
+                            onClick={() => setSelectedCandidate(candidate)}
+                            className="flex justify-between items-center p-4 rounded-xl border-2 border-transparent bg-stone-50 hover:bg-white hover:border-emerald-500 hover:shadow-md cursor-pointer transition-all group"
+                          >
+                            <div>
+                              <h4 className="font-bold text-stone-700 group-hover:text-emerald-700 transition-colors">{candidate.name}</h4>
+                              <p className="text-xs text-stone-400 uppercase tracking-wide">{candidate.scientific_name}</p>
+                            </div>
+                            <div className="text-right">
+                              <span className={`font-mono font-bold ${candidate.score > 50 ? 'text-emerald-600' : 'text-stone-400'}`}>
+                                {candidate.score.toFixed(1)}%
+                              </span>
+                              <p className="text-[10px] text-stone-300 font-bold uppercase tracking-widest mt-1 group-hover:text-emerald-500">View This</p>
+                            </div>
+                          </div>
+                        ))}
                     </div>
                   </div>
                 )}
 
                 {/* Actions */}
-                <div className="flex gap-3 pt-2">
+                <div className="flex gap-4 pt-4 border-t border-stone-100">
                   <button
                     onClick={resetFlow}
-                    className="flex-1 py-3 px-4 bg-stone-100 hover:bg-stone-200 text-stone-600 font-bold rounded-xl transition-colors"
+                    className="flex-1 py-4 px-6 bg-stone-100 hover:bg-stone-200 text-stone-600 font-bold rounded-2xl transition-colors text-lg"
                   >
                     Identify Another
                   </button>
                   <button
-                    onClick={() => router.push(`/anidex/${encodeURIComponent(predictionResult.candidates[0].name)}`)}
-                    className="flex-[2] py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg transition-transform active:scale-95"
+                    onClick={() => router.push(`/anidex/${encodeURIComponent(selectedCandidate.name)}`)}
+                    className="flex-[2] py-4 px-6 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all text-lg flex items-center justify-center gap-2"
                   >
-                    View Full Details
+                    <span>Learn More</span>
+                    <Check size={20} strokeWidth={3} />
                   </button>
                 </div>
               </div>
