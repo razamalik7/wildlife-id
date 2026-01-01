@@ -1,5 +1,14 @@
 [
     {
+        "name": "American Bison",
+        "scientific_name": "Bison bison",
+        "taxonomy": {
+            "class": "Mammalia",
+            "order": "Artiodactyla",
+            "family": "Bovidae"
+        }
+    },
+    {
         "name": "American Black Bear",
         "scientific_name": "Ursus americanus",
         "description": "Excellent tree climbers, often found in forests.",
