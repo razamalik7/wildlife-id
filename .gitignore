@@ -221,10 +221,8 @@ api/training_data_refined/
 api/training_data_cropped/
 training_data/
 
-# Ignore the trained brain (large binary file)
+# Ignore AI models (too large for GitHub LFS quota)
 *.pth
-!api/oogway_b3_best.pth
-!api/oogway_convnext_final.pth
 *.pt
 
 # Ignore user uploads
