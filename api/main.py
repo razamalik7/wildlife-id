@@ -1,8 +1,10 @@
-from fastapi import FastAPI, UploadFile, File
+from fastapi import FastAPI, UploadFile, File, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 import shutil
 import os
 import json
+import time
+from datetime import datetime
 from ai_engine import predict_animal
 
 # Trigger Hot Reload for Taxonomy ✨
@@ -49,21 +51,62 @@ def get_all_species():
     return load_species_data()
 
 @app.post("/predict")
-async def predict(file: UploadFile = File(...)):
+async def predict(background_tasks: BackgroundTasks, file: UploadFile = File(...)):
     # 1. Save file temporarily
     file_path = f"temp_{file.filename}"
     with open(file_path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
 
     # 2. Run AI (Now returns a Dictionary with Top 3 Candidates)
+    start_time = time.time()
     result = predict_animal(file_path)
+    exec_time = int((time.time() - start_time) * 1000)
     
     # 3. Clean up
     if os.path.exists(file_path):
         os.remove(file_path)
     
-    # 4. Return the result directly (Frontend expects .data.candidates)
+    # 4. Log to Supabase (Background Task)
+    if "candidates" in result and len(result["candidates"]) > 0:
+        top = result["candidates"][0]
+        background_tasks.add_task(
+            log_prediction, 
+            species=top["name"], 
+            confidence=top["score"], 
+            family=top["taxonomy"]["family"], 
+            class_name=top["taxonomy"]["class"],
+            filename=file.filename,
+            exec_time=exec_time
+        )
+    
+    # 5. Return the result directly (Frontend expects .data.candidates)
     return result
+
+def log_prediction(species: str, confidence: float, family: str, class_name: str, filename: str, exec_time: int):
+    """Logs prediction to Supabase without blocking the main thread."""
+    if not SUPABASE_URL or not SUPABASE_KEY:
+        return
+
+    try:
+        url = f"{SUPABASE_URL}/rest/v1/prediction_logs"
+        headers = {
+            "apikey": SUPABASE_KEY,
+            "Authorization": f"Bearer {SUPABASE_KEY}",
+            "Content-Type": "application/json",
+            "Prefer": "return=minimal"
+        }
+        payload = {
+            "species_prediction": species,
+            "confidence": confidence,
+            "family": family,
+            "class_name": class_name,
+            "filename": filename,
+            "execution_time_ms": exec_time,
+            "created_at": datetime.utcnow().isoformat()       
+        }
+        requests.post(url, headers=headers, json=payload, timeout=2)
+    except Exception as e:
+        print(f"⚠️ Logger Error: {e}")
 
 
 # --- PARK OBSERVATIONS CACHE ---
