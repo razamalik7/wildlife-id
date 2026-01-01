@@ -114,9 +114,22 @@ def load_checkpoint(path, model_type):
 print("🧠 Loading Trained Models...")
 path_b3 = os.path.join(BASE_DIR, 'oogway_b3_best.pth')
 path_cx = os.path.join(BASE_DIR, 'oogway_convnext_final.pth')
+path_yolo = os.path.join(BASE_DIR, 'yolov8m.pt')
 
 model_b3, classes_b3 = load_checkpoint(path_b3, 'b3')
 model_cx, classes_cx = load_checkpoint(path_cx, 'convnext')
+
+try:
+    from ultralytics import YOLO
+    if os.path.exists(path_yolo):
+        model_yolo = YOLO(path_yolo)
+        print(f"✅ Loaded YOLOv8 from {os.path.basename(path_yolo)}")
+    else:
+        print("⚠️ YOLOv8 model not found. Skipping Object Detection.")
+        model_yolo = None
+except ImportError:
+    print("⚠️ Ultralytics not installed. Skipping Object Detection.")
+    model_yolo = None
 
 # Helper: Family lookup for Smart Ensemble
 # We need to map class_index -> family_name to check against B3_STRONG_FAMILIES
@@ -185,21 +198,30 @@ def check_is_in_range(species_info, lat, lng):
         return True # No location provided
         
     hotspots = species_info.get('hotspots', [])
+    has_hotspots = len(hotspots) > 0
     
-    # 1. Precise Hotspot Check (500km radius tolerance)
-    if ALL_PARKS and hotspots:
+    # 1. Precise Hotspot Check (800km radius tolerance - wide regional check)
+    if ALL_PARKS and has_hotspots:
         for hotspot in hotspots:
             # "Yellowstone National Park, WY" -> Match "Yellowstone"
-            # Simple keyword matching
             for park in ALL_PARKS:
-                # park['name'] is like "Yellowstone NP"
                 p_name_core = park['name'].replace(' NP', '').replace(' National Park', '')
                 h_name_core = hotspot.split(',')[0].replace(' National Park', '').replace(' State Park', '')
                 
                 if p_name_core in h_name_core or h_name_core in p_name_core:
                     dist = haversine_distance(lat, lng, park['lat'], park['lng'])
-                    if dist < 500: # 500km radius (~300 miles)
+                    if dist < 800: # 800km radius (~500 miles) cover regions
                         return True
+                        
+        # STRICT CHECK: If specific hotspots were listed, but user is nowhere near them...
+        # Check if the hotspots were generic (e.g. "Natural Reserves")
+        is_generic = any("reserve" in h.lower() or "forest" in h.lower() for h in hotspots)
+        
+        # If Hotspots are specific (National Parks) and we didn't match -> FALSE
+        # This filters Grizzly (Yellowstone) from NY users.
+        if not is_generic and "north america" in species_info.get('origin', '').lower():
+            if (15 <= lat <= 75) and (-170 <= lng <= -50): # User IS in NA
+                 return False
                         
     # 2. Continental Fallback (Broad strokes)
     origin = species_info.get('origin', '').lower()
@@ -222,6 +244,60 @@ def predict_animal(image_path, lat=None, lng=None, date=None):
         # Load Image
         img = Image.open(image_path).convert('RGB')
         
+        # --- 0. YOLO OBJECT DETECTION (Smart Cropping) ---
+        detected_bbox = None
+        if model_yolo:
+            # Run inference
+            results = model_yolo(image_path, verbose=False, conf=0.4) 
+            
+            # Find best animal box (classes 14-23 in COCO are animals)
+            # 14:bird,15:cat,16:dog,17:horse,18:sheep,19:cow,20:elephant,21:bear,22:zebra,23:giraffe
+            ANIMAL_CLASSES = [14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+            
+            best_box = None
+            max_conf = 0.0
+            
+            if results and results[0].boxes:
+                for box in results[0].boxes:
+                    cls_id = int(box.cls[0].item())
+                    conf = box.conf[0].item()
+                    
+                    # Prioritize animals, but take any high conf object if no animal found?
+                    # Let's stick to animals to avoid cropping a rock.
+                    if cls_id in ANIMAL_CLASSES:
+                        if conf > max_conf:
+                            max_conf = conf
+                            best_box = box.xyxy[0].tolist()
+            
+            if best_box:
+                x1, y1, x2, y2 = best_box
+                w, h = img.size
+                
+                # Add 10% Margin (Context)
+                bw = x2 - x1
+                bh = y2 - y1
+                margin_x = bw * 0.10
+                margin_y = bh * 0.10
+                
+                nx1 = max(0, x1 - margin_x)
+                ny1 = max(0, y1 - margin_y)
+                nx2 = min(w, x2 + margin_x)
+                ny2 = min(h, y2 + margin_y)
+                
+                # Save detected box for Frontend (relative 0-1 coords for easy CSS)
+                detected_bbox = {
+                    "x": nx1 / w,
+                    "y": ny1 / h,
+                    "w": (nx2 - nx1) / w,
+                    "h": (ny2 - ny1) / h
+                }
+                
+                # Perform the Crop for the AI Model
+                img = img.crop((nx1, ny1, nx2, ny2))
+                print(f"✨ Auto-Cropped to {img.size} (Conf: {max_conf:.2f})")
+            else:
+                print("⚠️ No animal detected by YOLO. Using full image.")
+
         # Prepare Metadata
         if lat is None: lat = 0.0
         if lng is None: lng = 0.0
@@ -237,6 +313,15 @@ def predict_animal(image_path, lat=None, lng=None, date=None):
                 month = 6 
                 
         # Create Meta Tensor [sin(month), cos(month), lat, lng]
+        meta_tensor = torch.tensor([
+            math.sin(2 * math.pi * month / 12),
+            math.cos(2 * math.pi * month / 12),
+            lat / 90.0,
+            lng / 180.0
+        ], dtype=torch.float32).unsqueeze(0).to(DEVICE)
+        
+        # Confirm Metadata Usage to User
+        print(f"⚖️  Metadata Logic: Month={month}, Lat={lat:.2f}, Lng={lng:.2f}")
         meta_tensor = torch.tensor([
             math.sin(2 * math.pi * month / 12),
             math.cos(2 * math.pi * month / 12),
@@ -354,7 +439,10 @@ def predict_animal(image_path, lat=None, lng=None, date=None):
             candidates.append(candidate)
             
         print(f"🏆 Final Decision: {candidates[0]['name']} ({candidates[0]['score']:.1f}%)")
-        return {"candidates": candidates}
+        return {
+            "candidates": candidates,
+            "bbox": detected_bbox
+        }
 
     except Exception as e:
         import traceback

@@ -80,7 +80,9 @@ export default function IdentifyPage() {
             taxon_id: selectedCandidate.taxon_id,
             lat: observationLocation.lat,
             lng: observationLocation.lng,
-            radius: 100 // 100km radius
+            radius: 100, // 100km radius
+            captive: 'false', // Exclude Zoo animals
+            per_page: 1 // Optimization
           }
         });
 
