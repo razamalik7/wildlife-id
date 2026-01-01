@@ -5,7 +5,8 @@
         "taxonomy": {
             "class": "Mammalia",
             "order": "Artiodactyla",
-            "family": "Bovidae"
+            "family": "Bovidae",
+            "taxon_id": 42408
         }
     },
     {
@@ -100,29 +101,6 @@
             "species": "Odocoileus virginianus",
             "common_name": "White-tailed Deer",
             "taxon_id": 42223
-        }
-    },
-    {
-        "name": "American Bison",
-        "scientific_name": "Bison bison",
-        "description": "The national mammal of the United States.",
-        "origin": "North America",
-        "category": "Native",
-        "iucn": "Near Threatened",
-        "hotspots": [
-            "Yellowstone National Park, WY",
-            "Custer State Park, SD",
-            "Antelope Island State Park, UT"
-        ],
-        "taxonomy": {
-            "kingdom": "Animalia",
-            "phylum": "Chordata",
-            "class": null,
-            "order": null,
-            "family": null,
-            "genus": "Bison",
-            "species": "Bison bison",
-            "taxon_id": 42408
         }
     },
     {
@@ -582,9 +560,9 @@
         "taxonomy": {
             "kingdom": "Animalia",
             "phylum": "Chordata",
-            "class": null,
-            "order": null,
-            "family": null,
+            "class": "Reptilia",
+            "order": "Squamata",
+            "family": "Iguanidae",
             "genus": "Iguana",
             "species": "Iguana iguana",
             "taxon_id": 35342

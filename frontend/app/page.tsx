@@ -57,6 +57,45 @@ export default function IdentifyPage() {
     setSelectedCandidate(null);
   };
 
+  // New State for Live Range Check
+  const [rangeStatus, setRangeStatus] = useState<'loading' | 'yes' | 'no' | null>(null);
+
+  useEffect(() => {
+    if (!selectedCandidate || !observationLocation || !selectedCandidate.taxon_id) {
+      setRangeStatus(null);
+      return;
+    }
+
+    // Don't re-fetch if we already have a specialized guess, but live valid is better.
+    setRangeStatus('loading');
+
+    // Debounce slightly to avoid rapid clicks
+    const timer = setTimeout(async () => {
+      try {
+        const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
+        const res = await axios.get(`${API_BASE}/inat/observations`, {
+          params: {
+            taxon_id: selectedCandidate.taxon_id,
+            lat: observationLocation.lat,
+            lng: observationLocation.lng,
+            radius: 100 // 100km radius
+          }
+        });
+
+        if (res.data.total_results > 0) {
+          setRangeStatus('yes');
+        } else {
+          setRangeStatus('no');
+        }
+      } catch (e) {
+        console.error("Range check failed", e);
+        setRangeStatus(null);
+      }
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, [selectedCandidate, observationLocation]);
+
   const identifyAnimal = async () => {
     if (!image || !observationLocation) return;
 
@@ -65,6 +104,10 @@ export default function IdentifyPage() {
     try {
       const formData = new FormData();
       formData.append('file', image);
+      if (observationLocation) {
+        formData.append('lat', observationLocation.lat.toString());
+        formData.append('lng', observationLocation.lng.toString());
+      }
 
       const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
       const aiRes = await axios.post(`${API_BASE}/predict`, formData);
@@ -124,13 +167,31 @@ export default function IdentifyPage() {
         }
       }
 
+      // Enrich candidates with client-side taxonomy if missing from API
+      const enrichedCandidates = candidates.map((c: any) => {
+        if (!c.taxonomy?.family || c.taxonomy.family === 'Unknown') {
+          const match = allSpecies.find(s => s.name === c.name);
+          if (match?.taxonomy) {
+            return {
+              ...c,
+              taxonomy: {
+                ...c.taxonomy,
+                family: match.taxonomy.family || 'Unknown',
+                class: match.taxonomy.class || 'Unknown'
+              }
+            };
+          }
+        }
+        return c;
+      });
+
       // SET RESULT instead of redirecting
       setPredictionResult({
-        candidates,
+        candidates: enrichedCandidates,
         bestTaxonId,
         taxonId: bestTaxonId // Just to be safe
       });
-      setSelectedCandidate(candidates[0]);
+      setSelectedCandidate(enrichedCandidates[0]);
 
     } catch (error) {
       alert('Backend Error. Is Python running?');
@@ -150,102 +211,169 @@ export default function IdentifyPage() {
 
           {/* 1. RESULT VIEW */}
           {predictionResult && selectedCandidate && preview ? (
-            <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden animate-in zoom-in-95 duration-300">
-              <div className="relative h-64 bg-stone-900 group">
-                <img src={preview} alt="Identified" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 p-6 text-white w-full">
-                  {selectedCandidate.score < 40 && (
-                    <div className="mb-2 inline-flex items-center gap-2 px-3 py-1 bg-amber-500/90 text-amber-50 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-md">
-                      <span>⚠️ Low Confidence</span>
+            <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 animate-in zoom-in-95 duration-500">
+
+              {/* PRIMARY CARD (Left, 2/3 width) */}
+              <div className="lg:col-span-2 bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col">
+                <div className="relative h-72 sm:h-96 bg-stone-900 group">
+                  <img src={preview} alt="Identified" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 p-8 text-white w-full">
+                    {selectedCandidate.score < 40 && (
+                      <div className="mb-3 inline-flex items-center gap-2 px-3 py-1 bg-amber-500/90 text-amber-50 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+                        <span>⚠️ Low Confidence</span>
+                      </div>
+                    )}
+                    <h2 className="text-4xl sm:text-6xl font-black tracking-tighter mb-2 leading-none">{selectedCandidate.name}</h2>
+                    <p className="opacity-80 font-mono text-sm sm:text-base uppercase tracking-widest flex items-center gap-2 flex-wrap">
+                      {selectedCandidate.scientific_name}
+
+                      {/* 1. Live Check Loading */}
+                      {rangeStatus === 'loading' && (
+                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border bg-stone-100 text-stone-500 border-stone-200 animate-pulse">
+                          📡 Checking Location...
+                        </span>
+                      )}
+
+                      {/* 2. Live Check Result (Priority) */}
+                      {rangeStatus === 'yes' && (
+                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border backdrop-blur-md bg-emerald-500/20 text-emerald-600 border-emerald-500/30">
+                          ✅ Verified In Range
+                        </span>
+                      )}
+                      {rangeStatus === 'no' && (
+                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border backdrop-blur-md bg-amber-500/20 text-amber-600 border-amber-500/30">
+                          ⚠️ Out of Range
+                        </span>
+                      )}
+
+                      {/* 3. Static Fallback (Only if Live Check hasn't finished or failed) */}
+                      {rangeStatus === null && selectedCandidate.in_range !== undefined && (
+                        <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border backdrop-blur-md ${selectedCandidate.in_range
+                            ? 'bg-emerald-500/20 text-emerald-600 border-emerald-500/30'
+                            : 'bg-red-500/20 text-red-600 border-red-500/30'
+                          }`}>
+                          {selectedCandidate.in_range ? 'Possibly In Range' : 'Likely Out of Range'}
+                        </span>
+                      )}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-8">
+                  {/* Taxonomy Grid */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="p-4 sm:p-5 bg-stone-50 rounded-2xl border border-stone-100">
+                      <p className="text-xs uppercase tracking-wider text-stone-400 font-bold mb-2">Family</p>
+                      <p className="font-bold text-xl sm:text-2xl text-stone-700">{selectedCandidate.taxonomy.family || 'Unknown'}</p>
                     </div>
-                  )}
-                  <h2 className="text-4xl font-black tracking-tighter mb-1">{selectedCandidate.name}</h2>
-                  <p className="opacity-80 font-mono text-sm uppercase tracking-widest">{selectedCandidate.scientific_name}</p>
+                    <div className="p-4 sm:p-5 bg-stone-50 rounded-2xl border border-stone-100">
+                      <p className="text-xs uppercase tracking-wider text-stone-400 font-bold mb-2">Class</p>
+                      <p className="font-bold text-xl sm:text-2xl text-stone-700">{selectedCandidate.taxonomy.class || 'Unknown'}</p>
+                    </div>
+                  </div>
+
+                  {/* Confidence Bar */}
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-end text-stone-600">
+                      <span className="text-sm font-bold uppercase tracking-wider opacity-70">Confidence</span>
+                      <span className="text-3xl font-black text-emerald-600">{selectedCandidate.score.toFixed(1)}%</span>
+                    </div>
+                    <div className="h-4 bg-stone-100 rounded-full overflow-hidden border border-stone-200">
+                      <div
+                        className={`h-full rounded-full transition-all duration-1000 ${selectedCandidate.score > 80 ? 'bg-emerald-500' :
+                          selectedCandidate.score > 40 ? 'bg-amber-400' : 'bg-red-400'
+                          }`}
+                        style={{ width: `${selectedCandidate.score}%` }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Actions */}
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-stone-100">
+                    <button
+                      onClick={resetFlow}
+                      className="w-full sm:flex-1 py-4 px-6 bg-stone-100 hover:bg-stone-200 text-stone-600 font-bold rounded-2xl transition-colors text-lg"
+                    >
+                      New Photo
+                    </button>
+                    <button
+                      onClick={() => router.push(`/anidex/${encodeURIComponent(selectedCandidate.name)}`)}
+                      className="w-full sm:flex-[2] py-4 px-6 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all text-lg flex items-center justify-center gap-2"
+                    >
+                      <span>Full Details</span>
+                      <Check size={20} strokeWidth={3} />
+                    </button>
+                  </div>
                 </div>
               </div>
 
-              <div className="p-6 space-y-8">
-                {/* Confidence Bar */}
-                <div className="space-y-3">
-                  <div className="flex justify-between items-end text-stone-600">
-                    <span className="text-sm font-bold uppercase tracking-wider opacity-70">Confidence Match</span>
-                    <span className="text-2xl font-black text-emerald-600">{selectedCandidate.score.toFixed(1)}%</span>
-                  </div>
-                  <div className="h-5 bg-stone-100 rounded-full overflow-hidden border border-stone-200 shadow-inner">
-                    <div
-                      className={`h-full rounded-full transition-all duration-1000 ${selectedCandidate.score > 80 ? 'bg-gradient-to-r from-emerald-500 to-emerald-400' :
-                          selectedCandidate.score > 40 ? 'bg-gradient-to-r from-amber-400 to-amber-300' : 'bg-red-400'
-                        }`}
-                      style={{ width: `${selectedCandidate.score}%` }}
-                    />
-                  </div>
-                  {selectedCandidate.score < 40 && (
-                    <p className="text-sm text-amber-800 bg-amber-50 p-4 rounded-xl border border-amber-100 flex items-start gap-3">
-                      <span className="text-xl">🤔</span>
-                      <span>Our model is unsure about this identification. It might be a species we haven't trained on yet, or the image quality is low.</span>
-                    </p>
-                  )}
-                </div>
-
-                {/* Taxonomy Grid */}
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="p-5 bg-stone-50 rounded-2xl border border-stone-100">
-                    <p className="text-xs uppercase tracking-wider text-stone-400 font-bold mb-2">My Family</p>
-                    <p className="font-bold text-xl text-stone-700">{selectedCandidate.taxonomy.family || 'Unknown'}</p>
-                  </div>
-                  <div className="p-5 bg-stone-50 rounded-2xl border border-stone-100">
-                    <p className="text-xs uppercase tracking-wider text-stone-400 font-bold mb-2">My Class</p>
-                    <p className="font-bold text-xl text-stone-700">{selectedCandidate.taxonomy.class || 'Unknown'}</p>
-                  </div>
-                </div>
-
-                {/* Alternative Candidates - Interactive Cards */}
-                {predictionResult.candidates.length > 1 && (
-                  <div className="pt-4 border-t border-stone-100">
-                    <p className="text-xs font-bold text-stone-400 uppercase tracking-widest mb-4">Other Potential Matches</p>
-                    <div className="space-y-3">
-                      {predictionResult.candidates
-                        .filter((c: any) => c.name !== selectedCandidate.name)
-                        .map((candidate: any, idx: number) => (
-                          <div
-                            key={idx}
-                            onClick={() => setSelectedCandidate(candidate)}
-                            className="flex justify-between items-center p-4 rounded-xl border-2 border-transparent bg-stone-50 hover:bg-white hover:border-emerald-500 hover:shadow-md cursor-pointer transition-all group"
-                          >
-                            <div>
-                              <h4 className="font-bold text-stone-700 group-hover:text-emerald-700 transition-colors">{candidate.name}</h4>
-                              <p className="text-xs text-stone-400 uppercase tracking-wide">{candidate.scientific_name}</p>
+              {/* SIDEBAR (Right, 1/3 width) - Alternatives */}
+              <div className="space-y-4">
+                <div className="bg-white/50 backdrop-blur-sm p-4 rounded-3xl border border-white/50 shadow-sm">
+                  <h3 className="text-xs font-bold text-stone-500 uppercase tracking-widest mb-3 pl-2">Alternative Matches</h3>
+                  <div className="space-y-3">
+                    {/* Render Alternatives */}
+                    {predictionResult.candidates
+                      .filter((c: any) => c.name !== selectedCandidate.name)
+                      .map((candidate: any, idx: number) => (
+                        <div
+                          key={idx}
+                          onClick={() => setSelectedCandidate(candidate)}
+                          className="group flex items-center justify-between p-3 bg-white border border-stone-100 rounded-2xl shadow-sm hover:shadow-md hover:border-emerald-500 cursor-pointer transition-all"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center overflow-hidden border border-stone-200 group-hover:border-emerald-500 transition-colors">
+                              <img
+                                src={`/icons/${candidate.name.toLowerCase().replace(/ /g, '_')}.png`}
+                                alt={candidate.name}
+                                className="w-full h-full object-cover"
+                                onError={(e) => {
+                                  e.currentTarget.style.display = 'none';
+                                  e.currentTarget.parentElement!.innerText = '🐾';
+                                }}
+                              />
                             </div>
-                            <div className="text-right">
-                              <span className={`font-mono font-bold ${candidate.score > 50 ? 'text-emerald-600' : 'text-stone-400'}`}>
-                                {candidate.score.toFixed(1)}%
-                              </span>
-                              <p className="text-[10px] text-stone-300 font-bold uppercase tracking-widest mt-1 group-hover:text-emerald-500">View This</p>
+                            <div>
+                              <p className="font-bold text-stone-700 leading-tight group-hover:text-emerald-700">{candidate.name}</p>
+                              <div className="flex items-center gap-2">
+                                <p className="text-[10px] text-stone-400 font-mono tracking-wider">{candidate.score.toFixed(1)}%</p>
+                                {candidate.in_range !== undefined && (
+                                  <span className={`text-[9px] px-1.5 py-0.5 rounded-md font-bold uppercase ${candidate.in_range ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'
+                                    }`}>
+                                    {candidate.in_range ? 'In Range' : 'Out of Range'}
+                                  </span>
+                                )}
+                              </div>
                             </div>
                           </div>
-                        ))}
-                    </div>
-                  </div>
-                )}
+                          <div className="opacity-0 group-hover:opacity-100 transition-opacity text-emerald-500">
+                            <Search size={16} />
+                          </div>
+                        </div>
+                      ))}
 
-                {/* Actions */}
-                <div className="flex gap-4 pt-4 border-t border-stone-100">
-                  <button
-                    onClick={resetFlow}
-                    className="flex-1 py-4 px-6 bg-stone-100 hover:bg-stone-200 text-stone-600 font-bold rounded-2xl transition-colors text-lg"
-                  >
-                    Identify Another
-                  </button>
-                  <button
-                    onClick={() => router.push(`/anidex/${encodeURIComponent(selectedCandidate.name)}`)}
-                    className="flex-[2] py-4 px-6 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all text-lg flex items-center justify-center gap-2"
-                  >
-                    <span>Learn More</span>
-                    <Check size={20} strokeWidth={3} />
-                  </button>
+                    {/* If no alternatives, show placeholder */}
+                    {predictionResult.candidates.length === 1 && (
+                      <div className="p-4 text-center text-stone-400 text-sm italic">
+                        No other close matches found.
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+                {/* Mini Stats or Info Tile */}
+                <div className="bg-emerald-900 text-emerald-100 p-6 rounded-3xl shadow-lg relative overflow-hidden">
+                  <div className="absolute top-0 right-0 p-4 opacity-10">
+                    <Camera size={64} />
+                  </div>
+                  <p className="text-xs font-bold uppercase tracking-widest opacity-60 mb-2">Did you know?</p>
+                  <p className="text-sm font-medium leading-relaxed">
+                    Our AI analyzes over 1,000 unique features to distinguish between similar species like the <span className="text-white font-bold">Gray Wolf</span> and <span className="text-white font-bold">Coyote</span>.
+                  </p>
                 </div>
               </div>
+
             </div>
           ) : (
 

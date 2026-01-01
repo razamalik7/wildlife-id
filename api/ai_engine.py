@@ -155,6 +155,68 @@ tf_cx = transforms.Compose([
 
 # --- 4. PREDICTION LOGIC ---
 
+# Load Parks Data for Range Checking
+ALL_PARKS = []
+try:
+    parks_path = os.path.join(BASE_DIR, '../frontend/public/parks.json')
+    with open(parks_path, 'r') as f:
+        ALL_PARKS = json.load(f)
+    print(f"   Loaded {len(ALL_PARKS)} parks for range checking")
+except Exception as e:
+    print(f"   Warning: Could not load parks.json for range check: {e}")
+
+def haversine_distance(lat1, lon1, lat2, lon2):
+    R = 6371  # Earth radius in km
+    phi1, phi2 = math.radians(lat1), math.radians(lat2) 
+    dphi = math.radians(lat2 - lat1)
+    dlambda = math.radians(lon2 - lon1)
+    
+    a = math.sin(dphi/2)**2 + math.cos(phi1)*math.cos(phi2)*math.sin(dlambda/2)**2
+    c = 2*math.atan2(math.sqrt(a), math.sqrt(1 - a))
+    return R*c
+
+def check_is_in_range(species_info, lat, lng):
+    """
+    Smart Check: 
+    1. Check distance to known 'Hotspots' (National Parks).
+    2. Fallback to Continental bounding boxes.
+    """
+    if lat == 0.0 and lng == 0.0:
+        return True # No location provided
+        
+    hotspots = species_info.get('hotspots', [])
+    
+    # 1. Precise Hotspot Check (500km radius tolerance)
+    if ALL_PARKS and hotspots:
+        for hotspot in hotspots:
+            # "Yellowstone National Park, WY" -> Match "Yellowstone"
+            # Simple keyword matching
+            for park in ALL_PARKS:
+                # park['name'] is like "Yellowstone NP"
+                p_name_core = park['name'].replace(' NP', '').replace(' National Park', '')
+                h_name_core = hotspot.split(',')[0].replace(' National Park', '').replace(' State Park', '')
+                
+                if p_name_core in h_name_core or h_name_core in p_name_core:
+                    dist = haversine_distance(lat, lng, park['lat'], park['lng'])
+                    if dist < 500: # 500km radius (~300 miles)
+                        return True
+                        
+    # 2. Continental Fallback (Broad strokes)
+    origin = species_info.get('origin', '').lower()
+    is_user_in_na = (15 <= lat <= 75) and (-170 <= lng <= -50)
+    
+    if "north america" in origin:
+        if is_user_in_na: return True
+        
+    is_user_in_eu = (35 <= lat <= 70) and (-10 <= lng <= 40)
+    if is_user_in_eu and "europe" in origin: return True
+    
+    # If explicitly strictly native to one place and user is far away:
+    if "north america" in origin and "europe" not in origin:
+        if not is_user_in_na: return False
+        
+    return True
+
 def predict_animal(image_path, lat=None, lng=None, date=None):
     try:
         # Load Image
@@ -166,14 +228,13 @@ def predict_animal(image_path, lat=None, lng=None, date=None):
         if date is None:
             month = datetime.now().month
         else:
-            # Parse date string if needed, or assume it's a month int
             try:
                 if isinstance(date, str):
                     month = datetime.strptime(date, "%Y-%m-%d").month
                 else:
                     month = int(date)
             except:
-                month = 6 # Default mid-year
+                month = 6 
                 
         # Create Meta Tensor [sin(month), cos(month), lat, lng]
         meta_tensor = torch.tensor([
@@ -181,7 +242,7 @@ def predict_animal(image_path, lat=None, lng=None, date=None):
             math.cos(2 * math.pi * month / 12),
             lat / 90.0,
             lng / 180.0
-        ], dtype=torch.float32).unsqueeze(0).to(DEVICE) # Add batch dim
+        ], dtype=torch.float32).unsqueeze(0).to(DEVICE)
         
         print("\n🔎 --- OOGWAY SESSION STARTED ---")
         
@@ -282,6 +343,8 @@ def predict_animal(image_path, lat=None, lng=None, date=None):
                 "name": display_name,
                 "score": score,
                 "scientific_name": species_info.get('scientific_name', ''),
+                "taxon_id": species_info.get('taxonomy', {}).get('taxon_id', 0),
+                "in_range": check_is_in_range(species_info, lat, lng),
                 "taxonomy": {
                     "class": taxonomy.get('class', ''),
                     "order": taxonomy.get('order', ''),
