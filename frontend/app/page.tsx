@@ -12,6 +12,57 @@ import { useRouter } from 'next/navigation';
 
 const ObservationLocationPicker = dynamic(() => import('@/components/ObservationLocationPicker'), { ssr: false });
 
+// --- SIDEBAR RANGE BADGE (Live iNaturalist Check) ---
+const SidebarRangeBadge = ({ taxonId, lat, lng }: { taxonId: number; lat: number; lng: number }) => {
+  const [status, setStatus] = useState<'loading' | 'yes' | 'no' | null>(null);
+
+  useEffect(() => {
+    if (!taxonId || !lat || !lng) {
+      setStatus(null);
+      return;
+    }
+
+    setStatus('loading');
+    let cancelled = false;
+
+    const check = async () => {
+      try {
+        const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
+        const res = await axios.get(`${API_BASE}/inat/observations`, {
+          params: {
+            taxon_id: taxonId,
+            lat: lat,
+            lng: lng,
+            radius: 100,
+            captive: 'false',
+            per_page: 1
+          }
+        });
+        if (!cancelled) {
+          setStatus(res.data.total_results > 0 ? 'yes' : 'no');
+        }
+      } catch (e) {
+        if (!cancelled) setStatus(null);
+      }
+    };
+
+    check();
+    return () => { cancelled = true; };
+  }, [taxonId, lat, lng]);
+
+  if (status === 'loading') {
+    return <span className="text-[9px] px-1.5 py-0.5 rounded-md font-bold uppercase bg-stone-100 text-stone-400 animate-pulse">Checking...</span>;
+  }
+  if (status === 'yes') {
+    return <span className="text-[9px] px-1.5 py-0.5 rounded-md font-bold uppercase bg-emerald-100 text-emerald-700">In Range</span>;
+  }
+  if (status === 'no') {
+    return <span className="text-[9px] px-1.5 py-0.5 rounded-md font-bold uppercase bg-red-100 text-red-700">Out of Range</span>;
+  }
+  return null;
+};
+
+
 export default function IdentifyPage() {
   const router = useRouter();
   const { user, allSpecies, anidex, setAnidex, location } = useApp();
@@ -368,11 +419,12 @@ export default function IdentifyPage() {
                               <p className="font-bold text-stone-700 leading-tight group-hover:text-emerald-700">{candidate.name}</p>
                               <div className="flex items-center gap-2">
                                 <p className="text-[10px] text-stone-400 font-mono tracking-wider">{candidate.score.toFixed(1)}%</p>
-                                {candidate.in_range !== undefined && (
-                                  <span className={`text-[9px] px-1.5 py-0.5 rounded-md font-bold uppercase ${candidate.in_range ? 'bg-emerald-100 text-emerald-700' : 'bg-red-100 text-red-700'
-                                    }`}>
-                                    {candidate.in_range ? 'In Range' : 'Out of Range'}
-                                  </span>
+                                {observationLocation && candidate.taxon_id && (
+                                  <SidebarRangeBadge
+                                    taxonId={candidate.taxon_id}
+                                    lat={observationLocation.lat}
+                                    lng={observationLocation.lng}
+                                  />
                                 )}
                               </div>
                             </div>
