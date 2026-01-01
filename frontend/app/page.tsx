@@ -451,7 +451,15 @@ export default function IdentifyPage() {
                   </div>
                   <p className="text-xs font-bold uppercase tracking-widest opacity-60 mb-2">Did you know?</p>
                   <p className="text-sm font-medium leading-relaxed">
-                    Our AI analyzes over 1,000 unique features to distinguish between similar species like the <span className="text-white font-bold">Gray Wolf</span> and <span className="text-white font-bold">Coyote</span>.
+                    {[
+                      <>Our AI analyzes over <span className="text-white font-bold">1,000 unique features</span> to distinguish between similar species like the Gray Wolf and Coyote.</>,
+                      <>The model was trained on <span className="text-white font-bold">50,000+ images</span> from verified wildlife photographers across North America.</>,
+                      <>Location data helps boost accuracy by <span className="text-white font-bold">15%</span> — a Grizzly in Alaska is more likely than one in Florida!</>,
+                      <>Our <span className="text-white font-bold">OOGWAY architecture</span> combines two neural networks for maximum precision.</>,
+                      <>Black Bears can be <span className="text-white font-bold">brown, cinnamon, or blonde</span> — fur color doesn't always match the name!</>,
+                      <>The AI checks <span className="text-white font-bold">iNaturalist's 50M+ observations</span> to verify if a species is in your area.</>,
+                      <>We use <span className="text-white font-bold">YOLOv8</span> to automatically find and crop animals before identification.</>,
+                    ][Math.floor(Math.random() * 7)]}
                   </p>
                 </div>
               </div>
