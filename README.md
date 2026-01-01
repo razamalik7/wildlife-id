@@ -11,7 +11,7 @@ app_port: 7860
 
 A robust, full-stack application that uses **Computer Vision** (PyTorch) to identify wildlife species and a **Real-time Backend Proxy** to locate recent sightings in national parks.
 
-![Project Banner](https://images.unsplash.com/photo-1535591273668-578e31182c4f?q=80&w=2070&auto=format&fit=crop)
+![Project Banner](https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?q=80&w=2070&auto=format&fit=crop)
 
 ## 🚀 Live Demo
 - **Frontend**: [https://wildlife-id.vercel.app](https://wildlife-id.vercel.app) (Replace with your Vercel URL)
