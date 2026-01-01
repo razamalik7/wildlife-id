@@ -171,7 +171,7 @@ export default function IdentifyPage() {
                   <div className="h-4 bg-stone-100 rounded-full overflow-hidden border border-stone-200">
                     <div
                       className={`h-full rounded-full transition-all duration-1000 ${predictionResult.candidates[0].score > 80 ? 'bg-emerald-500' :
-                          predictionResult.candidates[0].score > 40 ? 'bg-amber-400' : 'bg-red-400'
+                        predictionResult.candidates[0].score > 40 ? 'bg-amber-400' : 'bg-red-400'
                         }`}
                       style={{ width: `${predictionResult.candidates[0].score}%` }}
                     />
@@ -194,6 +194,21 @@ export default function IdentifyPage() {
                     <p className="font-bold text-stone-700">{predictionResult.candidates[0].taxonomy.class || 'Unknown'}</p>
                   </div>
                 </div>
+
+                {/* Alternative Candidates - Subtle */}
+                {predictionResult.candidates.length > 1 && (
+                  <div className="pt-2 border-t border-stone-100">
+                    <p className="text-xs font-bold text-stone-400 uppercase tracking-widest mb-3">Other Possibilities</p>
+                    <div className="space-y-2">
+                      {predictionResult.candidates.slice(1).map((candidate: any, idx: number) => (
+                        <div key={idx} className="flex justify-between items-center text-sm text-stone-500">
+                          <span>{candidate.name}</span>
+                          <span className="font-mono text-xs opacity-70">{candidate.score.toFixed(1)}%</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 {/* Actions */}
                 <div className="flex gap-3 pt-2">
