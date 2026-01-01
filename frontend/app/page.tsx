@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import { Camera, MapPin, Loader2, Search, Check } from 'lucide-react';
 import dynamic from 'next/dynamic';
@@ -57,6 +57,8 @@ export default function IdentifyPage() {
     setSelectedCandidate(null);
   };
 
+  const [boundingBox, setBoundingBox] = useState<any>(null);
+
   // New State for Live Range Check
   const [rangeStatus, setRangeStatus] = useState<'loading' | 'yes' | 'no' | null>(null);
 
@@ -112,6 +114,12 @@ export default function IdentifyPage() {
       const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
       const aiRes = await axios.post(`${API_BASE}/predict`, formData);
       const candidates = aiRes.data.candidates;
+
+      if (aiRes.data.bbox) {
+        setBoundingBox(aiRes.data.bbox);
+      } else {
+        setBoundingBox(null);
+      }
 
       if (!candidates || candidates.length === 0) {
         alert('AI could not identify this animal.');
@@ -218,6 +226,26 @@ export default function IdentifyPage() {
                 <div className="relative h-72 sm:h-96 bg-stone-900 group">
                   <img src={preview} alt="Identified" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+
+                  {/* Bounding Box Overlay */}
+                  {boundingBox && (
+                    <div
+                      className="absolute border-2 border-white/80 bg-white/10 z-10 rounded-lg pointer-events-none shadow-[0_0_20px_rgba(255,255,255,0.3)] animate-in fade-in zoom-in duration-700"
+                      style={{
+                        left: `${boundingBox.x * 100}%`,
+                        top: `${boundingBox.y * 100}%`,
+                        width: `${boundingBox.w * 100}%`,
+                        height: `${boundingBox.h * 100}%`
+                      }}
+                    >
+                      {/* Corner Accents */}
+                      <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-emerald-400 -mt-0.5 -ml-0.5"></div>
+                      <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-emerald-400 -mt-0.5 -mr-0.5"></div>
+                      <div className="absolute bottom-0 left-0 w-3 h-3 border-b-2 border-l-2 border-emerald-400 -mb-0.5 -ml-0.5"></div>
+                      <div className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-emerald-400 -mb-0.5 -mr-0.5"></div>
+                    </div>
+                  )}
+
                   <div className="absolute bottom-0 left-0 p-8 text-white w-full">
                     {selectedCandidate.score < 40 && (
                       <div className="mb-3 inline-flex items-center gap-2 px-3 py-1 bg-amber-500/90 text-amber-50 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-md">
@@ -250,8 +278,8 @@ export default function IdentifyPage() {
                       {/* 3. Static Fallback (Only if Live Check hasn't finished or failed) */}
                       {rangeStatus === null && selectedCandidate.in_range !== undefined && (
                         <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider border backdrop-blur-md ${selectedCandidate.in_range
-                            ? 'bg-emerald-500/20 text-emerald-600 border-emerald-500/30'
-                            : 'bg-red-500/20 text-red-600 border-red-500/30'
+                          ? 'bg-emerald-500/20 text-emerald-600 border-emerald-500/30'
+                          : 'bg-red-500/20 text-red-600 border-red-500/30'
                           }`}>
                           {selectedCandidate.in_range ? 'Possibly In Range' : 'Likely Out of Range'}
                         </span>
