@@ -45,7 +45,7 @@ export default function WelcomeOverlay() {
         {
             icon: <PawPrint size={64} className="text-amber-500" />,
             title: "Build Your AniDex",
-            desc: "Track your findings and try to collect all 100 species."
+            desc: "Track your collection and learn exactly where to find each species in the wild."
         },
         {
             icon: <Map size={64} className="text-blue-500" />,
