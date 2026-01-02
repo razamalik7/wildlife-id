@@ -227,6 +227,28 @@ export default function IdentifyPage() {
         } catch (e) {
           console.error('Supabase error:', e);
         }
+      } else {
+        // Save to localStorage for anonymous map
+        const localObs = {
+          id: Date.now(), // Fake ID
+          user_id: 'anon',
+          image_url: preview || '',
+          common_name: finalPrediction, // Map uses common_name
+          scientific_name: speciesInfo?.scientific_name || candidates[0].name,
+          family: candidates[0].taxonomy?.family || speciesInfo?.taxonomy?.family || null,
+          class: candidates[0].taxonomy?.class || speciesInfo?.taxonomy?.class || null,
+          lat: observationLocation.lat,
+          lng: observationLocation.lng,
+          country: 'Unknown',
+          created_at: new Date().toISOString()
+        };
+
+        try {
+          const existing = JSON.parse(localStorage.getItem('local_observations') || '[]');
+          localStorage.setItem('local_observations', JSON.stringify([localObs, ...existing]));
+        } catch (e) {
+          console.error('LocalStorage error:', e);
+        }
       }
 
       // Enrich candidates with client-side taxonomy if missing from API
