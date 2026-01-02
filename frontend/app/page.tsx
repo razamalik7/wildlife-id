@@ -209,10 +209,11 @@ export default function IdentifyPage() {
 
       setAnidex((prev: any) => [newEntry, ...prev]);
 
+      const speciesInfo = allSpecies.find(s => s.name === finalPrediction);
+
       // Save to Supabase if logged in
       if (user) {
         try {
-          const speciesInfo = allSpecies.find(s => s.name === finalPrediction);
           await supabase.from('observations').insert({
             user_id: user.id,
             image_url: preview || '',
@@ -235,6 +236,7 @@ export default function IdentifyPage() {
           image_url: preview || '',
           common_name: finalPrediction, // Map uses common_name
           scientific_name: speciesInfo?.scientific_name || candidates[0].name,
+          category: speciesInfo?.category || 'Native', // Default to Native locally if unknown
           family: candidates[0].taxonomy?.family || speciesInfo?.taxonomy?.family || null,
           class: candidates[0].taxonomy?.class || speciesInfo?.taxonomy?.class || null,
           lat: observationLocation.lat,
