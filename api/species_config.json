@@ -7,7 +7,8 @@
             "order": "Artiodactyla",
             "family": "Bovidae",
             "taxon_id": 42408
-        }
+        },
+        "category": "Native"
     },
     {
         "name": "American Black Bear",
@@ -526,7 +527,7 @@
         "scientific_name": "Python bivittatus",
         "description": "Massive constrictors decimating mammals in the Florida Everglades.",
         "origin": "Asia",
-        "category": "Invasive",
+        "category": "Introduced",
         "iucn": "Vulnerable",
         "hotspots": [
             "Everglades National Park, FL",
@@ -550,7 +551,7 @@
         "scientific_name": "Iguana iguana",
         "description": "Cause damage to infrastructure by digging burrows; thrive in Florida.",
         "origin": "South America, Central America",
-        "category": "Invasive",
+        "category": "Introduced",
         "iucn": "Least Concern",
         "hotspots": [
             "Key West, FL",
@@ -573,7 +574,7 @@
         "scientific_name": "Salvator merianae",
         "description": "Large lizard that eats the eggs of native birds and reptiles.",
         "origin": "South America",
-        "category": "Invasive",
+        "category": "Native",
         "iucn": "Least Concern",
         "hotspots": [
             "Natural Reserves in South America"
@@ -595,7 +596,7 @@
         "scientific_name": "Rhinella marina",
         "description": "Toxic amphibian that kills pets and native predators who try to eat it.",
         "origin": "South America, Australia",
-        "category": "Invasive",
+        "category": "Native",
         "iucn": "Least Concern",
         "hotspots": [
             "Natural Reserves in South America, Australia"
@@ -617,7 +618,7 @@
         "scientific_name": "Sturnus vulgaris",
         "description": "Introduced to NY in 1890; huge flocks damage crops and airplanes.",
         "origin": "Europe, Asia",
-        "category": "Invasive",
+        "category": "Introduced",
         "iucn": "Least Concern",
         "hotspots": [
             "Natural Reserves in Europe, Asia"
@@ -639,7 +640,7 @@
         "scientific_name": "Passer domesticus",
         "description": "Aggressively competes with native birds for nesting cavities.",
         "origin": "Europe, Asia",
-        "category": "Invasive",
+        "category": "Introduced",
         "iucn": "Least Concern",
         "hotspots": [
             "Natural Reserves in Europe, Asia"
@@ -661,7 +662,7 @@
         "scientific_name": "Columba livia",
         "description": "The common city pigeon; carries diseases and damages buildings.",
         "origin": "Europe, Asia, Africa",
-        "category": "Invasive",
+        "category": "Introduced",
         "iucn": "Least Concern",
         "hotspots": [
             "Natural Reserves in Europe, Asia, Africa"
@@ -683,7 +684,7 @@
         "scientific_name": "Myiopsitta monachus",
         "description": "Builds massive communal nests on power lines, causing outages.",
         "origin": "South America",
-        "category": "Invasive",
+        "category": "Introduced",
         "iucn": "Least Concern",
         "hotspots": [
             "Natural Reserves in South America"
@@ -705,7 +706,7 @@
         "scientific_name": "Sus scrofa",
         "description": "Highly destructive to crops and native habitats due to rooting behavior.",
         "origin": "Europe, Asia, North Africa",
-        "category": "Invasive",
+        "category": "Introduced",
         "iucn": "Least Concern",
         "hotspots": [
             "Great Smoky Mountains, TN",
@@ -729,7 +730,7 @@
         "scientific_name": "Myocastor coypus",
         "description": "Large rodent that destroys wetlands; looks like a beaver with a rat tail.",
         "origin": "South America",
-        "category": "Invasive",
+        "category": "Introduced",
         "iucn": "Least Concern",
         "hotspots": [
             "Blackwater National Wildlife Refuge, MD",
@@ -1207,7 +1208,7 @@
         "scientific_name": "Phasianus colchicus",
         "description": "Popular game bird with colorful plumage, introduced from Asia.",
         "origin": "Asia",
-        "category": "Invasive",
+        "category": "Introduced",
         "iucn": "Least Concern",
         "hotspots": [
             "Natural Reserves in Asia"
@@ -1229,7 +1230,7 @@
         "scientific_name": "Cygnus olor",
         "description": "Large white swan with an orange beak; aggressively defends territory.",
         "origin": "Europe, Asia",
-        "category": "Invasive",
+        "category": "Native",
         "iucn": "Least Concern",
         "hotspots": [
             "Natural Reserves in Europe, Asia"
@@ -1251,7 +1252,7 @@
         "scientific_name": "Anolis sagrei",
         "description": "Highly invasive lizard that displaces the native Green Anole.",
         "origin": "Cuba, Bahamas",
-        "category": "Invasive",
+        "category": "Introduced",
         "iucn": "Least Concern",
         "hotspots": [
             "Natural Reserves in Cuba, Bahamas"
@@ -1273,7 +1274,7 @@
         "scientific_name": "Varanus niloticus",
         "description": "Large carnivorous lizard established in Florida, preying on native wildlife.",
         "origin": "Africa",
-        "category": "Invasive",
+        "category": "Native",
         "iucn": "Least Concern",
         "hotspots": [
             "Natural Reserves in Africa"
@@ -1295,7 +1296,7 @@
         "scientific_name": "Axis axis",
         "description": "Originally from India, now invasive in Texas and Hawaii; spots persist into adulthood.",
         "origin": "Asia",
-        "category": "Invasive",
+        "category": "Native",
         "iucn": "Least Concern",
         "hotspots": [
             "Natural Reserves in Asia"
@@ -1451,7 +1452,7 @@
         "scientific_name": "Chamaeleo calyptratus",
         "description": "Invasive in Florida; distinguishable by the towering casque on its head.",
         "origin": "Middle East",
-        "category": "Invasive",
+        "category": "Native",
         "iucn": "Least Concern",
         "hotspots": [
             "Natural Reserves in Middle East"
@@ -1473,7 +1474,7 @@
         "scientific_name": "Gekko gecko",
         "description": "Large, aggressive gecko with blue skin and orange spots.",
         "origin": "Asia",
-        "category": "Invasive",
+        "category": "Introduced",
         "iucn": "Least Concern",
         "hotspots": [
             "Natural Reserves in Asia"
@@ -1627,7 +1628,7 @@
         "scientific_name": "Felis catus",
         "description": "Common house cat; feral populations decimate local birdlife.",
         "origin": "Global",
-        "category": "Invasive",
+        "category": "Domestic",
         "iucn": "Not Evaluated",
         "hotspots": [
             "Natural Reserves in Global"
@@ -1649,7 +1650,7 @@
         "scientific_name": "Canis lupus familiaris",
         "description": "Man's best friend; breeds vary wildly in appearance.",
         "origin": "Global",
-        "category": "Invasive",
+        "category": "Domestic",
         "iucn": "Not Evaluated",
         "hotspots": [
             "Natural Reserves in Global"
@@ -1935,7 +1936,7 @@
         "scientific_name": "Macaca mulatta",
         "description": "Established feral populations exist in Florida (Silver Springs).",
         "origin": "Asia",
-        "category": "Invasive",
+        "category": "Introduced",
         "iucn": "Least Concern",
         "hotspots": [
             "Natural Reserves in Asia"
@@ -2023,7 +2024,7 @@
         "scientific_name": "Oryx gazella",
         "description": "Distinctive antelope with long straight horns; introduced to White Sands, NM.",
         "origin": "Africa",
-        "category": "Invasive",
+        "category": "Introduced",
         "iucn": "Least Concern",
         "hotspots": [
             "Natural Reserves in Africa"
