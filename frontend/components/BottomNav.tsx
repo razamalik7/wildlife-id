@@ -23,16 +23,6 @@ export default function BottomNav() {
                     <span className="text-xs font-bold">Identify</span>
                 </Link>
                 <Link
-                    href="/map"
-                    className={`flex-1 flex flex-col items-center gap-1 py-3 transition-all ${isMap
-                        ? 'text-emerald-600'
-                        : 'text-stone-400 hover:text-stone-600'
-                        }`}
-                >
-                    <Map size={24} />
-                    <span className="text-xs font-bold">My World</span>
-                </Link>
-                <Link
                     href="/anidex"
                     className={`flex-1 flex flex-col items-center gap-1 py-3 transition-all ${isAnidex
                         ? 'text-emerald-600'
@@ -41,6 +31,16 @@ export default function BottomNav() {
                 >
                     <PawPrint size={24} />
                     <span className="text-xs font-bold">AniDex</span>
+                </Link>
+                <Link
+                    href="/map"
+                    className={`flex-1 flex flex-col items-center gap-1 py-3 transition-all ${isMap
+                        ? 'text-emerald-600'
+                        : 'text-stone-400 hover:text-stone-600'
+                        }`}
+                >
+                    <Map size={24} />
+                    <span className="text-xs font-bold">My World</span>
                 </Link>
             </div>
         </nav>
