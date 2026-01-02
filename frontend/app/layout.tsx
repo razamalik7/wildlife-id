@@ -14,9 +14,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: "#10b981",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false, // For app-like feel
+}
+
 export const metadata: Metadata = {
   title: "aniML vision - Wildlife Identification",
   description: "AI-powered wildlife identification using computer vision",
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/icons/icon-192.png", // Fallback
+    apple: "/icons/icon-192.png", // For iOS
+  }
 };
 
 export default function RootLayout({

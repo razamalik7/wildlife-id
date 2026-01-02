@@ -2,7 +2,8 @@
 
 import { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
-import { Camera, MapPin, Loader2, Search, Check } from 'lucide-react';
+import { Camera, Search, ChevronRight, X, AlertTriangle, Check, Lock } from 'lucide-react';
+import WelcomeOverlay from '@/components/WelcomeOverlay';
 import dynamic from 'next/dynamic';
 import 'leaflet/dist/leaflet.css';
 import AppHeader from '@/components/AppHeader';
@@ -293,7 +294,8 @@ export default function IdentifyPage() {
   };
 
   return (
-    <main className="min-h-screen bg-stone-100 text-stone-900 pb-24">
+    <main className="min-h-screen bg-stone-50 pb-24 md:pb-0 font-sans selection:bg-emerald-200">
+      <WelcomeOverlay />
       <AppHeader />
 
       <div className="max-w-5xl mx-auto p-4">
@@ -521,6 +523,10 @@ export default function IdentifyPage() {
                     className="hidden"
                     accept="image/*"
                   />
+                  <p className="text-center text-xs text-stone-400 mt-4 flex items-center justify-center gap-1 opacity-80">
+                    <Lock size={12} />
+                    Your privacy matters. Location is only used for identification.
+                  </p>
                 </div>
               )}
 
