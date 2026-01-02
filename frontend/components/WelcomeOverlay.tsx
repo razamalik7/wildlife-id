@@ -86,7 +86,7 @@ export default function WelcomeOverlay() {
                     onClick={handleNext}
                     className="w-full py-4 bg-black text-white rounded-xl font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-lg"
                 >
-                    {step === 2 ? "Start Exploring 🚀" : "Next"}
+                    {step === 2 ? "Start Exploring" : "Next"}
                 </button>
 
             </div>
