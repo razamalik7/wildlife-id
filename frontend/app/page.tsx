@@ -548,7 +548,7 @@ export default function IdentifyPage() {
 
             <div className="flex justify-center gap-8 text-xs text-emerald-700/80 bg-stone-200/50 py-3 rounded-xl max-w-xs mx-auto border border-stone-200">
               <div className="flex flex-col">
-                <span className="font-bold text-lg">90.3%</span>
+                <span className="font-bold text-lg">90.7%</span>
                 <span className="uppercase tracking-wider opacity-70">Accuracy</span>
               </div>
               <div className="w-px bg-stone-300" />
