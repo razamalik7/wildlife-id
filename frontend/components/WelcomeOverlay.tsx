@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Camera, Brain, Map } from 'lucide-react';
+import { Camera, Brain, Map, PawPrint } from 'lucide-react';
 
 export default function WelcomeOverlay() {
     const [step, setStep] = useState(0);
@@ -17,7 +17,7 @@ export default function WelcomeOverlay() {
     }, []);
 
     const handleNext = () => {
-        if (step < 2) {
+        if (step < 3) {
             setStep(step + 1);
         } else {
             handleClose();
@@ -43,9 +43,14 @@ export default function WelcomeOverlay() {
             desc: "Our advanced AI identifies the species in seconds."
         },
         {
-            icon: <Map size={64} className="text-amber-500" />,
-            title: "Build Your World",
-            desc: "Collect species and fill your personal discovery map."
+            icon: <PawPrint size={64} className="text-amber-500" />,
+            title: "Build Your AniDex",
+            desc: "Track your findings and try to collect all 100 species."
+        },
+        {
+            icon: <Map size={64} className="text-blue-500" />,
+            title: "See Your World",
+            desc: " visualize your discoveries on an interactive map."
         }
     ];
 
@@ -86,7 +91,7 @@ export default function WelcomeOverlay() {
                     onClick={handleNext}
                     className="w-full py-4 bg-black text-white rounded-xl font-bold text-lg hover:scale-105 active:scale-95 transition-all shadow-lg"
                 >
-                    {step === 2 ? "Start Exploring" : "Next"}
+                    {step === 3 ? "Start Exploring" : "Next"}
                 </button>
 
             </div>
