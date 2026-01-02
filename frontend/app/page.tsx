@@ -294,7 +294,7 @@ export default function IdentifyPage() {
   };
 
   return (
-    <main className="min-h-screen bg-stone-50 pb-36 md:pb-0 font-sans selection:bg-emerald-200">
+    <main className="min-h-screen bg-stone-50 pb-36 font-sans selection:bg-emerald-200">
       <WelcomeOverlay />
       <AppHeader />
 
