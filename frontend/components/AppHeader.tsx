@@ -30,6 +30,7 @@ export default function AppHeader({ observedCount, totalCount, filter }: AppHead
                         <h1 className="text-3xl font-black tracking-tighter text-white">
                             aniML <span className="text-emerald-400 font-mono">vision</span>
                         </h1>
+                        <p className="text-[10px] text-stone-400 font-mono tracking-wider mt-0.5">NORTH AMERICAN WILDLIFE</p>
                     </div>
                 </Link>
 

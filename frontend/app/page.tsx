@@ -543,7 +543,7 @@ export default function IdentifyPage() {
           <div className="mt-8 text-center space-y-4">
             <div>
               <p className="text-xs font-bold text-emerald-800/60 tracking-[0.2em] uppercase">Powered by OOGWAY</p>
-              <p className="text-xs text-emerald-600/70 mt-1 italic">Specialized for North American Wildlife</p>
+              <p className="text-xs text-emerald-600/70 mt-1 italic">Custom Architecture Originally Developed for aniML vision</p>
             </div>
 
             <div className="flex justify-center gap-8 text-xs text-emerald-700/80 bg-stone-200/50 py-3 rounded-xl max-w-xs mx-auto border border-stone-200">
