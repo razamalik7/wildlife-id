@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
-import { Camera, Search, ChevronRight, X, AlertTriangle, Check, Lock } from 'lucide-react';
+import { Camera, Search, ChevronRight, X, AlertTriangle, Check, Lock, Loader2 } from 'lucide-react';
 import WelcomeOverlay from '@/components/WelcomeOverlay';
 import dynamic from 'next/dynamic';
 import 'leaflet/dist/leaflet.css';
