@@ -72,6 +72,7 @@ export default function IdentifyPage() {
   const [loading, setLoading] = useState(false);
   const [observationLocation, setObservationLocation] = useState<{ lat: number; lng: number } | null>(null);
   const [isLocationConfirmed, setIsLocationConfirmed] = useState(false);
+  const [showSignupNudge, setShowSignupNudge] = useState(false);
 
   const [predictionResult, setPredictionResult] = useState<any>(null);
   const [selectedCandidate, setSelectedCandidate] = useState<any>(null);
@@ -253,6 +254,11 @@ export default function IdentifyPage() {
         taxonId: bestTaxonId // Just to be safe
       });
       setSelectedCandidate(enrichedCandidates[0]);
+
+      // Show signup nudge for anonymous users after first identification
+      if (!user) {
+        setTimeout(() => setShowSignupNudge(true), 2000); // Delay to let them see the result first
+      }
 
     } catch (error) {
       alert('Backend Error. Is Python running?');
@@ -537,13 +543,13 @@ export default function IdentifyPage() {
           <div className="mt-8 text-center space-y-4">
             <div>
               <p className="text-xs font-bold text-emerald-800/60 tracking-[0.2em] uppercase">Powered by OOGWAY</p>
-              <p className="text-xs text-emerald-600/70 mt-1 italic">Custom Architecture Originally Developed for aniML vision</p>
+              <p className="text-xs text-emerald-600/70 mt-1 italic">Specialized for North American Wildlife</p>
             </div>
 
             <div className="flex justify-center gap-8 text-xs text-emerald-700/80 bg-stone-200/50 py-3 rounded-xl max-w-xs mx-auto border border-stone-200">
               <div className="flex flex-col">
-                <span className="font-bold text-lg">90.7%</span>
-                <span className="uppercase tracking-wider opacity-70">Species Acc</span>
+                <span className="font-bold text-lg">90.3%</span>
+                <span className="uppercase tracking-wider opacity-70">Accuracy</span>
               </div>
               <div className="w-px bg-stone-300" />
               <div className="flex flex-col">
@@ -551,9 +557,58 @@ export default function IdentifyPage() {
                 <span className="uppercase tracking-wider opacity-70">Species</span>
               </div>
             </div>
+
+            {!user && (
+              <p className="text-xs text-emerald-700/60 italic">
+                🎯 Sign in to start your <span className="font-bold">AniDex</span> — can you discover all 100?
+              </p>
+            )}
           </div>
         )}
       </div>
+
+      {/* Signup Nudge Modal */}
+      {showSignupNudge && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 animate-fade-in">
+          <div className="bg-white rounded-3xl shadow-2xl max-w-md w-full p-8 relative">
+            <button
+              onClick={() => setShowSignupNudge(false)}
+              className="absolute top-4 right-4 text-stone-400 hover:text-stone-600 text-xl"
+            >
+              ✕
+            </button>
+
+            <div className="text-center space-y-4">
+              <div className="text-5xl">🎯</div>
+              <h2 className="text-2xl font-black text-stone-800">Nice Discovery!</h2>
+              <p className="text-stone-600">
+                Create a free account to save your observations and build your <span className="font-bold text-emerald-600">AniDex</span>!
+              </p>
+              <p className="text-sm text-stone-500 italic">
+                Can you discover all <span className="font-bold">100 North American species</span>?
+              </p>
+
+              <div className="pt-4 space-y-3">
+                <button
+                  onClick={() => {
+                    setShowSignupNudge(false);
+                    router.push('/auth');
+                  }}
+                  className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition-colors"
+                >
+                  Create Free Account
+                </button>
+                <button
+                  onClick={() => setShowSignupNudge(false)}
+                  className="w-full py-2 text-stone-500 hover:text-stone-700 text-sm"
+                >
+                  Maybe later
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
