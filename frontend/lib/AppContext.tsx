@@ -59,13 +59,13 @@ export function AppProvider({ children }: { children: ReactNode }) {
     const [anidex, setAnidex] = useState<AnimalEntry[]>([]);
     const [location, setLocation] = useState<{ lat: number; lng: number } | null>(null);
 
-    // Load species data
+    // Load species data from static JSON (no backend dependency)
     useEffect(() => {
         const fetchSpecies = async () => {
             try {
-                const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
-                const res = await axios.get(`${API_BASE}/species`);
-                setAllSpecies(res.data);
+                const res = await fetch('/species_config.json');
+                const data = await res.json();
+                setAllSpecies(data);
             } catch (e) {
                 console.error('Failed to load species:', e);
             }
