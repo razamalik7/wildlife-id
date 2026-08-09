@@ -239,6 +239,7 @@ venv/
 .env
 # local secrets
 Github Token.txt
+Tokens-Local.txt
 
 # local tooling
 .claude/
