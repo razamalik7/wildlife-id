@@ -1,0 +1,11 @@
+[general]
+resolution = 1024
+batch_size = 2
+enable_bucket = false
+caption_extension = ".txt"
+
+[[datasets]]
+
+[[datasets.subsets]]
+image_dir = "C:/Users/nars7/Projects/aniML-vision/art-pipeline/lora/dataset/img"
+num_repeats = 1

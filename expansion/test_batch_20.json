@@ -1,0 +1,542 @@
+[
+ {
+  "common_name": "Wood Duck",
+  "scientific_name": "Aix sponsa",
+  "taxon_id": 7107,
+  "us_research_grade_obs": 82288,
+  "rationale": "duck-cluster",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/355078425/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Adrienne van den Beemt, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/201177190"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/357513228/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Matt Felperin, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/202430260"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/346246720/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Wendy McCrady, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/196699867"
+   }
+  ]
+ },
+ {
+  "common_name": "Northern Shoveler",
+  "scientific_name": "Spatula clypeata",
+  "taxon_id": 558438,
+  "us_research_grade_obs": 65347,
+  "rationale": "duck-cluster",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/342842647/original.jpg",
+    "license": "cc0",
+    "attribution": "no rights reserved",
+    "observation": "https://www.inaturalist.org/observations/194955806"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/471047143/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Dan Vickers, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/262164450"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/605795875/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) er-birds, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/333681359"
+   }
+  ]
+ },
+ {
+  "common_name": "Northern Pintail",
+  "scientific_name": "Anas acuta",
+  "taxon_id": 6933,
+  "us_research_grade_obs": 32709,
+  "rationale": "duck-cluster",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/353707135/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Matt Felperin, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/200474404"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/2821159/original.JPG",
+    "license": "cc-by",
+    "attribution": "(c) Sam Kieschnick, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/2510501"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/182039479/original.jpeg",
+    "license": "cc-by",
+    "attribution": "(c) sprcrkwild, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/108153031"
+   }
+  ]
+ },
+ {
+  "common_name": "American Wigeon",
+  "scientific_name": "Mareca americana",
+  "taxon_id": 485176,
+  "us_research_grade_obs": 55547,
+  "rationale": "duck-cluster",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/12858667/original.jpeg",
+    "license": "cc0",
+    "attribution": "no rights reserved",
+    "observation": "https://www.inaturalist.org/observations/9453973"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/402608432/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Matt Felperin, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/226979232"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/114696762/original.jpeg",
+    "license": "cc-by",
+    "attribution": "(c) P Holroyd, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/70540418"
+   }
+  ]
+ },
+ {
+  "common_name": "Green-winged Teal",
+  "scientific_name": "Anas crecca",
+  "taxon_id": 6937,
+  "us_research_grade_obs": 42477,
+  "rationale": "duck-cluster",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/108186568/original.jpeg",
+    "license": "cc0",
+    "attribution": "no rights reserved",
+    "observation": "https://www.inaturalist.org/observations/67024246"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/608709086/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) wweellll, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/335108472"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/459155599/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) zr217, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/256131663"
+   }
+  ]
+ },
+ {
+  "common_name": "American Robin",
+  "scientific_name": "Turdus migratorius",
+  "taxon_id": 12727,
+  "us_research_grade_obs": 333269,
+  "rationale": "most-observed US bird",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/370528121/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Mila Turov, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/209375487"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/190120595/original.jpeg",
+    "license": "cc-by",
+    "attribution": "(c) Kathy Richardson, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/112558925"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/465521426/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Kevin Anderson, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/259340397"
+   }
+  ]
+ },
+ {
+  "common_name": "Great Egret",
+  "scientific_name": "Ardea alba",
+  "taxon_id": 144455,
+  "us_research_grade_obs": 213733,
+  "rationale": "iconic; white-plumage rendering test",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/123196245/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Shiva Shenoy, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/75313436"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/512622421/original.jpg",
+    "license": "cc0",
+    "attribution": "no rights reserved",
+    "observation": "https://www.inaturalist.org/observations/285203731"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/187489218/original.jpeg",
+    "license": "cc-by",
+    "attribution": "(c) David Garza, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/111088763"
+   }
+  ]
+ },
+ {
+  "common_name": "Downy Woodpecker",
+  "scientific_name": "Dryobates pubescens",
+  "taxon_id": 792988,
+  "us_research_grade_obs": 143934,
+  "rationale": "new body plan: clinging pose",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/169943089/original.jpeg",
+    "license": "cc-by",
+    "attribution": "(c) Mila C., some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/101740561"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/31579590/original.jpg",
+    "license": "cc0",
+    "attribution": "no rights reserved",
+    "observation": "https://www.inaturalist.org/observations/20452544"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/635214136/original.jpg",
+    "license": "cc0",
+    "attribution": "no rights reserved",
+    "observation": "https://www.inaturalist.org/observations/348306970"
+   }
+  ]
+ },
+ {
+  "common_name": "Mule Deer",
+  "scientific_name": "Odocoileus hemionus",
+  "taxon_id": 42220,
+  "us_research_grade_obs": 153104,
+  "rationale": "confusable: white-tailed deer/elk",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/616385073/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Daughter Dad, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/338896238"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/246604447/original.jpeg",
+    "license": "cc0",
+    "attribution": "no rights reserved",
+    "observation": "https://www.inaturalist.org/observations/143758829"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/416799138/original.jpeg",
+    "license": "cc-by",
+    "attribution": "(c) Jennifer Jiang, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/234451752"
+   }
+  ]
+ },
+ {
+  "common_name": "Muskrat",
+  "scientific_name": "Ondatra zibethicus",
+  "taxon_id": 45763,
+  "us_research_grade_obs": 28739,
+  "rationale": "completes beaver/nutria/muskrat trio",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/147844114/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Katie Gipson, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/89522805"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/332374139/original.jpeg",
+    "license": "cc-by",
+    "attribution": "(c) Ken Clark, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/189694522"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/14523326/original.jpeg",
+    "license": "cc-by",
+    "attribution": "(c) Even Dankowicz, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/10448356"
+   }
+  ]
+ },
+ {
+  "common_name": "California Ground Squirrel",
+  "scientific_name": "Otospermophilus beecheyi",
+  "taxon_id": 180007,
+  "us_research_grade_obs": 58592,
+  "rationale": "joins squirrel cluster",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/206836027/original.png",
+    "license": "cc-by",
+    "attribution": "(c) smeckert, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/122179989"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/318722949/original.jpeg",
+    "license": "cc-by",
+    "attribution": "(c) Adam J. Searcy, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/182763009"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/104658973/original.jpg",
+    "license": "cc0",
+    "attribution": "no rights reserved",
+    "observation": "https://www.inaturalist.org/observations/65042864"
+   }
+  ]
+ },
+ {
+  "common_name": "American Pika",
+  "scientific_name": "Ochotona princeps",
+  "taxon_id": 43188,
+  "us_research_grade_obs": 10047,
+  "rationale": "iconic small mammal, distinctive",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/576126020/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Jared Shorma, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/318784451"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/553527839/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Parker James Lloyd, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/306915514"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/44575496/original.jpeg",
+    "license": "cc-by",
+    "attribution": "(c) Annie Chang, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/28588869"
+   }
+  ]
+ },
+ {
+  "common_name": "Western Fence Lizard",
+  "scientific_name": "Sceloporus occidentalis",
+  "taxon_id": 36204,
+  "us_research_grade_obs": 190393,
+  "rationale": "most-observed US reptile",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/120158487/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Ken-ichi Ueda, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/73589287"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/134760538/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Shawn O'Donnell, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/82124588"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/9589407/original.jpeg",
+    "license": "cc-by",
+    "attribution": "(c) Peter Brastow, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/7388172"
+   }
+  ]
+ },
+ {
+  "common_name": "Pond Slider",
+  "scientific_name": "Trachemys scripta",
+  "taxon_id": 39782,
+  "us_research_grade_obs": 175881,
+  "rationale": "confusable: painted turtle",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/5518581/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Laura Clark, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/4571829"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/20328829/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Sandy Wolkenberg, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/13785123"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/520708759/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Roberto Daniel Avila, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/289500069"
+   }
+  ]
+ },
+ {
+  "common_name": "Gopher Snake",
+  "scientific_name": "Pituophis catenifer",
+  "taxon_id": 29044,
+  "us_research_grade_obs": 74935,
+  "rationale": "confusable: rattlesnake mimic",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/25171938/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Pinnacles National Park, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/16689186"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/511282342/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Seth Marshall, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/284487258"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/293179436/original.jpeg",
+    "license": "cc-by",
+    "attribution": "(c) Rory O'Shea, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/169121722"
+   }
+  ]
+ },
+ {
+  "common_name": "Common Watersnake",
+  "scientific_name": "Nerodia sipedon",
+  "taxon_id": 29305,
+  "us_research_grade_obs": 75949,
+  "rationale": "high-obs; snake pose variety",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/117650561/original.jpg",
+    "license": "cc0",
+    "attribution": "no rights reserved",
+    "observation": "https://www.inaturalist.org/observations/72186862"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/569682807/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Alex Stach, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/315360966"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/15458841/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) David Weisenbeck, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/10978689"
+   }
+  ]
+ },
+ {
+  "common_name": "Gopher Tortoise",
+  "scientific_name": "Gopherus polyphemus",
+  "taxon_id": 40085,
+  "us_research_grade_obs": 30946,
+  "rationale": "geo-prior test vs desert tortoise (disjoint ranges)",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/118019897/original.jpeg",
+    "license": "cc-by",
+    "attribution": "(c) geosesarma, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/72392234"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/51781424/original.jpeg",
+    "license": "cc-by",
+    "attribution": "(c) mfeaver, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/32990629"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/32439507/original.jpg",
+    "license": "cc0",
+    "attribution": "no rights reserved",
+    "observation": "https://www.inaturalist.org/observations/21003608"
+   }
+  ]
+ },
+ {
+  "common_name": "American Toad",
+  "scientific_name": "Anaxyrus americanus",
+  "taxon_id": 64968,
+  "us_research_grade_obs": 149125,
+  "rationale": "confusable: cane toad (native vs invasive)",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/46547792/original.jpeg",
+    "license": "cc0",
+    "attribution": "no rights reserved",
+    "observation": "https://www.inaturalist.org/observations/29813766"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/35315010/original.jpg",
+    "license": "cc0",
+    "attribution": "no rights reserved",
+    "observation": "https://www.inaturalist.org/observations/22833803"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/545339298/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Bernie Paquette, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/302590593"
+   }
+  ]
+ },
+ {
+  "common_name": "Spring Peeper",
+  "scientific_name": "Pseudacris crucifer",
+  "taxon_id": 24268,
+  "us_research_grade_obs": 47827,
+  "rationale": "tiny treefrog body plan",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/489288668/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Laura J. Costello, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/271983442"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/208482353/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Christine Young, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/123088321"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/94628910/original.jpeg",
+    "license": "cc-by",
+    "attribution": "(c) Bernie Paquette, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/59231757"
+   }
+  ]
+ },
+ {
+  "common_name": "Eastern Red-backed Salamander",
+  "scientific_name": "Plethodon cinereus",
+  "taxon_id": 27186,
+  "us_research_grade_obs": 72231,
+  "rationale": "most-observed salamander; elongate body plan",
+  "reference_photo_candidates": [
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/164124431/original.jpg",
+    "license": "cc-by",
+    "attribution": "(c) Nick Tobler (Cowturtle), some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/98561708"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/258089771/original.jpeg",
+    "license": "cc-by",
+    "attribution": "(c) Mila C., some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/149752310"
+   },
+   {
+    "url": "https://inaturalist-open-data.s3.amazonaws.com/photos/253099346/original.jpeg",
+    "license": "cc-by",
+    "attribution": "(c) Adrienne van den Beemt, some rights reserved (CC BY)",
+    "observation": "https://www.inaturalist.org/observations/147122049"
+   }
+  ]
+ }
+]

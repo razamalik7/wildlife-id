@@ -1,0 +1,8 @@
+# Rendered every 250 steps so style convergence is visible during training.
+# Mix of trained species (style check) and UNSEEN species (generalization check).
+a red fox --w 1024 --h 1024 --s 28 --d 42
+a moose --w 1024 --h 1024 --s 28 --d 42
+a painted turtle --w 1024 --h 1024 --s 28 --d 42
+an american robin --w 1024 --h 1024 --s 28 --d 42
+a wood duck --w 1024 --h 1024 --s 28 --d 42
+a muskrat --w 1024 --h 1024 --s 28 --d 42
