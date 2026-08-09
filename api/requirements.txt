@@ -1,8 +1,12 @@
-fastapi
-uvicorn
-python-multipart
-torch --index-url https://download.pytorch.org/whl/cpu
-torchvision --index-url https://download.pytorch.org/whl/cpu
-pillow
-requests
-httpx
+# Pinned 2026-08-09 (verified: models load and serve on this set).
+# The extra-index-url provides CPU-only torch wheels; everything else
+# resolves from PyPI.
+--extra-index-url https://download.pytorch.org/whl/cpu
+fastapi==0.141.1
+uvicorn==0.52.1
+python-multipart==0.0.32
+pillow==12.3.0
+requests==2.34.2
+httpx==0.28.1
+torch==2.13.0+cpu
+torchvision==0.28.0+cpu

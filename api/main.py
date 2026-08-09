@@ -1,4 +1,4 @@
-from fastapi import FastAPI, UploadFile, File, BackgroundTasks
+from fastapi import FastAPI, UploadFile, File, Form, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 import shutil
 import os
@@ -11,10 +11,14 @@ from ai_engine import predict_animal
 app = FastAPI()
 
 # --- CONFIGURATION ---
+# NOTE: no "*" here — wildcard origins combined with allow_credentials=True
+# is rejected by browsers.
 origins = [
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-    "*"
+    "https://animlvision.com",
+    "https://www.animlvision.com",
+    "https://wildlife-id.vercel.app",
 ]
 
 app.add_middleware(
@@ -51,15 +55,22 @@ def get_all_species():
     return load_species_data()
 
 @app.post("/predict")
-async def predict(background_tasks: BackgroundTasks, file: UploadFile = File(...)):
+async def predict(
+    background_tasks: BackgroundTasks,
+    file: UploadFile = File(...),
+    lat: float = Form(0.0),
+    lng: float = Form(0.0),
+):
     # 1. Save file temporarily
     file_path = f"temp_{file.filename}"
     with open(file_path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
 
     # 2. Run AI (Now returns a Dictionary with Top 3 Candidates)
+    # The frontend has always sent lat/lng in the form data; the model's
+    # metadata branch and check_is_in_range() expect them.
     start_time = time.time()
-    result = predict_animal(file_path)
+    result = predict_animal(file_path, lat=lat, lng=lng)
     exec_time = int((time.time() - start_time) * 1000)
     
     # 3. Clean up

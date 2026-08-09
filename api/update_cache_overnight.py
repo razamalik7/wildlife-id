@@ -16,9 +16,10 @@ import argparse
 import requests
 from datetime import datetime
 
-# Supabase config
-SUPABASE_URL = "https://tfbmczhkgyfdrvvzeupz.supabase.co"
-SUPABASE_KEY = "sb_secret_j2PwpByYdrX6bAk_kyzA-w_cU8jIRKM"
+# Supabase config — set env vars before running:
+#   SUPABASE_URL=https://<project>.supabase.co  SUPABASE_SECRET_KEY=sb_secret_...
+SUPABASE_URL = os.environ["SUPABASE_URL"]
+SUPABASE_KEY = os.environ["SUPABASE_SECRET_KEY"]
 
 # Rate limit settings - EXTRA SLOW to respect iNaturalist
 DELAY_BETWEEN_PARKS = 5       # 5 seconds between each park query

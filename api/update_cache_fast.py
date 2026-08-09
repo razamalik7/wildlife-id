@@ -16,9 +16,10 @@ import requests
 from datetime import datetime
 from collections import defaultdict
 
-# Supabase config
-SUPABASE_URL = "https://tfbmczhkgyfdrvvzeupz.supabase.co"
-SUPABASE_KEY = "sb_secret_j2PwpByYdrX6bAk_kyzA-w_cU8jIRKM"
+# Supabase config — set env vars before running:
+#   SUPABASE_URL=https://<project>.supabase.co  SUPABASE_SECRET_KEY=sb_secret_...
+SUPABASE_URL = os.environ["SUPABASE_URL"]
+SUPABASE_KEY = os.environ["SUPABASE_SECRET_KEY"]
 
 # Rate limit settings  
 DELAY_BETWEEN_PAGES = 1.0     # 1 second between pagination requests

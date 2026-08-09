@@ -1,24 +1,24 @@
-# Use Python 3.10
+# AnimlVision API — HuggingFace Space (docker sdk, app_port 7860)
 FROM python:3.10-slim
 
-# Set working directory
+# Unbuffered output so container logs actually show startup progress —
+# the April 2026 launch timeout was undebuggable because nothing flushed.
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONIOENCODING=utf-8
+
 WORKDIR /app
 
-# Copy requirements first to cache install
+# Dependencies first (cached layer)
 COPY api/requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy API code
-# This copies everything in /api to /app/api
-COPY api ./api
+# Model weights from the GitHub release (cached layer; not in git history)
+ADD https://github.com/razamalik7/wildlife-id/releases/download/weights-v1/oogway_b3_best.pth /app/api/oogway_b3_best.pth
+ADD https://github.com/razamalik7/wildlife-id/releases/download/weights-v1/oogway_convnext_final.pth /app/api/oogway_convnext_final.pth
 
-# Copy Parks Data (Essential for WhereToSee)
-# We recreate the folder structure so the relative path "../frontend/public/parks.json" still works
-COPY frontend/public/parks.json ./frontend/public/parks.json
+# Runtime code + data only — NOT the training/scraping scripts
+COPY api/main.py api/ai_engine.py api/species_config.json /app/api/
+COPY frontend/public/parks.json /app/frontend/public/parks.json
 
-# Start from /app/api so imports like "from ai_engine" work
 WORKDIR /app/api
-
-# Start command
-# Now we use "main:app" because we are inside the api directory
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "7860"]

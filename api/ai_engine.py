@@ -319,15 +319,9 @@ def predict_animal(image_path, lat=None, lng=None, date=None):
             lat / 90.0,
             lng / 180.0
         ], dtype=torch.float32).unsqueeze(0).to(DEVICE)
-        
+
         # Confirm Metadata Usage to User
         print(f"⚖️  Metadata Logic: Month={month}, Lat={lat:.2f}, Lng={lng:.2f}")
-        meta_tensor = torch.tensor([
-            math.sin(2 * math.pi * month / 12),
-            math.cos(2 * math.pi * month / 12),
-            lat / 90.0,
-            lng / 180.0
-        ], dtype=torch.float32).unsqueeze(0).to(DEVICE)
         
         print("\n🔎 --- OOGWAY SESSION STARTED ---")
         
