@@ -7,6 +7,7 @@ import WelcomeOverlay from '@/components/WelcomeOverlay';
 import dynamic from 'next/dynamic';
 import 'leaflet/dist/leaflet.css';
 import AppHeader from '@/components/AppHeader';
+import AuthModal from '@/components/AuthModal';
 import { useApp } from '@/lib/AppContext';
 import { supabase } from '@/lib/supabase';
 import { useRouter } from 'next/navigation';
@@ -74,6 +75,7 @@ export default function IdentifyPage() {
   const [observationLocation, setObservationLocation] = useState<{ lat: number; lng: number } | null>(null);
   const [isLocationConfirmed, setIsLocationConfirmed] = useState(false);
   const [showSignupNudge, setShowSignupNudge] = useState(false);
+  const [showAuthModal, setShowAuthModal] = useState(false);
 
   const [predictionResult, setPredictionResult] = useState<any>(null);
   const [selectedCandidate, setSelectedCandidate] = useState<any>(null);
@@ -622,7 +624,7 @@ export default function IdentifyPage() {
                 <button
                   onClick={() => {
                     setShowSignupNudge(false);
-                    router.push('/auth');
+                    setShowAuthModal(true);
                   }}
                   className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition-colors"
                 >
@@ -639,6 +641,12 @@ export default function IdentifyPage() {
           </div>
         </div>
       )}
+
+      <AuthModal
+        isOpen={showAuthModal}
+        onClose={() => setShowAuthModal(false)}
+        onSuccess={() => setShowAuthModal(false)}
+      />
     </main>
   );
 }

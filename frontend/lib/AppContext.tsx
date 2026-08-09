@@ -25,7 +25,7 @@ export interface SpeciesInfo {
     scientific_name?: string;
     description?: string;
     origin?: string;
-    category: "Native" | "Invasive";
+    category: "Native" | "Introduced" | "Domestic";
     iucn?: string;
     hotspots?: string[];
     taxonomy?: {

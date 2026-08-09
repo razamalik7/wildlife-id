@@ -90,19 +90,25 @@ export default function SpeciesDetailPage() {
                         <div className="md:w-1/3 bg-stone-100 p-8 flex items-center justify-center">
                             <img
                                 src={getIconPath(speciesName)}
-                                alt={speciesName}
+                                alt=""
                                 className={`w-48 h-48 object-contain ${!unlocked ? 'grayscale opacity-60' : ''}`}
+                                onError={(e) => {
+                                    const img = e.target as HTMLImageElement;
+                                    if (!img.src.endsWith('/icons/default.png')) {
+                                        img.src = '/icons/default.png';
+                                    }
+                                }}
                             />
                         </div>
 
                         {/* Info */}
                         <div className="flex-1 p-6">
                             <div className="flex flex-wrap gap-2 mb-4">
-                                <span className={`text-xs font-bold px-3 py-1 rounded-full border ${speciesInfo.category === 'Invasive'
+                                <span className={`text-xs font-bold px-3 py-1 rounded-full border ${speciesInfo.category === 'Introduced'
                                     ? 'bg-red-50 text-red-700 border-red-100'
                                     : 'bg-emerald-50 text-emerald-700 border-emerald-100'
                                     }`}>
-                                    {speciesInfo.category?.toUpperCase()}
+                                    {speciesInfo.category === 'Introduced' ? 'INVASIVE' : speciesInfo.category?.toUpperCase()}
                                 </span>
                                 {speciesInfo.iucn && (
                                     <span className={`text-xs font-bold px-3 py-1 rounded-full border ${getIUCNColor(speciesInfo.iucn)}`}>

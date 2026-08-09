@@ -58,6 +58,9 @@ export default function MapPage() {
                     if (!error && data) {
                         const supabaseObs = data.map(obs => ({
                             ...obs,
+                            // Supabase rows store latitude/longitude; the map and dedup use lat/lng
+                            lat: obs.lat ?? obs.latitude,
+                            lng: obs.lng ?? obs.longitude,
                             common_name: obs.species // Map expects common_name
                         }));
                         allObs = [...allObs, ...supabaseObs];

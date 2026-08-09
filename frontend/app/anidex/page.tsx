@@ -7,19 +7,20 @@ import AppHeader from '@/components/AppHeader';
 import { Search, Lock, CheckCircle, Leaf, PawPrint } from 'lucide-react';
 
 export default function AnidexPage() {
-    const { allSpecies, anidex, isUnlocked, getStaticInfo } = useApp();
+    const { allSpecies, anidex, isUnlocked } = useApp();
     const [filter, setFilter] = useState<'Total' | 'Native' | 'Invasive'>('Total');
     const [searchQuery, setSearchQuery] = useState('');
 
     const getFilteredList = () => {
         let list = allSpecies;
         if (filter === 'Native') list = list.filter(s => s.category === 'Native');
-        if (filter === 'Invasive') list = list.filter(s => s.category === 'Invasive');
+        // "Invasive" tab shows non-native species; data uses category "Introduced"
+        if (filter === 'Invasive') list = list.filter(s => s.category === 'Introduced');
         if (searchQuery) {
             list = list.filter(s => s.name.toLowerCase().includes(searchQuery.toLowerCase()));
         }
-        // Sort alphabetically
-        return list.sort((a, b) => a.name.localeCompare(b.name));
+        // Sort alphabetically (copy first: list may be the shared context array)
+        return [...list].sort((a, b) => a.name.localeCompare(b.name));
     };
 
     const getIconPath = (name: string) => {
@@ -102,13 +103,16 @@ export default function AnidexPage() {
                                 </div>
 
                                 {/* Icon */}
-                                <div className={`aspect-square bg-stone-100 rounded-xl mb-2 flex items-center justify-center overflow-hidden ${!unlocked && 'grayscale'}`}>
+                                <div className={`aspect-square bg-stone-100 rounded-xl mb-2 flex items-center justify-center overflow-hidden ${unlocked ? '' : 'grayscale'}`}>
                                     <img
                                         src={getIconPath(species.name)}
-                                        alt={species.name}
+                                        alt=""
                                         className="w-3/4 h-3/4 object-contain"
                                         onError={(e) => {
-                                            (e.target as HTMLImageElement).src = '/icons/default.png';
+                                            const img = e.target as HTMLImageElement;
+                                            if (!img.src.endsWith('/icons/default.png')) {
+                                                img.src = '/icons/default.png';
+                                            }
                                         }}
                                     />
                                 </div>
@@ -120,7 +124,7 @@ export default function AnidexPage() {
                                 </p>
 
                                 {/* Category Indicator */}
-                                {species.category === 'Invasive' && (
+                                {species.category === 'Introduced' && (
                                     <div className="mt-1 flex justify-center">
                                         <span className="text-[8px] bg-red-100 text-red-600 px-1.5 py-0.5 rounded-full font-bold">
                                             INVASIVE
