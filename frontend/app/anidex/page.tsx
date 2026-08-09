@@ -5,6 +5,7 @@ import { useApp } from '@/lib/AppContext';
 import Link from 'next/link';
 import AppHeader from '@/components/AppHeader';
 import { Search, Lock, CheckCircle, Leaf, PawPrint } from 'lucide-react';
+import { speciesIconUrl } from '@/lib/species';
 
 export default function AnidexPage() {
     const { allSpecies, anidex, isUnlocked } = useApp();
@@ -23,10 +24,6 @@ export default function AnidexPage() {
         return [...list].sort((a, b) => a.name.localeCompare(b.name));
     };
 
-    const getIconPath = (name: string) => {
-        const slug = name.toLowerCase().replace(/ /g, '_');
-        return `/icons/${slug}.png`;
-    };
 
     const filteredList = getFilteredList();
     const observedCount = filteredList.filter(s => isUnlocked(s.name)).length;
@@ -105,7 +102,7 @@ export default function AnidexPage() {
                                 {/* Icon */}
                                 <div className={`aspect-square bg-stone-100 rounded-xl mb-2 flex items-center justify-center overflow-hidden ${unlocked ? '' : 'grayscale'}`}>
                                     <img
-                                        src={getIconPath(species.name)}
+                                        src={speciesIconUrl(species.name)}
                                         alt=""
                                         className="w-3/4 h-3/4 object-contain"
                                         onError={(e) => {

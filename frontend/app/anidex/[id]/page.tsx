@@ -10,6 +10,7 @@ import axios from 'axios';
 
 const SpeciesMap = dynamic(() => import('@/components/SpeciesMap'), { ssr: false });
 import WhereToSee from '@/components/WhereToSee';
+import { speciesIconUrl } from '@/lib/species';
 
 export default function SpeciesDetailPage() {
     const params = useParams();
@@ -42,10 +43,6 @@ export default function SpeciesDetailPage() {
         );
     }
 
-    const getIconPath = (name: string) => {
-        const slug = name.toLowerCase().replace(/ /g, '_');
-        return `/icons/${slug}.png`;
-    };
 
     const observations = entries.map(e => ({
         lat: e.lat || 0,
@@ -89,7 +86,7 @@ export default function SpeciesDetailPage() {
                         {/* Image */}
                         <div className="md:w-1/3 bg-stone-100 p-8 flex items-center justify-center">
                             <img
-                                src={getIconPath(speciesName)}
+                                src={speciesIconUrl(speciesName)}
                                 alt=""
                                 className={`w-48 h-48 object-contain ${!unlocked ? 'grayscale opacity-60' : ''}`}
                                 onError={(e) => {

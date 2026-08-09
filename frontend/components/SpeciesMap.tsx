@@ -4,6 +4,7 @@ import { MapContainer, TileLayer, Marker, Popup, LayersControl } from "react-lea
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { useEffect, useState } from "react";
+import { speciesIconUrl } from "@/lib/species";
 
 // Standard Blue Pin for "You are Here"
 const currentLocIcon = L.icon({
@@ -51,9 +52,8 @@ export default function SpeciesMap({ taxonId, userLat, userLng, animalName, obse
     checkIUCN();
   }, [taxonId]);
   const getAnimalIcon = () => {
-    const slug = animalName.toLowerCase().replace(/ /g, "_");
     return L.icon({
-      iconUrl: `/icons/${slug}.png`,
+      iconUrl: speciesIconUrl(animalName),
       iconSize: [48, 48],
       iconAnchor: [24, 24],
       className: "drop-shadow-xl",  // Colorful, no grayscale

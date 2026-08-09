@@ -8,6 +8,7 @@ import dynamic from 'next/dynamic';
 import 'leaflet/dist/leaflet.css';
 import AppHeader from '@/components/AppHeader';
 import AuthModal from '@/components/AuthModal';
+import { speciesIconUrl } from '@/lib/species';
 import { useApp } from '@/lib/AppContext';
 import { supabase } from '@/lib/supabase';
 import { useRouter } from 'next/navigation';
@@ -440,7 +441,7 @@ export default function IdentifyPage() {
                           <div className="flex items-center gap-3">
                             <div className="w-12 h-12 rounded-xl bg-stone-100 flex items-center justify-center overflow-hidden border border-stone-200 group-hover:border-emerald-500 transition-colors">
                               <img
-                                src={`/icons/${candidate.name.toLowerCase().replace(/ /g, '_')}.png`}
+                                src={speciesIconUrl(candidate.name)}
                                 alt={candidate.name}
                                 className="w-full h-full object-cover"
                                 onError={(e) => {

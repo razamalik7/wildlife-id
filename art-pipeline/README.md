@@ -30,8 +30,10 @@ is the fix.
 3. Generate 4–6 candidates. Accept at most one (~30% accept rate is normal).
    Reject for: style drift, wrong diagnostic marks, prop/shadow leakage,
    non-left facing, cropped anatomy.
-4. `python art-pipeline/normalize.py --in <accepted> --out <staging>` and ship
-   the normalized file to `frontend/public/icons/`.
+4. `python art-pipeline/normalize.py --in <accepted> --out <staging>`, move the
+   normalized master into `art-pipeline/masters/`, then run
+   `python art-pipeline/make_web_icons.py` to regenerate the WebP the app
+   serves from `frontend/public/icons/web/`.
 5. Batch by taxonomic cluster (all mustelids in one session, all dabbling
    ducks in another).
 

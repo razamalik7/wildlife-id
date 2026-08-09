@@ -34,7 +34,7 @@ def sample_pixels(png: Path, per_image: int, rng: np.random.Generator) -> np.nda
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--icons", default="frontend/public/icons")
+    ap.add_argument("--icons", default="art-pipeline/masters")
     ap.add_argument("--k", type=int, default=24)
     ap.add_argument("--per-image", type=int, default=4000)
     ap.add_argument("--out", default="art-pipeline/palette.json")
