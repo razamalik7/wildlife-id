@@ -243,3 +243,7 @@ Tokens-Local.txt
 
 # local tooling
 .claude/
+art-pipeline/vetting/thumbs/
+art-pipeline/vetting/sheets/
+art-pipeline/batch_run/
+art-pipeline/lora/eval_refs/

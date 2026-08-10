@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AnimlVision — Reference Photo Vetting</title>
+<style>
+  body { margin:0; font-family: system-ui, sans-serif; background:#1c1917; color:#e7e5e4;
+         display:flex; flex-direction:column; align-items:center; min-height:100vh; }
+  header { padding:14px 20px; width:100%; box-sizing:border-box; display:flex;
+           justify-content:space-between; align-items:baseline; }
+  h1 { font-size:18px; margin:0; color:#a8a29e; }
+  #progress { color:#78716c; font-size:14px; }
+  #species { font-size:26px; font-weight:700; margin:4px 0 2px; }
+  #sci { font-style:italic; color:#a8a29e; margin-bottom:10px; }
+  #photo-box { background:#292524; border-radius:16px; padding:12px; max-width:860px; }
+  #photo { max-width:820px; max-height:62vh; border-radius:8px; display:block; }
+  #meta { font-size:12px; color:#78716c; margin-top:8px; max-width:820px; }
+  #candinfo { font-size:14px; color:#d6d3d1; margin:10px 0; }
+  #keys { margin:16px 0 24px; color:#a8a29e; font-size:13px; display:flex; gap:18px; flex-wrap:wrap; }
+  kbd { background:#44403c; border-radius:5px; padding:2px 7px; color:#fafaf9; font-size:12px; }
+  #done { display:none; font-size:22px; margin-top:80px; text-align:center; }
+  .accepted { color:#34d399; } .skipped { color:#fbbf24; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Reference Photo Vetting</h1>
+  <div id="progress"></div>
+</header>
+<div id="main">
+  <div id="species"></div>
+  <div id="sci"></div>
+  <div id="photo-box"><img id="photo" alt=""></div>
+  <div id="candinfo"></div>
+  <div id="meta"></div>
+</div>
+<div id="done"></div>
+<div id="keys">
+  <span><kbd>Enter</kbd>/<kbd>→</kbd> accept photo, next species</span>
+  <span><kbd>↓</kbd> next candidate</span>
+  <span><kbd>↑</kbd> previous candidate</span>
+  <span><kbd>←</kbd> previous species</span>
+  <span><kbd>S</kbd> skip species</span>
+</div>
+<script>
+let data = {}, slugs = [], picks = {}, si = 0, ci = {};
+
+async function boot() {
+  data = await (await fetch('candidates.json')).json();
+  slugs = Object.keys(data);
+  try { picks = await (await fetch('picks.json')).json(); } catch (e) { picks = {}; }
+  // resume at first unvetted species
+  si = slugs.findIndex(s => !picks[s]);
+  if (si < 0) si = slugs.length;
+  slugs.forEach(s => ci[s] = 0);
+  render();
+}
+
+function save() {
+  fetch('save', {method:'POST', headers:{'Content-Type':'application/json'},
+                 body: JSON.stringify(picks)});
+}
+
+function render() {
+  const doneEl = document.getElementById('done'), main = document.getElementById('main');
+  if (si >= slugs.length) {
+    main.style.display = 'none';
+    const acc = Object.values(picks).filter(p => p.status === 'accepted').length;
+    const skip = Object.values(picks).filter(p => p.status === 'skipped').length;
+    doneEl.style.display = 'block';
+    doneEl.innerHTML = `All species vetted 🎉<br>
+      <span class="accepted">${acc} accepted</span> · <span class="skipped">${skip} skipped</span><br>
+      <small>picks.json saved — Claude takes it from here.</small>`;
+    return;
+  }
+  doneEl.style.display = 'none'; main.style.display = 'block';
+  const slug = slugs[si], sp = data[slug], c = sp.candidates[ci[slug]];
+  document.getElementById('progress').textContent =
+    `species ${si+1}/${slugs.length}` + (picks[slug] ? ` — already ${picks[slug].status}` : '');
+  document.getElementById('species').textContent = sp.common_name;
+  document.getElementById('sci').textContent = sp.scientific_name;
+  document.getElementById('photo').src = c.medium_url;
+  document.getElementById('candinfo').textContent =
+    `candidate ${ci[slug]+1} of ${sp.candidates.length}`;
+  document.getElementById('meta').textContent = `${c.license} — ${c.attribution || ''}`;
+}
+
+document.addEventListener('keydown', (e) => {
+  if (si >= slugs.length && e.key !== 'ArrowLeft') return;
+  const slug = slugs[Math.min(si, slugs.length - 1)];
+  if (e.key === 'Enter' || e.key === 'ArrowRight') {
+    const c = data[slug].candidates[ci[slug]];
+    picks[slug] = {...c, status:'accepted'}; save(); si++;
+  } else if (e.key === 'ArrowDown' || e.key === 'n') {
+    ci[slug] = (ci[slug] + 1) % data[slug].candidates.length;
+  } else if (e.key === 'ArrowUp' || e.key === 'p') {
+    ci[slug] = (ci[slug] - 1 + data[slug].candidates.length) % data[slug].candidates.length;
+  } else if (e.key === 'ArrowLeft') {
+    if (si > 0) si--;
+  } else if (e.key === 's' || e.key === 'S') {
+    picks[slug] = {status:'skipped'}; save(); si++;
+  } else { return; }
+  e.preventDefault(); render();
+});
+boot();
+</script>
+</body>
+</html>

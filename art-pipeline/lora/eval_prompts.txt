@@ -1,0 +1,5 @@
+# Real-condition eval prompts: condensed framing contract + shared negative.
+# One trained species, two unseen. Fixed seed per line for cross-checkpoint comparison.
+a red fox, full body wildlife illustration, single animal, three-quarter view facing left, neutral standing pose, plain white background, no scenery, no props, no cast shadow, centered --n photo, photorealistic, pattern, wallpaper, multiple animals, tiling, text, watermark, border, scenery, foliage, branch --d 7
+a wood duck, full body wildlife illustration, single animal, three-quarter view facing left, neutral standing pose, plain white background, no scenery, no props, no cast shadow, centered --n photo, photorealistic, pattern, wallpaper, multiple animals, tiling, text, watermark, border, scenery, foliage, branch, water, reflection --d 7
+a muskrat, full body wildlife illustration, single animal, three-quarter view facing left, neutral standing pose, plain white background, no scenery, no props, no cast shadow, centered --n photo, photorealistic, pattern, wallpaper, multiple animals, tiling, text, watermark, border, scenery, foliage, branch, water --d 7
