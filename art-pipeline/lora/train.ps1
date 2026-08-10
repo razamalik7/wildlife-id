@@ -24,6 +24,7 @@ $lora = "C:\Users\nars7\Projects\aniML-vision\art-pipeline\lora"
   --sample_every_n_steps 250 `
   --sample_prompts "$lora\sample_prompts.txt" `
   --sample_sampler euler_a `
+  --sdpa `
   --mixed_precision bf16 `
   --save_precision bf16 `
   --gradient_checkpointing `
