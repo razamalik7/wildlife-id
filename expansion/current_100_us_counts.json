@@ -1,0 +1,702 @@
+[
+ {
+  "name": "Jaguar",
+  "scientific_name": "Panthera onca",
+  "taxon_id": 41970,
+  "category": "Native",
+  "us_research_grade_obs": 2
+ },
+ {
+  "name": "Ocelot",
+  "scientific_name": "Leopardus pardalis",
+  "taxon_id": 41997,
+  "category": "Native",
+  "us_research_grade_obs": 10
+ },
+ {
+  "name": "Nile Monitor",
+  "scientific_name": "Varanus niloticus",
+  "taxon_id": 71085,
+  "category": "Native",
+  "us_research_grade_obs": 17
+ },
+ {
+  "name": "Walrus",
+  "scientific_name": "Odobenus rosmarus",
+  "taxon_id": 41766,
+  "category": "Native",
+  "us_research_grade_obs": 61
+ },
+ {
+  "name": "Black-footed Ferret",
+  "scientific_name": "Mustela nigripes",
+  "taxon_id": 41809,
+  "category": "Native",
+  "us_research_grade_obs": 73
+ },
+ {
+  "name": "Polar Bear",
+  "scientific_name": "Ursus maritimus",
+  "taxon_id": 41644,
+  "category": "Native",
+  "us_research_grade_obs": 163
+ },
+ {
+  "name": "Argentine Black and White Tegu",
+  "scientific_name": "Salvator merianae",
+  "taxon_id": 318758,
+  "category": "Native",
+  "us_research_grade_obs": 270
+ },
+ {
+  "name": "Wolverine",
+  "scientific_name": "Gulo gulo",
+  "taxon_id": 41852,
+  "category": "Native",
+  "us_research_grade_obs": 298
+ },
+ {
+  "name": "Gemsbok",
+  "scientific_name": "Oryx gazella",
+  "taxon_id": 42308,
+  "category": "Introduced",
+  "us_research_grade_obs": 301
+ },
+ {
+  "name": "Veiled Chameleon",
+  "scientific_name": "Chamaeleo calyptratus",
+  "taxon_id": 32873,
+  "category": "Native",
+  "us_research_grade_obs": 330
+ },
+ {
+  "name": "Rhesus Macaque",
+  "scientific_name": "Macaca mulatta",
+  "taxon_id": 43460,
+  "category": "Introduced",
+  "us_research_grade_obs": 386
+ },
+ {
+  "name": "Arctic Fox",
+  "scientific_name": "Vulpes lagopus",
+  "taxon_id": 233598,
+  "category": "Native",
+  "us_research_grade_obs": 417
+ },
+ {
+  "name": "Eastern Hellbender",
+  "scientific_name": "Cryptobranchus alleganiensis",
+  "taxon_id": 26804,
+  "category": "Native",
+  "us_research_grade_obs": 473
+ },
+ {
+  "name": "Muskox",
+  "scientific_name": "Ovibos moschatus",
+  "taxon_id": 42412,
+  "category": "Native",
+  "us_research_grade_obs": 631
+ },
+ {
+  "name": "Tokay Gecko",
+  "scientific_name": "Gekko gecko",
+  "taxon_id": 34615,
+  "category": "Introduced",
+  "us_research_grade_obs": 642
+ },
+ {
+  "name": "Burmese Python",
+  "scientific_name": "Python bivittatus",
+  "taxon_id": 238252,
+  "category": "Introduced",
+  "us_research_grade_obs": 653
+ },
+ {
+  "name": "American Marten",
+  "scientific_name": "Martes americana",
+  "taxon_id": 41798,
+  "category": "Native",
+  "us_research_grade_obs": 789
+ },
+ {
+  "name": "Axis Deer",
+  "scientific_name": "Axis axis",
+  "taxon_id": 42166,
+  "category": "Native",
+  "us_research_grade_obs": 1296
+ },
+ {
+  "name": "Thinhorn Sheep",
+  "scientific_name": "Ovis dalli",
+  "taxon_id": 42390,
+  "category": "Native",
+  "us_research_grade_obs": 1367
+ },
+ {
+  "name": "Domestic Dog",
+  "scientific_name": "Canis lupus familiaris",
+  "taxon_id": 47144,
+  "category": "Domestic",
+  "us_research_grade_obs": 1712
+ },
+ {
+  "name": "Caribou",
+  "scientific_name": "Rangifer tarandus",
+  "taxon_id": 42199,
+  "category": "Native",
+  "us_research_grade_obs": 1955
+ },
+ {
+  "name": "American Flamingo",
+  "scientific_name": "Phoenicopterus ruber",
+  "taxon_id": 4257,
+  "category": "Native",
+  "us_research_grade_obs": 2008
+ },
+ {
+  "name": "Gila Monster",
+  "scientific_name": "Heloderma suspectum",
+  "taxon_id": 35003,
+  "category": "Native",
+  "us_research_grade_obs": 2833
+ },
+ {
+  "name": "Gray Wolf",
+  "scientific_name": "Canis lupus",
+  "taxon_id": 42048,
+  "category": "Native",
+  "us_research_grade_obs": 3041
+ },
+ {
+  "name": "Grizzly Bear",
+  "scientific_name": "Ursus arctos horribilis",
+  "taxon_id": 125461,
+  "category": "Native",
+  "us_research_grade_obs": 3337
+ },
+ {
+  "name": "American Crocodile",
+  "scientific_name": "Crocodylus acutus",
+  "taxon_id": 26085,
+  "category": "Native",
+  "us_research_grade_obs": 3661
+ },
+ {
+  "name": "Desert Tortoise",
+  "scientific_name": "Gopherus agassizii",
+  "taxon_id": 40086,
+  "category": "Native",
+  "us_research_grade_obs": 4143
+ },
+ {
+  "name": "Whooping Crane",
+  "scientific_name": "Grus americana",
+  "taxon_id": 34,
+  "category": "Native",
+  "us_research_grade_obs": 4270
+ },
+ {
+  "name": "American Badger",
+  "scientific_name": "Taxidea taxus",
+  "taxon_id": 41789,
+  "category": "Native",
+  "us_research_grade_obs": 4612
+ },
+ {
+  "name": "Snowy Owl",
+  "scientific_name": "Bubo scandiacus",
+  "taxon_id": 144594,
+  "category": "Native",
+  "us_research_grade_obs": 5082
+ },
+ {
+  "name": "Monk Parakeet",
+  "scientific_name": "Myiopsitta monachus",
+  "taxon_id": 19349,
+  "category": "Introduced",
+  "us_research_grade_obs": 6470
+ },
+ {
+  "name": "Snowshoe Hare",
+  "scientific_name": "Lepus americanus",
+  "taxon_id": 43132,
+  "category": "Native",
+  "us_research_grade_obs": 6893
+ },
+ {
+  "name": "Mountain Goat",
+  "scientific_name": "Oreamnos americanus",
+  "taxon_id": 42414,
+  "category": "Native",
+  "us_research_grade_obs": 7416
+ },
+ {
+  "name": "Cane Toad",
+  "scientific_name": "Rhinella marina",
+  "taxon_id": 553515,
+  "category": "Native",
+  "us_research_grade_obs": 7438
+ },
+ {
+  "name": "Mountain Lion",
+  "scientific_name": "Puma concolor",
+  "taxon_id": 42007,
+  "category": "Native",
+  "us_research_grade_obs": 9099
+ },
+ {
+  "name": "Nutria",
+  "scientific_name": "Myocastor coypus",
+  "taxon_id": 43997,
+  "category": "Introduced",
+  "us_research_grade_obs": 10003
+ },
+ {
+  "name": "Barn Owl",
+  "scientific_name": "Tyto alba",
+  "taxon_id": 1578502,
+  "category": "Native",
+  "us_research_grade_obs": 11119
+ },
+ {
+  "name": "American Mink",
+  "scientific_name": "Neogale vison",
+  "taxon_id": 1264432,
+  "category": "Native",
+  "us_research_grade_obs": 11409
+ },
+ {
+  "name": "Northern Elephant Seal",
+  "scientific_name": "Mirounga angustirostris",
+  "taxon_id": 41728,
+  "category": "Native",
+  "us_research_grade_obs": 11420
+ },
+ {
+  "name": "Ring-necked Pheasant",
+  "scientific_name": "Phasianus colchicus",
+  "taxon_id": 981,
+  "category": "Introduced",
+  "us_research_grade_obs": 11887
+ },
+ {
+  "name": "Wild Boar",
+  "scientific_name": "Sus scrofa",
+  "taxon_id": 42134,
+  "category": "Introduced",
+  "us_research_grade_obs": 14023
+ },
+ {
+  "name": "Sea Otter",
+  "scientific_name": "Enhydra lutris",
+  "taxon_id": 41860,
+  "category": "Native",
+  "us_research_grade_obs": 15386
+ },
+ {
+  "name": "Black-tailed Prairie Dog",
+  "scientific_name": "Cynomys ludovicianus",
+  "taxon_id": 46179,
+  "category": "Native",
+  "us_research_grade_obs": 15699
+ },
+ {
+  "name": "Yellow-bellied Marmot",
+  "scientific_name": "Marmota flaviventris",
+  "taxon_id": 46086,
+  "category": "Native",
+  "us_research_grade_obs": 18544
+ },
+ {
+  "name": "North American Porcupine",
+  "scientific_name": "Erethizon dorsatum",
+  "taxon_id": 44026,
+  "category": "Native",
+  "us_research_grade_obs": 19309
+ },
+ {
+  "name": "American Bison",
+  "scientific_name": "Bison bison",
+  "taxon_id": 208700,
+  "category": "Native",
+  "us_research_grade_obs": 22349
+ },
+ {
+  "name": "Pronghorn",
+  "scientific_name": "Antilocapra americana",
+  "taxon_id": 42429,
+  "category": "Native",
+  "us_research_grade_obs": 22377
+ },
+ {
+  "name": "Green Iguana",
+  "scientific_name": "Iguana iguana",
+  "taxon_id": 35342,
+  "category": "Introduced",
+  "us_research_grade_obs": 22549
+ },
+ {
+  "name": "North American River Otter",
+  "scientific_name": "Lontra canadensis",
+  "taxon_id": 41777,
+  "category": "Native",
+  "us_research_grade_obs": 22983
+ },
+ {
+  "name": "Peregrine Falcon",
+  "scientific_name": "Falco peregrinus",
+  "taxon_id": 4647,
+  "category": "Native",
+  "us_research_grade_obs": 22983
+ },
+ {
+  "name": "Bighorn Sheep",
+  "scientific_name": "Ovis canadensis",
+  "taxon_id": 42391,
+  "category": "Native",
+  "us_research_grade_obs": 23325
+ },
+ {
+  "name": "Eastern Copperhead",
+  "scientific_name": "Agkistrodon contortrix",
+  "taxon_id": 912622,
+  "category": "Native",
+  "us_research_grade_obs": 25828
+ },
+ {
+  "name": "Western Diamondback Rattlesnake",
+  "scientific_name": "Crotalus atrox",
+  "taxon_id": 30764,
+  "category": "Native",
+  "us_research_grade_obs": 26776
+ },
+ {
+  "name": "Moose",
+  "scientific_name": "Alces alces",
+  "taxon_id": 522193,
+  "category": "Native",
+  "us_research_grade_obs": 28273
+ },
+ {
+  "name": "Gray Fox",
+  "scientific_name": "Urocyon cinereoargenteus",
+  "taxon_id": 42076,
+  "category": "Native",
+  "us_research_grade_obs": 30831
+ },
+ {
+  "name": "Mute Swan",
+  "scientific_name": "Cygnus olor",
+  "taxon_id": 6921,
+  "category": "Native",
+  "us_research_grade_obs": 30970
+ },
+ {
+  "name": "Spotted Salamander",
+  "scientific_name": "Ambystoma maculatum",
+  "taxon_id": 26790,
+  "category": "Native",
+  "us_research_grade_obs": 31997
+ },
+ {
+  "name": "California Sea Lion",
+  "scientific_name": "Zalophus californianus",
+  "taxon_id": 41740,
+  "category": "Native",
+  "us_research_grade_obs": 32881
+ },
+ {
+  "name": "Nine-banded Armadillo",
+  "scientific_name": "Dasypus novemcinctus",
+  "taxon_id": 1647419,
+  "category": "Native",
+  "us_research_grade_obs": 32925
+ },
+ {
+  "name": "Domestic Cat",
+  "scientific_name": "Felis catus",
+  "taxon_id": 118552,
+  "category": "Domestic",
+  "us_research_grade_obs": 34560
+ },
+ {
+  "name": "Striped Skunk",
+  "scientific_name": "Mephitis mephitis",
+  "taxon_id": 41880,
+  "category": "Native",
+  "us_research_grade_obs": 34810
+ },
+ {
+  "name": "Harbor Seal",
+  "scientific_name": "Phoca vitulina",
+  "taxon_id": 41708,
+  "category": "Native",
+  "us_research_grade_obs": 35949
+ },
+ {
+  "name": "American Red Squirrel",
+  "scientific_name": "Tamiasciurus hudsonicus",
+  "taxon_id": 46260,
+  "category": "Native",
+  "us_research_grade_obs": 39363
+ },
+ {
+  "name": "Bobcat",
+  "scientific_name": "Lynx rufus",
+  "taxon_id": 41976,
+  "category": "Native",
+  "us_research_grade_obs": 39772
+ },
+ {
+  "name": "Groundhog",
+  "scientific_name": "Marmota monax",
+  "taxon_id": 46095,
+  "category": "Native",
+  "us_research_grade_obs": 44172
+ },
+ {
+  "name": "Elk",
+  "scientific_name": "Cervus canadensis",
+  "taxon_id": 204114,
+  "category": "Native",
+  "us_research_grade_obs": 46050
+ },
+ {
+  "name": "Red Fox",
+  "scientific_name": "Vulpes vulpes",
+  "taxon_id": 42069,
+  "category": "Native",
+  "us_research_grade_obs": 47794
+ },
+ {
+  "name": "American Black Bear",
+  "scientific_name": "Ursus americanus",
+  "taxon_id": 41638,
+  "category": "Native",
+  "us_research_grade_obs": 48508
+ },
+ {
+  "name": "North American Beaver",
+  "scientific_name": "Castor canadensis",
+  "taxon_id": 43794,
+  "category": "Native",
+  "us_research_grade_obs": 50868
+ },
+ {
+  "name": "Virginia Opossum",
+  "scientific_name": "Didelphis virginiana",
+  "taxon_id": 42652,
+  "category": "Native",
+  "us_research_grade_obs": 60729
+ },
+ {
+  "name": "Great Horned Owl",
+  "scientific_name": "Bubo virginianus",
+  "taxon_id": 20044,
+  "category": "Native",
+  "us_research_grade_obs": 69144
+ },
+ {
+  "name": "Eastern Chipmunk",
+  "scientific_name": "Tamias striatus",
+  "taxon_id": 46217,
+  "category": "Native",
+  "us_research_grade_obs": 72360
+ },
+ {
+  "name": "Eastern Newt",
+  "scientific_name": "Notophthalmus viridescens",
+  "taxon_id": 27805,
+  "category": "Native",
+  "us_research_grade_obs": 73940
+ },
+ {
+  "name": "Common Snapping Turtle",
+  "scientific_name": "Chelydra serpentina",
+  "taxon_id": 39682,
+  "category": "Native",
+  "us_research_grade_obs": 86490
+ },
+ {
+  "name": "Brown Pelican",
+  "scientific_name": "Pelecanus occidentalis",
+  "taxon_id": 4328,
+  "category": "Native",
+  "us_research_grade_obs": 95955
+ },
+ {
+  "name": "American Alligator",
+  "scientific_name": "Alligator mississippiensis",
+  "taxon_id": 26159,
+  "category": "Native",
+  "us_research_grade_obs": 98653
+ },
+ {
+  "name": "Coyote",
+  "scientific_name": "Canis latrans",
+  "taxon_id": 42051,
+  "category": "Native",
+  "us_research_grade_obs": 100872
+ },
+ {
+  "name": "Common Box Turtle",
+  "scientific_name": "Terrapene carolina",
+  "taxon_id": 39814,
+  "category": "Native",
+  "us_research_grade_obs": 102911
+ },
+ {
+  "name": "Painted Turtle",
+  "scientific_name": "Chrysemys picta",
+  "taxon_id": 39771,
+  "category": "Native",
+  "us_research_grade_obs": 110782
+ },
+ {
+  "name": "American Bullfrog",
+  "scientific_name": "Lithobates catesbeianus",
+  "taxon_id": 65979,
+  "category": "Native",
+  "us_research_grade_obs": 112251
+ },
+ {
+  "name": "Rock Pigeon",
+  "scientific_name": "Columba livia",
+  "taxon_id": 3017,
+  "category": "Introduced",
+  "us_research_grade_obs": 120586
+ },
+ {
+  "name": "European Starling",
+  "scientific_name": "Sturnus vulgaris",
+  "taxon_id": 14850,
+  "category": "Introduced",
+  "us_research_grade_obs": 127213
+ },
+ {
+  "name": "Raccoon",
+  "scientific_name": "Procyon lotor",
+  "taxon_id": 41663,
+  "category": "Native",
+  "us_research_grade_obs": 132952
+ },
+ {
+  "name": "Brown Anole",
+  "scientific_name": "Anolis sagrei",
+  "taxon_id": 116461,
+  "category": "Introduced",
+  "us_research_grade_obs": 135000
+ },
+ {
+  "name": "Osprey",
+  "scientific_name": "Pandion haliaetus",
+  "taxon_id": 116999,
+  "category": "Native",
+  "us_research_grade_obs": 135833
+ },
+ {
+  "name": "Common Garter Snake",
+  "scientific_name": "Thamnophis sirtalis",
+  "taxon_id": 28362,
+  "category": "Native",
+  "us_research_grade_obs": 138175
+ },
+ {
+  "name": "Blue Jay",
+  "scientific_name": "Cyanocitta cristata",
+  "taxon_id": 8229,
+  "category": "Native",
+  "us_research_grade_obs": 138560
+ },
+ {
+  "name": "Eastern Cottontail",
+  "scientific_name": "Sylvilagus floridanus",
+  "taxon_id": 43111,
+  "category": "Native",
+  "us_research_grade_obs": 142582
+ },
+ {
+  "name": "Green Anole",
+  "scientific_name": "Anolis carolinensis",
+  "taxon_id": 36514,
+  "category": "Native",
+  "us_research_grade_obs": 144765
+ },
+ {
+  "name": "Wild Turkey",
+  "scientific_name": "Meleagris gallopavo",
+  "taxon_id": 906,
+  "category": "Native",
+  "us_research_grade_obs": 156131
+ },
+ {
+  "name": "Eastern Fox Squirrel",
+  "scientific_name": "Sciurus niger",
+  "taxon_id": 46020,
+  "category": "Native",
+  "us_research_grade_obs": 157618
+ },
+ {
+  "name": "Bald Eagle",
+  "scientific_name": "Haliaeetus leucocephalus",
+  "taxon_id": 5305,
+  "category": "Native",
+  "us_research_grade_obs": 160284
+ },
+ {
+  "name": "House Sparrow",
+  "scientific_name": "Passer domesticus",
+  "taxon_id": 13858,
+  "category": "Introduced",
+  "us_research_grade_obs": 210938
+ },
+ {
+  "name": "Red-tailed Hawk",
+  "scientific_name": "Buteo jamaicensis",
+  "taxon_id": 5212,
+  "category": "Native",
+  "us_research_grade_obs": 277712
+ },
+ {
+  "name": "Eastern Gray Squirrel",
+  "scientific_name": "Sciurus carolinensis",
+  "taxon_id": 46017,
+  "category": "Native",
+  "us_research_grade_obs": 282419
+ },
+ {
+  "name": "Canada Goose",
+  "scientific_name": "Branta canadensis",
+  "taxon_id": 7089,
+  "category": "Native",
+  "us_research_grade_obs": 304869
+ },
+ {
+  "name": "Northern Cardinal",
+  "scientific_name": "Cardinalis cardinalis",
+  "taxon_id": 9083,
+  "category": "Native",
+  "us_research_grade_obs": 309240
+ },
+ {
+  "name": "White-tailed Deer",
+  "scientific_name": "Odocoileus virginianus",
+  "taxon_id": 42223,
+  "category": "Native",
+  "us_research_grade_obs": 316686
+ },
+ {
+  "name": "Great Blue Heron",
+  "scientific_name": "Ardea herodias",
+  "taxon_id": 4956,
+  "category": "Native",
+  "us_research_grade_obs": 347751
+ },
+ {
+  "name": "Mallard",
+  "scientific_name": "Anas platyrhynchos",
+  "taxon_id": 6930,
+  "category": "Native",
+  "us_research_grade_obs": 401791
+ }
+]
