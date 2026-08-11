@@ -28,9 +28,9 @@ SIZE = 1024
 FILL = 0.76
 
 # Stylistic outliers kept out of training (see STYLE_BIBLE "Known deviations")
-EXCLUDE = {
-    "bald_eagle",  # branch prop; props must not enter the style prior
-}
+# v2: bald_eagle is back in - branches are house convention (anole, eagle),
+# water pools too (otter, heron, flamingo); the vignettes SHOULD be learned.
+EXCLUDE: set[str] = set()
 
 
 def caption_for(slug: str) -> str:

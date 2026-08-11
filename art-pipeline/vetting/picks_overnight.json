@@ -72,16 +72,16 @@
   "candidate_index": 4
  },
  "great_egret": {
-  "photo_id": 195512518,
-  "medium_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/195512518/medium.jpeg",
-  "original_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/195512518/original.jpeg",
+  "photo_id": 714031948,
+  "medium_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/714031948/medium.jpg",
+  "original_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/714031948/original.jpg",
   "license": "cc-by",
-  "attribution": "(c) Gavin Slater, some rights reserved (CC BY)",
-  "observation_url": "https://www.inaturalist.org/observations/115840462",
+  "attribution": "(c) Dmitry Mozzherin, some rights reserved (CC BY)",
+  "observation_url": "https://www.inaturalist.org/observations/389794142",
   "common_name": "Great Egret",
   "status": "accepted",
-  "picked_by": "claude-overnight",
-  "candidate_index": 9
+  "picked_by": "claude-revet-r2",
+  "candidate_index": 18
  },
  "downy_woodpecker": {
   "photo_id": 458395355,
@@ -120,16 +120,16 @@
   "candidate_index": 13
  },
  "california_ground_squirrel": {
-  "photo_id": 270635081,
-  "medium_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/270635081/medium.jpeg",
-  "original_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/270635081/original.jpeg",
+  "photo_id": 712223518,
+  "medium_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/712223518/medium.jpg",
+  "original_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/712223518/original.jpg",
   "license": "cc-by",
-  "attribution": "(c) Rudyard, some rights reserved (CC BY)",
-  "observation_url": "https://www.inaturalist.org/observations/156506786",
+  "attribution": "(c) Brooke J., some rights reserved (CC BY)",
+  "observation_url": "https://www.inaturalist.org/observations/388852714",
   "common_name": "California Ground Squirrel",
   "status": "accepted",
-  "picked_by": "claude-overnight",
-  "candidate_index": 5
+  "picked_by": "claude-revet-r2",
+  "candidate_index": 16
  },
  "american_pika": {
   "photo_id": 553527839,

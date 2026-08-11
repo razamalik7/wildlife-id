@@ -27,8 +27,43 @@ from normalize import subject_bbox  # noqa: E402
 
 LORA = Path(__file__).parent / "lora"
 PY = LORA / "venv" / "Scripts" / "python.exe"
-NEG = ("photo, photorealistic, pattern, multiple animals, tiling, text, "
-       "watermark, border, scenery, foliage, branch, water, glow, vignette, shadow")
+NEG_BASE = ("photo, photorealistic, pattern, multiple animals, tiling, text, "
+            "watermark, border, full scene, landscape, sky, speckles, confetti, "
+            "dots, paint splatter, glow, cast shadow")
+
+# Environmental vignette per the style bible: the house style gives swimmers
+# a stylized water pool, waders legs-in-water, perchers/climbers a branch.
+# Prompt clause + which default negatives to drop for that context.
+CONTEXTS = {
+    "terrestrial": ("neutral standing pose, plain white background",
+                    "scenery, foliage, branch, water"),
+    "floating":    ("resting on a small stylized pool of blue water with simple "
+                    "ripple lines, white background around the water",
+                    "scenery, foliage, branch"),
+    "wading":      ("standing with legs in a shallow stylized pool of blue water "
+                    "with ripple lines, white background around the water",
+                    "scenery, foliage, branch"),
+    "perching":    ("perched on a single bare branch segment, white background",
+                    "scenery, water"),
+    "climbing":    ("climbing a single branch segment, white background",
+                    "scenery, water"),
+    "coiled":      ("coiled resting pose, plain white background",
+                    "scenery, foliage, branch, water"),
+}
+
+SPECIES_CONTEXT = {
+    "wood_duck": "floating", "northern_shoveler": "floating",
+    "northern_pintail": "floating", "american_wigeon": "floating",
+    "green-winged_teal": "floating",
+    "american_robin": "terrestrial", "great_egret": "wading",
+    "downy_woodpecker": "perching",
+    "mule_deer": "terrestrial", "muskrat": "floating",
+    "california_ground_squirrel": "terrestrial", "american_pika": "terrestrial",
+    "western_fence_lizard": "terrestrial", "pond_slider": "terrestrial",
+    "gopher_snake": "coiled", "common_watersnake": "coiled",
+    "gopher_tortoise": "terrestrial", "american_toad": "terrestrial",
+    "spring_peeper": "perching", "eastern_red-backed_salamander": "terrestrial",
+}
 
 
 def prep(slug: str, url: str, work: Path) -> Path:
@@ -53,9 +88,10 @@ def prep(slug: str, url: str, work: Path) -> Path:
 def generate(slug: str, common: str, cut_p: Path, strength: float, seed: int, outdir: Path) -> None:
     if list(outdir.glob("*.png")):
         return
+    ctx_clause, extra_neg = CONTEXTS[SPECIES_CONTEXT.get(slug, "terrestrial")]
     prompt = (f"a {common.lower()}, full body wildlife illustration, single animal, "
-              f"three-quarter view, painterly brushwork, plain white background, "
-              f"no scenery, no props, no cast shadow --n {NEG}")
+              f"complete body with all limbs visible, three-quarter view, "
+              f"painterly brushwork, {ctx_clause} --n {NEG_BASE}, {extra_neg}")
     subprocess.run([
         str(PY), str(LORA / "sd-scripts" / "sdxl_gen_img.py"),
         "--ckpt", str(LORA / "base" / "sd_xl_base_1.0.safetensors"),

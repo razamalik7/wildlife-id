@@ -59,12 +59,18 @@ with warm darks from this table, not with gray or blue-black.
 The block in [prompts/framing_contract.txt](prompts/framing_contract.txt) is
 appended verbatim to every generation prompt. Summary of the contract:
 
-- Full body, every limb and the complete tail visible; nothing cropped.
+- Full body, every limb and the complete tail visible; nothing cropped, no
+  body part missing.
 - Three-quarter view, head toward viewer-left. (Most of the existing set faces
   left; left-facing is the convention going forward.)
-- Neutral standing pose, feet on an invisible level ground line. Coiled pose
-  for snakes. No perch, branch, rock, foliage, water, or any prop.
-- Transparent background. No cast shadow, no ground plane, no vignette.
+- **Environmental vignette by species context** — the set has always done
+  this (otter floats on a stylized water pool, flamingo/heron wade in one,
+  anole climbs a branch, eagle perches): terrestrial = standing on invisible
+  ground, no props; swimmers = stylized water-pool vignette; waders = legs in
+  a shallow pool; perchers/climbers = a single minimal branch. The vignette
+  is an isolated shape — never a full scene, never a background fill.
+- Transparent background outside subject + vignette. No cast shadow, no
+  ground plane, no scenery.
 - Single adult animal in typical coloration. No text, border, or watermark.
 - Subject scale is NOT the artist's problem: normalize.py crops to the alpha
   bounding box and rescales every piece so its long side fills 76% of the
@@ -101,7 +107,8 @@ appended verbatim to every generation prompt. Summary of the contract:
 
 ## Known deviations in the current set (do not imitate)
 
-- Bald eagle: perched on a branch prop, near-pure-black heavy inking.
+- Bald eagle: near-pure-black heavy inking (the branch itself is fine — see
+  vignette rules above).
 - Blue jay / small birds: subject fills as little as 25% of canvas (fixed by
   normalize.py going forward).
 - Marten and some small mammals: outline nearly absent, softer rendering.

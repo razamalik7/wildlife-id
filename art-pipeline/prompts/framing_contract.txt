@@ -1,2 +1,10 @@
 FRAMING (identical for every species — do not vary):
-Full body illustration of a single adult animal, every limb and the entire tail fully visible, nothing cropped by the frame. Three-quarter view with the head oriented toward the viewer's left. Neutral standing pose with feet on an invisible level ground line (coiled resting pose for snakes; floating swim pose for exclusively aquatic species). Plain fully transparent background. No branch, rock, perch, foliage, water, prop, or scenery of any kind. No ground plane, no cast shadow, no reflection, no vignette. Typical adult coloration. No text, no border, no watermark, no signature. The animal is centered with a small even margin on all sides.
+Full body illustration of a single adult animal, every limb and the entire tail fully visible, nothing cropped by the frame and no body part missing. Three-quarter view with the head oriented toward the viewer's left. Typical adult coloration. No text, no border, no watermark, no signature. The animal is centered with a small even margin on all sides. Plain fully transparent background outside the subject — no scenery, no landscape, no sky, no cast shadow.
+
+ENVIRONMENTAL VIGNETTE (per species context — pick exactly one):
+- terrestrial (default): neutral standing pose on an invisible level ground line; no props.
+- floating (swimming mammals, ducks on water): resting on a small stylized pool of blue water with simple ripple lines, body correctly seated at the waterline; the pool is an isolated vignette shape, not a full scene.
+- wading (herons, egrets, flamingos, shorebirds): standing with legs in a shallow stylized pool of blue water with ripple lines; legs visible through/above the water.
+- perching (songbirds, raptors, treefrogs): perched on a single bare branch segment; the branch is a minimal prop, not a tree.
+- climbing (anoles, squirrels in trees): climbing a single branch or trunk segment.
+- coiled (snakes): coiled resting pose, no props.
