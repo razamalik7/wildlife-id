@@ -1,0 +1,57 @@
+Generate an american badger in the samestyle and format as this caribou. Use this realphoto as inspiration for pose and color andshape. Ensure the resulting image is a squarehttps://gemini.google.com/app/7cb278c1560095acUser prompt: Generate an american badger in the same style and format as this caribou. Use thisreal photo as inspiration for pose and color and shape. Ensure the resulting image is a square
+User prompt: good but remove the ground
+Firefoxabout:blank
+1 of 198/11/2026, 12:50 PM
+User prompt: Generate an american marten in the same style and format as this caribou. Use thisreal photo as inspiration for pose and color and shape. Ensure the resulting image is a square
+Firefoxabout:blank
+2 of 198/11/2026, 12:50 PM
+User prompt: Generate an ocelot in the same style and format as this caribou. Use this real photoas inspiration for pose and color and shape. Ensure the resulting image is a square
+Firefoxabout:blank
+3 of 198/11/2026, 12:50 PM
+User prompt: Generate an ocelot in the same style and format as this caribou. Use this real photoas inspiration for pose and color and shape. Ensure the resulting image is a square
+Firefoxabout:blank
+4 of 198/11/2026, 12:50 PM
+User prompt: remove the branch and fix the limbs
+Firefoxabout:blank
+5 of 198/11/2026, 12:50 PM
+User prompt: make it look more like it is on flat ground rather than moving down
+Firefoxabout:blank
+6 of 198/11/2026, 12:50 PM
+User prompt: Generate a jaguar in the same style and format as this caribou. Use this real photoas inspiration for pose and color and shape. Ensure the resulting image is a square
+Firefoxabout:blank
+7 of 198/11/2026, 12:50 PM
+User prompt: make the jaguar a little more sideways and less facing the cam with its body
+Firefoxabout:blank
+8 of 198/11/2026, 12:50 PM
+User prompt: Generate a gemsbok in the same style and format as this caribou. Use this real photoas inspiration for pose and color and shape. Ensure the resulting image is a square
+Firefoxabout:blank
+9 of 198/11/2026, 12:50 PM
+User prompt: Generate a gray fox in the same style and format as this caribou. Use this real photoas inspiration for pose and color and shape. Ensure the resulting image is a square
+Firefoxabout:blank
+10 of 198/11/2026, 12:50 PM
+User prompt: remove the ground
+Firefoxabout:blank
+11 of 198/11/2026, 12:50 PM
+User prompt: Generate a black-footed ferret in the same style and format as this caribou. Use thisreal photo as inspiration for pose and color and shape. Ensure the resulting image is a square
+Firefoxabout:blank
+12 of 198/11/2026, 12:50 PM
+User prompt: remove the ground
+Firefoxabout:blank
+13 of 198/11/2026, 12:50 PM
+User prompt: Generate a sea otter in the same style and format as this caribou. Use this real photoas inspiration for pose and color and shape. Ensure the resulting image is a square. Make it in a lilpool of water, submerged to the same extent as the one in the image
+Firefoxabout:blank
+14 of 198/11/2026, 12:50 PM
+User prompt: Generate an american flamingo in the same style and format as this caribou
+Firefoxabout:blank
+15 of 198/11/2026, 12:50 PM
+User prompt: make it standing in a lil pool of water
+Firefoxabout:blank
+16 of 198/11/2026, 12:50 PM
+User prompt: do vanderbilt students get supabase premium for free?Response: Based on current available information, Vanderbilt students do not get SupabasePremium (Pro) for free.There is no university-wide partnership between Vanderbilt and Supabase listed in the VanderbiltSoftware Store, nor is Supabase currently listed as a partner in the GitHub Student DeveloperPack.However, students can still use Supabase for free through their standard public tier, which isdesigned to be generous for student and hobbyist projects.Best Option: Supabase Free TierFor most student projects, the standard Free Tier is sufficient. It includes:Cost: $0/monthDatabase: 500 MB database spaceAPI: Unlimited API requests
+Firefoxabout:blank
+17 of 198/11/2026, 12:50 PM
+Users: 50,000 monthly active users (MAU)Storage: 1 GB file storageAlternative Resources for StudentsWhile Supabase Pro isn't free, you can access other premium developer tools for free through theGitHub Student Developer Pack (which you are eligible for with your @vanderbilt.edu email).This pack includes:Heroku: Credits for hosting.DigitalOcean: $200 in platform credit (which can be used to host a self-hosted instance ofSupabase if you are technically inclined).JetBrains IDEs: Free Professional licenses.GitHub Copilot: Free access.Recommendation: Start with the Supabase Free Tier. If your project scales beyond the free limits(e.g., you need more than 500MB of data), you could consider "self-hosting" Supabase onDigitalOcean using the $200 credit from the GitHub Student Pack.User prompt: Generate a green anole in the style and format of this caribou
+Firefoxabout:blank
+18 of 198/11/2026, 12:50 PM
+Firefoxabout:blank
+19 of 198/11/2026, 12:50 PM

@@ -53,6 +53,8 @@ CONTEXTS = {
                     "scenery, water"),
     "climbing":    ("climbing a single branch segment, white background",
                     "scenery, water"),
+    "rock":        ("perched on a small stylized rock, white background",
+                    "scenery, foliage, branch, water"),
     "coiled":      ("coiled resting pose, plain white background",
                     "scenery, foliage, branch, water"),
 }
@@ -64,8 +66,8 @@ SPECIES_CONTEXT = {
     "american_robin": "terrestrial", "great_egret": "wading",
     "downy_woodpecker": "perching",
     "mule_deer": "terrestrial", "muskrat": "floating",
-    "california_ground_squirrel": "terrestrial", "american_pika": "terrestrial",
-    "western_fence_lizard": "terrestrial", "pond_slider": "terrestrial",
+    "california_ground_squirrel": "rock", "american_pika": "rock",
+    "western_fence_lizard": "rock", "pond_slider": "terrestrial",
     "gopher_snake": "coiled", "common_watersnake": "coiled",
     "gopher_tortoise": "terrestrial", "american_toad": "terrestrial",
     "spring_peeper": "perching", "eastern_red-backed_salamander": "terrestrial",
@@ -92,7 +94,7 @@ def prep(slug: str, url: str, work: Path) -> Path:
     return cut_p
 
 
-def generate(slug: str, common: str, cut_p: Path, strength: float, seed: int, outdir: Path) -> None:
+def generate(slug: str, common: str, cut_p: Path, strength: float, seed: int, outdir: Path, args_lora: str = "animl_style_v2") -> None:
     if list(outdir.glob("*.png")):
         return
     ctx_clause, extra_neg = CONTEXTS[SPECIES_CONTEXT.get(slug, "terrestrial")]
@@ -104,7 +106,7 @@ def generate(slug: str, common: str, cut_p: Path, strength: float, seed: int, ou
         "--ckpt", str(LORA / "base" / "sd_xl_base_1.0.safetensors"),
         "--outdir", str(outdir),
         "--network_module", "networks.lora",
-        "--network_weights", str(LORA / "output" / "animl_style_v2.safetensors"),
+        "--network_weights", str(LORA / "output" / f"{args_lora}.safetensors"),
         "--network_mul", "1.0",
         "--prompt", prompt,
         "--image_path", str(cut_p),
@@ -146,6 +148,7 @@ def main() -> None:
     ap.add_argument("--strengths", nargs="+", type=float, default=[0.6, 0.7, 0.8])
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--work", default="art-pipeline/batch_run")
+    ap.add_argument("--lora", default="animl_style_v2")
     args = ap.parse_args()
 
     picks = json.loads(Path(args.picks).read_text())
@@ -160,7 +163,7 @@ def main() -> None:
             cut_p = prep(slug, pick["original_url"], work)
             for s in args.strengths:
                 generate(slug, pick["common_name"], cut_p, s, args.seed,
-                         work / f"{slug}_str{s}")
+                         work / f"{slug}_str{s}", args.lora)
             sheet(slug, work, args.strengths, sheets)
             print(f"done {slug}", flush=True)
         except Exception as e:

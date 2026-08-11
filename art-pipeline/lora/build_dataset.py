@@ -27,10 +27,14 @@ OUT = Path(__file__).parent / "dataset" / "img"
 SIZE = 1024
 FILL = 0.76
 
-# Stylistic outliers kept out of training (see STYLE_BIBLE "Known deviations")
-# v2: bald_eagle is back in - branches are house convention (anole, eagle),
-# water pools too (otter, heron, flamingo); the vignettes SHOULD be learned.
-EXCLUDE: set[str] = set()
+# v3: exclude the punchy ink-sticker/graphic outliers so the LoRA learns the
+# soft matte painterly core (Claude visual pass, 2026-08-11; user can veto).
+# Vignettes (water pools, branches, rocks) remain represented via the core.
+EXCLUDE: set[str] = {
+    "american_flamingo", "american_red_squirrel", "bald_eagle", "blue_jay",
+    "bobcat", "eastern_newt", "mallard", "monk_parakeet", "moose",
+    "northern_cardinal", "red_fox",
+}
 
 
 def caption_for(slug: str) -> str:

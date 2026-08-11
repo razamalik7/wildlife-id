@@ -19,7 +19,13 @@ class Handler(SimpleHTTPRequestHandler):
         super().__init__(*a, directory=str(ROOT), **kw)
 
     def do_POST(self):
-        if self.path.rstrip("/").endswith("save"):
+        if self.path.rstrip("/").endswith("save_masters"):
+            length = int(self.headers.get("Content-Length", 0))
+            body = self.rfile.read(length)
+            json.loads(body)
+            (ROOT / "picks_masters.json").write_bytes(body)
+            self.send_response(200); self.end_headers(); self.wfile.write(b"ok")
+        elif self.path.rstrip("/").endswith("save"):
             length = int(self.headers.get("Content-Length", 0))
             body = self.rfile.read(length)
             json.loads(body)  # validate before writing

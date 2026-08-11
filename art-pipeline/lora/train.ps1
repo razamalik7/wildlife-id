@@ -9,7 +9,7 @@ $lora = "C:\Users\nars7\Projects\aniML-vision\art-pipeline\lora"
   --pretrained_model_name_or_path "$lora\base\sd_xl_base_1.0.safetensors" `
   --dataset_config "$lora\dataset.toml" `
   --output_dir "$lora\output" `
-  --output_name "animl_style_v2" `
+  --output_name "animl_style_v3" `
   --save_model_as safetensors `
   --network_module networks.lora `
   --network_dim 32 `
