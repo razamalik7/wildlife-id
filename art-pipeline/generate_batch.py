@@ -148,7 +148,7 @@ def main() -> None:
     ap.add_argument("--strengths", nargs="+", type=float, default=[0.6, 0.7, 0.8])
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--work", default="art-pipeline/batch_run")
-    ap.add_argument("--lora", default="animl_style_v2")
+    ap.add_argument("--lora", default="animl_style_v3")
     args = ap.parse_args()
 
     picks = json.loads(Path(args.picks).read_text())

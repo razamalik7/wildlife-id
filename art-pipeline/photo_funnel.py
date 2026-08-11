@@ -110,20 +110,25 @@ def stage_c(clip_pack, device, im: Image.Image, common_name: str) -> float:
 
 
 def stage_d(im: Image.Image, common_name: str) -> dict | None:
-    """Gemma rubric verdict via Ollama."""
+    """Qwen3-VL attribute extraction via Ollama. The VLM reports ATTRIBUTES
+    only; acceptance policy lives in stage_d_policy() — the 3-model shootout
+    showed every VLM extracts pose/in-mouth reliably but none can hold our
+    usability policy (all rated a flying duck 'usable')."""
     buf = BytesIO()
     im.save(buf, format="JPEG", quality=90)
     b64 = base64.b64encode(buf.getvalue()).decode()
     prompt = (
-        f"You are vetting a reference photo of a {common_name} for an illustrator. "
+        f"Describe this photo of a {common_name} for an illustrator's records. "
         "Answer STRICT JSON only: {\"single_animal\": bool, \"whole_body_visible\": bool "
         "(all limbs, feet and tail in frame and unobstructed), \"nothing_in_mouth\": bool "
         "(no food or objects in mouth or paws), \"adult_typical\": bool (adult with typical "
-        "coloration, not juvenile/leucistic), \"side_or_three_quarter_view\": bool, "
+        "coloration, not juvenile/leucistic), "
+        "\"pose\": \"standing/sitting/swimming/flying/feeding/preening/curled/other\", "
+        "\"side_or_three_quarter_view\": bool, "
         "\"is_photo\": bool (a real photo, not a drawing), \"usable_score\": 0-10}")
     try:
         r = requests.post(f"{OLLAMA}/api/chat", json={
-            "model": "gemma3:12b", "stream": False, "format": "json",
+            "model": "qwen3-vl:8b", "stream": False, "format": "json",
             "messages": [{"role": "user", "content": prompt, "images": [b64]}],
         }, timeout=180)
         r.raise_for_status()
@@ -144,7 +149,10 @@ def main() -> None:
 
     device = args.device or ("cuda" if torch.cuda.is_available() else "cpu")
     from PytorchWildlife.models import detection
-    det_model = detection.MegaDetectorV6(device=device, pretrained=True, version="MDV6-yolov9-c")
+    # MDV5A: well-calibrated confidences (0.9+ on clear animals). The compact
+    # MDV6-yolov9-c variant runs badly under-confident on 500px thumbs and
+    # missed 7/12 obvious animals in testing.
+    det_model = detection.MegaDetectorV5(device=device, pretrained=True, version="a")
     clip_pack = build_clip(device)
 
     cand_path = Path(args.candidates)
@@ -177,10 +185,19 @@ def main() -> None:
                     v = stage_d(r["_im"], sp["common_name"])
                     if v:
                         r["funnel"]["vlm"] = v
-                        checks = sum(bool(v.get(k)) for k in
-                                     ["single_animal", "whole_body_visible", "nothing_in_mouth",
-                                      "adult_typical", "side_or_three_quarter_view", "is_photo"])
-                        r["funnel"]["score"] += checks + float(v.get("usable_score", 0)) / 2
+                        # policy in code, attributes from the model
+                        reject = (v.get("pose") in ("flying", "feeding", "preening")
+                                  or not v.get("single_animal", True)
+                                  or not v.get("nothing_in_mouth", True)
+                                  or not v.get("is_photo", True))
+                        if reject:
+                            r["funnel"]["score"] -= 25
+                            r["funnel"]["policy_reject"] = True
+                        else:
+                            checks = sum(bool(v.get(k)) for k in
+                                         ["whole_body_visible", "adult_typical",
+                                          "side_or_three_quarter_view"])
+                            r["funnel"]["score"] += 2 * checks + float(v.get("usable_score", 0)) / 2
 
         rows.sort(key=lambda r: r["funnel"]["score"], reverse=True)
         for r in rows:
