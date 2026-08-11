@@ -18,10 +18,10 @@ import sys
 from pathlib import Path
 
 from PIL import Image
-from rembg import remove
 
 sys.path.insert(0, str(Path(__file__).parent))
 from normalize import subject_bbox  # noqa: E402
+from u2net_matte import remove  # noqa: E402  (rembg's numba dep is policy-blocked)
 
 CANVAS = 2048
 FILL = 0.76

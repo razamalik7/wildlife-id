@@ -22,14 +22,20 @@ import requests
 from PIL import Image, ImageDraw, ImageFont
 
 sys.path.insert(0, str(Path(__file__).parent))
-from rembg import remove  # noqa: E402
 from normalize import subject_bbox  # noqa: E402
+# rembg is imported lazily in prep(): its numba dependency can be blocked by
+# Windows App Control, and most runs only need already-built cutouts.
 
 LORA = Path(__file__).parent / "lora"
 PY = LORA / "venv" / "Scripts" / "python.exe"
 NEG_BASE = ("photo, photorealistic, pattern, multiple animals, tiling, text, "
             "watermark, border, full scene, landscape, sky, speckles, confetti, "
-            "dots, paint splatter, glow, cast shadow")
+            "dots, paint splatter, glow, cast shadow, sticker, heavy black outline, "
+            "glossy, shiny, oversaturated, 3d render, airbrushed, cropped body")
+
+# Locked by the overnight grid search: v2 LoRA + matte language beat v1 +
+# neutral wording decisively (wigeon identity fixed, muskrat gloss gone).
+STYLE_CLAUSE = ("muted matte colors, soft painterly brushwork, flat gouache shading")
 
 # Environmental vignette per the style bible: the house style gives swimmers
 # a stylized water pool, waders legs-in-water, perchers/climbers a branch.
@@ -70,6 +76,7 @@ def prep(slug: str, url: str, work: Path) -> Path:
     photo_p = work / f"{slug}_photo.png"
     cut_p = work / f"{slug}_cutout.png"
     if not cut_p.exists():
+        from u2net_matte import remove
         r = requests.get(url, timeout=60, headers={"User-Agent": "animlvision"})
         photo = Image.open(BytesIO(r.content)).convert("RGBA")
         photo.convert("RGB").save(photo_p)
@@ -91,20 +98,20 @@ def generate(slug: str, common: str, cut_p: Path, strength: float, seed: int, ou
     ctx_clause, extra_neg = CONTEXTS[SPECIES_CONTEXT.get(slug, "terrestrial")]
     prompt = (f"a {common.lower()}, full body wildlife illustration, single animal, "
               f"complete body with all limbs visible, three-quarter view, "
-              f"painterly brushwork, {ctx_clause} --n {NEG_BASE}, {extra_neg}")
+              f"{STYLE_CLAUSE}, {ctx_clause} --n {NEG_BASE}, {extra_neg}")
     subprocess.run([
         str(PY), str(LORA / "sd-scripts" / "sdxl_gen_img.py"),
         "--ckpt", str(LORA / "base" / "sd_xl_base_1.0.safetensors"),
         "--outdir", str(outdir),
         "--network_module", "networks.lora",
-        "--network_weights", str(LORA / "output" / "animl_style_v1.safetensors"),
+        "--network_weights", str(LORA / "output" / "animl_style_v2.safetensors"),
         "--network_mul", "1.0",
         "--prompt", prompt,
         "--image_path", str(cut_p),
         "--strength", str(strength),
         "--W", "1024", "--H", "1024", "--steps", "32", "--sampler", "euler_a",
         "--scale", "7", "--seed", str(seed), "--bf16", "--sdpa",
-        "--batch_size", "1", "--images_per_prompt", "1",
+        "--batch_size", "1", "--images_per_prompt", "2",
     ], check=True, capture_output=True)
 
 

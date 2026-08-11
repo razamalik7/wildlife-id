@@ -12,16 +12,17 @@
   "candidate_index": 0
  },
  "northern_shoveler": {
-  "photo_id": 342842647,
-  "medium_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/342842647/medium.jpg",
-  "original_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/342842647/original.jpg",
+  "photo_id": 112302366,
+  "medium_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/112302366/medium.jpeg",
+  "original_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/112302366/original.jpeg",
   "license": "cc0",
   "attribution": "no rights reserved",
-  "observation_url": "https://www.inaturalist.org/observations/194955806",
+  "observation_url": "https://www.inaturalist.org/observations/69235558",
+  "orig_index": 5,
   "common_name": "Northern Shoveler",
   "status": "accepted",
-  "picked_by": "claude-overnight",
-  "candidate_index": 0
+  "picked_by": "funnel-r3",
+  "candidate_index": 5
  },
  "northern_pintail": {
   "photo_id": 464545165,
@@ -42,22 +43,24 @@
   "license": "cc-by",
   "attribution": "(c) Bob Nieman, some rights reserved (CC BY)",
   "observation_url": "https://www.inaturalist.org/observations/107800583",
+  "orig_index": 9,
   "common_name": "American Wigeon",
   "status": "accepted",
-  "picked_by": "claude-overnight",
+  "picked_by": "funnel-r3",
   "candidate_index": 9
  },
  "green-winged_teal": {
-  "photo_id": 130420221,
-  "medium_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/130420221/medium.jpg",
-  "original_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/130420221/original.jpg",
+  "photo_id": 176951502,
+  "medium_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/176951502/medium.jpeg",
+  "original_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/176951502/original.jpeg",
   "license": "cc-by",
-  "attribution": "(c) P Holroyd, some rights reserved (CC BY)",
-  "observation_url": "https://www.inaturalist.org/observations/79615504",
+  "attribution": "(c) Laura Clark, some rights reserved (CC BY)",
+  "observation_url": "https://www.inaturalist.org/observations/105462036",
+  "orig_index": 7,
   "common_name": "Green-winged Teal",
   "status": "accepted",
-  "picked_by": "claude-overnight",
-  "candidate_index": 8
+  "picked_by": "funnel-r3",
+  "candidate_index": 7
  },
  "american_robin": {
   "photo_id": 361987379,
@@ -114,22 +117,24 @@
   "license": "cc-by",
   "attribution": "(c) Alex Abair, some rights reserved (CC BY)",
   "observation_url": "https://www.inaturalist.org/observations/388665407",
+  "orig_index": 0,
   "common_name": "Muskrat",
   "status": "accepted",
-  "picked_by": "claude-overnight",
-  "candidate_index": 13
+  "picked_by": "funnel-r3",
+  "candidate_index": 0
  },
  "california_ground_squirrel": {
-  "photo_id": 712223518,
-  "medium_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/712223518/medium.jpg",
-  "original_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/712223518/original.jpg",
+  "photo_id": 270635081,
+  "medium_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/270635081/medium.jpeg",
+  "original_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/270635081/original.jpeg",
   "license": "cc-by",
-  "attribution": "(c) Brooke J., some rights reserved (CC BY)",
-  "observation_url": "https://www.inaturalist.org/observations/388852714",
+  "attribution": "(c) Rudyard, some rights reserved (CC BY)",
+  "observation_url": "https://www.inaturalist.org/observations/156506786",
+  "orig_index": 6,
   "common_name": "California Ground Squirrel",
   "status": "accepted",
-  "picked_by": "claude-revet-r2",
-  "candidate_index": 16
+  "picked_by": "funnel-r3",
+  "candidate_index": 6
  },
  "american_pika": {
   "photo_id": 553527839,
