@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Style Labels</title>
+<style>
+  body { margin:0; font-family: system-ui, sans-serif; background:#1c1917; color:#e7e5e4; }
+  header { position:sticky; top:0; z-index:5; background:#1c1917ee; padding:12px 18px;
+           display:flex; gap:18px; align-items:center; flex-wrap:wrap; border-bottom:1px solid #44403c; }
+  h1 { font-size:16px; margin:0; color:#d6d3d1; }
+  label { font-size:13px; color:#a8a29e; }
+  select { background:#292524; color:#e7e5e4; border:1px solid #57534e; border-radius:6px; padding:3px 6px; }
+  #save { font-size:12px; color:#78716c; margin-left:auto; }
+  h2 { font-size:15px; margin:22px 18px 8px; color:#fbbf24; }
+  h2 span { color:#78716c; font-weight:400; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:12px; padding:0 18px; }
+  .card { background:#292524; border-radius:12px; padding:10px; border:2px solid transparent; }
+  .card.ultra { border-color:#fbbf24; }
+  .card img { width:100%; aspect-ratio:1; object-fit:contain; background:#fafaf9; border-radius:8px; cursor:zoom-in; }
+  .name { font-weight:600; margin:6px 0 2px; font-size:14px; }
+  .meta { font-size:11px; color:#a8a29e; margin-bottom:6px; }
+  .f { display:flex; justify-content:space-between; align-items:center; font-size:11px; margin:2px 0; }
+  .f span { color:#a8a29e; }
+  .f select { font-size:11px; padding:1px 4px; }
+  .f.changed select { border-color:#34d399; color:#34d399; }
+  #zoom { position:fixed; inset:0; background:#000c; display:none; align-items:center; justify-content:center; z-index:9; }
+  #zoom img { max-width:92vw; max-height:92vh; background:#fafaf9; border-radius:10px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Style labels · Claude's draft — fix anything wrong</h1>
+  <label>Group by <select id="groupBy"></select></label>
+  <label>Show <select id="tier">
+    <option value="all">all 47</option><option value="ultra">ultra only</option>
+    <option value="core">core (36)</option></select></label>
+  <span id="save"></span>
+</header>
+<div id="groups"></div>
+<div id="zoom" onclick="this.style.display='none'"><img></div>
+<script>
+let D, edits = {};
+const CORE = new Set();
+
+async function boot() {
+  D = await (await fetch('style_review.json')).json();
+  try { (await (await fetch('elite_core_v1.json')).json()).keep.forEach(s => CORE.add(s)); } catch (e) {}
+  try { edits = await (await fetch('style_labels_reviewed.json', {cache:'no-store'})).json(); } catch (e) { edits = {}; }
+  const gb = document.getElementById('groupBy');
+  ['tier', 'class', ...D.fields].forEach(f => gb.add(new Option(f.replace(/_/g, ' '), f)));
+  gb.value = 'overall_feel';
+  gb.onchange = render; document.getElementById('tier').onchange = render;
+  render();
+}
+
+const val = (r, f) => edits[r.slug]?.[f] ?? r[f];
+
+function save() {
+  const el = document.getElementById('save');
+  fetch('save_style', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(edits)})
+    .then(r => el.textContent = r.ok ? `saved · ${Object.keys(edits).length} pieces edited` : 'SAVE FAILED')
+    .catch(() => el.textContent = 'SAVE FAILED (server not reachable)');
+}
+
+function render() {
+  const gb = document.getElementById('groupBy').value, tier = document.getElementById('tier').value;
+  let rows = D.rows.filter(r => tier === 'all' || (tier === 'ultra' ? r.tier === 'ultra' : CORE.has(r.slug)));
+  const groups = {};
+  rows.forEach(r => (groups[val(r, gb)] ??= []).push(r));
+  const order = D.options[gb] || Object.keys(groups).sort();
+  const root = document.getElementById('groups'); root.innerHTML = '';
+  [...order, ...Object.keys(groups).filter(k => !order.includes(k))].forEach(k => {
+    if (!groups[k]) return;
+    const ultraN = groups[k].filter(r => r.tier === 'ultra').length;
+    const h = document.createElement('h2');
+    h.innerHTML = `${gb.replace(/_/g, ' ')}: ${k} <span>· ${groups[k].length} pieces · ${ultraN} ultra</span>`;
+    root.appendChild(h);
+    const grid = document.createElement('div'); grid.className = 'grid';
+    groups[k].forEach(r => grid.appendChild(card(r)));
+    root.appendChild(grid);
+  });
+}
+
+function card(r) {
+  const c = document.createElement('div');
+  c.className = 'card' + (r.tier === 'ultra' ? ' ultra' : '');
+  c.innerHTML = `<img src="master_thumbs/${r.slug}.jpg" loading="lazy">
+    <div class="name">${r.tier === 'ultra' ? '★ ' : ''}${r.slug.replace(/_/g, ' ')}</div>
+    <div class="meta">${r.class} · ${r.tier} · flat ${(+r.m_flat_fraction*100).toFixed(0)}% · ink ${(+r.m_ink_fraction*100).toFixed(0)}%</div>`;
+  c.querySelector('img').onclick = () => { const z = document.getElementById('zoom'); z.querySelector('img').src = `master_thumbs/${r.slug}.jpg`; z.style.display = 'flex'; };
+  D.fields.forEach(f => {
+    const row = document.createElement('div');
+    row.className = 'f' + (edits[r.slug]?.[f] !== undefined ? ' changed' : '');
+    row.innerHTML = `<span>${f.replace(/_/g, ' ')}</span>`;
+    const sel = document.createElement('select');
+    D.options[f].forEach(o => sel.add(new Option(o, o)));
+    sel.value = val(r, f);
+    sel.onchange = () => {
+      if (sel.value === r[f]) { delete edits[r.slug]?.[f]; if (edits[r.slug] && !Object.keys(edits[r.slug]).length) delete edits[r.slug]; }
+      else (edits[r.slug] ??= {})[f] = sel.value;
+      row.className = 'f' + (edits[r.slug]?.[f] !== undefined ? ' changed' : '');
+      save();
+    };
+    row.appendChild(sel); c.appendChild(row);
+  });
+  return c;
+}
+boot();
+</script>
+</body>
+</html>

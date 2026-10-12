@@ -78,7 +78,7 @@
       "order": "Artiodactyla",
       "family": "Cervidae",
       "genus": null,
-      "species": "Alces",
+      "species": "Alces alces",
       "common_name": "True Moose",
       "taxon_id": 522193
     }
@@ -264,7 +264,7 @@
       "order": "Carnivora",
       "family": "Mephitidae",
       "genus": null,
-      "species": "Mephitis",
+      "species": "Mephitis mephitis",
       "common_name": "Striped and Hooded Skunks",
       "taxon_id": 41880
     }
@@ -334,7 +334,7 @@
       "order": "Carnivora",
       "family": "Canidae",
       "genus": null,
-      "species": "Vulpes",
+      "species": "Vulpes vulpes",
       "common_name": "Typical Foxes",
       "taxon_id": 42069
     }
@@ -813,7 +813,7 @@
       "order": "Passeriformes",
       "family": "Cardinalidae",
       "genus": null,
-      "species": "Cardinalis",
+      "species": "Cardinalis cardinalis",
       "common_name": "Typical Cardinals",
       "taxon_id": 9083
     }
@@ -1059,12 +1059,12 @@
     "taxonomy": {
       "kingdom": "Animalia",
       "phylum": "Chordata",
-      "class": "Aves",
-      "order": "Anseriformes",
-      "family": "Anatidae",
-      "genus": "Mergus",
-      "species": "Mergus merganser",
-      "common_name": "Common Merganser",
+      "class": "Mammalia",
+      "order": "Carnivora",
+      "family": "Mustelidae",
+      "genus": "Gulo",
+      "species": "Gulo gulo",
+      "common_name": "Wolverine",
       "taxon_id": 41852
     }
   },
@@ -1309,7 +1309,7 @@
       "order": "Artiodactyla",
       "family": "Cervidae",
       "genus": null,
-      "species": "Axis",
+      "species": "Axis axis",
       "common_name": "Axis Deer",
       "taxon_id": 42166
     }
@@ -2127,8 +2127,8 @@
       "order": "Phoenicopteriformes",
       "family": "Phoenicopteridae",
       "genus": "Phoenicopterus",
-      "species": "Phoenicopterus roseus",
-      "common_name": "Greater Flamingo",
+      "species": "Phoenicopterus ruber",
+      "common_name": "American Flamingo",
       "taxon_id": 4257
     }
   },

@@ -1,0 +1,43 @@
+{
+ "keep": [
+  "american_marten",
+  "arctic_fox",
+  "axis_deer",
+  "caribou",
+  "common_box_turtle",
+  "desert_tortoise",
+  "elk",
+  "gila_monster",
+  "gray_wolf",
+  "groundhog",
+  "harbor_seal",
+  "mountain_goat",
+  "muskox",
+  "nile_monitor",
+  "nine-banded_armadillo",
+  "ocelot",
+  "peregrine_falcon",
+  "pronghorn",
+  "rock_pigeon",
+  "snowy_owl",
+  "white-tailed_deer",
+  "wolverine"
+ ],
+ "drop": [
+  "american_badger",
+  "american_bullfrog",
+  "brown_pelican",
+  "california_sea_lion",
+  "eastern_fox_squirrel",
+  "great_blue_heron",
+  "great_horned_owl",
+  "green_iguana",
+  "monk_parakeet",
+  "northern_elephant_seal",
+  "snowshoe_hare",
+  "western_diamondback_rattlesnake",
+  "whooping_crane",
+  "yellow-bellied_marmot"
+ ],
+ "note": "ultra favorites - tightest pass over the original 36"
+}

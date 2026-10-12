@@ -19,7 +19,19 @@ class Handler(SimpleHTTPRequestHandler):
         super().__init__(*a, directory=str(ROOT), **kw)
 
     def do_POST(self):
-        if self.path.rstrip("/").endswith("save_masters"):
+        if self.path.rstrip("/").endswith("save_style"):
+            length = int(self.headers.get("Content-Length", 0))
+            body = self.rfile.read(length)
+            json.loads(body)
+            (ROOT / "style_labels_reviewed.json").write_bytes(body)
+            self.send_response(200); self.end_headers(); self.wfile.write(b"ok")
+        elif self.path.rstrip("/").endswith("save_core"):
+            length = int(self.headers.get("Content-Length", 0))
+            body = self.rfile.read(length)
+            json.loads(body)
+            (ROOT / "picks_core.json").write_bytes(body)
+            self.send_response(200); self.end_headers(); self.wfile.write(b"ok")
+        elif self.path.rstrip("/").endswith("save_masters"):
             length = int(self.headers.get("Content-Length", 0))
             body = self.rfile.read(length)
             json.loads(body)
