@@ -249,3 +249,5 @@ art-pipeline/batch_run/
 art-pipeline/lora/eval_refs/
 art-pipeline/funnel-venv/
 art-pipeline/vetting/funnel_cache/
+art-pipeline/vetting/axis_thumbs/
+art-pipeline/vetting/master_thumbs/

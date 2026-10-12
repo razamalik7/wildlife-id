@@ -1,10 +1,11 @@
-"""Serve the reference-photo vetting UI.
+"""Serve the art-pipeline review UIs.
 
     python art-pipeline/vetting/serve.py   ->  http://localhost:8777
 
-Hotkeys in the UI: Enter/RightArrow accept, DownArrow next candidate,
-UpArrow previous candidate, LeftArrow previous species, S skip species.
-Accepted picks land in picks.json next to this script.
+Pages: index.html (reference-photo vetting), curate.html (training-set
+curation; ?set=core for the core-only pass), style.html (style labels),
+axes.html (empirical style axes + families).
+Each page POSTs its state to /save_<name>; ROUTES maps that to a file here.
 """
 
 import json
@@ -13,40 +14,30 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 
+ROUTES = {
+    "save": "picks.json",
+    "save_masters": "picks_masters.json",
+    "save_core": "picks_core.json",
+    "save_style": "style_labels_reviewed.json",
+    "save_axes": "axis_targets.json",
+}
+
 
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *a, **kw):
         super().__init__(*a, directory=str(ROOT), **kw)
 
     def do_POST(self):
-        if self.path.rstrip("/").endswith("save_style"):
-            length = int(self.headers.get("Content-Length", 0))
-            body = self.rfile.read(length)
-            json.loads(body)
-            (ROOT / "style_labels_reviewed.json").write_bytes(body)
-            self.send_response(200); self.end_headers(); self.wfile.write(b"ok")
-        elif self.path.rstrip("/").endswith("save_core"):
-            length = int(self.headers.get("Content-Length", 0))
-            body = self.rfile.read(length)
-            json.loads(body)
-            (ROOT / "picks_core.json").write_bytes(body)
-            self.send_response(200); self.end_headers(); self.wfile.write(b"ok")
-        elif self.path.rstrip("/").endswith("save_masters"):
-            length = int(self.headers.get("Content-Length", 0))
-            body = self.rfile.read(length)
-            json.loads(body)
-            (ROOT / "picks_masters.json").write_bytes(body)
-            self.send_response(200); self.end_headers(); self.wfile.write(b"ok")
-        elif self.path.rstrip("/").endswith("save"):
-            length = int(self.headers.get("Content-Length", 0))
-            body = self.rfile.read(length)
-            json.loads(body)  # validate before writing
-            (ROOT / "picks.json").write_bytes(body)
-            self.send_response(200)
-            self.end_headers()
-            self.wfile.write(b"ok")
-        else:
+        target = ROUTES.get(self.path.strip("/").rsplit("/", 1)[-1])
+        if target is None:
             self.send_error(404)
+            return
+        body = self.rfile.read(int(self.headers.get("Content-Length", 0)))
+        json.loads(body)  # validate before writing
+        (ROOT / target).write_bytes(body)
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"ok")
 
     def log_message(self, *a):
         pass

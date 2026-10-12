@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Style Axes</title>
+<style>
+  body { margin:0; font-family: system-ui, sans-serif; background:#1c1917; color:#e7e5e4; }
+  header { position:sticky; top:0; z-index:5; background:#1c1917f2; padding:10px 18px;
+           display:flex; gap:16px; align-items:center; flex-wrap:wrap; border-bottom:1px solid #44403c; }
+  h1 { font-size:16px; margin:0; }
+  .seg button { background:#292524; color:#d6d3d1; border:1px solid #57534e; padding:4px 10px; cursor:pointer; }
+  .seg button:first-child { border-radius:6px 0 0 6px; } .seg button:last-child { border-radius:0 6px 6px 0; }
+  .seg button.on { background:#fbbf24; color:#1c1917; border-color:#fbbf24; }
+  #save { font-size:12px; color:#78716c; margin-left:auto; }
+  .intro { padding:12px 18px 0; color:#a8a29e; font-size:13px; max-width:1000px; line-height:1.5; }
+  .axis { padding:14px 18px 6px; border-bottom:1px solid #292524; }
+  .axis h2 { font-size:15px; margin:0; display:flex; gap:10px; align-items:baseline; flex-wrap:wrap; }
+  .axis h2 small { color:#a8a29e; font-weight:400; font-size:12px; }
+  .meter { display:inline-block; width:120px; height:7px; background:#292524; border-radius:4px; vertical-align:middle; }
+  .meter div { height:100%; border-radius:4px; }
+  .ends { display:flex; justify-content:space-between; font-size:11px; color:#78716c; margin:6px 0 2px; }
+  .strip { display:flex; gap:6px; overflow-x:auto; padding:4px 0 10px; }
+  .t { flex:0 0 auto; width:116px; text-align:center; font-size:10px; color:#a8a29e; cursor:pointer; }
+  .t img { width:116px; height:116px; object-fit:contain; background:#fafaf9; border-radius:8px;
+           border:3px solid transparent; display:block; }
+  .t.ultra img { border-color:#78716c; }
+  .t.target img { border-color:#34d399; box-shadow:0 0 0 2px #34d399; }
+  .t .v { color:#d6d3d1; }
+  .pick { font-size:12px; color:#34d399; }
+  .skip { font-size:11px; background:none; border:1px solid #57534e; color:#a8a29e; border-radius:5px; cursor:pointer; padding:2px 8px; }
+  .skip.on { border-color:#a8a29e; color:#e7e5e4; background:#44403c; }
+  .fam { padding:14px 18px; border-bottom:1px solid #292524; }
+  .fam h3 { font-size:14px; margin:0 0 4px; }
+  .fam p { font-size:12px; color:#a8a29e; margin:0 0 8px; }
+  .fgrid { display:flex; flex-wrap:wrap; gap:6px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Style axes</h1>
+  <span class="seg" id="setSeg"></span>
+  <span class="seg" id="viewSeg"></span>
+  <span id="save"></span>
+</header>
+<div id="root"></div>
+<script>
+const INFO = {
+  flat_areas:      ["Flat color areas", "Share of the animal painted in calm, unbroken color", "busy / every patch varies", "big calm flat patches"],
+  shadow_depth:    ["Shadow depth", "How far the darkest shadows drop below the animal's middle tone", "shadows barely darker", "very deep dark shadows"],
+  saturation:      ["Color intensity", "How punchy the colors are", "earthy, grayed", "vivid, punchy"],
+  outline_darkness:["Outline darkness", "How dark the line around the animal is", "light or barely-there line", "pure black line"],
+  hard_edges:      ["Hard tone edges", "Share of the animal where tone changes abruptly (crisp shapes, cel shading)", "soft transitions", "lots of crisp hard steps"],
+  fine_texture:    ["Fine texture", "How much tiny repeated detail (individual hairs, scales, speckles)", "smooth, little detail", "dense tiny detail"],
+  outline_px:      ["Outline thickness", "How thick the line around the animal is", "hairline", "thick"],
+  contrast:        ["Overall contrast", "Spread between the lightest and darkest parts", "gentle, low contrast", "strong light vs dark"],
+  ink_lines:       ["Drawn lines inside", "Thin dark lines inside the body: fur strokes, feather edges, scale outlines", "almost no drawn lines", "lots of drawn lines"],
+  outline_tint:    ["Outline color", "Whether the outline is neutral black/gray or a dark shade of the animal's own color", "neutral black/gray", "colored (dark brown etc.)"],
+  soft_blend:      ["Soft blending", "Share with gradual, smooth tone change (painted/airbrushed transitions)", "little soft blending", "lots of smooth blending"],
+  warmth:          ["Warmth", "Red/orange vs blue/gray balance (partly just the animal's own color)", "cool", "warm"],
+  palette_size:    ["Palette size", "How many distinct colors it takes to cover 90% of the animal", "few colors (graphic)", "many colors (rendered)"],
+  edge_roughness:  ["Silhouette roughness", "How broken-up the outer shape is (fur tufts, feather tips)", "smooth clean shape", "ragged, tufted edge"],
+  outline_coverage:["Outline coverage", "How much of the edge actually has a line", "mostly unlined", "fully outlined"],
+};
+const SETS = {ultra:"Ultra 22", core:"Core 36", superset:"Superset 47", all:"All 100"};
+let D, set = "ultra", view = "axes", targets = {};
+
+async function boot() {
+  D = await (await fetch('style_axes.json', {cache:'no-store'})).json();
+  try { targets = await (await fetch('axis_targets.json', {cache:'no-store'})).json(); } catch (e) { targets = {}; }
+  seg('setSeg', SETS, () => set, v => { set = v; render(); });
+  seg('viewSeg', {axes:"Axes", families:"Families"}, () => view, v => { view = v; render(); });
+  render();
+}
+
+function seg(id, opts, get, setv) {
+  const el = document.getElementById(id); el.innerHTML = '';
+  Object.entries(opts).forEach(([k, label]) => {
+    const b = document.createElement('button'); b.textContent = label;
+    b.onclick = () => { setv(k); seg(id, opts, get, setv); };
+    if (get() === k) b.className = 'on';
+    el.appendChild(b);
+  });
+}
+
+const inSet = p => set === 'all' || (set === 'ultra' && p.tier === 'ultra') ||
+  (set === 'core' && ['ultra','core'].includes(p.tier)) || (set === 'superset' && p.tier !== 'rejected');
+
+function save() {
+  fetch('save_axes', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(targets)})
+    .then(r => document.getElementById('save').textContent = r.ok ? `saved · ${Object.keys(targets).length} axes decided` : 'SAVE FAILED')
+    .catch(() => document.getElementById('save').textContent = 'SAVE FAILED');
+}
+
+function thumb(p, f) {
+  const t = document.createElement('div');
+  t.className = 't' + (p.tier === 'ultra' && set !== 'ultra' ? ' ultra' : '') + (f && targets[f] === p.slug ? ' target' : '');
+  t.innerHTML = `<img src="axis_thumbs/${p.slug}.jpg" loading="lazy"><div>${p.slug.replace(/_/g,' ')}</div>` +
+                (f ? `<div class="v">${(+p[f]).toFixed(f === 'palette_size' ? 0 : 2)}</div>` : '');
+  return t;
+}
+
+function render() {
+  const root = document.getElementById('root'); root.innerHTML = '';
+  view === 'axes' ? renderAxes(root) : renderFamilies(root);
+}
+
+function renderAxes(root) {
+  root.insertAdjacentHTML('beforeend', `<div class="intro">Each row is one measurable property, with the pieces sorted from one end
+    to the other. Rows are ordered by how <b>inconsistent your ultra set</b> is on that property. Click the piece that sits where
+    you want the house style to land on that row; it turns green. Click it again to clear, or mark the row "doesn't matter".</div>`);
+  const feats = [...D.features].sort((a, b) => D.spread[b].ultra - D.spread[a].ultra);
+  feats.forEach(f => {
+    const [name, desc, lo, hi] = INFO[f] || [f, '', 'low', 'high'];
+    const sp = D.spread[f].ultra, col = sp > 0.75 ? '#f87171' : sp > 0.5 ? '#fbbf24' : '#34d399';
+    const a = document.createElement('div'); a.className = 'axis';
+    const decided = targets[f] === '__skip' ? 'doesn’t matter' : targets[f] ? 'target: ' + targets[f].replace(/_/g,' ') : '';
+    a.innerHTML = `<h2>${name} <small>${desc}</small>
+        <small>ultra spread <span class="meter"><div style="width:${Math.min(sp,1)*100}%;background:${col}"></div></span> ${(sp*100).toFixed(0)}% of full range</small>
+        <span class="pick">${decided}</span></h2>
+      <div class="ends"><span>← ${lo}</span><span>${hi} →</span></div>`;
+    const skip = document.createElement('button'); skip.className = 'skip' + (targets[f] === '__skip' ? ' on' : '');
+    skip.textContent = "doesn't matter";
+    skip.onclick = () => { targets[f] === '__skip' ? delete targets[f] : targets[f] = '__skip'; save(); render(); };
+    a.querySelector('h2').appendChild(skip);
+    const strip = document.createElement('div'); strip.className = 'strip';
+    D.pieces.filter(inSet).sort((x, y) => x[f] - y[f]).forEach(p => {
+      const t = thumb(p, f);
+      t.onclick = () => { targets[f] === p.slug ? delete targets[f] : targets[f] = p.slug; save(); render(); };
+      strip.appendChild(t);
+    });
+    a.appendChild(strip); root.appendChild(a);
+  });
+}
+
+function renderFamilies(root) {
+  root.insertAdjacentHTML('beforeend', `<div class="intro"><b>Style fingerprint families</b> group pieces by brush and texture
+    statistics, ignoring what animal it is. <b>Measurement families</b> group by the numbers on the Axes tab. If fingerprint
+    families line up with animal class (all birds together, all reptiles together), the classes are being drawn in different styles.</div>`);
+  [['family_gram', 'Style fingerprint family'], ['family_classic', 'Measurement family']].forEach(([key, label]) => {
+    root.insertAdjacentHTML('beforeend', `<h2 style="margin:18px 18px 0;font-size:16px">${label}s</h2>`);
+    [...new Set(D.pieces.map(p => p[key]))].sort().forEach(k => {
+      const mem = D.pieces.filter(p => p[key] === k && inSet(p));
+      if (!mem.length) return;
+      const counts = {};
+      mem.forEach(p => counts[p.class] = (counts[p.class] || 0) + 1);
+      const f = document.createElement('div'); f.className = 'fam';
+      f.innerHTML = `<h3>${label} ${String.fromCharCode(65 + k)} · ${mem.length} pieces · ${mem.filter(p => p.tier === 'ultra').length} ultra</h3>
+        <p>${Object.entries(counts).map(([c, n]) => `${c} ${n}`).join(' · ')}</p>`;
+      const g = document.createElement('div'); g.className = 'fgrid';
+      mem.forEach(p => g.appendChild(thumb(p, null)));
+      f.appendChild(g); root.appendChild(f);
+    });
+  });
+}
+boot();
+</script>
+</body>
+</html>
