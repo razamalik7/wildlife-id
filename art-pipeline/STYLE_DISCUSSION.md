@@ -112,6 +112,39 @@ Class coverage among the user's likes:
 - Artistic: mammals, birds, reptiles, amphibian (no pinnipeds)
 - Cartoony: pinnipeds only
 
+## Round 3: Magic vs Stylish vs the combo
+
+User answers:
+- Artistic is its own direction; probably not committing to it.
+- Friendliness: the marten's level is right. Think Pokémon: not all friendly,
+  but all dynamic and real ("ocelot vs jaguar").
+- Life = pose + depth together. A standard-ish pose is fine: marten,
+  elephant seal, falcon, nile monitor, fox squirrel, arctic fox, crane
+  (somewhat), polar bear, snowy owl, wolverine, caribou, armadillo all have
+  good poses without doing too much. Jaguar and rattlesnake not loved despite
+  their poses. Gila: very standard pose, but real depth and the tail curl.
+- Nearly all the pieces that feel alive were generated from a real reference
+  photo.
+
+Findings:
+- The combo signature (flat calm fields + rich color) also matches the
+  rejected grizzly, so the numbers can't separate the combo from flat
+  cartoon. The difference is depth.
+- A blurred large-scale shading measure did NOT capture depth: plastic pieces
+  (grizzly, polar bear, sea lion) shade as much as the elk. The difference is
+  the kind of shading: painted planes and texture following the form, true
+  darks, overlaps (gila tail curl) vs smooth airbrushed gradients. Eye
+  judgment for now. Rattlesnake did measure the flattest of all tested.
+- The combo exemplars (marten, elk, white-tailed deer, axis deer) are all
+  mammals: no evidence yet that the combo works for birds or reptiles.
+  Magic has strong reptile evidence; the falcon is the best bird evidence.
+- Reframe: Stylish -> combo -> Magic is one dial (how much surface material
+  is rendered), with the user's loves spanning marten/elk to
+  ocelot/turtle/gila. Constants across the dial: painted depth (not
+  airbrush), clean thin outline, rich value range, living pose.
+
+Sheet: style_review/three_sets.jpg
+
 ## Parked for later (do not drop)
 
 - UX redesign of the app.
