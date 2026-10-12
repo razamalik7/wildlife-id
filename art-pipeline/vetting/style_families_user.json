@@ -1,15 +1,155 @@
 {
-  "note": "Raza's own style-family read of the masters (2026-10-12). Families are candidate 'founder' groups; some likes are not yet placed.",
-  "families": {
-    "sticker":            {"label": "Ultra-stylized sticker", "members": ["polar_bear"], "verdict": "maybe"},
-    "realistic_stylized": {"label": "Realistic / stylized", "members": ["gila_monster", "nine-banded_armadillo", "nile_monitor", "ocelot"], "verdict": "likes"},
-    "paintbrushy":        {"label": "Paintbrushy", "members": ["gray_wolf", "rock_pigeon", "wolverine"], "verdict": "likes"},
-    "sketchy_fieldguide": {"label": "Textured, a bit sketchy, field-guide science", "members": ["muskox", "great_blue_heron"], "verdict": "likes"},
-    "flat_cartoon":       {"label": "Very flat cartoonish", "members": ["grizzly_bear"], "verdict": "probably no"},
-    "cartoon_stylized":   {"label": "Cartoonish stylized", "members": ["american_black_bear", "arctic_fox", "caribou", "peregrine_falcon"], "verdict": "likes"},
-    "in_between_favs":    {"label": "Between stylized-realistic and stylized-cartoon (top favorites)", "members": ["common_box_turtle", "elk", "american_marten"], "verdict": "loves"}
+ "note": "Raza's own style-family read of the masters (2026-10-12). Families are candidate 'founder' groups; some likes are not yet placed.",
+ "families": {
+  "sticker": {
+   "label": "Ultra-stylized sticker",
+   "members": [
+    "polar_bear"
+   ],
+   "verdict": "maybe"
   },
-  "unplaced_likes": ["groundhog", "eastern_fox_squirrel", "eastern_newt", "desert_tortoise", "snowy_owl", "harbor_seal"],
-  "alive": ["ocelot", "gila_monster", "nile_monitor", "common_box_turtle", "elk", "american_marten", "gray_wolf", "rock_pigeon", "wolverine", "muskox", "arctic_fox", "caribou", "peregrine_falcon", "nine-banded_armadillo"],
-  "soulless_textbook": ["snowshoe_hare", "great_blue_heron", "whooping_crane", "brown_anole", "green_anole"]
+  "realistic_stylized": {
+   "label": "Realistic / stylized",
+   "members": [
+    "gila_monster",
+    "nine-banded_armadillo",
+    "nile_monitor",
+    "ocelot"
+   ],
+   "verdict": "likes"
+  },
+  "paintbrushy": {
+   "label": "Paintbrushy",
+   "members": [
+    "gray_wolf",
+    "rock_pigeon",
+    "wolverine"
+   ],
+   "verdict": "likes"
+  },
+  "sketchy_fieldguide": {
+   "label": "Textured, a bit sketchy, field-guide science",
+   "members": [
+    "muskox",
+    "great_blue_heron"
+   ],
+   "verdict": "likes"
+  },
+  "flat_cartoon": {
+   "label": "Very flat cartoonish",
+   "members": [
+    "grizzly_bear"
+   ],
+   "verdict": "probably no"
+  },
+  "cartoon_stylized": {
+   "label": "Cartoonish stylized",
+   "members": [
+    "american_black_bear",
+    "arctic_fox",
+    "caribou",
+    "peregrine_falcon"
+   ],
+   "verdict": "likes"
+  },
+  "in_between_favs": {
+   "label": "Between stylized-realistic and stylized-cartoon (top favorites)",
+   "members": [
+    "common_box_turtle",
+    "elk",
+    "american_marten"
+   ],
+   "verdict": "loves"
+  }
+ },
+ "unplaced_likes": [
+  "groundhog",
+  "eastern_fox_squirrel",
+  "eastern_newt",
+  "desert_tortoise",
+  "snowy_owl",
+  "harbor_seal"
+ ],
+ "alive": [
+  "ocelot",
+  "gila_monster",
+  "nile_monitor",
+  "common_box_turtle",
+  "elk",
+  "american_marten",
+  "gray_wolf",
+  "rock_pigeon",
+  "wolverine",
+  "muskox",
+  "arctic_fox",
+  "caribou",
+  "peregrine_falcon",
+  "nine-banded_armadillo"
+ ],
+ "soulless_textbook": [
+  "snowshoe_hare",
+  "great_blue_heron",
+  "whooping_crane",
+  "brown_anole",
+  "green_anole"
+ ],
+ "round2_groups": {
+  "magic": {
+   "members": [
+    "ocelot",
+    "american_marten",
+    "nine-banded_armadillo",
+    "gila_monster",
+    "common_box_turtle",
+    "nile_monitor"
+   ],
+   "maybe": [
+    "elk"
+   ]
+  },
+  "stylish": {
+   "members": [
+    "axis_deer",
+    "arctic_fox",
+    "mountain_goat",
+    "elk",
+    "caribou",
+    "peregrine_falcon",
+    "american_black_bear",
+    "american_marten",
+    "snowy_owl",
+    "american_badger"
+   ],
+   "note": "like cartoony but less big-eyed/friendly"
+  },
+  "artistic": {
+   "members": [
+    "wolverine",
+    "gray_wolf",
+    "muskox",
+    "whooping_crane",
+    "rock_pigeon",
+    "groundhog",
+    "brown_anole",
+    "green_anole"
+   ],
+   "maybe": [
+    "eastern_newt"
+   ],
+   "note": "varies too much in color vibrance and texture"
+  },
+  "cartoony": {
+   "members": [
+    "northern_elephant_seal",
+    "harbor_seal"
+   ]
+  }
+ },
+ "round2_notes": [
+  "polar bear close to stylish but heavy border and pale wash shading with no deep blacks",
+  "jaguar still not loved; black bear good pose but not alive enough",
+  "rhesus macaque very alive, unplaced",
+  "wolf alive and artsy; wolverine a little less alive",
+  "ocelot alive without looking at viewer; marten looking at viewer may help"
+ ]
 }

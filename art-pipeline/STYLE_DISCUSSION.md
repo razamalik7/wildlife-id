@@ -65,6 +65,53 @@ Notes:
   the "something off").
 - **Color**: rich color carries the stylized pieces (gila, newt, elk).
 
+## Round 2: user's own groups (supersede Claude's five techniques)
+
+| Group | Pieces | User notes |
+|---|---|---|
+| **Magic** | ocelot, marten, armadillo, gila monster, box turtle, nile monitor, elk (maybe) | |
+| **Stylish** | axis deer, arctic fox, mountain goat, elk, caribou, peregrine falcon, black bear, marten, snowy owl, badger | like cartoony but less big-eyed / friendly |
+| **Artistic** | wolverine, gray wolf, muskox, whooping crane, rock pigeon, groundhog, both anoles, eastern newt (maybe) | varies too much in color vibrance and texture right now |
+| **Cartoony** | northern elephant seal, harbor seal | |
+
+Also from the user:
+- Pen-and-ink group makes sense; realistic-render "kind of"; ocelot arguably
+  belongs with realistic render.
+- Polar bear is close to stylish; what breaks it is the heavy border and the
+  pale color-wash shading with no deep blacks.
+- Pose matters a lot but isn't everything: jaguar (still not loved) and black
+  bear (good pose, still not alive enough).
+- Rhesus macaque feels very alive; unplaced.
+- Wolf feels alive and artsy; wolverine a little less alive (maybe the animal).
+- Ocelot isn't looking at the viewer yet is very alive; the marten looking at
+  the viewer may help it.
+
+Measured lean of each group vs. the whole collection (typical-spread units,
+|x| >= 0.7 is a clear lean; small groups, supporting evidence only):
+
+| | Magic | Stylish | Artistic | Cartoony | Marten + elk |
+|---|---|---|---|---|---|
+| Outline thickness | thin -0.9 | 0.0 | thin -0.9 | **thick +1.1** | thin -0.9 |
+| Flat calm color areas | -0.3 | **+1.4** | -0.2 | +0.5 | **+1.9** |
+| Crisp detail (hard edges / local contrast) | **+0.9 / +0.8** | -0.7 / -0.5 | ~0 | ~0 | **-1.6 / -1.3** |
+| Drawn lines inside | +0.6 | -0.7 | +0.3 | -0.5 | -1.1 |
+| Saturation | +0.2 | **-1.2** | -0.5 | -0.8 | +0.7 |
+| Warmth | **+0.8** | -0.7 | -0.7 | -0.2 | **+1.0** |
+| Rim light | 0.0 | 0.0 | **+0.8** | +0.6 | +0.5 |
+
+Reading: Magic = crisp, detailed, warm, thin-lined. Stylish = calm flat
+fields, muted, cooler (partly because several stylish animals are white).
+Artistic = rim light and fine texture. Cartoony = thick outline. Marten and
+elk (in both Magic and Stylish, and among the user's top favorites) are the
+calmest, flattest pieces with Magic's warmth and color: Stylish structure,
+Magic color.
+
+Class coverage among the user's likes:
+- Magic: mammals + reptiles (no birds, amphibians, pinnipeds)
+- Stylish: mammals + birds (no reptiles, amphibians, pinnipeds)
+- Artistic: mammals, birds, reptiles, amphibian (no pinnipeds)
+- Cartoony: pinnipeds only
+
 ## Parked for later (do not drop)
 
 - UX redesign of the app.
