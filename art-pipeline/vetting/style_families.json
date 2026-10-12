@@ -1,0 +1,1418 @@
+{
+ "typical_distance": 1.94,
+ "families": {
+  "sticker": {
+   "label": "Ultra-stylized sticker",
+   "verdict": "maybe",
+   "members": [
+    "polar_bear"
+   ],
+   "tightness": null,
+   "leave_one_out": {},
+   "traits": [
+    [
+     "outline_px",
+     2.73
+    ],
+    [
+     "shadow_depth",
+     2.19
+    ],
+    [
+     "outline_tint",
+     2.11
+    ],
+    [
+     "flat_areas",
+     1.55
+    ],
+    [
+     "contrast",
+     1.34
+    ],
+    [
+     "rim_light",
+     -1.25
+    ],
+    [
+     "outline_darkness",
+     -1.05
+    ],
+    [
+     "saturation",
+     -1.05
+    ],
+    [
+     "pose_compact",
+     0.97
+    ],
+    [
+     "hard_edges",
+     -0.85
+    ],
+    [
+     "local_contrast",
+     -0.73
+    ]
+   ],
+   "nearest": [
+    {
+     "slug": "thinhorn_sheep",
+     "dist": 1.147,
+     "tier": "rejected"
+    },
+    {
+     "slug": "arctic_fox",
+     "dist": 1.219,
+     "tier": "ultra"
+    },
+    {
+     "slug": "bighorn_sheep",
+     "dist": 1.272,
+     "tier": "rejected"
+    },
+    {
+     "slug": "coyote",
+     "dist": 1.366,
+     "tier": "rejected"
+    },
+    {
+     "slug": "harbor_seal",
+     "dist": 1.385,
+     "tier": "ultra"
+    },
+    {
+     "slug": "american_badger",
+     "dist": 1.4,
+     "tier": "core"
+    },
+    {
+     "slug": "mountain_goat",
+     "dist": 1.428,
+     "tier": "ultra"
+    },
+    {
+     "slug": "gray_fox",
+     "dist": 1.541,
+     "tier": "rejected"
+    },
+    {
+     "slug": "nutria",
+     "dist": 1.582,
+     "tier": "superset"
+    },
+    {
+     "slug": "gemsbok",
+     "dist": 1.596,
+     "tier": "rejected"
+    },
+    {
+     "slug": "snowshoe_hare",
+     "dist": 1.623,
+     "tier": "core"
+    },
+    {
+     "slug": "gray_wolf",
+     "dist": 1.628,
+     "tier": "ultra"
+    }
+   ]
+  },
+  "realistic_stylized": {
+   "label": "Realistic / stylized",
+   "verdict": "likes",
+   "members": [
+    "gila_monster",
+    "nine-banded_armadillo",
+    "nile_monitor",
+    "ocelot"
+   ],
+   "tightness": 2.176,
+   "leave_one_out": {
+    "gila_monster": {
+     "own": 1.267,
+     "nearest_other": "paintbrushy",
+     "nearest_other_dist": 1.627,
+     "stays": true
+    },
+    "nine-banded_armadillo": {
+     "own": 1.625,
+     "nearest_other": "in_between_favs",
+     "nearest_other_dist": 1.477,
+     "stays": false
+    },
+    "nile_monitor": {
+     "own": 1.81,
+     "nearest_other": "sketchy_fieldguide",
+     "nearest_other_dist": 1.531,
+     "stays": false
+    },
+    "ocelot": {
+     "own": 2.381,
+     "nearest_other": "in_between_favs",
+     "nearest_other_dist": 1.968,
+     "stays": false
+    }
+   },
+   "traits": [
+    [
+     "outline_px",
+     -0.95
+    ],
+    [
+     "flat_areas",
+     -0.84
+    ],
+    [
+     "hard_edges",
+     0.83
+    ]
+   ],
+   "nearest": [
+    {
+     "slug": "american_bullfrog",
+     "dist": 0.999,
+     "tier": "core"
+    },
+    {
+     "slug": "gray_fox",
+     "dist": 1.099,
+     "tier": "rejected"
+    },
+    {
+     "slug": "eastern_hellbender",
+     "dist": 1.158,
+     "tier": "rejected"
+    },
+    {
+     "slug": "ring-necked_pheasant",
+     "dist": 1.16,
+     "tier": "rejected"
+    },
+    {
+     "slug": "common_snapping_turtle",
+     "dist": 1.164,
+     "tier": "rejected"
+    },
+    {
+     "slug": "american_alligator",
+     "dist": 1.208,
+     "tier": "superset"
+    },
+    {
+     "slug": "bobcat",
+     "dist": 1.212,
+     "tier": "rejected"
+    },
+    {
+     "slug": "canada_goose",
+     "dist": 1.223,
+     "tier": "rejected"
+    },
+    {
+     "slug": "brown_pelican",
+     "dist": 1.236,
+     "tier": "core"
+    },
+    {
+     "slug": "north_american_river_otter",
+     "dist": 1.238,
+     "tier": "rejected"
+    },
+    {
+     "slug": "brown_anole",
+     "dist": 1.251,
+     "tier": "superset"
+    },
+    {
+     "slug": "harbor_seal",
+     "dist": 1.268,
+     "tier": "ultra"
+    }
+   ]
+  },
+  "paintbrushy": {
+   "label": "Paintbrushy",
+   "verdict": "likes",
+   "members": [
+    "gray_wolf",
+    "rock_pigeon",
+    "wolverine"
+   ],
+   "tightness": 1.46,
+   "leave_one_out": {
+    "gray_wolf": {
+     "own": 0.953,
+     "nearest_other": "sketchy_fieldguide",
+     "nearest_other_dist": 1.016,
+     "stays": true
+    },
+    "rock_pigeon": {
+     "own": 1.571,
+     "nearest_other": "cartoon_stylized",
+     "nearest_other_dist": 1.134,
+     "stays": false
+    },
+    "wolverine": {
+     "own": 1.271,
+     "nearest_other": "sketchy_fieldguide",
+     "nearest_other_dist": 1.228,
+     "stays": false
+    }
+   },
+   "traits": [
+    [
+     "rim_light",
+     1.15
+    ],
+    [
+     "outline_darkness",
+     1.12
+    ],
+    [
+     "saturation",
+     -1.0
+    ],
+    [
+     "hue_variety",
+     -0.76
+    ]
+   ],
+   "nearest": [
+    {
+     "slug": "raccoon",
+     "dist": 0.718,
+     "tier": "rejected"
+    },
+    {
+     "slug": "wild_boar",
+     "dist": 0.908,
+     "tier": "rejected"
+    },
+    {
+     "slug": "muskox",
+     "dist": 0.937,
+     "tier": "ultra"
+    },
+    {
+     "slug": "nutria",
+     "dist": 0.961,
+     "tier": "superset"
+    },
+    {
+     "slug": "gray_fox",
+     "dist": 0.991,
+     "tier": "rejected"
+    },
+    {
+     "slug": "caribou",
+     "dist": 0.992,
+     "tier": "ultra"
+    },
+    {
+     "slug": "american_badger",
+     "dist": 1.035,
+     "tier": "core"
+    },
+    {
+     "slug": "american_bison",
+     "dist": 1.06,
+     "tier": "rejected"
+    },
+    {
+     "slug": "california_sea_lion",
+     "dist": 1.061,
+     "tier": "core"
+    },
+    {
+     "slug": "house_sparrow",
+     "dist": 1.087,
+     "tier": "rejected"
+    },
+    {
+     "slug": "harbor_seal",
+     "dist": 1.09,
+     "tier": "ultra"
+    },
+    {
+     "slug": "north_american_river_otter",
+     "dist": 1.096,
+     "tier": "rejected"
+    }
+   ]
+  },
+  "sketchy_fieldguide": {
+   "label": "Textured, a bit sketchy, field-guide science",
+   "verdict": "likes",
+   "members": [
+    "muskox",
+    "great_blue_heron"
+   ],
+   "tightness": 2.051,
+   "leave_one_out": {
+    "muskox": {
+     "own": 2.051,
+     "nearest_other": "paintbrushy",
+     "nearest_other_dist": 0.937,
+     "stays": false
+    },
+    "great_blue_heron": {
+     "own": 2.051,
+     "nearest_other": "realistic_stylized",
+     "nearest_other_dist": 1.498,
+     "stays": false
+    }
+   },
+   "traits": [
+    [
+     "edge_roughness",
+     1.0
+    ],
+    [
+     "outline_px",
+     -0.95
+    ],
+    [
+     "outline_coverage",
+     -0.73
+    ]
+   ],
+   "nearest": [
+    {
+     "slug": "brown_pelican",
+     "dist": 0.794,
+     "tier": "core"
+    },
+    {
+     "slug": "groundhog",
+     "dist": 0.908,
+     "tier": "ultra"
+    },
+    {
+     "slug": "raccoon",
+     "dist": 0.989,
+     "tier": "rejected"
+    },
+    {
+     "slug": "gray_wolf",
+     "dist": 1.016,
+     "tier": "ultra"
+    },
+    {
+     "slug": "north_american_river_otter",
+     "dist": 1.067,
+     "tier": "rejected"
+    },
+    {
+     "slug": "rhesus_macaque",
+     "dist": 1.12,
+     "tier": "superset"
+    },
+    {
+     "slug": "gray_fox",
+     "dist": 1.151,
+     "tier": "rejected"
+    },
+    {
+     "slug": "wild_boar",
+     "dist": 1.164,
+     "tier": "rejected"
+    },
+    {
+     "slug": "caribou",
+     "dist": 1.172,
+     "tier": "ultra"
+    },
+    {
+     "slug": "northern_elephant_seal",
+     "dist": 1.185,
+     "tier": "core"
+    },
+    {
+     "slug": "bighorn_sheep",
+     "dist": 1.187,
+     "tier": "rejected"
+    },
+    {
+     "slug": "virginia_opossum",
+     "dist": 1.206,
+     "tier": "rejected"
+    }
+   ]
+  },
+  "flat_cartoon": {
+   "label": "Very flat cartoonish",
+   "verdict": "probably no",
+   "members": [
+    "grizzly_bear"
+   ],
+   "tightness": null,
+   "leave_one_out": {},
+   "traits": [
+    [
+     "saturation",
+     2.02
+    ],
+    [
+     "rim_light",
+     1.82
+    ],
+    [
+     "flat_areas",
+     1.77
+    ],
+    [
+     "hard_edges",
+     -1.57
+    ],
+    [
+     "local_contrast",
+     -1.39
+    ],
+    [
+     "ink_lines",
+     -1.33
+    ],
+    [
+     "outline_px",
+     1.02
+    ],
+    [
+     "pose_tilt",
+     -0.98
+    ],
+    [
+     "pose_compact",
+     0.97
+    ],
+    [
+     "hue_variety",
+     -0.92
+    ],
+    [
+     "outline_tint",
+     0.71
+    ],
+    [
+     "shadow_depth",
+     -0.71
+    ]
+   ],
+   "nearest": [
+    {
+     "slug": "american_bison",
+     "dist": 0.747,
+     "tier": "rejected"
+    },
+    {
+     "slug": "moose",
+     "dist": 1.195,
+     "tier": "rejected"
+    },
+    {
+     "slug": "red_fox",
+     "dist": 1.22,
+     "tier": "rejected"
+    },
+    {
+     "slug": "coyote",
+     "dist": 1.224,
+     "tier": "rejected"
+    },
+    {
+     "slug": "american_badger",
+     "dist": 1.232,
+     "tier": "core"
+    },
+    {
+     "slug": "nutria",
+     "dist": 1.242,
+     "tier": "superset"
+    },
+    {
+     "slug": "wolverine",
+     "dist": 1.247,
+     "tier": "ultra"
+    },
+    {
+     "slug": "mountain_lion",
+     "dist": 1.265,
+     "tier": "rejected"
+    },
+    {
+     "slug": "white-tailed_deer",
+     "dist": 1.296,
+     "tier": "ultra"
+    },
+    {
+     "slug": "california_sea_lion",
+     "dist": 1.329,
+     "tier": "core"
+    },
+    {
+     "slug": "wild_boar",
+     "dist": 1.387,
+     "tier": "rejected"
+    },
+    {
+     "slug": "elk",
+     "dist": 1.403,
+     "tier": "ultra"
+    }
+   ]
+  },
+  "cartoon_stylized": {
+   "label": "Cartoonish stylized",
+   "verdict": "likes",
+   "members": [
+    "american_black_bear",
+    "arctic_fox",
+    "caribou",
+    "peregrine_falcon"
+   ],
+   "tightness": 1.715,
+   "leave_one_out": {
+    "american_black_bear": {
+     "own": 1.463,
+     "nearest_other": "paintbrushy",
+     "nearest_other_dist": 1.446,
+     "stays": false
+    },
+    "arctic_fox": {
+     "own": 1.72,
+     "nearest_other": "sticker",
+     "nearest_other_dist": 1.219,
+     "stays": false
+    },
+    "caribou": {
+     "own": 1.16,
+     "nearest_other": "in_between_favs",
+     "nearest_other_dist": 0.894,
+     "stays": false
+    },
+    "peregrine_falcon": {
+     "own": 1.249,
+     "nearest_other": "paintbrushy",
+     "nearest_other_dist": 1.196,
+     "stays": false
+    }
+   },
+   "traits": [
+    [
+     "flat_areas",
+     1.79
+    ],
+    [
+     "saturation",
+     -1.13
+    ],
+    [
+     "hard_edges",
+     -1.1
+    ],
+    [
+     "ink_lines",
+     -0.94
+    ],
+    [
+     "local_contrast",
+     -0.88
+    ],
+    [
+     "palette_size",
+     -0.82
+    ],
+    [
+     "pose_tilt",
+     0.71
+    ]
+   ],
+   "nearest": [
+    {
+     "slug": "california_sea_lion",
+     "dist": 0.9,
+     "tier": "core"
+    },
+    {
+     "slug": "gemsbok",
+     "dist": 0.948,
+     "tier": "rejected"
+    },
+    {
+     "slug": "northern_elephant_seal",
+     "dist": 1.091,
+     "tier": "core"
+    },
+    {
+     "slug": "mallard",
+     "dist": 1.099,
+     "tier": "rejected"
+    },
+    {
+     "slug": "bighorn_sheep",
+     "dist": 1.112,
+     "tier": "rejected"
+    },
+    {
+     "slug": "rock_pigeon",
+     "dist": 1.134,
+     "tier": "ultra"
+    },
+    {
+     "slug": "american_badger",
+     "dist": 1.136,
+     "tier": "core"
+    },
+    {
+     "slug": "pronghorn",
+     "dist": 1.151,
+     "tier": "ultra"
+    },
+    {
+     "slug": "nutria",
+     "dist": 1.156,
+     "tier": "superset"
+    },
+    {
+     "slug": "american_marten",
+     "dist": 1.166,
+     "tier": "ultra"
+    },
+    {
+     "slug": "harbor_seal",
+     "dist": 1.176,
+     "tier": "ultra"
+    },
+    {
+     "slug": "gray_wolf",
+     "dist": 1.18,
+     "tier": "ultra"
+    }
+   ]
+  },
+  "in_between_favs": {
+   "label": "Between stylized-realistic and stylized-cartoon (top favorites)",
+   "verdict": "loves",
+   "members": [
+    "common_box_turtle",
+    "elk",
+    "american_marten"
+   ],
+   "tightness": 2.012,
+   "leave_one_out": {
+    "common_box_turtle": {
+     "own": 2.041,
+     "nearest_other": "realistic_stylized",
+     "nearest_other_dist": 1.582,
+     "stays": false
+    },
+    "elk": {
+     "own": 1.551,
+     "nearest_other": "cartoon_stylized",
+     "nearest_other_dist": 1.265,
+     "stays": false
+    },
+    "american_marten": {
+     "own": 1.641,
+     "nearest_other": "cartoon_stylized",
+     "nearest_other_dist": 1.166,
+     "stays": false
+    }
+   },
+   "traits": [
+    [
+     "flat_areas",
+     1.28
+    ],
+    [
+     "local_contrast",
+     -1.26
+    ],
+    [
+     "hard_edges",
+     -1.14
+    ],
+    [
+     "ink_lines",
+     -1.04
+    ],
+    [
+     "outline_px",
+     -0.95
+    ],
+    [
+     "saturation",
+     0.9
+    ],
+    [
+     "pose_tilt",
+     0.78
+    ]
+   ],
+   "nearest": [
+    {
+     "slug": "caribou",
+     "dist": 0.894,
+     "tier": "ultra"
+    },
+    {
+     "slug": "bighorn_sheep",
+     "dist": 0.964,
+     "tier": "rejected"
+    },
+    {
+     "slug": "nutria",
+     "dist": 0.977,
+     "tier": "superset"
+    },
+    {
+     "slug": "northern_elephant_seal",
+     "dist": 0.996,
+     "tier": "core"
+    },
+    {
+     "slug": "california_sea_lion",
+     "dist": 0.998,
+     "tier": "core"
+    },
+    {
+     "slug": "canada_goose",
+     "dist": 1.001,
+     "tier": "rejected"
+    },
+    {
+     "slug": "white-tailed_deer",
+     "dist": 1.013,
+     "tier": "ultra"
+    },
+    {
+     "slug": "red-tailed_hawk",
+     "dist": 1.036,
+     "tier": "rejected"
+    },
+    {
+     "slug": "grizzly_bear",
+     "dist": 1.069,
+     "tier": "rejected"
+    },
+    {
+     "slug": "axis_deer",
+     "dist": 1.07,
+     "tier": "ultra"
+    },
+    {
+     "slug": "gray_wolf",
+     "dist": 1.075,
+     "tier": "ultra"
+    },
+    {
+     "slug": "moose",
+     "dist": 1.102,
+     "tier": "rejected"
+    }
+   ]
+  }
+ },
+ "assignment": {
+  "american_alligator": {
+   "family": "realistic_stylized",
+   "dist": 1.208,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.257
+  },
+  "american_badger": {
+   "family": "paintbrushy",
+   "dist": 1.035,
+   "runner_up": "cartoon_stylized",
+   "margin": 0.097
+  },
+  "american_bison": {
+   "family": "flat_cartoon",
+   "dist": 0.747,
+   "runner_up": "paintbrushy",
+   "margin": 0.418
+  },
+  "american_black_bear": {
+   "family": "cartoon_stylized",
+   "dist": 1.097,
+   "runner_up": "paintbrushy",
+   "margin": 0.318
+  },
+  "american_bullfrog": {
+   "family": "realistic_stylized",
+   "dist": 0.999,
+   "runner_up": "in_between_favs",
+   "margin": 0.307
+  },
+  "american_crocodile": {
+   "family": "realistic_stylized",
+   "dist": 1.345,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.143
+  },
+  "american_flamingo": {
+   "family": "in_between_favs",
+   "dist": 1.864,
+   "runner_up": "cartoon_stylized",
+   "margin": 0.02
+  },
+  "american_marten": {
+   "family": "in_between_favs",
+   "dist": 1.094,
+   "runner_up": "cartoon_stylized",
+   "margin": 0.066
+  },
+  "american_mink": {
+   "family": "paintbrushy",
+   "dist": 1.479,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.049
+  },
+  "american_red_squirrel": {
+   "family": "sketchy_fieldguide",
+   "dist": 1.223,
+   "runner_up": "in_between_favs",
+   "margin": 0.106
+  },
+  "arctic_fox": {
+   "family": "sticker",
+   "dist": 1.219,
+   "runner_up": "cartoon_stylized",
+   "margin": 0.058
+  },
+  "argentine_black_and_white_tegu": {
+   "family": "realistic_stylized",
+   "dist": 2.42,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.048
+  },
+  "axis_deer": {
+   "family": "in_between_favs",
+   "dist": 1.07,
+   "runner_up": "realistic_stylized",
+   "margin": 0.354
+  },
+  "bald_eagle": {
+   "family": "in_between_favs",
+   "dist": 1.322,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.114
+  },
+  "barn_owl": {
+   "family": "sketchy_fieldguide",
+   "dist": 1.639,
+   "runner_up": "in_between_favs",
+   "margin": 0.037
+  },
+  "bighorn_sheep": {
+   "family": "in_between_favs",
+   "dist": 0.964,
+   "runner_up": "cartoon_stylized",
+   "margin": 0.154
+  },
+  "black-footed_ferret": {
+   "family": "paintbrushy",
+   "dist": 1.263,
+   "runner_up": "realistic_stylized",
+   "margin": 0.052
+  },
+  "black-tailed_prairie_dog": {
+   "family": "realistic_stylized",
+   "dist": 1.372,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.212
+  },
+  "blue_jay": {
+   "family": "sketchy_fieldguide",
+   "dist": 1.539,
+   "runner_up": "realistic_stylized",
+   "margin": 0.055
+  },
+  "bobcat": {
+   "family": "in_between_favs",
+   "dist": 1.102,
+   "runner_up": "paintbrushy",
+   "margin": 0.014
+  },
+  "brown_anole": {
+   "family": "realistic_stylized",
+   "dist": 1.251,
+   "runner_up": "in_between_favs",
+   "margin": 0.1
+  },
+  "brown_pelican": {
+   "family": "sketchy_fieldguide",
+   "dist": 0.794,
+   "runner_up": "paintbrushy",
+   "margin": 0.495
+  },
+  "burmese_python": {
+   "family": "realistic_stylized",
+   "dist": 1.653,
+   "runner_up": "in_between_favs",
+   "margin": 0.091
+  },
+  "california_sea_lion": {
+   "family": "cartoon_stylized",
+   "dist": 0.9,
+   "runner_up": "in_between_favs",
+   "margin": 0.11
+  },
+  "canada_goose": {
+   "family": "in_between_favs",
+   "dist": 1.001,
+   "runner_up": "realistic_stylized",
+   "margin": 0.222
+  },
+  "cane_toad": {
+   "family": "in_between_favs",
+   "dist": 1.376,
+   "runner_up": "realistic_stylized",
+   "margin": 0.074
+  },
+  "caribou": {
+   "family": "cartoon_stylized",
+   "dist": 0.87,
+   "runner_up": "in_between_favs",
+   "margin": 0.028
+  },
+  "common_box_turtle": {
+   "family": "in_between_favs",
+   "dist": 1.361,
+   "runner_up": "realistic_stylized",
+   "margin": 0.162
+  },
+  "common_garter_snake": {
+   "family": "realistic_stylized",
+   "dist": 1.327,
+   "runner_up": "in_between_favs",
+   "margin": 0.113
+  },
+  "common_snapping_turtle": {
+   "family": "realistic_stylized",
+   "dist": 1.164,
+   "runner_up": "in_between_favs",
+   "margin": 0.021
+  },
+  "coyote": {
+   "family": "in_between_favs",
+   "dist": 1.152,
+   "runner_up": "cartoon_stylized",
+   "margin": 0.061
+  },
+  "desert_tortoise": {
+   "family": "in_between_favs",
+   "dist": 1.42,
+   "runner_up": "realistic_stylized",
+   "margin": 0.092
+  },
+  "domestic_cat": {
+   "family": "in_between_favs",
+   "dist": 1.533,
+   "runner_up": "realistic_stylized",
+   "margin": 0.09
+  },
+  "domestic_dog": {
+   "family": "in_between_favs",
+   "dist": 1.685,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.01
+  },
+  "eastern_chipmunk": {
+   "family": "realistic_stylized",
+   "dist": 1.284,
+   "runner_up": "in_between_favs",
+   "margin": 0.058
+  },
+  "eastern_copperhead": {
+   "family": "in_between_favs",
+   "dist": 1.733,
+   "runner_up": "realistic_stylized",
+   "margin": 0.011
+  },
+  "eastern_cottontail": {
+   "family": "realistic_stylized",
+   "dist": 1.399,
+   "runner_up": "in_between_favs",
+   "margin": 0.234
+  },
+  "eastern_fox_squirrel": {
+   "family": "sketchy_fieldguide",
+   "dist": 1.636,
+   "runner_up": "in_between_favs",
+   "margin": 0.042
+  },
+  "eastern_gray_squirrel": {
+   "family": "sketchy_fieldguide",
+   "dist": 1.822,
+   "runner_up": "realistic_stylized",
+   "margin": 0.166
+  },
+  "eastern_hellbender": {
+   "family": "realistic_stylized",
+   "dist": 1.158,
+   "runner_up": "paintbrushy",
+   "margin": 0.042
+  },
+  "eastern_newt": {
+   "family": "in_between_favs",
+   "dist": 1.445,
+   "runner_up": "realistic_stylized",
+   "margin": 0.024
+  },
+  "elk": {
+   "family": "in_between_favs",
+   "dist": 1.034,
+   "runner_up": "cartoon_stylized",
+   "margin": 0.224
+  },
+  "european_starling": {
+   "family": "paintbrushy",
+   "dist": 1.551,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.011
+  },
+  "gemsbok": {
+   "family": "cartoon_stylized",
+   "dist": 0.948,
+   "runner_up": "in_between_favs",
+   "margin": 0.495
+  },
+  "gila_monster": {
+   "family": "realistic_stylized",
+   "dist": 0.95,
+   "runner_up": "paintbrushy",
+   "margin": 0.712
+  },
+  "gray_fox": {
+   "family": "paintbrushy",
+   "dist": 0.991,
+   "runner_up": "realistic_stylized",
+   "margin": 0.11
+  },
+  "gray_wolf": {
+   "family": "paintbrushy",
+   "dist": 0.636,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.598
+  },
+  "great_blue_heron": {
+   "family": "sketchy_fieldguide",
+   "dist": 1.026,
+   "runner_up": "realistic_stylized",
+   "margin": 0.461
+  },
+  "great_horned_owl": {
+   "family": "realistic_stylized",
+   "dist": 1.47,
+   "runner_up": "in_between_favs",
+   "margin": 0.038
+  },
+  "green_anole": {
+   "family": "realistic_stylized",
+   "dist": 1.755,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.024
+  },
+  "green_iguana": {
+   "family": "realistic_stylized",
+   "dist": 1.318,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.037
+  },
+  "grizzly_bear": {
+   "family": "flat_cartoon",
+   "dist": 0.0,
+   "runner_up": "in_between_favs",
+   "margin": 1068598.702
+  },
+  "groundhog": {
+   "family": "sketchy_fieldguide",
+   "dist": 0.908,
+   "runner_up": "paintbrushy",
+   "margin": 0.356
+  },
+  "harbor_seal": {
+   "family": "paintbrushy",
+   "dist": 1.09,
+   "runner_up": "cartoon_stylized",
+   "margin": 0.079
+  },
+  "house_sparrow": {
+   "family": "paintbrushy",
+   "dist": 1.087,
+   "runner_up": "in_between_favs",
+   "margin": 0.275
+  },
+  "jaguar": {
+   "family": "realistic_stylized",
+   "dist": 1.93,
+   "runner_up": "in_between_favs",
+   "margin": 0.127
+  },
+  "mallard": {
+   "family": "cartoon_stylized",
+   "dist": 1.099,
+   "runner_up": "in_between_favs",
+   "margin": 0.037
+  },
+  "monk_parakeet": {
+   "family": "paintbrushy",
+   "dist": 1.473,
+   "runner_up": "in_between_favs",
+   "margin": 0.035
+  },
+  "moose": {
+   "family": "in_between_favs",
+   "dist": 1.102,
+   "runner_up": "flat_cartoon",
+   "margin": 0.085
+  },
+  "mountain_goat": {
+   "family": "cartoon_stylized",
+   "dist": 1.337,
+   "runner_up": "sticker",
+   "margin": 0.068
+  },
+  "mountain_lion": {
+   "family": "in_between_favs",
+   "dist": 1.161,
+   "runner_up": "flat_cartoon",
+   "margin": 0.09
+  },
+  "muskox": {
+   "family": "paintbrushy",
+   "dist": 0.937,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.094
+  },
+  "mute_swan": {
+   "family": "cartoon_stylized",
+   "dist": 2.033,
+   "runner_up": "paintbrushy",
+   "margin": 0.031
+  },
+  "nile_monitor": {
+   "family": "realistic_stylized",
+   "dist": 1.357,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.128
+  },
+  "nine-banded_armadillo": {
+   "family": "realistic_stylized",
+   "dist": 1.218,
+   "runner_up": "in_between_favs",
+   "margin": 0.212
+  },
+  "north_american_beaver": {
+   "family": "in_between_favs",
+   "dist": 1.198,
+   "runner_up": "paintbrushy",
+   "margin": 0.022
+  },
+  "north_american_porcupine": {
+   "family": "sketchy_fieldguide",
+   "dist": 2.07,
+   "runner_up": "realistic_stylized",
+   "margin": 0.111
+  },
+  "north_american_river_otter": {
+   "family": "sketchy_fieldguide",
+   "dist": 1.067,
+   "runner_up": "paintbrushy",
+   "margin": 0.027
+  },
+  "northern_cardinal": {
+   "family": "in_between_favs",
+   "dist": 1.268,
+   "runner_up": "paintbrushy",
+   "margin": 0.14
+  },
+  "northern_elephant_seal": {
+   "family": "in_between_favs",
+   "dist": 0.996,
+   "runner_up": "cartoon_stylized",
+   "margin": 0.095
+  },
+  "nutria": {
+   "family": "paintbrushy",
+   "dist": 0.961,
+   "runner_up": "in_between_favs",
+   "margin": 0.016
+  },
+  "ocelot": {
+   "family": "realistic_stylized",
+   "dist": 1.786,
+   "runner_up": "in_between_favs",
+   "margin": 0.102
+  },
+  "osprey": {
+   "family": "paintbrushy",
+   "dist": 1.193,
+   "runner_up": "in_between_favs",
+   "margin": 0.14
+  },
+  "painted_turtle": {
+   "family": "in_between_favs",
+   "dist": 1.256,
+   "runner_up": "realistic_stylized",
+   "margin": 0.06
+  },
+  "peregrine_falcon": {
+   "family": "cartoon_stylized",
+   "dist": 0.937,
+   "runner_up": "paintbrushy",
+   "margin": 0.276
+  },
+  "polar_bear": {
+   "family": "sticker",
+   "dist": 0.0,
+   "runner_up": "cartoon_stylized",
+   "margin": 1244487.303
+  },
+  "pronghorn": {
+   "family": "cartoon_stylized",
+   "dist": 1.151,
+   "runner_up": "in_between_favs",
+   "margin": 0.156
+  },
+  "raccoon": {
+   "family": "paintbrushy",
+   "dist": 0.718,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.378
+  },
+  "red-tailed_hawk": {
+   "family": "in_between_favs",
+   "dist": 1.036,
+   "runner_up": "paintbrushy",
+   "margin": 0.228
+  },
+  "red_fox": {
+   "family": "flat_cartoon",
+   "dist": 1.22,
+   "runner_up": "paintbrushy",
+   "margin": 0.137
+  },
+  "rhesus_macaque": {
+   "family": "sketchy_fieldguide",
+   "dist": 1.12,
+   "runner_up": "in_between_favs",
+   "margin": 0.036
+  },
+  "ring-necked_pheasant": {
+   "family": "realistic_stylized",
+   "dist": 1.16,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.24
+  },
+  "rock_pigeon": {
+   "family": "paintbrushy",
+   "dist": 1.047,
+   "runner_up": "cartoon_stylized",
+   "margin": 0.083
+  },
+  "sea_otter": {
+   "family": "sketchy_fieldguide",
+   "dist": 1.738,
+   "runner_up": "realistic_stylized",
+   "margin": 0.031
+  },
+  "snowshoe_hare": {
+   "family": "cartoon_stylized",
+   "dist": 1.474,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.004
+  },
+  "snowy_owl": {
+   "family": "sketchy_fieldguide",
+   "dist": 1.889,
+   "runner_up": "cartoon_stylized",
+   "margin": 0.003
+  },
+  "spotted_salamander": {
+   "family": "paintbrushy",
+   "dist": 1.221,
+   "runner_up": "in_between_favs",
+   "margin": 0.075
+  },
+  "striped_skunk": {
+   "family": "sketchy_fieldguide",
+   "dist": 1.377,
+   "runner_up": "paintbrushy",
+   "margin": 0.183
+  },
+  "thinhorn_sheep": {
+   "family": "sticker",
+   "dist": 1.147,
+   "runner_up": "cartoon_stylized",
+   "margin": 0.15
+  },
+  "tokay_gecko": {
+   "family": "realistic_stylized",
+   "dist": 1.782,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.259
+  },
+  "veiled_chameleon": {
+   "family": "realistic_stylized",
+   "dist": 2.08,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.054
+  },
+  "virginia_opossum": {
+   "family": "sketchy_fieldguide",
+   "dist": 1.206,
+   "runner_up": "realistic_stylized",
+   "margin": 0.168
+  },
+  "walrus": {
+   "family": "in_between_favs",
+   "dist": 1.336,
+   "runner_up": "flat_cartoon",
+   "margin": 0.108
+  },
+  "western_diamondback_rattlesnake": {
+   "family": "realistic_stylized",
+   "dist": 1.772,
+   "runner_up": "in_between_favs",
+   "margin": 0.076
+  },
+  "white-tailed_deer": {
+   "family": "in_between_favs",
+   "dist": 1.013,
+   "runner_up": "flat_cartoon",
+   "margin": 0.28
+  },
+  "whooping_crane": {
+   "family": "sketchy_fieldguide",
+   "dist": 1.433,
+   "runner_up": "realistic_stylized",
+   "margin": 0.103
+  },
+  "wild_boar": {
+   "family": "paintbrushy",
+   "dist": 0.908,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.281
+  },
+  "wild_turkey": {
+   "family": "in_between_favs",
+   "dist": 1.381,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.027
+  },
+  "wolverine": {
+   "family": "paintbrushy",
+   "dist": 0.847,
+   "runner_up": "sketchy_fieldguide",
+   "margin": 0.449
+  },
+  "yellow-bellied_marmot": {
+   "family": "sketchy_fieldguide",
+   "dist": 1.449,
+   "runner_up": "realistic_stylized",
+   "margin": 0.245
+  }
+ }
+}

@@ -122,8 +122,62 @@ def classic(rgb, mask) -> dict:
     per_s = sum(cv2.arcLength(c, True) for c in cnts_s)
     rough = float(per / max(per_s, 1.0))
 
+    # eye catchlights: small near-black blobs with a bright speck inside/at
+    # their rim - the highlight that makes an eye read as "alive"
+    eye_like, eye_area = 0, 0.0
+    darkb = (lum < 0.18) & mask
+    n, lab, stats, _ = cv2.connectedComponentsWithStats(darkb.astype(np.uint8), 8)
+    sub_area = float(mask.sum())
+    for j in range(1, n):
+        a_ = stats[j, cv2.CC_STAT_AREA]
+        if not (0.00015 * sub_area <= a_ <= 0.01 * sub_area):
+            continue
+        w_, h_ = stats[j, cv2.CC_STAT_WIDTH], stats[j, cv2.CC_STAT_HEIGHT]
+        if max(w_, h_) > 2.2 * min(w_, h_):  # eyes are roundish, strokes aren't
+            continue
+        blob = (lab == j).astype(np.uint8)
+        ring = cv2.dilate(blob, k(2)).astype(bool)
+        if (lum[ring] > 0.82).any():
+            eye_like += 1
+            eye_area = max(eye_area, a_ / sub_area)
+
+    # crispness: local contrast in 9px windows over the interior
+    mu = cv2.blur(lum, (9, 9))
+    sd = np.sqrt(np.maximum(cv2.blur(lum * lum, (9, 9)) - mu * mu, 0))
+    local_contrast = float(sd[interior].mean())
+
+    # color: hue variety and accent pop (saturated hues far from the dominant one)
+    hue = hsv[..., 0] * 2.0  # degrees
+    colored = mask & (sat > 0.25) & (val > 0.2)
+    if colored.sum() > 50:
+        hist, _ = np.histogram(hue[colored], bins=18, range=(0, 360))
+        pr = hist / hist.sum()
+        hue_variety = float(-(pr[pr > 0] * np.log(pr[pr > 0])).sum() / np.log(18))
+        dom = (np.argmax(hist) + 0.5) * 20
+        dh = np.abs(((hue[colored] - dom) + 180) % 360 - 180)
+        accent = float(((dh > 60) & (sat[colored] > 0.45)).sum() / sub_area)
+    else:
+        hue_variety, accent = 0.0, 0.0
+
+    # rim light: brightness just inside the outline vs the interior
+    inner_band = cv2.erode(m8, k(3)).astype(bool) & ~cv2.erode(m8, k(9)).astype(bool) & ~dark
+    rim = float(lum[inner_band].mean() - med) if inner_band.any() else 0.0
+
+    # pose: tilt of the body's main axis, and how compact vs spread-out it is
+    ys, xs = np.nonzero(mask)
+    cov = np.cov(np.stack([xs, ys]))
+    ev, evec = np.linalg.eigh(cov)
+    major = evec[:, -1]
+    tilt = float(np.degrees(np.arctan2(abs(major[1]), abs(major[0]))))
+    hull = cv2.convexHull(np.stack([xs, ys], 1).astype(np.int32))
+    solidity = float(mask.sum() / max(cv2.contourArea(hull), 1.0))
+
     bright = val > 0.2
     return {
+        "eye_highlights": eye_like, "eye_size": eye_area,
+        "local_contrast": local_contrast, "hue_variety": hue_variety,
+        "accent_color": accent, "rim_light": rim,
+        "pose_tilt": tilt, "pose_compact": solidity,
         "outline_px": width, "outline_coverage": coverage,
         "outline_darkness": 1.0 - ol_lum, "outline_tint": ol_sat,
         "ink_lines": ink_lines, "flat_areas": flat, "soft_blend": soft, "hard_edges": hard,
@@ -183,7 +237,10 @@ def main() -> None:
             im.save(t, quality=88)
         print(f"measured {p.stem}", flush=True)
 
-    feats = list(rows[0])
+    # eye_* is unreliable (counts texture specks as eyes) and accent_color is
+    # ~0 everywhere at this threshold - kept in the data, hidden from analysis
+    HIDDEN = {"eye_highlights", "eye_size", "accent_color"}
+    feats = [f for f in rows[0] if f not in HIDDEN]
     X = StandardScaler().fit_transform(np.array([[r[f] for f in feats] for r in rows]))
     fam_classic = AgglomerativeClustering(n_clusters=5, linkage="ward").fit_predict(X)
 
@@ -198,6 +255,7 @@ def main() -> None:
                 else "superset" if s in sets["superset"] else "rejected")
         pieces.append({"slug": s, "class": cls.get(s, "?"), "tier": tier,
                        "family_classic": int(fam_classic[i]), "family_gram": int(fam_gram[i]),
+                       "gram_pca": [round(float(v), 4) for v in Gp[i, :10]],
                        **{f: round(float(rows[i][f]), 4) for f in feats}})
 
     # how inconsistent each set is on each axis, relative to the full range
