@@ -311,6 +311,26 @@ Current combo set: marten, elk, caribou, axis deer, white-tailed deer, snowy
 owl, box turtle, desert tortoise, armadillo, mountain goat (a bit off),
 rhesus macaque.
 
+## Round 8: cohesion check of the curated set
+
+User asks: add harbor seal as an anchor? use the gila? reptile texture from
+the turtles? is the curated set cohesive?
+
+Measured spread (fraction of the full collection's range; coat-robust
+measures): outline thickness 0.70 all-100 -> 0.30 combo11 (0.62 with seal +
+gila); outline darkness 0.87 -> 0.58; outline coverage 0.28 -> 0.01; soft
+blending 0.85 -> 0.49; hard edges 0.86 -> 0.82 (still mixed: crisp graphic
+areas like the turtle shell and axis spots vs soft areas). The style
+fingerprint barely tightens (4.34 -> 3.98), but it sorts by animal class, so
+it can't judge cross-class cohesion.
+
+Outline thickness (px at 768): most pieces 1.9-2.7; box turtle 4.6, harbor
+seal 3.8. Goat 2.7, same as caribou and white-tailed deer - so outline weight
+is NOT what's off about the goat (Claude's earlier guess was wrong).
+Farthest from the set's center by fingerprint: gila, snowy owl, box turtle.
+
+Sheet: style_review/combo_set.jpg
+
 ## Parked for later (do not drop)
 
 - UX redesign of the app.
