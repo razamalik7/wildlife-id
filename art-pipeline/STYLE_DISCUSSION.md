@@ -145,6 +145,55 @@ Findings:
 
 Sheet: style_review/three_sets.jpg
 
+## Round 4: art features vs animal features
+
+User placements: snowy owl -> maybe combo; mountain goat and caribou close
+to combo; box turtle maybe combo; nile monitor is the ceiling of Magic, a
+little too realistic; armadillo close to that.
+
+User concern (valid): earlier sets tracked animal coat - brown animals in
+combo, white in stylish-only, intricate patterns (and small animals, more
+striking when scaled up in a tile) in Magic.
+
+Matched same-coat sets (style_review/matched_sets.jpg) show art varies a lot
+with coat held constant: big plain-brown mammals (elk calm, moose strokes
+everywhere, grizzly airbrush, bison heavy texture); white mammals (fox
+minimal, goat hair everywhere, polar bear sticker, hare textbook); spotted
+cats (ocelot spots wrap the form, jaguar's flatten it); axis deer shows the
+combo can handle pattern.
+
+Art-level definition of the dial: WHERE detail is rendered. Combo renders
+material (strands, scales) only along edges and at focal areas (face, mane,
+tail tip) and leaves big body surfaces as calm painted tone; Magic renders
+material across the whole body.
+
+Measured "interior detail / edge detail" ratio (fine strokes only, pattern
+boundaries excluded): combo-read pieces 0.43-0.80 (white-tailed deer 0.43,
+elk 0.52, axis 0.58, owl 0.65, caribou 0.74, marten 0.79, turtle 0.80);
+ocelot 0.85, armadillo 0.92, monitor 1.09, gila 1.27; goat and hare 0.87
+(hair everywhere); arctic fox 0.80, bison 0.83, moose 0.61. Points the right
+way but overlaps - supporting evidence only.
+
+Coat-confounded measurements (treat with care): saturation, warmth, flat
+areas (plain coats), drawn lines / fine texture (patterns), contrast and
+shadow depth (white and black coats). More coat-robust: outline thickness,
+darkness and coverage; silhouette roughness; detail distribution.
+
+Tile scale: normalization makes every animal fill the tile the same, so
+small animals' detail is magnified and long thin animals (gila, snakes,
+monitor) shrink. Affects how striking pieces look in review and in the Dex.
+Detail density should be specified relative to the tile; true size handled
+in post from body-length data (as planned); consider area-based fill for
+long animals.
+
+Revised read (pending user):
+- Too realistic: nile monitor, armadillo
+- Magic: ocelot, gila
+- Combo: marten, elk, caribou, axis deer, white-tailed deer, snowy owl,
+  box turtle (shell combo, skin Magic)
+- Stylish, short on depth: arctic fox, black bear, polar bear (sticker)
+- Unclear: mountain goat (hair rendered everywhere, weak depth)
+
 ## Parked for later (do not drop)
 
 - UX redesign of the app.
