@@ -194,6 +194,53 @@ Revised read (pending user):
 - Stylish, short on depth: arctic fox, black bear, polar bear (sticker)
 - Unclear: mountain goat (hair rendered everywhere, weak depth)
 
+## Round 5: direction settling on the combo
+
+**User: settling on the combo, borrowing from Magic.**
+
+Key distinction from the user (replaces "where detail goes"): whether each
+texture element is **lit in 3D** or drawn as a **flat stylized shape**.
+Gila and nile monitor (and the ocelot, less so) light every bead/scale with
+its own highlight and shadow. Box turtle legs, armadillo scales and marten fur
+have plenty of detail, but each scale/strand is a flat stylized piece.
+Measured small highlights per 10k px: gila 84, monitor 108; marten 22, turtle
+23, ocelot 23, tortoise 26, elk 29, owl 35; armadillo 69 (likely light scale
+rims; user's eye says flat, eye wins).
+
+Corrections: marten has more fur lines than Claude credited (they are flat
+stylized marks); armadillo is close to the COMBO (not the Magic ceiling).
+Goat: shaggier animal with shading underneath; open question what it's
+missing (user guesses outline a little heavy).
+
+User rankings within matched sets (coat held constant):
+1. ocelot > jaguar > bobcat (bobcat textbooky; also looks like a lynx -
+   accuracy issue, regenerate)
+2. elk > axis deer > white-tailed deer = caribou. Elk's edge: body not
+   parallel to the page, very good shading, coat a little denser at the
+   highlight.
+3. elk (by a lot) > bison > moose (arty, dramatic color highlights - cool
+   but not our direction) > grizzly
+4. mountain goat > arctic fox > polar bear > snowshoe hare
+5. marten > groundhog > fox squirrel > mink
+6. box turtle > gila >> rattlesnake > copperhead
+7. desert tortoise (maybe combo) > nile monitor >> iguana (artsy) >
+   alligator (flat, boring)
+8. osprey > peregrine > red-tailed hawk > bald eagle; doesn't love any.
+   Peregrine a little too heavily stylized; osprey a little flat, dead,
+   somewhat textbooky, texture not quite right, but the best.
+9. snowy owl >> whooping crane (good pose, cool style, but drab and flat) >
+   mute swan (very textbooky; head is blended paint colors, not stylized)
+
+What the rankings show:
+- With coat controlled, the combo beats Magic: box turtle > gila, desert
+  tortoise > nile monitor, elk > moose. Strong confirmation of direction.
+- New concrete levers from the elk: body turned into space (three-quarter,
+  not flat profile), painted shading quality, texture denser at highlights.
+- Textbook pattern: bobcat, hare, swan, crane, osprey (partly) - blended
+  realistic paint without stylized elements, drab color, flat light.
+- Too-heavy stylization ceiling: peregrine, polar bear.
+- Birds are the weakest class: only the owl is loved; no raptor is.
+
 ## Parked for later (do not drop)
 
 - UX redesign of the app.

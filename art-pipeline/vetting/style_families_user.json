@@ -151,5 +151,72 @@
   "rhesus macaque very alive, unplaced",
   "wolf alive and artsy; wolverine a little less alive",
   "ocelot alive without looking at viewer; marten looking at viewer may help"
+ ],
+ "direction": {
+  "settling_on": "combo",
+  "borrow_from": "magic",
+  "date": "2026-10-12"
+ },
+ "matched_set_rankings": {
+  "spotted_cats": [
+   "ocelot",
+   "jaguar",
+   "bobcat"
+  ],
+  "deer": [
+   "elk",
+   "axis_deer",
+   [
+    "white-tailed_deer",
+    "caribou"
+   ]
+  ],
+  "big_brown": [
+   "elk",
+   "american_bison",
+   "moose",
+   "grizzly_bear"
+  ],
+  "white_mammals": [
+   "mountain_goat",
+   "arctic_fox",
+   "polar_bear",
+   "snowshoe_hare"
+  ],
+  "small_brown": [
+   "american_marten",
+   "groundhog",
+   "eastern_fox_squirrel",
+   "american_mink"
+  ],
+  "patterned_reptiles": [
+   "common_box_turtle",
+   "gila_monster",
+   "|gap|",
+   "western_diamondback_rattlesnake",
+   "eastern_copperhead"
+  ],
+  "plain_reptiles": [
+   "desert_tortoise",
+   "nile_monitor",
+   "|gap|",
+   "green_iguana",
+   "american_alligator"
+  ],
+  "raptors": [
+   "osprey",
+   "peregrine_falcon",
+   "red-tailed_hawk",
+   "bald_eagle"
+  ],
+  "white_birds": [
+   "snowy_owl",
+   "|gap|",
+   "whooping_crane",
+   "mute_swan"
+  ]
+ },
+ "regenerate_for_accuracy": [
+  "bobcat (looks like a lynx)"
  ]
 }
