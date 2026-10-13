@@ -241,6 +241,31 @@ What the rankings show:
 - Too-heavy stylization ceiling: peregrine, polar bear.
 - Birds are the weakest class: only the owl is loved; no raptor is.
 
+## Round 6: depth as its own dial, gap classes
+
+User:
+- Reference set lacks amphibians, non-turtle reptiles (small lizards, snakes),
+  small birds, pinnipeds, large birds (flamingo, heron, pelican, crane).
+- Combo already borrows from Magic; we may want to augment that a little.
+- Bullfrog: not hated, a bit off, maybe flat. (Close-up: flat green with
+  spots, almost no light-to-shadow modelling, heavy outline - below the
+  depth floor.)
+- Depth varies within the combo: marten's tail gives great depth; box turtle
+  has lots of texture but little depth; desert tortoise more depth; goat
+  lots of depth; armadillo a good bit. Floor maybe caribou, ceiling maybe
+  ocelot (or axis / snowy owl). => depth and texture are separate dials.
+- Asked whether the macaque is in the set: it's in the 47-piece superset,
+  not core/ultra; by the spec it fits the combo (flat stylized fur, painted
+  depth, body turned, behavior moment).
+
+Placements (pending confirmation): desert tortoise combo (edge); armadillo
+combo; goat combo but a bit off (outline / flat profile / no lit side);
+bullfrog below the depth floor.
+
+Sheets: style_review/depth_ladder.jpg (Claude's guess at depth order, for the
+user to set floor and ceiling); style_review/gap_classes.jpg (every existing
+piece in the under-covered classes, for ranking like the matched sets).
+
 ## Parked for later (do not drop)
 
 - UX redesign of the app.
