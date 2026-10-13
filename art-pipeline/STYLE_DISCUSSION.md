@@ -331,6 +331,40 @@ Farthest from the set's center by fingerprint: gila, snowy owl, box turtle.
 
 Sheet: style_review/combo_set.jpg
 
+## Round 9: decisions, hare vs marten vs goat, color
+
+Decided: harbor seal IN; gila OUT of training for now (kept as a color and
+pattern reference).
+
+Hare vs marten vs goat (style_review/hare_marten_goat.jpg):
+- Hare: fur rendered as fine pen hatching over the WHOLE body, value nearly
+  all light gray (no real shadow side), pure neutral gray with no color
+  temperature (measured chroma 4, the lowest), rigid side-on profile with
+  fully visible far legs (diagram pose), eye fully drawn but face blank.
+  This is the textbook plate.
+- Marten: fur marks concentrated at edges, chest and tail; big calm tan
+  areas on the flank; warm cream-to-brown color steps; strong shadow side
+  plus the tail curving toward the viewer; head turned to the viewer.
+- Goat: between them. Shaggy hair marks everywhere like the hare (partly the
+  animal), but warm off-white with cool gray shadows (color temperature the
+  hare lacks), real belly/leg shadow, walking pose. What's off is likely the
+  head: flat profile with an expressionless eye and smiling mouth line, and
+  hair drawn uniformly so the form doesn't turn.
+
+Crisp colors and highlights (user: important and consistent across the
+set; the set "tries to bring out the colors"): agreed. The real distinction
+is not crisp vs soft, it's that the set pushes each animal's own colors (and
+highlights) to their best version: axis spots, turtle shell, elk mane,
+marten cream bib, owl's yellow eye, macaque pink face, seal spots. Measured
+chroma of the richest 10% runs high wherever the animal has color (turtle
+56, axis 51, deer 45, elk 39); white/gray animals stay low by nature. The
+"crisp hard edges" variance in round 8 was the animals' patterns (spots,
+shell plates), not inconsistent rendering.
+Spec wording: render each species' true colors at their most saturated,
+believable version; use crisp, distinct color steps and small highlights
+(not blended mud); give even neutral animals color temperature (warm
+lights, cool shadows - goat, owl).
+
 ## Parked for later (do not drop)
 
 - UX redesign of the app.

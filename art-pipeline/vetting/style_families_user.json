@@ -230,7 +230,8 @@
   "desert_tortoise",
   "nine-banded_armadillo",
   "mountain_goat",
-  "rhesus_macaque"
+  "rhesus_macaque",
+  "harbor_seal"
  ],
  "gap_class_rankings": {
   "amphibians": {
@@ -273,5 +274,8 @@
    ],
    "notes": "flamingo too flat; heron arty/flat; turkey too 3D; goose worst; swan head blended"
   }
+ },
+ "reference_only": {
+  "gila_monster": "color and pattern intensity reference; excluded from training (3D-lit beads, no outline)"
  }
 }
