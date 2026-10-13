@@ -266,6 +266,51 @@ Sheets: style_review/depth_ladder.jpg (Claude's guess at depth order, for the
 user to set floor and ceiling); style_review/gap_classes.jpg (every existing
 piece in the under-covered classes, for ranking like the matched sets).
 
+## Round 7: gap-class rankings and "color depth"
+
+- Macaque -> combo. Hurt only by its real-life colors; rendered well.
+- Axis deer has some depth. Box turtle: legs lack depth, but the shell's
+  colors and pattern give it real depth, which is what makes it stand out.
+- **Color depth vs blendy (user):** our shading is color gradients and
+  highlights (ocelot, box turtle shell, marten), not blended paint (the
+  swan's head). Working wording: shading built from distinct color steps and
+  highlights, where you can see one tone end and the next begin - vs soft
+  smudged transitions mixing toward mud. A shadow-color-retention measure did
+  not separate the groups (pattern and white coats confound it); eye judgment.
+
+Gap-class rankings (user):
+1. Amphibians: none liked; spotted salamander if forced. Lizard-like ones
+   too textbooky; frog and toad too flat.
+2. Small lizards: none loved; brown and green anole top two, but want more
+   contrast between stick and lizard. Tegu too flat despite pose; iguana too
+   arty; tokay far too 3D-rendered; chameleon a bit too detailed.
+3. Snakes: none.
+4. Small birds: none quite right, a bit arty. Pigeon maybe fits; parakeet
+   maybe good; starling good but too detailed and dark (textbooky); blue jay
+   a bit flat; cardinal very textbooky; sparrow a bit too arty.
+5. Pinnipeds: harbor seal good (a bit cartoony; likes the spots and skin
+   texture the others lack) > elephant seal > walrus?; sea lion worst - should
+   have some fur texture and has none.
+6. Large birds: flamingo far too flat; heron too artsy and flat; pelican and
+   crane closest but a bit dead; turkey too 3D-lit; goose weirdly shaded
+   (worst); swan body OK but head blended-painty.
+
+Read: the target is narrow, with misses on every side - too flat (frog,
+toad, tegu, flamingo, blue jay), too 3D (tokay, turkey), too detailed
+(chameleon, starling), too arty (iguana, sparrow, heron), textbooky (most
+lizards, cardinal), blendy/odd shading (swan head, goose), dead (pelican,
+crane). Usable anchors exist only partially: harbor seal (pinnipeds), pigeon
+and maybe parakeet (small birds), pelican/crane closest (large birds). None
+for amphibians, snakes or lizards. These misses are useful as per-class
+negative examples.
+
+Vignette rule from the anoles: the prop must contrast with (be quieter
+than) the animal.
+
+Current combo set: marten, elk, caribou, axis deer, white-tailed deer, snowy
+owl, box turtle, desert tortoise, armadillo, mountain goat (a bit off),
+rhesus macaque.
+
 ## Parked for later (do not drop)
 
 - UX redesign of the app.

@@ -218,5 +218,60 @@
  },
  "regenerate_for_accuracy": [
   "bobcat (looks like a lynx)"
- ]
+ ],
+ "combo_set": [
+  "american_marten",
+  "elk",
+  "caribou",
+  "axis_deer",
+  "white-tailed_deer",
+  "snowy_owl",
+  "common_box_turtle",
+  "desert_tortoise",
+  "nine-banded_armadillo",
+  "mountain_goat",
+  "rhesus_macaque"
+ ],
+ "gap_class_rankings": {
+  "amphibians": {
+   "liked": [],
+   "if_forced": "spotted_salamander",
+   "notes": "lizard-like too textbooky; frog and toad too flat"
+  },
+  "small_lizards": {
+   "liked": [],
+   "closest": [
+    "brown_anole",
+    "green_anole"
+   ],
+   "notes": "want more stick/lizard contrast; tegu flat; iguana arty; tokay too 3D; chameleon too detailed"
+  },
+  "snakes": {
+   "liked": []
+  },
+  "small_birds": {
+   "liked": [],
+   "maybe": [
+    "rock_pigeon",
+    "monk_parakeet"
+   ],
+   "notes": "starling too detailed/dark; blue jay flat; cardinal textbooky; sparrow arty"
+  },
+  "pinnipeds": {
+   "order": [
+    "harbor_seal",
+    "northern_elephant_seal",
+    "walrus",
+    "california_sea_lion"
+   ],
+   "notes": "sea lion needs fur texture"
+  },
+  "large_birds": {
+   "closest": [
+    "brown_pelican",
+    "whooping_crane"
+   ],
+   "notes": "flamingo too flat; heron arty/flat; turkey too 3D; goose worst; swan head blended"
+  }
+ }
 }
