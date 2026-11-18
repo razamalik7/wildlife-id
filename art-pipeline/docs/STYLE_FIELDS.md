@@ -2,8 +2,8 @@
 
 13 things you can check on any illustration. For each: what it means, and
 the options. The draft labels for all 47 superset pieces are in
-[style_labels.csv](style_labels.csv) (review page: `localhost:8777/style.html`).
-Some fields also have a **measured** number from [style_audit.py](style_audit.py),
+[style_labels.csv](../archive/experiments/style_labels.csv) (review page: `localhost:8777/style.html`).
+Some fields also have a **measured** number from [style_audit.py](../archive/experiments/style_audit.py),
 so they don't rely on anyone's eye.
 
 | # | Field | What to look at | Options |

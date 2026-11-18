@@ -175,7 +175,7 @@ def build_parser() -> argparse.ArgumentParser:
     p_web.add_argument("--quality", type=int, default=90)
     p_web.set_defaults(func=cmd_export_web)
 
-    p_norm = sub.add_parser("normalize", help="Normalize transparent RGBA PNGs to 76% fill square canvas")
+    p_norm = sub.add_parser("normalize", help="Normalize transparent RGBA PNGs to 76%% fill square canvas")
     p_norm.add_argument("--in", dest="src", required=True)
     p_norm.add_argument("--out", required=True)
     p_norm.add_argument("--canvas", type=int, default=2048)

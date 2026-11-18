@@ -2,7 +2,7 @@
 
 Production spec for species illustrations. Drafted from direct inspection of the
 existing set (fox, eagle, bison, rattlesnake, bullfrog, blue jay, painted turtle,
-marten) plus k-means palette extraction over all 101 pieces ([palette.json](palette.json)).
+marten) plus k-means palette extraction over all 101 pieces ([palette.json](../configs/palette.json)).
 Treat this as the contract another illustrator — human or model — could follow
 without seeing the originals.
 
@@ -56,7 +56,7 @@ with warm darks from this table, not with gray or blue-black.
 
 ## Framing contract
 
-The block in [prompts/framing_contract.txt](prompts/framing_contract.txt) is
+The block in [prompts/framing_contract.txt](../configs/prompts/framing_contract.txt) is
 appended verbatim to every generation prompt. Summary of the contract:
 
 - Full body, every limb and the complete tail visible; nothing cropped, no
