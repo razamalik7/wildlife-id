@@ -19,6 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from animl_art import (
     ART_ROOT,
     BATCHES_DIR,
+    CACHE_DIR,
     EXPANSION_LIST_PATH,
     LORA_OUTPUT_DIR,
     MASTERS_DIR,
@@ -28,7 +29,7 @@ from animl_art import (
 
 
 def cmd_status(_args: argparse.Namespace) -> None:
-    """CPU-only status report of masters, 1,777 expansion coverage, LoRAs, and active runs."""
+    """CPU-only status report of masters, 1,777 expansion coverage, caches, LoRAs, and active runs."""
     masters = sorted(p for p in MASTERS_DIR.glob("*.png") if not p.name.startswith("icon-")) if MASTERS_DIR.exists() else []
     web_icons = sorted(WEB_ICONS_DIR.glob("*.webp")) if WEB_ICONS_DIR.exists() else []
     loras = sorted(LORA_OUTPUT_DIR.glob("*.safetensors")) if LORA_OUTPUT_DIR.exists() else []
@@ -46,17 +47,45 @@ def cmd_status(_args: argparse.Namespace) -> None:
         summary = catalog.get("summary", {})
         print(f"Expansion List : {summary.get('total_species', len(catalog.get('species', [])))} species -> {summary.get('by_class', {})}")
 
+    if CACHE_DIR.exists():
+        inat_c = CACHE_DIR / "inat_taxa_cache.json"
+        wiki_c = CACHE_DIR / "wiki_clauses_cache.json"
+        i_len = len(json.loads(inat_c.read_text(encoding="utf-8"))) if inat_c.exists() else 0
+        w_len = len(json.loads(wiki_c.read_text(encoding="utf-8"))) if wiki_c.exists() else 0
+        print(f"Disk Caches    : iNat taxa={i_len} entries, Wiki clauses={w_len} entries ({CACHE_DIR})")
+
     if BATCHES_DIR.exists():
-        batches = sorted(BATCHES_DIR.glob("*.json"))
-        print(f"Batch Manifests: {[b.name for b in batches]}")
+        batches = sorted(b.name for b in BATCHES_DIR.glob("*.json"))
+        print(f"Batch Manifests: {batches}")
 
     if RUNS_DIR.exists():
         runs = sorted(d.name for d in RUNS_DIR.iterdir() if d.is_dir())
-        v7_runs = [r for r in runs if "v7" in r or "unseen" in r]
-        print(f"Local Runs     : {len(runs)} total dirs under {RUNS_DIR} (v7/unseen: {len(v7_runs)})")
+        v7_runs = [r for r in runs if "v7" in r or "unseen" in r or "top500" in r]
+        print(f"Local Runs     : {len(runs)} total dirs under {RUNS_DIR} (v7/unseen/top500: {len(v7_runs)})")
         for rname in v7_runs:
             eq_cnt = len(list((RUNS_DIR / rname / "eq_out").glob("*.png"))) if (RUNS_DIR / rname / "eq_out").exists() else 0
             print(f"  - {rname} (eq_out={eq_cnt})")
+
+
+def cmd_prefetch(args: argparse.Namespace) -> None:
+    """CPU-only Top-500 manifest builder & batched iNat/Wikipedia cache pre-warmer."""
+    from animl_art.prefetch import build_top500_manifests, prefetch_inat_and_wiki_caches
+
+    if args.build_top500:
+        res = build_top500_manifests()
+        print("Built Top-500 manifests:", json.dumps(res, indent=2))
+
+    manifests = [Path(m) for m in args.manifest] if args.manifest else [
+        p for p in (
+            BATCHES_DIR / "unseen_10_batch2.json",
+            BATCHES_DIR / "top500_inat_balanced.json",
+            BATCHES_DIR / "top500_inat_raw.json",
+        )
+        if p.exists()
+    ]
+    if manifests:
+        stats = prefetch_inat_and_wiki_caches(manifests)
+        print("Prefetch complete:", json.dumps(stats, indent=2))
 
 
 def cmd_run(args: argparse.Namespace) -> None:
@@ -80,6 +109,8 @@ def cmd_run(args: argparse.Namespace) -> None:
             manifest_path=manifest_p,
             species_queries=args.species,
             sample_unseen=args.sample_unseen,
+            offset=args.offset,
+            limit=args.limit,
             force_stems=args.force,
             boards_dir=boards_p,
         )
@@ -90,6 +121,8 @@ def cmd_run(args: argparse.Namespace) -> None:
         manifest_path=manifest_p,
         species_queries=args.species,
         sample_unseen=args.sample_unseen,
+        offset=args.offset,
+        limit=args.limit,
     )
     if args.phase == "1a":
         run_phase_1a(work_dir, species, force_stems=set(args.force))
@@ -103,6 +136,21 @@ def cmd_run(args: argparse.Namespace) -> None:
             unet_only_stems=set(args.unet_only),
             boards_dir=boards_p,
         )
+
+
+def cmd_review(args: argparse.Namespace) -> None:
+    """Launch local browser QA dashboard for inspecting a completed run."""
+    from animl_art.review_server import serve_batch_review
+
+    serve_batch_review(RUNS_DIR / args.batch, port=args.port)
+
+
+def cmd_apply_review(args: argparse.Namespace) -> None:
+    """Apply queued swaps, reruns, and approvals recorded in the Batch Review UI."""
+    from animl_art.runner import apply_review_decisions
+
+    summary = apply_review_decisions(RUNS_DIR / args.batch, promote=args.promote, export_web=args.export_web)
+    print("Applied review decisions:", json.dumps(summary, indent=2))
 
 
 def cmd_swap(args: argparse.Namespace) -> None:
@@ -145,16 +193,34 @@ def build_parser() -> argparse.ArgumentParser:
     p_status = sub.add_parser("status", help="CPU-only pipeline status, masters, LoRA weights, and runs")
     p_status.set_defaults(func=cmd_status)
 
+    p_pre = sub.add_parser("prefetch", help="CPU-only: build Top-500 manifests and pre-cache iNat + Wikipedia data")
+    p_pre.add_argument("--build-top500", action="store_true", help="Generate Top-500 balanced/raw manifests & tiers")
+    p_pre.add_argument("--manifest", nargs="*", help="Specific manifest JSONs to prefetch")
+    p_pre.set_defaults(func=cmd_prefetch)
+
     p_run = sub.add_parser("run", help="Run a batch through v7 pipeline stages")
     p_run.add_argument("--batch", required=True, help="Run directory name under art-pipeline/runs/<batch>")
     p_run.add_argument("--manifest", help="Path to JSON list of species entries")
     p_run.add_argument("--species", nargs="+", help="One or more species common/scientific/slug names")
     p_run.add_argument("--sample-unseen", type=int, default=0, help="Auto-sample N strictly unseen species")
+    p_run.add_argument("--offset", type=int, default=0, help="0-based start offset for slicing large manifests")
+    p_run.add_argument("--limit", type=int, default=0, help="Max species count to process from --offset")
     p_run.add_argument("--phase", choices=["1a", "1b", "stylize", "all"], default="all")
     p_run.add_argument("--force", nargs="*", default=[], help="Force recompute specific species stems")
     p_run.add_argument("--unet-only", nargs="*", default=[], help="Force unet_only LoRA weights for stems")
     p_run.add_argument("--boards-out", help="Optional directory to also write contact sheet boards")
     p_run.set_defaults(func=cmd_run)
+
+    p_rev = sub.add_parser("review", help="Launch browser dashboard to inspect QA flags & queue candidate swaps")
+    p_rev.add_argument("--batch", required=True)
+    p_rev.add_argument("--port", type=int, default=8765)
+    p_rev.set_defaults(func=cmd_review)
+
+    p_apply = sub.add_parser("apply-review", help="Execute queued swaps/reruns and promote approved icons")
+    p_apply.add_argument("--batch", required=True)
+    p_apply.add_argument("--promote", action="store_true")
+    p_apply.add_argument("--export-web", action="store_true")
+    p_apply.set_defaults(func=cmd_apply_review)
 
     p_swap = sub.add_parser("swap", help="Swap cached photo candidate rank and re-extract Gemma3 traits")
     p_swap.add_argument("--batch", required=True)

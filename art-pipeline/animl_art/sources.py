@@ -1,12 +1,42 @@
 """Reference-photo and Wikipedia trait acquisition from iNaturalist, Wikimedia Commons, and Wikipedia."""
 
+import json
 import re
 from io import BytesIO
 
 import requests
 from PIL import Image
 
+from animl_art import CACHE_DIR
+
 HEADERS = {"User-Agent": "AnimlVisionArtPipeline/2.0 (https://animl.org; contact@animl.org)"}
+
+_INAT_TAXA_CACHE: dict | None = None
+_WIKI_CLAUSES_CACHE: dict | None = None
+
+
+def _load_json_cache(name: str) -> dict:
+    p = CACHE_DIR / name
+    if p.exists():
+        try:
+            return json.loads(p.read_text(encoding="utf-8"))
+        except Exception:
+            return {}
+    return {}
+
+
+def get_inat_taxa_cache() -> dict:
+    global _INAT_TAXA_CACHE
+    if _INAT_TAXA_CACHE is None:
+        _INAT_TAXA_CACHE = _load_json_cache("inat_taxa_cache.json")
+    return _INAT_TAXA_CACHE
+
+
+def get_wiki_clauses_cache() -> dict:
+    global _WIKI_CLAUSES_CACHE
+    if _WIKI_CLAUSES_CACHE is None:
+        _WIKI_CLAUSES_CACHE = _load_json_cache("wiki_clauses_cache.json")
+    return _WIKI_CLAUSES_CACHE
 
 _GENERAL_BAD_TITLE_WORDS = (
     "map",
@@ -142,7 +172,12 @@ def fetch_commons_files(sci: str, common: str, limit: int = 10) -> list[dict]:
 
 
 def fetch_inat_curated_taxon(taxon_id: int, limit: int = 8) -> list[dict]:
-    """Fetch CC0/CC-BY curated taxon photos from iNaturalist `/v1/taxa/{taxon_id}`."""
+    """Fetch CC0/CC-BY curated taxon photos from disk cache or iNaturalist `/v1/taxa/{taxon_id}`."""
+    cache = get_inat_taxa_cache()
+    cached_entry = cache.get(str(taxon_id))
+    if isinstance(cached_entry, dict) and "photos" in cached_entry:
+        return [dict(p) for p in cached_entry["photos"][:limit]]
+
     out: list[dict] = []
     try:
         r = requests.get(f"https://api.inaturalist.org/v1/taxa/{taxon_id}", headers=HEADERS, timeout=25)
@@ -260,32 +295,60 @@ def fetch_marine_candidates_v7(taxon_id: int, sci: str, common: str) -> list[dic
     return out
 
 
-def fetch_wiki_batch(titles: list[str]) -> dict[str, str]:
-    """Fetch plain-text Wikipedia extracts for a list of page titles."""
+def fetch_wiki_batch(titles: list[str], max_workers: int = 6) -> dict[str, str]:
+    """Fetch whole-article plain-text Wikipedia extracts (MediaWiki caps full extracts at exlimit=1)."""
+    import threading
+    import time
+    from concurrent.futures import ThreadPoolExecutor
+
     url = "https://en.wikipedia.org/w/api.php"
+    unique = [t for t in dict.fromkeys(titles) if t]
+    if not unique:
+        return {}
+    tls = threading.local()
+
+    def _get_session() -> requests.Session:
+        sess = getattr(tls, "session", None)
+        if sess is None:
+            sess = requests.Session()
+            sess.headers.update({"User-Agent": "AnimlVisionBot/1.0 (https://animl.org; contact@animl.org)"})
+            tls.session = sess
+        return sess
+
+    def _fetch_one(title: str) -> tuple[str, str]:
+        sess = _get_session()
+        for attempt in range(3):
+            try:
+                r = sess.get(
+                    url,
+                    params={
+                        "action": "query",
+                        "prop": "extracts",
+                        "explaintext": 1,
+                        "titles": title,
+                        "redirects": 1,
+                        "format": "json",
+                    },
+                    timeout=20,
+                )
+                if r.status_code in (429, 502, 503):
+                    time.sleep(1.5 * (attempt + 1))
+                    continue
+                if r.status_code == 200 and r.text.strip().startswith("{"):
+                    pages = r.json().get("query", {}).get("pages", {})
+                    for p in pages.values():
+                        if p.get("extract"):
+                            return title, p["extract"]
+                    return title, ""
+            except Exception:
+                time.sleep(0.5)
+        return title, ""
+
     out: dict[str, str] = {}
-    session = requests.Session()
-    session.headers.update({"User-Agent": "AnimlVisionBot/1.0 (https://github.com/animl-vision; contact@animl.org)"})
-    for t in titles:
-        try:
-            r = session.get(
-                url,
-                params={
-                    "action": "query",
-                    "prop": "extracts",
-                    "explaintext": 1,
-                    "titles": t,
-                    "redirects": 1,
-                    "format": "json",
-                },
-                timeout=20,
-            )
-            if r.status_code == 200 and r.text.strip().startswith("{"):
-                pages = r.json().get("query", {}).get("pages", {})
-                for p in pages.values():
-                    out[t] = p.get("extract", "")
-        except Exception:
-            pass
+    with ThreadPoolExecutor(max_workers=min(max_workers, len(unique))) as pool:
+        for title, txt in pool.map(_fetch_one, unique):
+            if txt:
+                out[title] = txt
     return out
 
 
@@ -336,12 +399,24 @@ def extract_visual_clauses(wiki_text: str) -> str:
 
 
 def fetch_wiki_clauses_map(species_list: list[tuple[str, str]]) -> dict[str, str]:
-    """Fetch Wikipedia visual clauses for `[(common, sci), ...]`, falling back to `sci` on disambiguation/stubs."""
-    commons = [c for c, _ in species_list]
-    raw_common = fetch_wiki_batch(commons)
+    """Read cached Wikipedia visual clauses first, then fetch uncached species in batched HTTP calls."""
+    cache = get_wiki_clauses_cache()
     out: dict[str, str] = {}
-    need_sci: list[tuple[str, str]] = []
+    uncached: list[tuple[str, str]] = []
     for common, sci in species_list:
+        if cache.get(common):
+            out[common] = cache[common]
+        elif cache.get(sci):
+            out[common] = cache[sci]
+        else:
+            uncached.append((common, sci))
+
+    if not uncached:
+        return out
+
+    raw_common = fetch_wiki_batch([c for c, _ in uncached])
+    need_sci: list[tuple[str, str]] = []
+    for common, sci in uncached:
         txt = raw_common.get(common, "")
         clauses = extract_visual_clauses(txt) if len(txt) >= 500 and "may refer to:" not in txt[:300].lower() else ""
         if clauses:

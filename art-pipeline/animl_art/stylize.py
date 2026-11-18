@@ -34,33 +34,302 @@ _RAY_FIN_EYE_NEG = (
 
 # (keyword_in_common_lower, required_class_or_None, phrase_fn(sci), extra_neg_prefix)
 _SUBJECT_SANITIZER_RULES: list[tuple[str, str | None, object, str]] = [
+    # --- Mammals ---
     (
         "prairie dog",
-        None,
+        "Mammalia",
         lambda sci: f"a plump unstriped buff-tan Cynomys prairie marmot ({sci})",
         "canine, dog snout, dog ears, puppy, chipmunk stripes, lateral stripes, dorsal stripes, striped back, black and white stripes, pink nose, pink snout, pink feet, hairless rat tail, rat, mouse, ",
     ),
     (
+        "mountain beaver",
+        "Mammalia",
+        lambda sci: f"a stocky burrowing Aplodontia rodent with a stubby hidden tail ({sci})",
+        "flat scaly beaver paddle tail, aquatic beaver tail, webbed hind feet, ",
+    ),
+    (
+        "antelope squirrel",
+        "Mammalia",
+        lambda sci: f"a small striped Ammospermophilus desert ground squirrel ({sci})",
+        "antelope horns, hooves, ungulate, deer legs, ",
+    ),
+    (
+        "flying squirrel",
+        "Mammalia",
+        lambda sci: f"a nocturnal Glaucomys gliding squirrel with furred patagium membrane ({sci})",
+        "bird wings, feathers, feathered wings, bird beak, ",
+    ),
+    (
         "sea lion",
-        None,
+        "Mammalia",
         lambda sci: f"a large golden-brown {sci.split()[0]} eared seal pinniped ({sci})",
         "lion mane, cat face, feline paws, terrestrial mammal legs, ",
     ),
     (
         "kangaroo rat",
-        None,
+        "Mammalia",
         lambda sci: f"a small bipedal Dipodomys desert rodent ({sci})",
         "marsupial kangaroo, pouch, giant kangaroo, ",
     ),
+    # --- Birds ---
+    (
+        "turkey vulture",
+        "Aves",
+        lambda sci: f"a large dark raptor-like Cathartes New World vulture with a featherless red head ({sci})",
+        "domestic turkey fan tail, turkey wattles, caruncle snood, barnyard turkey, ",
+    ),
+    (
+        "catbird",
+        "Aves",
+        lambda sci: f"a sleek slate-gray passerine songbird ({sci})",
+        "domestic cat, cat ears, whiskers, feline fur, four legs, ",
+    ),
+    (
+        "cowbird",
+        "Aves",
+        lambda sci: f"a compact dark Molothrus icterid songbird ({sci})",
+        "cow, bovine horns, cattle, hooves, ",
+    ),
+    (
+        "titmouse",
+        "Aves",
+        lambda sci: f"a small crested Baeolophus parid songbird ({sci})",
+        "mouse ears, rodent tail, whiskers, mouse fur, ",
+    ),
+    (
+        "nighthawk",
+        "Aves",
+        lambda sci: f"a sleek cryptic-plumaged Chordeiles nightjar bird ({sci})",
+        "hooked hawk beak, sharp eagle talons, raptor hawk, ",
+    ),
+    (
+        "frogmouth",
+        "Aves",
+        lambda sci: f"a cryptic nocturnal caprimulgiform bird with a wide hooked bill ({sci})",
+        "amphibian frog, moist skin, webbed frog feet, ",
+    ),
+    (
+        "woodcock",
+        "Aves",
+        lambda sci: f"a plump short-legged Scolopax shorebird with a very long straight bill ({sci})",
+        "rooster plumage, chicken comb, pheasant tail, ",
+    ),
+    # --- Amphibians ---
+    (
+        "squirrel tree",
+        "Amphibia",
+        lambda sci: f"a smooth-skinned arboreal Dryophytes treefrog with sticky toe pads ({sci})",
+        "squirrel fur, bushy squirrel tail, rodent claws, whiskers, ",
+    ),
+    (
+        "cricket frog",
+        "Amphibia",
+        lambda sci: f"a small warty Acris terrestrial chorus frog ({sci})",
+        "insect cricket, antennae, six insect legs, insect wings, ",
+    ),
+    (
+        "barking tree",
+        "Amphibia",
+        lambda sci: f"a stout smooth-skinned Dryophytes treefrog ({sci})",
+        "dog, bark wood log, puppy, canine snout, ",
+    ),
+    (
+        "leopard frog",
+        "Amphibia",
+        lambda sci: f"a sleek Lithobates ranid frog with dark oval dorsal spots ({sci})",
+        "feline leopard, fur, mammal ears, tail, whiskers, claws, ",
+    ),
+    (
+        "pickerel frog",
+        "Amphibia",
+        lambda sci: f"a square-spotted Lithobates ranid frog ({sci})",
+        "fish scales, pectoral fins, gill slits, pike fish body, ",
+    ),
+    (
+        "chorus frog",
+        "Amphibia",
+        lambda sci: f"a small striped Pseudacris hylid frog ({sci})",
+        "musical notes, microphone, fur, feathers, ",
+    ),
+    (
+        "gopher frog",
+        "Amphibia",
+        lambda sci: f"a stout plump Lithobates ranid frog ({sci})",
+        "gopher fur, rodent incisors, digging claws, tail, ",
+    ),
+    (
+        "sheep frog",
+        "Amphibia",
+        lambda sci: f"a small stout microhylid frog ({sci})",
+        "woolly sheep, fleece, horns, hooves, ",
+    ),
+    (
+        "pig frog",
+        "Amphibia",
+        lambda sci: f"a large aquatic Lithobates true frog ({sci})",
+        "pig snout, pink pigskin, swine ears, trotters, ",
+    ),
+    (
+        "bullfrog",
+        "Amphibia",
+        lambda sci: f"a large aquatic Lithobates true frog ({sci})",
+        "bull horns, bovine cattle, hooves, tail, ",
+    ),
+    (
+        "spadefoot",
+        "Amphibia",
+        lambda sci: f"a plump toad-like burrowing pelobatoid amphibian with vertical pupils ({sci})",
+        "metal spade, shovel tool, rodent claws, ",
+    ),
+    # --- Reptiles ---
+    (
+        "glass lizard",
+        "Reptilia",
+        lambda sci: f"a sleek completely legless serpentine Ophisaurus lizard with smooth glossy scales and external ear openings ({sci})",
+        "legs, four legs, limbs, feet, toes, claws, transparent glass, broken glass, ",
+    ),
+    (
+        "legless lizard",
+        "Reptilia",
+        lambda sci: f"a sleek completely legless serpentine Anniella lizard ({sci})",
+        "legs, four legs, limbs, feet, toes, claws, ",
+    ),
+    (
+        "wormsnake",
+        "Reptilia",
+        lambda sci: f"a tiny slender glossy Carphophis colubrid snake with smooth iridescent scales ({sci})",
+        "earthworm segments, clitellum ring, slimy segmented worm, legs, ",
+    ),
+    (
+        "worm snake",
+        "Reptilia",
+        lambda sci: f"a tiny slender glossy colubrid snake with smooth scales ({sci})",
+        "earthworm segments, clitellum ring, slimy segmented worm, legs, ",
+    ),
+    (
+        "hognose",
+        "Reptilia",
+        lambda sci: f"a heavy-bodied Heterodon colubrid snake with an upturned keeled snout scale ({sci})",
+        "pink pig snout, mammal nose, swine ears, legs, ",
+    ),
+    (
+        "hog-nosed",
+        "Reptilia",
+        lambda sci: f"a heavy-bodied colubrid snake with an upturned snout scale ({sci})",
+        "pink pig snout, mammal nose, swine ears, legs, ",
+    ),
+    (
+        "ratsnake",
+        "Reptilia",
+        lambda sci: f"a slender semi-arboreal Pantherophis colubrid constrictor snake ({sci})",
+        "rodent rat, whiskers, fur, rodent ears, four legs, ",
+    ),
+    (
+        "rat snake",
+        "Reptilia",
+        lambda sci: f"a slender semi-arboreal colubrid snake ({sci})",
+        "rodent rat, whiskers, fur, rodent ears, four legs, ",
+    ),
+    (
+        "milksnake",
+        "Reptilia",
+        lambda sci: f"a glossy smooth-scaled Lampropeltis tricolor banded colubrid snake ({sci})",
+        "milk bottle, dairy cow, spots, legs, ",
+    ),
+    (
+        "milk snake",
+        "Reptilia",
+        lambda sci: f"a glossy smooth-scaled Lampropeltis colubrid snake ({sci})",
+        "milk bottle, dairy cow, legs, ",
+    ),
+    (
+        "kingsnake",
+        "Reptilia",
+        lambda sci: f"a glossy smooth-scaled Lampropeltis colubrid snake ({sci})",
+        "gold crown, king cobra hood, four legs, ",
+    ),
+    (
+        "king snake",
+        "Reptilia",
+        lambda sci: f"a glossy smooth-scaled Lampropeltis colubrid snake ({sci})",
+        "gold crown, king cobra hood, four legs, ",
+    ),
+    (
+        "fox snake",
+        "Reptilia",
+        lambda sci: f"a blotched Pantherophis colubrid snake ({sci})",
+        "fox fur, fox ears, bushy tail, four legs, ",
+    ),
+    (
+        "bullsnake",
+        "Reptilia",
+        lambda sci: f"a large blotched Pituophis colubrid snake ({sci})",
+        "bull horns, cattle hooves, fur, four legs, ",
+    ),
+    (
+        "gopher snake",
+        "Reptilia",
+        lambda sci: f"a large blotched Pituophis colubrid snake ({sci})",
+        "gopher fur, rodent claws, four legs, ",
+    ),
+    (
+        "coachwhip",
+        "Reptilia",
+        lambda sci: f"a very slender fast Masticophis colubrid snake with braided tail scales ({sci})",
+        "leather whip handle, wagon, four legs, ",
+    ),
     (
         "alligator lizard",
-        None,
+        "Reptilia",
         lambda sci: f"a slender Elgaria lizard ({sci})",
         "alligator snout, crocodile head, caiman, ",
     ),
     (
+        "horned lizard",
+        "Reptilia",
+        lambda sci: f"a flat-bodied spiny Phrynosoma lizard ({sci})",
+        "mammal horns, bull horns, goat horns, ",
+    ),
+    (
+        "leopard lizard",
+        "Reptilia",
+        lambda sci: f"a long-tailed spotted Gambelia desert lizard ({sci})",
+        "feline leopard, fur, mammal ears, whiskers, ",
+    ),
+    (
+        "zebra-tailed lizard",
+        "Reptilia",
+        lambda sci: f"a slender long-legged Callisaurus desert lizard with black-and-white banded tail underside ({sci})",
+        "equine zebra, hooves, horse mane, stripes over body, ",
+    ),
+    (
+        "earless lizard",
+        "Reptilia",
+        lambda sci: f"a sleek phrynosomatid desert lizard with smooth temporal scales ({sci})",
+        "mammal ears, pinnae, fur, ",
+    ),
+    (
+        "chicken turtle",
+        "Reptilia",
+        lambda sci: f"an elongated-necked aquatic Deirochelys emydid turtle ({sci})",
+        "chicken feathers, poultry beak, rooster comb, wings, ",
+    ),
+    (
+        "box turtle",
+        "Reptilia",
+        lambda sci: f"a high-domed terrestrial Terrapene emydid turtle ({sci})",
+        "cardboard box, wooden crate, flat flippered sea turtle, ",
+    ),
+    (
+        "map turtle",
+        "Reptilia",
+        lambda sci: f"an aquatic Graptemys emydid basking turtle with patterned carapace ({sci})",
+        "paper map, cartography grid lines, compass, ",
+    ),
+    # --- Elasmobranchs ---
+    (
         "bat ray",
-        None,
+        "Elasmobranchii",
         lambda sci: f"a smooth-skinned Myliobatis ray ({sci})",
         "bat ears, mammal ears, pointed ears, spots, polka dots, "
         + _RAY_FIN_EYE_NEG
@@ -68,7 +337,7 @@ _SUBJECT_SANITIZER_RULES: list[tuple[str, str | None, object, str]] = [
     ),
     (
         "cownose ray",
-        None,
+        "Elasmobranchii",
         lambda sci: f"a smooth-winged Rhinoptera eagle ray ({sci})",
         "cow, bovine, mammal snout, horns, "
         + _RAY_FIN_EYE_NEG
@@ -76,7 +345,7 @@ _SUBJECT_SANITIZER_RULES: list[tuple[str, str | None, object, str]] = [
     ),
     (
         "eagle ray",
-        None,
+        "Elasmobranchii",
         lambda sci: (
             f"a countershaded Aetobatus pelagic ray ({sci}) with white spots strictly on its dark navy dorsal back, "
             f"a solid unspotted opaque cream-white ventral wing underside and belly, and a long thin whip-like tail"
@@ -89,14 +358,8 @@ _SUBJECT_SANITIZER_RULES: list[tuple[str, str | None, object, str]] = [
         ),
     ),
     (
-        "horned lizard",
-        None,
-        lambda sci: f"a flat-bodied spiny Phrynosoma lizard ({sci})",
-        "mammal horns, bull horns, goat horns, ",
-    ),
-    (
         "horn shark",
-        None,
+        "Elasmobranchii",
         lambda sci: f"a brown spotted Heterodontus benthic shark ({sci})",
         "mammal horns, bull horns, tiger stripes, ",
     ),
@@ -114,7 +377,7 @@ _SUBJECT_SANITIZER_RULES: list[tuple[str, str | None, object, str]] = [
     ),
     (
         "guitarfish",
-        None,
+        "Elasmobranchii",
         lambda sci: f"a flat-bodied benthic ray-like elasmobranch ({sci})",
         "guitar, musical instrument, strings, " + _RAY_FIN_EYE_NEG,
     ),
@@ -136,6 +399,16 @@ def sanitize_species_subject_v7(common: str, sci: str, cls_name: str, subtype: s
             continue
         if kw in c_low:
             return phrase_fn(sci), extra_neg
+    if subtype == "mammal_aquatic" and cls_name == "Mammalia":
+        return (
+            f"a {common} marine mammal ({sci}) swimming smoothly in side view",
+            "fish scales, vertical fish tail fin, gill slits, bony fish fin rays, terrestrial legs, paws, claws, fur, ",
+        )
+    if subtype == "mammal_bat" and cls_name == "Mammalia":
+        return (
+            f"a {common} Chiroptera bat ({sci}) with thin leathery patagium wings",
+            "feathered bird wings, bird feathers, avian beak, ",
+        )
     if cls_name == "Elasmobranchii" and any(k in c_low for k in ("stingray", "manta", "devil ray", "ray", "skate")):
         return (
             f"a {common} ({sci})",

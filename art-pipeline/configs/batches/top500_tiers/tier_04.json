@@ -1,0 +1,502 @@
+[
+  {
+    "stem": "001_eastern_red_bat",
+    "common_name": "Eastern Red Bat",
+    "scientific_name": "Lasiurus borealis",
+    "taxon_id": 40522,
+    "class": "Mammalia",
+    "subtype": "mammal_bat",
+    "default_perched": false,
+    "us_research_grade_obs": 3988
+  },
+  {
+    "stem": "002_abert_s_squirrel",
+    "common_name": "Abert's Squirrel",
+    "scientific_name": "Sciurus aberti",
+    "taxon_id": 46018,
+    "class": "Mammalia",
+    "subtype": "mammal_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 3982
+  },
+  {
+    "stem": "003_tamanend_s_bottlenose_dolphin",
+    "common_name": "Tamanend's Bottlenose Dolphin",
+    "scientific_name": "Tursiops erebennus",
+    "taxon_id": 1562178,
+    "class": "Mammalia",
+    "subtype": "mammal_aquatic",
+    "default_perched": false,
+    "us_research_grade_obs": 3922
+  },
+  {
+    "stem": "004_townsend_s_chipmunk",
+    "common_name": "Townsend's Chipmunk",
+    "scientific_name": "Neotamias townsendii",
+    "taxon_id": 225756,
+    "class": "Mammalia",
+    "subtype": "mammal_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 3811
+  },
+  {
+    "stem": "005_mountain_cottontail",
+    "common_name": "Mountain Cottontail",
+    "scientific_name": "Sylvilagus nuttallii",
+    "taxon_id": 43109,
+    "class": "Mammalia",
+    "subtype": "mammal_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 3776
+  },
+  {
+    "stem": "006_black_rat",
+    "common_name": "Black Rat",
+    "scientific_name": "Rattus rattus",
+    "taxon_id": 44575,
+    "class": "Mammalia",
+    "subtype": "mammal_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 3770
+  },
+  {
+    "stem": "007_island_fox",
+    "common_name": "Island Fox",
+    "scientific_name": "Urocyon littoralis",
+    "taxon_id": 42077,
+    "class": "Mammalia",
+    "subtype": "mammal_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 3730
+  },
+  {
+    "stem": "008_house_mouse",
+    "common_name": "House Mouse",
+    "scientific_name": "Mus musculus",
+    "taxon_id": 44705,
+    "class": "Mammalia",
+    "subtype": "mammal_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 3573
+  },
+  {
+    "stem": "009_least_chipmunk",
+    "common_name": "Least Chipmunk",
+    "scientific_name": "Neotamias minimus",
+    "taxon_id": 225743,
+    "class": "Mammalia",
+    "subtype": "mammal_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 3569
+  },
+  {
+    "stem": "010_hermit_thrush",
+    "common_name": "Hermit Thrush",
+    "scientific_name": "Catharus guttatus",
+    "taxon_id": 12890,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 47289
+  },
+  {
+    "stem": "011_steller_s_jay",
+    "common_name": "Steller's Jay",
+    "scientific_name": "Cyanocitta stelleri",
+    "taxon_id": 8234,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 47107
+  },
+  {
+    "stem": "012_northern_yellow_warbler",
+    "common_name": "Northern Yellow Warbler",
+    "scientific_name": "Setophaga aestiva",
+    "taxon_id": 1188207,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 45362
+  },
+  {
+    "stem": "013_northern_harrier",
+    "common_name": "Northern Harrier",
+    "scientific_name": "Circus hudsonius",
+    "taxon_id": 558446,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 45333
+  },
+  {
+    "stem": "014_eurasian_collared_dove",
+    "common_name": "Eurasian Collared-Dove",
+    "scientific_name": "Streptopelia decaocto",
+    "taxon_id": 2969,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 44932
+  },
+  {
+    "stem": "015_ruddy_duck",
+    "common_name": "Ruddy Duck",
+    "scientific_name": "Oxyura jamaicensis",
+    "taxon_id": 850859,
+    "class": "Aves",
+    "subtype": "bird_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 44657
+  },
+  {
+    "stem": "016_greater_yellowlegs",
+    "common_name": "Greater Yellowlegs",
+    "scientific_name": "Tringa melanoleuca",
+    "taxon_id": 3892,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 44545
+  },
+  {
+    "stem": "017_spotted_sandpiper",
+    "common_name": "Spotted Sandpiper",
+    "scientific_name": "Actitis macularius",
+    "taxon_id": 72458,
+    "class": "Aves",
+    "subtype": "bird_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 44544
+  },
+  {
+    "stem": "018_least_sandpiper",
+    "common_name": "Least Sandpiper",
+    "scientific_name": "Calidris minutilla",
+    "taxon_id": 3864,
+    "class": "Aves",
+    "subtype": "bird_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 44529
+  },
+  {
+    "stem": "019_baltimore_oriole",
+    "common_name": "Baltimore Oriole",
+    "scientific_name": "Icterus galbula",
+    "taxon_id": 9346,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 43824
+  },
+  {
+    "stem": "020_tricolored_heron",
+    "common_name": "Tricolored Heron",
+    "scientific_name": "Egretta tricolor",
+    "taxon_id": 4938,
+    "class": "Aves",
+    "subtype": "bird_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 43736
+  },
+  {
+    "stem": "021_palm_warbler",
+    "common_name": "Palm Warbler",
+    "scientific_name": "Setophaga palmarum",
+    "taxon_id": 145242,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 43561
+  },
+  {
+    "stem": "022_indigo_bunting",
+    "common_name": "Indigo Bunting",
+    "scientific_name": "Passerina cyanea",
+    "taxon_id": 10227,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 43064
+  },
+  {
+    "stem": "023_blue_winged_teal",
+    "common_name": "Blue-winged Teal",
+    "scientific_name": "Spatula discors",
+    "taxon_id": 558433,
+    "class": "Aves",
+    "subtype": "bird_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 42696
+  },
+  {
+    "stem": "024_brown_thrasher",
+    "common_name": "Brown Thrasher",
+    "scientific_name": "Toxostoma rufum",
+    "taxon_id": 14898,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 42077
+  },
+  {
+    "stem": "025_blue_gray_gnatcatcher",
+    "common_name": "Blue-gray Gnatcatcher",
+    "scientific_name": "Polioptila caerulea",
+    "taxon_id": 7493,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 41036
+  },
+  {
+    "stem": "026_yellow_bellied_sapsucker",
+    "common_name": "Yellow-bellied Sapsucker",
+    "scientific_name": "Sphyrapicus varius",
+    "taxon_id": 18463,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 40885
+  },
+  {
+    "stem": "027_hairy_woodpecker",
+    "common_name": "Hairy Woodpecker",
+    "scientific_name": "Leuconotopicus villosus",
+    "taxon_id": 1651487,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 40701
+  },
+  {
+    "stem": "028_say_s_phoebe",
+    "common_name": "Say's Phoebe",
+    "scientific_name": "Sayornis saya",
+    "taxon_id": 17009,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 39806
+  },
+  {
+    "stem": "029_orange_crowned_warbler",
+    "common_name": "Orange-crowned Warbler",
+    "scientific_name": "Leiothlypis celata",
+    "taxon_id": 979757,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 38844
+  },
+  {
+    "stem": "030_common_loon",
+    "common_name": "Common Loon",
+    "scientific_name": "Gavia immer",
+    "taxon_id": 4626,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 38575
+  },
+  {
+    "stem": "031_brewer_s_blackbird",
+    "common_name": "Brewer's Blackbird",
+    "scientific_name": "Euphagus cyanocephalus",
+    "taxon_id": 10325,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 38491
+  },
+  {
+    "stem": "032_eastern_towhee",
+    "common_name": "Eastern Towhee",
+    "scientific_name": "Pipilo erythrophthalmus",
+    "taxon_id": 9424,
+    "class": "Aves",
+    "subtype": "bird_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 37993
+  },
+  {
+    "stem": "033_california_quail",
+    "common_name": "California Quail",
+    "scientific_name": "Callipepla californica",
+    "taxon_id": 1409,
+    "class": "Aves",
+    "subtype": "bird_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 37356
+  },
+  {
+    "stem": "034_diamondback_terrapin",
+    "common_name": "Diamondback Terrapin",
+    "scientific_name": "Malaclemys terrapin",
+    "taxon_id": 39836,
+    "class": "Reptilia",
+    "subtype": "turtle",
+    "default_perched": false,
+    "us_research_grade_obs": 14478
+  },
+  {
+    "stem": "035_california_king_snake",
+    "common_name": "California King Snake",
+    "scientific_name": "Lampropeltis californiae",
+    "taxon_id": 146199,
+    "class": "Reptilia",
+    "subtype": "snake",
+    "default_perched": false,
+    "us_research_grade_obs": 14213
+  },
+  {
+    "stem": "036_six_lined_racerunner",
+    "common_name": "Six-lined Racerunner",
+    "scientific_name": "Aspidoscelis sexlineatus",
+    "taxon_id": 717858,
+    "class": "Reptilia",
+    "subtype": "snake",
+    "default_perched": false,
+    "us_research_grade_obs": 14157
+  },
+  {
+    "stem": "037_diamondback_watersnake",
+    "common_name": "Diamondback Watersnake",
+    "scientific_name": "Nerodia rhombifer",
+    "taxon_id": 29310,
+    "class": "Reptilia",
+    "subtype": "snake",
+    "default_perched": false,
+    "us_research_grade_obs": 14100
+  },
+  {
+    "stem": "038_rough_earthsnake",
+    "common_name": "Rough Earthsnake",
+    "scientific_name": "Virginia striatula",
+    "taxon_id": 28102,
+    "class": "Reptilia",
+    "subtype": "snake",
+    "default_perched": false,
+    "us_research_grade_obs": 13758
+  },
+  {
+    "stem": "039_red_bellied_snake",
+    "common_name": "Red-bellied Snake",
+    "scientific_name": "Storeria occipitomaculata",
+    "taxon_id": 28557,
+    "class": "Reptilia",
+    "subtype": "snake",
+    "default_perched": false,
+    "us_research_grade_obs": 13689
+  },
+  {
+    "stem": "040_timber_rattlesnake",
+    "common_name": "Timber Rattlesnake",
+    "scientific_name": "Crotalus horridus",
+    "taxon_id": 30746,
+    "class": "Reptilia",
+    "subtype": "snake",
+    "default_perched": false,
+    "us_research_grade_obs": 13571
+  },
+  {
+    "stem": "041_eastern_musk_turtle",
+    "common_name": "Eastern Musk Turtle",
+    "scientific_name": "Sternotherus odoratus",
+    "taxon_id": 39703,
+    "class": "Reptilia",
+    "subtype": "turtle",
+    "default_perched": false,
+    "us_research_grade_obs": 12481
+  },
+  {
+    "stem": "042_eastern_ratsnake",
+    "common_name": "Eastern Ratsnake",
+    "scientific_name": "Pantherophis quadrivittatus",
+    "taxon_id": 1660911,
+    "class": "Reptilia",
+    "subtype": "snake",
+    "default_perched": false,
+    "us_research_grade_obs": 11988
+  },
+  {
+    "stem": "043_rough_skinned_newt",
+    "common_name": "Rough-skinned Newt",
+    "scientific_name": "Taricha granulosa",
+    "taxon_id": 27826,
+    "class": "Amphibia",
+    "subtype": "amphibian",
+    "default_perched": false,
+    "us_research_grade_obs": 19986
+  },
+  {
+    "stem": "044_woodhouse_s_toad",
+    "common_name": "Woodhouse's Toad",
+    "scientific_name": "Anaxyrus woodhousii",
+    "taxon_id": 64989,
+    "class": "Amphibia",
+    "subtype": "amphibian",
+    "default_perched": false,
+    "us_research_grade_obs": 19809
+  },
+  {
+    "stem": "045_northern_two_lined_salamander",
+    "common_name": "Northern Two-lined Salamander",
+    "scientific_name": "Eurycea bislineata",
+    "taxon_id": 27120,
+    "class": "Amphibia",
+    "subtype": "amphibian",
+    "default_perched": false,
+    "us_research_grade_obs": 16083
+  },
+  {
+    "stem": "046_northern_slimy_salamander",
+    "common_name": "Northern Slimy Salamander",
+    "scientific_name": "Plethodon glutinosus",
+    "taxon_id": 27184,
+    "class": "Amphibia",
+    "subtype": "amphibian",
+    "default_perched": false,
+    "us_research_grade_obs": 14930
+  },
+  {
+    "stem": "047_northern_cricket_frog",
+    "common_name": "Northern Cricket Frog",
+    "scientific_name": "Acris crepitans",
+    "taxon_id": 24230,
+    "class": "Amphibia",
+    "subtype": "amphibian",
+    "default_perched": false,
+    "us_research_grade_obs": 14145
+  },
+  {
+    "stem": "048_bonnethead",
+    "common_name": "Bonnethead",
+    "scientific_name": "Sphyrna tiburo",
+    "taxon_id": 112960,
+    "class": "Elasmobranchii",
+    "subtype": "shark_ray",
+    "default_perched": false,
+    "us_research_grade_obs": 1249
+  },
+  {
+    "stem": "049_thornback_guitarfish",
+    "common_name": "Thornback Guitarfish",
+    "scientific_name": "Platyrhinoidis triseriata",
+    "taxon_id": 48401,
+    "class": "Elasmobranchii",
+    "subtype": "shark_ray",
+    "default_perched": false,
+    "us_research_grade_obs": 1055
+  },
+  {
+    "stem": "050_atlantic_sharpnose_shark",
+    "common_name": "Atlantic Sharpnose Shark",
+    "scientific_name": "Rhizoprionodon terraenovae",
+    "taxon_id": 111752,
+    "class": "Elasmobranchii",
+    "subtype": "shark_ray",
+    "default_perched": false,
+    "us_research_grade_obs": 1027
+  }
+]

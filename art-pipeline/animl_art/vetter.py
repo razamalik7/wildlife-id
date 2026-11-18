@@ -35,8 +35,14 @@ def unload_ollama_model(model_name: str = "gemma3:27b") -> None:
         pass
 
 
-def make_normalized_cutout_v7(im: Image.Image, subtype: str = "") -> tuple[Image.Image | None, Image.Image | None, dict]:
+def make_normalized_cutout_v7(
+    im: Image.Image,
+    subtype: str = "",
+    max_edge_touch: float = 0.12,
+    split_limit_override: float | None = None,
+) -> tuple[Image.Image | None, Image.Image | None, dict]:
     """BiRefNet cutout with connected hysteresis propagation so thin whip tails stay attached."""
+    is_marine = subtype in ("shark_ray", "mammal_aquatic")
     cut = remove(im.convert("RGBA"))
     arr = np.array(cut)
     alpha = arr[:, :, 3]
@@ -52,16 +58,16 @@ def make_normalized_cutout_v7(im: Image.Image, subtype: str = "") -> tuple[Image
     order = np.argsort(areas)[::-1]
     main_label = int(order[0]) + 1
     main_area = float(areas[order[0]])
-    split_limit = 0.025 if subtype == "shark_ray" else 0.015
+    split_limit = split_limit_override if split_limit_override is not None else (0.025 if is_marine else 0.015)
     if len(order) > 1:
         sec_area = float(areas[order[1]])
         if sec_area / max(1.0, main_area) >= split_limit:
             return None, None, {"valid": False, "reason": f"split_subject ({sec_area / main_area:.3f})"}
 
     main_core = labels == main_label
-    low_thresh = 38 if subtype == "shark_ray" else 90
+    low_thresh = 38 if subtype == "shark_ray" else (70 if subtype == "mammal_aquatic" else 90)
     support = alpha >= low_thresh
-    if subtype == "shark_ray":
+    if is_marine:
         support = cv2.morphologyEx(support.astype(np.uint8) * 255, cv2.MORPH_CLOSE, np.ones((5, 5), np.uint8)) > 0
 
     clean_mask = binary_propagation(main_core, structure=np.ones((3, 3), dtype=bool), mask=support)
@@ -69,7 +75,7 @@ def make_normalized_cutout_v7(im: Image.Image, subtype: str = "") -> tuple[Image
     thin_recovered = clean_mask & (alpha < 220)
     arr[thin_recovered, 3] = np.clip(alpha[thin_recovered].astype(np.int32) * 3, 185, 255).astype(np.uint8)
 
-    if subtype == "shark_ray":
+    if is_marine:
         rgb_fg = arr[clean_mask, :3].astype(np.float32)
         r_m, g_m, b_m = rgb_fg[:, 0].mean(), rgb_fg[:, 1].mean(), rgb_fg[:, 2].mean()
         if (g_m - r_m) > 18.0 or (b_m - r_m) > 18.0:
@@ -83,7 +89,7 @@ def make_normalized_cutout_v7(im: Image.Image, subtype: str = "") -> tuple[Image
     edge_touch_sum = float(
         clean_mask[0, :].mean() + clean_mask[-1, :].mean() + clean_mask[:, 0].mean() + clean_mask[:, -1].mean()
     )
-    if edge_touch_sum > 0.12:
+    if edge_touch_sum > max_edge_touch:
         return None, None, {"valid": False, "reason": f"border_clipped ({edge_touch_sum:.3f})"}
 
     cut_clean = Image.fromarray(arr)
@@ -125,8 +131,9 @@ def gather_top_candidates_for_species(
     if sp_meta.exists():
         return json.loads(sp_meta.read_text(encoding="utf-8"))
 
+    is_marine = subtype in ("shark_ray", "mammal_aquatic")
     print(f"  Fetching & segmenting candidates for {common} ({sci})...", flush=True)
-    if subtype == "shark_ray":
+    if is_marine:
         cands = fetch_marine_candidates_v7(taxon_id, sci, common)
         max_try, target_valid, keep_top = 24, 12, 4
     else:
@@ -149,11 +156,13 @@ def gather_top_candidates_for_species(
             pass
         max_try, target_valid, keep_top = 18, 7, 3
 
+    downloaded: list[tuple[Image.Image, dict]] = []
     valid_packs = []
     for c in cands[:max_try]:
         im = download_pil_compliant(c["medium_url"], timeout=12) or download_pil_compliant(c["original_url"], timeout=15)
         if im is None or min(im.size) < 300:
             continue
+        downloaded.append((im, c))
         norm_cut, pad_photo, st = make_normalized_cutout_v7(im, subtype=subtype)
         if not st.get("valid") or norm_cut is None:
             continue
@@ -161,23 +170,48 @@ def gather_top_candidates_for_species(
         if len(valid_packs) >= target_valid:
             break
 
+    # Tier-2 resilience fallback for tightly cropped / split obscure species photos
+    used_relaxed = False
+    if not valid_packs and downloaded:
+        used_relaxed = True
+        for im, c in downloaded:
+            norm_cut, pad_photo, st = make_normalized_cutout_v7(
+                im, subtype=subtype, max_edge_touch=0.22, split_limit_override=0.045
+            )
+            if st.get("valid") and norm_cut is not None:
+                valid_packs.append((norm_cut, pad_photo, c, st))
+                if len(valid_packs) >= target_valid:
+                    break
+
     if not valid_packs:
         return []
 
-    if subtype == "shark_ray":
-        scuba_pos = (
-            f"a clear underwater scuba diving photograph of a single live {common} ({sci}) "
-            f"swimming submerged in blue ocean water showing its back and long tail"
-        )
-        scuba_neg = (
-            "photograph taken from above the water surface looking down through green water ripples and glare, "
-            "upside-down white belly view in aquarium tunnel, beached dead fish on sand or boat"
-        )
-        cut_pos = (
-            f"a complete full-body side-three-quarter view of a {common} ({sci}) "
-            f"with both wings and long tail intact on a white background"
-        )
-        cut_neg = "cropped half body, missing tail, tailless blob, upside-down white belly"
+    if is_marine:
+        if subtype == "mammal_aquatic":
+            scuba_pos = (
+                f"a clear wildlife photograph of a single live {common} ({sci}) "
+                f"swimming in clean ocean water showing its head, dorsal body, flippers, and tail flukes"
+            )
+            scuba_neg = (
+                "dead stranded beached carcass on sand or rocks, muddy brown murky glare, "
+                "partial distant splash with body submerged invisible, museum skeleton"
+            )
+            cut_pos = f"a complete full-body side view of a {common} ({sci}) with head, flippers, and tail intact on a white background"
+            cut_neg = "cropped half body, tiny dorsal fin tip only, missing tail, blob"
+        else:
+            scuba_pos = (
+                f"a clear underwater scuba diving photograph of a single live {common} ({sci}) "
+                f"swimming submerged in blue ocean water showing its back and long tail"
+            )
+            scuba_neg = (
+                "photograph taken from above the water surface looking down through green water ripples and glare, "
+                "upside-down white belly view in aquarium tunnel, beached dead fish on sand or boat"
+            )
+            cut_pos = (
+                f"a complete full-body side-three-quarter view of a {common} ({sci}) "
+                f"with both wings and long tail intact on a white background"
+            )
+            cut_neg = "cropped half body, missing tail, tailless blob, upside-down white belly"
         with torch.no_grad():
             in_photo = clip_proc(
                 text=[scuba_pos, scuba_neg],
@@ -214,7 +248,12 @@ def gather_top_candidates_for_species(
         clip_s = float(logits[int(r_idx)])
         im_hi = download_pil_compliant(c["original_url"], timeout=16)
         if im_hi is not None and max(im_hi.size) > 600:
-            hi_cut, hi_pad, hi_st = make_normalized_cutout_v7(im_hi, subtype=subtype)
+            hi_cut, hi_pad, hi_st = make_normalized_cutout_v7(
+                im_hi,
+                subtype=subtype,
+                max_edge_touch=0.22 if used_relaxed else 0.12,
+                split_limit_override=0.045 if used_relaxed else None,
+            )
             if hi_st.get("valid") and hi_cut is not None and hi_pad is not None:
                 norm_cut, pad_photo = hi_cut, hi_pad
         norm_cut.save(sp_dir / f"cut_{rank_i}.png")
@@ -255,6 +294,11 @@ def vet_side_by_side_and_extract_traits_v7(
             "  (b) the photo shows ONLY the flat white underside/belly from underneath (such as an aquarium tunnel shot) rather than the patterned dorsal/side swimming view,\n"
             "  (c) the shark/ray is dead on a beach/boat, on dry sand, caught on a line, held by a human, or obscured by aquarium window glass reflections/glare, or has holes in its wings/fins.\n"
         )
+    elif subtype == "mammal_aquatic":
+        marine_rule = (
+            "CRITICAL FOR AQUATIC MAMMALS (whales, dolphins, manatees): `valid_live_wild_pose` MUST be false if the animal is dead/stranded/beached on dry land or sand, "
+            "or if the cutout shows only a tiny dorsal fin tip without the head/body.\n"
+        )
     elif subtype == "snake":
         marine_rule = (
             "CRITICAL FOR SNAKES: `valid_live_wild_pose` MUST be false if the snake is held in a human hand, tangled in wire/netting, "
@@ -269,12 +313,18 @@ def vet_side_by_side_and_extract_traits_v7(
             "   - RAY/SKATE DORSAL VS VENTRAL SCOPING: If the white ventral underside of an upturned pectoral wing or belly is visible, explicitly describe it as \"solid unspotted opaque white ventral wing underside and belly\" (never bare \"white pectoral fins\"), and scope any spots/markings strictly to the \"dorsal back and upperwings\".\n"
         )
 
+    mammal_ext_rule = (
+        "   - AQUATIC MAMMAL ANATOMY: Describe smooth streamlined skin/hide, flippers, dorsal fin or ridge, rostrum/snout, and horizontal tail flukes or rounded paddle tail (never legs, paws, claws, or fish scales).\n"
+        if subtype == "mammal_aquatic"
+        else "   - MAMMAL MUZZLE & PAWS: For terrestrial/amphibious mammals, also include exact nose/muzzle and paw/foot coloration visible in the photo (e.g., furred tan muzzle with small dark nose, buff furred paws with dark claws) so paws and noses are never rendered bare pink.\n"
+    )
+
     prompt = (
         f"Left image is the original reference photo; Right image is the segmented white-background cutout of a {common} ({sci}).\n"
         f"Wikipedia reference notes (use ONLY for anatomical texture & diagnostic marks, NEVER to override the photo's actual color/pattern): {wiki_clauses}\n"
         f"{marine_rule}\n"
         f"Inspect BOTH Left and Right images carefully and return STRICT JSON with these keys:\n"
-        f"1. \"valid_live_wild_pose\": boolean (true ONLY if the animal is alive, in a clear full-body submerged/natural pose per above rules, NOT above-water surface ripples, NOT ventral-only belly view, NOT dead/held)\n"
+        f"1. \"valid_live_wild_pose\": boolean (true ONLY if the animal is alive, in a clear full-body submerged/natural pose per above rules, NOT above-water surface ripples, NOT ventral-only belly view, NOT dead/held/stranded)\n"
         f"2. \"no_fused_background_blob\": boolean (true if the Right cutout does not have a giant rock, human hand, or mud wall fused to the body; a small twig under a perched bird's feet is OK)\n"
         f"3. \"no_aquarium_glass_reflection\": boolean (true if the photo is clean and free of aquarium/zoo window glass reflections, human reflections in glass, or bright glare streaks across the body)\n"
         f"4. \"pose_quality_score\": number from 0 to 10 (10 = sharp, well-lit, full-body side or 3/4 field-guide view where head, eye, tail, and body markings are crystal clear; <=3 if blurry, murky, foreshortened, or clipped in half)\n"
@@ -282,8 +332,8 @@ def vet_side_by_side_and_extract_traits_v7(
         f"6. \"eye_color_in_photo\": short phrase describing the exact iris/eye color visible in the photo (e.g. \"bright golden-yellow iris with black pupil\", \"dark brown-black eye\", \"pale cream upper iris and brown lower iris\")\n"
         f"7. \"visual_traits\": 20 to 34 words of comma-separated `[color/pattern] [body part]` phrases describing ONLY visible colors, markings, and anatomy (no background words). STRICT RULES FOR `visual_traits`:\n"
         f"   - NAMESAKE & DIAGNOSTIC FIELD MARKS FIRST: Check `{common}`, BOTH images, and Wikipedia for any namesake/diagnostic field mark (such as a continuous pale cream-white diagonal shoulder stripe sweeping from the upper back across the mid-shoulder down to the chest on a peccary, double black breast bands on a plover, red waxy wingtip droplets on a waxwing, five pale stripes and blue tail on a skink, dorsal ribbon stripes, eye masks, or tail rings) and list those diagnostic markings FIRST with exact color & body location.\n"
-        f"   - EXPLICIT UNSTRIPED COAT WHEN PLAIN: If a mammal has a plain or grizzled coat with NO dorsal or lateral stripes in the photo (e.g., prairie dogs, marmots, rabbits, sea lions), explicitly include \"unstriped\" in the coat description (e.g. \"unstriped grizzled buff-tan coat\").\n"
-        f"   - MAMMAL MUZZLE & PAWS: For mammals, also include exact nose/muzzle and paw/foot coloration visible in the photo (e.g., furred tan muzzle with small dark nose, buff furred paws with dark claws) so paws and noses are never rendered bare pink.\n"
+        f"   - EXPLICIT UNSTRIPED COAT WHEN PLAIN: If a mammal has a plain or grizzled coat with NO dorsal or lateral stripes in the photo (e.g., prairie dogs, marmots, rabbits, sea lions, whales, manatees), explicitly include \"unstriped\" in the coat description (e.g. \"unstriped grizzled buff-tan coat\").\n"
+        f"{mammal_ext_rule}"
         f"{ray_tail_rule}"
     )
     try:

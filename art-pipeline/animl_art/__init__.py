@@ -22,9 +22,12 @@ REFERENCE_SHEET_DIR = ART_ROOT / "reference-sheet"
 RUNS_DIR = ART_ROOT / "runs"
 
 CONFIGS_DIR = ART_ROOT / "configs"
+CACHE_DIR = CONFIGS_DIR / "cache"
 BATCHES_DIR = CONFIGS_DIR / "batches"
+TIERS_DIR = BATCHES_DIR / "top500_tiers"
 BENCHMARKS_DIR = CONFIGS_DIR / "benchmarks"
 DOCS_DIR = ART_ROOT / "docs"
+VETTING_DIR = ART_ROOT / "vetting"
 
 EXPANSION_LIST_PATH = REPO_ROOT / "expansion" / "master_species_list.json"
 WEB_ICONS_DIR = REPO_ROOT / "frontend" / "public" / "icons" / "web"
@@ -41,9 +44,12 @@ __all__ = [
     "REFERENCE_SHEET_DIR",
     "RUNS_DIR",
     "CONFIGS_DIR",
+    "CACHE_DIR",
     "BATCHES_DIR",
+    "TIERS_DIR",
     "BENCHMARKS_DIR",
     "DOCS_DIR",
+    "VETTING_DIR",
     "EXPANSION_LIST_PATH",
     "WEB_ICONS_DIR",
 ]

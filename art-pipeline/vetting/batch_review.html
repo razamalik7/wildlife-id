@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>AnimlVision v7 Batch QA Review</title>
+  <style>
+    :root {
+      --bg: #0f131a; --card: #171d27; --border: #2a3342;
+      --text: #e8eef7; --muted: #8b9bb4; --accent: #38bdf8;
+      --ok: #22c55e; --warn: #f59e0b; --bad: #ef4444;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.45 system-ui, -apple-system, sans-serif; }
+    header {
+      position: sticky; top: 0; z-index: 20; background: rgba(15, 19, 26, 0.95);
+      border-bottom: 1px solid var(--border); padding: 12px 20px; backdrop-filter: blur(8px);
+      display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
+    }
+    .stats { display: flex; gap: 16px; flex-wrap: wrap; color: var(--muted); font-size: 13px; }
+    .stats b { color: var(--text); }
+    .controls { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    button, select {
+      background: #202836; color: var(--text); border: 1px solid var(--border);
+      padding: 6px 12px; border-radius: 7px; cursor: pointer; font-size: 13px;
+    }
+    button:hover { border-color: var(--accent); }
+    button.active { background: var(--accent); color: #07111b; border-color: var(--accent); font-weight: 600; }
+    button.ok { border-color: var(--ok); color: #86efac; }
+    button.ok.selected { background: var(--ok); color: #052e16; font-weight: 600; }
+    button.warn { border-color: var(--warn); color: #fcd34d; }
+    button.warn.selected { background: var(--warn); color: #451a03; font-weight: 600; }
+    button.bad { border-color: var(--bad); color: #fca5a5; }
+    button.bad.selected { background: var(--bad); color: #450a0a; font-weight: 600; }
+    main { padding: 16px 20px 60px; display: flex; flex-direction: column; gap: 14px; max-width: 1680px; margin: 0 auto; }
+    .row {
+      background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+      padding: 12px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .row.flagged { border-left: 4px solid var(--warn); }
+    .row.approved { border-left: 4px solid var(--ok); }
+    .row-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; align-items: center; }
+    .title { font-size: 15px; font-weight: 600; }
+    .sci { color: var(--muted); font-style: italic; font-weight: 400; margin-left: 6px; }
+    .badges { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; font-size: 12px; }
+    .badge { padding: 2px 8px; border-radius: 999px; background: #232c3b; color: var(--muted); border: 1px solid var(--border); }
+    .badge.flag { background: rgba(245, 158, 11, 0.14); color: #fcd34d; border-color: rgba(245, 158, 11, 0.4); }
+    .badge.good { background: rgba(34, 197, 94, 0.14); color: #86efac; border-color: rgba(34, 197, 94, 0.4); }
+    .panels { display: grid; grid-template-columns: repeat(4, minmax(180px, 1fr)) 220px; gap: 10px; align-items: start; }
+    .panel { background: #10141c; border: 1px solid var(--border); border-radius: 8px; padding: 6px; text-align: center; }
+    .panel img { width: 100%; aspect-ratio: 1; object-fit: contain; background: #fff; border-radius: 5px; display: block; }
+    .panel label { display: block; margin-top: 4px; font-size: 12px; color: var(--muted); }
+    .cands-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+    .cand-btn { padding: 3px; border-radius: 6px; border: 2px solid var(--border); background: #fff; cursor: pointer; }
+    .cand-btn img { width: 100%; aspect-ratio: 1; object-fit: contain; display: block; }
+    .cand-btn.picked { border-color: var(--warn); box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.4); }
+    .cand-btn span { display: block; font-size: 11px; color: #111; font-weight: 600; margin-top: 2px; }
+    .traits { font-size: 12px; color: var(--muted); }
+  </style>
+</head>
+<body>
+<header>
+  <div>
+    <strong id="batchTitle">Loading batch...</strong>
+    <div class="stats" id="statsBar"></div>
+  </div>
+  <div class="controls">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="flagged">QA Flagged</button>
+    <button data-filter="queued">Queued Swaps / Reruns</button>
+    <button data-filter="approved">Approved</button>
+    <button data-filter="pending">Pending</button>
+    <select id="classFilter">
+      <option value="">All Classes</option>
+      <option value="Mammalia">Mammalia</option>
+      <option value="Aves">Aves</option>
+      <option value="Reptilia">Reptilia</option>
+      <option value="Amphibia">Amphibia</option>
+      <option value="Elasmobranchii">Elasmobranchii</option>
+    </select>
+    <button class="ok" id="approveCleanBtn">Approve All Unflagged</button>
+  </div>
+</header>
+<main id="grid"></main>
+<script>
+let DATA = null;
+let curFilter = "all";
+
+async function loadBatch() {
+  const res = await fetch("/api/batch");
+  DATA = await res.json();
+  document.getElementById("batchTitle").textContent = `Batch: ${DATA.batch}`;
+  render();
+}
+
+async function setDecision(stem, action, swapRank = null, unetOnly = false) {
+  const res = await fetch("/api/decision", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ stem, action, swap_rank: swapRank, unet_only: unetOnly }),
+  });
+  const j = await res.json();
+  for (const it of DATA.items) {
+    if (j.decisions[it.stem]) it.decision = j.decisions[it.stem];
+  }
+  render();
+}
+
+document.getElementById("approveCleanBtn").onclick = async () => {
+  await fetch("/api/approve-unflagged", { method: "POST", body: "{}" });
+  await loadBatch();
+};
+
+document.querySelectorAll("[data-filter]").forEach(btn => {
+  btn.onclick = () => {
+    document.querySelectorAll("[data-filter]").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    curFilter = btn.dataset.filter;
+    render();
+  };
+});
+document.getElementById("classFilter").onchange = render;
+
+function render() {
+  if (!DATA) return;
+  const cls = document.getElementById("classFilter").value;
+  const qa = DATA.qa_summary || {};
+  const counts = { approved: 0, swap: 0, rerun: 0, flagged: 0 };
+  DATA.items.forEach(it => {
+    if (it.qa_flags.length) counts.flagged++;
+    const a = it.decision.action;
+    if (a === "approve") counts.approved++;
+    if (a === "swap") counts.swap++;
+    if (a === "rerun") counts.rerun++;
+  });
+  document.getElementById("statsBar").innerHTML = `
+    <span>Rendered: <b>${DATA.items.length}</b></span>
+    <span>Clean: <b>${qa.clean_count ?? 0}</b></span>
+    <span>QA Flagged: <b>${counts.flagged}</b></span>
+    <span>Approved: <b>${counts.approved}</b></span>
+    <span>Queued Swaps/Reruns: <b>${counts.swap + counts.rerun}</b></span>
+    <span>Mean Blk: <b>${DATA.summary.mean_black_pct ?? "-"}%</b></span>
+    <span>Mean AA: <b>${DATA.summary.mean_aa_pct ?? "-"}%</b></span>
+  `;
+
+  const shown = DATA.items.filter(it => {
+    if (cls && it.class !== cls) return false;
+    const act = it.decision.action;
+    if (curFilter === "flagged") return it.qa_flags.length > 0;
+    if (curFilter === "queued") return act === "swap" || act === "rerun";
+    if (curFilter === "approved") return act === "approve";
+    if (curFilter === "pending") return !act || act === "pending";
+    return true;
+  });
+
+  const grid = document.getElementById("grid");
+  grid.innerHTML = "";
+  for (const it of shown) {
+    const act = it.decision.action || "pending";
+    const card = document.createElement("div");
+    card.className = "row" + (act === "approve" ? " approved" : (it.qa_flags.length ? " flagged" : ""));
+    const m = it.metrics || {};
+    const candsHtml = (it.cands || []).map(c => {
+      const picked = act === "swap" && Number(it.decision.swap_rank) === Number(c.rank);
+      return `<button class="cand-btn ${picked ? "picked" : ""}" data-swap="${c.rank}">
+        <img loading="lazy" src="/files/cands_top3/${it.stem}/cut_${c.rank}.png" />
+        <span>#${c.rank} (${(c.clip_score ?? 0).toFixed(2)})</span>
+      </button>`;
+    }).join("");
+
+    card.innerHTML = `
+      <div class="row-head">
+        <div>
+          <span class="title">${it.stem} — ${it.common_name}</span>
+          <span class="sci">${it.scientific_name}</span>
+        </div>
+        <div class="badges">
+          <span class="badge">${it.class} · ${it.subtype}</span>
+          <span class="badge ${(m.black_line_pct ?? 100) >= 96 ? "good" : "flag"}">Blk ${m.black_line_pct ?? "-"}%</span>
+          <span class="badge ${(m.trapped_fur_gap_pct ?? 0) <= 1.5 ? "good" : "flag"}">Gap ${m.trapped_fur_gap_pct ?? "-"}%</span>
+          <span class="badge">AA ${m.aa_midtone_pct ?? "-"}%</span>
+          ${it.qa_flags.map(f => `<span class="badge flag">${f}</span>`).join("")}
+        </div>
+        <div class="controls">
+          <button class="ok ${act === "approve" ? "selected" : ""}" data-act="approve">Approve</button>
+          <button class="warn ${act === "rerun" ? "selected" : ""}" data-act="rerun">Rerun (UNet-only)</button>
+          <button class="bad ${act === "skip" ? "selected" : ""}" data-act="skip">Skip</button>
+        </div>
+      </div>
+      <div class="panels">
+        <div class="panel"><img loading="lazy" src="/files/photos_selected/${it.stem}.png" /><label>1. Selected Photo (${it.photo_id})</label></div>
+        <div class="panel"><img loading="lazy" src="/files/cutouts_final/${it.stem}.png" onerror="this.src='/files/cutouts_1024/${it.stem}.png'" /><label>2. Cutout (${it.cutout_repair_needed})</label></div>
+        <div class="panel"><img loading="lazy" src="/files/raw_stylized/${it.stem}.png" /><label>3. Raw v7</label></div>
+        <div class="panel"><img loading="lazy" src="/files/eq_out/${it.stem}.png" /><label>4. Final Equalized</label></div>
+        <div class="panel"><div class="cands-strip">${candsHtml}</div><label>Swap to Alt Cutout</label></div>
+      </div>
+      <div class="traits"><b>Traits:</b> ${it.visual_traits}</div>
+    `;
+
+    card.querySelector('[data-act="approve"]').onclick = () => setDecision(it.stem, "approve");
+    card.querySelector('[data-act="rerun"]').onclick = () => setDecision(it.stem, "rerun", null, true);
+    card.querySelector('[data-act="skip"]').onclick = () => setDecision(it.stem, "skip");
+    card.querySelectorAll("[data-swap]").forEach(b => {
+      b.onclick = () => setDecision(it.stem, "swap", Number(b.dataset.swap), false);
+    });
+    grid.appendChild(card);
+  }
+}
+
+loadBatch();
+</script>
+</body>
+</html>

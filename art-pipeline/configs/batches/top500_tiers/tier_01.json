@@ -1,0 +1,502 @@
+[
+  {
+    "stem": "001_california_ground_squirrel",
+    "common_name": "California Ground Squirrel",
+    "scientific_name": "Otospermophilus beecheyi",
+    "taxon_id": 180007,
+    "class": "Mammalia",
+    "subtype": "mammal_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 58592
+  },
+  {
+    "stem": "002_desert_cottontail",
+    "common_name": "Desert Cottontail",
+    "scientific_name": "Sylvilagus audubonii",
+    "taxon_id": 43115,
+    "class": "Mammalia",
+    "subtype": "mammal_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 44164
+  },
+  {
+    "stem": "003_common_golden_mantled_ground_squirrel",
+    "common_name": "Common Golden-mantled Ground Squirrel",
+    "scientific_name": "Callospermophilus lateralis",
+    "taxon_id": 180010,
+    "class": "Mammalia",
+    "subtype": "mammal_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 21536
+  },
+  {
+    "stem": "004_black_tailed_jackrabbit",
+    "common_name": "Black-tailed Jackrabbit",
+    "scientific_name": "Lepus californicus",
+    "taxon_id": 43130,
+    "class": "Mammalia",
+    "subtype": "mammal_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 20026
+  },
+  {
+    "stem": "005_rock_squirrel",
+    "common_name": "Rock Squirrel",
+    "scientific_name": "Otospermophilus variegatus",
+    "taxon_id": 180008,
+    "class": "Mammalia",
+    "subtype": "mammal_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 18206
+  },
+  {
+    "stem": "006_douglas_s_squirrel",
+    "common_name": "Douglas's Squirrel",
+    "scientific_name": "Tamiasciurus douglasii",
+    "taxon_id": 46259,
+    "class": "Mammalia",
+    "subtype": "mammal_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 13113
+  },
+  {
+    "stem": "007_humpback_whale",
+    "common_name": "Humpback Whale",
+    "scientific_name": "Megaptera novaeangliae",
+    "taxon_id": 41566,
+    "class": "Mammalia",
+    "subtype": "mammal_aquatic",
+    "default_perched": false,
+    "us_research_grade_obs": 11789
+  },
+  {
+    "stem": "008_northern_short_tailed_shrew",
+    "common_name": "Northern Short-tailed Shrew",
+    "scientific_name": "Blarina brevicauda",
+    "taxon_id": 63113,
+    "class": "Mammalia",
+    "subtype": "mammal_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 11549
+  },
+  {
+    "stem": "009_marsh_rabbit",
+    "common_name": "Marsh Rabbit",
+    "scientific_name": "Sylvilagus palustris",
+    "taxon_id": 43102,
+    "class": "Mammalia",
+    "subtype": "mammal_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 10726
+  },
+  {
+    "stem": "010_house_finch",
+    "common_name": "House Finch",
+    "scientific_name": "Haemorhous mexicanus",
+    "taxon_id": 199840,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 241182
+  },
+  {
+    "stem": "011_mourning_dove",
+    "common_name": "Mourning Dove",
+    "scientific_name": "Zenaida macroura",
+    "taxon_id": 3454,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 238882
+  },
+  {
+    "stem": "012_red_winged_blackbird",
+    "common_name": "Red-winged Blackbird",
+    "scientific_name": "Agelaius phoeniceus",
+    "taxon_id": 9744,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 210733
+  },
+  {
+    "stem": "013_northern_mockingbird",
+    "common_name": "Northern Mockingbird",
+    "scientific_name": "Mimus polyglottos",
+    "taxon_id": 14886,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 207209
+  },
+  {
+    "stem": "014_dark_eyed_junco",
+    "common_name": "Dark-eyed Junco",
+    "scientific_name": "Junco hyemalis",
+    "taxon_id": 10094,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 183780
+  },
+  {
+    "stem": "015_song_sparrow",
+    "common_name": "Song Sparrow",
+    "scientific_name": "Melospiza melodia",
+    "taxon_id": 9100,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 178756
+  },
+  {
+    "stem": "016_turkey_vulture",
+    "common_name": "Turkey Vulture",
+    "scientific_name": "Cathartes aura",
+    "taxon_id": 4756,
+    "class": "Aves",
+    "subtype": "bird_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 173056
+  },
+  {
+    "stem": "017_yellow_rumped_warbler",
+    "common_name": "Yellow-rumped Warbler",
+    "scientific_name": "Setophaga coronata",
+    "taxon_id": 145245,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 167696
+  },
+  {
+    "stem": "018_double_crested_cormorant",
+    "common_name": "Double-crested Cormorant",
+    "scientific_name": "Nannopterum auritum",
+    "taxon_id": 1454382,
+    "class": "Aves",
+    "subtype": "bird_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 153031
+  },
+  {
+    "stem": "019_american_goldfinch",
+    "common_name": "American Goldfinch",
+    "scientific_name": "Spinus tristis",
+    "taxon_id": 145310,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 130334
+  },
+  {
+    "stem": "020_snowy_egret",
+    "common_name": "Snowy Egret",
+    "scientific_name": "Egretta thula",
+    "taxon_id": 4940,
+    "class": "Aves",
+    "subtype": "bird_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 123106
+  },
+  {
+    "stem": "021_red_bellied_woodpecker",
+    "common_name": "Red-bellied Woodpecker",
+    "scientific_name": "Melanerpes carolinus",
+    "taxon_id": 18205,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 122077
+  },
+  {
+    "stem": "022_white_crowned_sparrow",
+    "common_name": "White-crowned Sparrow",
+    "scientific_name": "Zonotrichia leucophrys",
+    "taxon_id": 9176,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 121471
+  },
+  {
+    "stem": "023_cooper_s_hawk",
+    "common_name": "Cooper's Hawk",
+    "scientific_name": "Astur cooperii",
+    "taxon_id": 1579017,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 120373
+  },
+  {
+    "stem": "024_american_crow",
+    "common_name": "American Crow",
+    "scientific_name": "Corvus brachyrhynchos",
+    "taxon_id": 8021,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 118628
+  },
+  {
+    "stem": "025_american_coot",
+    "common_name": "American Coot",
+    "scientific_name": "Fulica americana",
+    "taxon_id": 473,
+    "class": "Aves",
+    "subtype": "bird_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 114760
+  },
+  {
+    "stem": "026_northern_flicker",
+    "common_name": "Northern Flicker",
+    "scientific_name": "Colaptes auratus",
+    "taxon_id": 18236,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 108663
+  },
+  {
+    "stem": "027_ring_billed_gull",
+    "common_name": "Ring-billed Gull",
+    "scientific_name": "Larus delawarensis",
+    "taxon_id": 4364,
+    "class": "Aves",
+    "subtype": "bird_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 105203
+  },
+  {
+    "stem": "028_anna_s_hummingbird",
+    "common_name": "Anna's Hummingbird",
+    "scientific_name": "Calypte anna",
+    "taxon_id": 6317,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 97770
+  },
+  {
+    "stem": "029_eastern_phoebe",
+    "common_name": "Eastern Phoebe",
+    "scientific_name": "Sayornis phoebe",
+    "taxon_id": 17008,
+    "class": "Aves",
+    "subtype": "bird_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 94328
+  },
+  {
+    "stem": "030_green_heron",
+    "common_name": "Green Heron",
+    "scientific_name": "Butorides virescens",
+    "taxon_id": 5020,
+    "class": "Aves",
+    "subtype": "bird_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 93963
+  },
+  {
+    "stem": "031_carolina_wren",
+    "common_name": "Carolina Wren",
+    "scientific_name": "Thryothorus ludovicianus",
+    "taxon_id": 7513,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 92485
+  },
+  {
+    "stem": "032_black_crowned_night_heron",
+    "common_name": "Black-crowned Night Heron",
+    "scientific_name": "Nycticorax nycticorax",
+    "taxon_id": 4981,
+    "class": "Aves",
+    "subtype": "bird_ground",
+    "default_perched": false,
+    "us_research_grade_obs": 91921
+  },
+  {
+    "stem": "033_white_throated_sparrow",
+    "common_name": "White-throated Sparrow",
+    "scientific_name": "Zonotrichia albicollis",
+    "taxon_id": 9184,
+    "class": "Aves",
+    "subtype": "bird_perched",
+    "default_perched": true,
+    "us_research_grade_obs": 90245
+  },
+  {
+    "stem": "034_dekay_s_brownsnake",
+    "common_name": "DeKay's Brownsnake",
+    "scientific_name": "Storeria dekayi",
+    "taxon_id": 28562,
+    "class": "Reptilia",
+    "subtype": "snake",
+    "default_perched": false,
+    "us_research_grade_obs": 57300
+  },
+  {
+    "stem": "035_central_ratsnake",
+    "common_name": "Central Ratsnake",
+    "scientific_name": "Pantherophis alleghaniensis",
+    "taxon_id": 1661279,
+    "class": "Reptilia",
+    "subtype": "snake",
+    "default_perched": false,
+    "us_research_grade_obs": 55818
+  },
+  {
+    "stem": "036_north_american_racer",
+    "common_name": "North American Racer",
+    "scientific_name": "Coluber constrictor",
+    "taxon_id": 27137,
+    "class": "Reptilia",
+    "subtype": "snake",
+    "default_perched": false,
+    "us_research_grade_obs": 53787
+  },
+  {
+    "stem": "037_ring_necked_snake",
+    "common_name": "Ring-necked Snake",
+    "scientific_name": "Diadophis punctatus",
+    "taxon_id": 26575,
+    "class": "Reptilia",
+    "subtype": "snake",
+    "default_perched": false,
+    "us_research_grade_obs": 41690
+  },
+  {
+    "stem": "038_mediterranean_house_gecko",
+    "common_name": "Mediterranean House Gecko",
+    "scientific_name": "Hemidactylus turcicus",
+    "taxon_id": 34435,
+    "class": "Reptilia",
+    "subtype": "lizard",
+    "default_perched": false,
+    "us_research_grade_obs": 40216
+  },
+  {
+    "stem": "039_texas_spiny_lizard",
+    "common_name": "Texas Spiny Lizard",
+    "scientific_name": "Sceloporus olivaceus",
+    "taxon_id": 36202,
+    "class": "Reptilia",
+    "subtype": "lizard",
+    "default_perched": false,
+    "us_research_grade_obs": 37286
+  },
+  {
+    "stem": "040_western_rattlesnake",
+    "common_name": "Western Rattlesnake",
+    "scientific_name": "Crotalus oreganus",
+    "taxon_id": 48268,
+    "class": "Reptilia",
+    "subtype": "snake",
+    "default_perched": false,
+    "us_research_grade_obs": 34984
+  },
+  {
+    "stem": "041_gopher_tortoise",
+    "common_name": "Gopher Tortoise",
+    "scientific_name": "Gopherus polyphemus",
+    "taxon_id": 40085,
+    "class": "Reptilia",
+    "subtype": "turtle",
+    "default_perched": false,
+    "us_research_grade_obs": 30946
+  },
+  {
+    "stem": "042_western_terrestrial_garter_snake",
+    "common_name": "Western Terrestrial Garter Snake",
+    "scientific_name": "Thamnophis elegans",
+    "taxon_id": 28398,
+    "class": "Reptilia",
+    "subtype": "snake",
+    "default_perched": false,
+    "us_research_grade_obs": 28624
+  },
+  {
+    "stem": "043_green_frog",
+    "common_name": "Green Frog",
+    "scientific_name": "Lithobates clamitans",
+    "taxon_id": 65982,
+    "class": "Amphibia",
+    "subtype": "amphibian",
+    "default_perched": false,
+    "us_research_grade_obs": 103633
+  },
+  {
+    "stem": "044_pacific_chorus_frog",
+    "common_name": "Pacific chorus frog",
+    "scientific_name": "Pseudacris regilla",
+    "taxon_id": 24259,
+    "class": "Amphibia",
+    "subtype": "amphibian",
+    "default_perched": false,
+    "us_research_grade_obs": 71808
+  },
+  {
+    "stem": "045_green_treefrog",
+    "common_name": "Green Treefrog",
+    "scientific_name": "Dryophytes cinereus",
+    "taxon_id": 1668858,
+    "class": "Amphibia",
+    "subtype": "amphibian",
+    "default_perched": false,
+    "us_research_grade_obs": 58365
+  },
+  {
+    "stem": "046_gulf_coast_toad",
+    "common_name": "Gulf Coast Toad",
+    "scientific_name": "Incilius nebulifer",
+    "taxon_id": 65849,
+    "class": "Amphibia",
+    "subtype": "amphibian",
+    "default_perched": false,
+    "us_research_grade_obs": 43803
+  },
+  {
+    "stem": "047_fowler_s_toad",
+    "common_name": "Fowler's Toad",
+    "scientific_name": "Anaxyrus fowleri",
+    "taxon_id": 64977,
+    "class": "Amphibia",
+    "subtype": "amphibian",
+    "default_perched": false,
+    "us_research_grade_obs": 42728
+  },
+  {
+    "stem": "048_blanchard_s_cricket_frog",
+    "common_name": "Blanchard's Cricket Frog",
+    "scientific_name": "Acris blanchardi",
+    "taxon_id": 70421,
+    "class": "Amphibia",
+    "subtype": "amphibian",
+    "default_perched": false,
+    "us_research_grade_obs": 35163
+  },
+  {
+    "stem": "049_haller_s_round_ray",
+    "common_name": "Haller's Round Ray",
+    "scientific_name": "Urobatis halleri",
+    "taxon_id": 114782,
+    "class": "Elasmobranchii",
+    "subtype": "shark_ray",
+    "default_perched": false,
+    "us_research_grade_obs": 2836
+  },
+  {
+    "stem": "050_atlantic_stingray",
+    "common_name": "Atlantic Stingray",
+    "scientific_name": "Hypanus sabinus",
+    "taxon_id": 623855,
+    "class": "Elasmobranchii",
+    "subtype": "shark_ray",
+    "default_perched": false,
+    "us_research_grade_obs": 2244
+  }
+]

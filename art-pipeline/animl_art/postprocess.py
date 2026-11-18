@@ -526,9 +526,11 @@ def render_comparison_boards(
     raw_dir: Path,
     eq_dir: Path,
     out_dir: Path,
+    rows_per_board: int | None = None,
 ) -> list[Path]:
-    """Render 4-column visual comparison boards (<=5 rows per part) and return saved file paths."""
+    """Render 4-column visual comparison boards and return saved file paths."""
     out_dir.mkdir(parents=True, exist_ok=True)
+    step = rows_per_board if rows_per_board is not None else (10 if len(items) > 20 else 5)
     font_hdr = load_font(20, bold=True)
     font_sub = load_font(15, bold=True)
     font_sm = load_font(12, bold=False)
@@ -540,8 +542,10 @@ def render_comparison_boards(
         "4. Final v7 (step 2000) + v3 Eq",
     ]
     saved_paths: list[Path] = []
-    for part_idx, start in enumerate(range(0, len(items), 5), start=1):
-        sub_items = items[start : start + 5]
+    row_by_stem = {r["stem"]: r for r in rows}
+    valid_items = [it for it in items if it["stem"] in row_by_stem and (eq_dir / f"{it['stem']}.png").exists()]
+    for part_idx, start in enumerate(range(0, len(valid_items), step), start=1):
+        sub_items = valid_items[start : start + step]
         board = Image.new("RGB", (4 * cw, hh + len(sub_items) * ch), (246, 247, 249))
         draw = ImageDraw.Draw(board)
         draw.rectangle([0, 0, 4 * cw, hh], fill=(24, 29, 38))
@@ -557,7 +561,7 @@ def render_comparison_boards(
         for ri, it in enumerate(sub_items):
             stem = it["stem"]
             y0 = hh + ri * ch
-            m_row = next(r for r in rows if r["stem"] == stem)
+            m_row = row_by_stem[stem]
             col_paths = [it["photo_p"], it["cut_p"], raw_dir / f"{stem}.png", eq_dir / f"{stem}.png"]
             for ci, cp in enumerate(col_paths):
                 x0 = ci * cw
