@@ -1,0 +1,19 @@
+[general]
+resolution = 1024
+batch_size = 1
+enable_bucket = false
+caption_extension = ".txt"
+
+[[datasets]]
+
+[[datasets.subsets]]
+image_dir = "C:/Users/nars7/Projects/aniML-vision/art-pipeline/lora/dataset_v7/img_6x"
+num_repeats = 6
+
+[[datasets.subsets]]
+image_dir = "C:/Users/nars7/Projects/aniML-vision/art-pipeline/lora/dataset_v7/img_4x"
+num_repeats = 4
+
+[[datasets.subsets]]
+image_dir = "C:/Users/nars7/Projects/aniML-vision/art-pipeline/lora/dataset_v7/img_2x"
+num_repeats = 2

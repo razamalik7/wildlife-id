@@ -1,0 +1,127 @@
+{
+  "american_marten": {
+    "wiki_title": "American marten",
+    "pose": "standing three-quarter view",
+    "wiki_visual_extract": "It is a long, slender-bodied marten, with fur ranging from yellowish to brown to near black."
+  },
+  "elk": {
+    "wiki_title": "Elk",
+    "pose": "standing side three-quarter view",
+    "wiki_visual_extract": "Forest-adapted Manchurian and Alaskan wapitis have red or reddish-brown coats with less contrast between the body coat and the rest of the body during the summer months."
+  },
+  "caribou": {
+    "wiki_title": "Reindeer",
+    "pose": "standing three-quarter view",
+    "wiki_visual_extract": ""
+  },
+  "white-tailed_deer": {
+    "wiki_title": "White-tailed deer",
+    "pose": "standing three-quarter view",
+    "wiki_visual_extract": "The white-tailed deer can be recognized by the characteristic white underside to its tail."
+  },
+  "axis_deer": {
+    "wiki_title": "Chital",
+    "pose": "standing three-quarter view",
+    "wiki_visual_extract": "The species is sexually dimorphic; males are larger than females, and antlers are present only on males.The dorsal parts are golden to rufous, completely covered in white spots. | The abdomen, rump, throat, insides of legs, ears, and tail are all white."
+  },
+  "mountain_goat": {
+    "wiki_title": "Mountain goat",
+    "pose": "standing three-quarter view",
+    "wiki_visual_extract": ""
+  },
+  "nine-banded_armadillo": {
+    "wiki_title": "Nine-banded armadillo",
+    "pose": "walking side three-quarter view",
+    "wiki_visual_extract": "The outer shell is composed of ossified dermal scutes covered by nonoverlapping, keratinized epidermal scales, which are connected by flexible bands of skin."
+  },
+  "harbor_seal": {
+    "wiki_title": "Harbor seal",
+    "pose": "resting side three-quarter view",
+    "wiki_visual_extract": "Individual harbor seals possess a unique pattern of spots, either dark on a light background or light on a dark. | They vary in colour from brownish black to tan or grey; underparts are generally lighter."
+  },
+  "rhesus_macaque": {
+    "wiki_title": "Rhesus macaque",
+    "pose": "sitting three-quarter view",
+    "wiki_visual_extract": "The rhesus macaque is brown or grey in color and has a pink face, which is bereft of fur. | Generally brown or grey in colour, it is in length with a tail and weighs ."
+  },
+  "snowy_owl": {
+    "wiki_title": "Snowy owl",
+    "pose": "standing front three-quarter view",
+    "wiki_visual_extract": "Her flight and tail feathers are faintly barred brown whilst the underparts are white in base color with brown spotting and barring on the flanks and upper breast. | The adult female is usually considerably more spotted and often slightly barred with dark brown on the crown and the underparts."
+  },
+  "desert_tortoise": {
+    "wiki_title": "Desert tortoise",
+    "pose": "walking three-quarter view",
+    "wiki_visual_extract": ""
+  },
+  "american_robin": {
+    "wiki_title": "American robin",
+    "pose": "standing side three-quarter view",
+    "wiki_visual_extract": "The head varies from jet black to gray, with white eye arcs and white supercilia. | The throat is white with black streaks, and the belly and undertail coverts are white."
+  },
+  "downy_woodpecker": {
+    "wiki_title": "Downy woodpecker",
+    "pose": "vertical clinging side profile view",
+    "wiki_visual_extract": "The downy woodpecker is mainly black on the upperparts and wings, with a white back, throat and belly and white spotting on the wings. | The downy woodpecker is virtually identical in plumage pattern to the larger hairy woodpecker, but it can be distinguished from the hairy by the presence of black spots on its white tail feathers and the length of its bill."
+  },
+  "wood_duck": {
+    "wiki_title": "Wood duck",
+    "pose": "standing side three-quarter view",
+    "wiki_visual_extract": "The adult male has stunning multicolored iridescent plumage and red eyes, with a distinctive white flare down the neck. | The female, less colorful, has a white eye-ring and a whitish throat."
+  },
+  "great_egret": {
+    "wiki_title": "Great egret",
+    "pose": "standing side three-quarter view",
+    "wiki_visual_extract": "The snowy egret is readily distinguished from the great egret because it is noticeably smaller, and it has a more slender bill which is black in color and yellow feet, whereas the great egret has a yellow bill and black feet."
+  },
+  "barking_treefrog": {
+    "wiki_title": "Barking tree frog",
+    "pose": "crouching three-quarter view",
+    "wiki_visual_extract": "Individuals may be bright or dull green, brown, yellowish, or gray in color with small, grey and green-yellow spots. | The eyes of Dryophytes gratiosus are brown, gold, and black."
+  },
+  "spring_peeper": {
+    "wiki_title": "Spring peeper",
+    "pose": "crouching three-quarter view",
+    "wiki_visual_extract": ""
+  },
+  "american_toad": {
+    "wiki_title": "American toad",
+    "pose": "crouching three-quarter view",
+    "wiki_visual_extract": ""
+  },
+  "eastern_red-backed_salamander": {
+    "wiki_title": "Red-backed salamander",
+    "pose": "crawling S-curve top-three-quarter view",
+    "wiki_visual_extract": ""
+  },
+  "common_box_turtle_3": {
+    "wiki_title": "Common box turtle",
+    "pose": "walking three-quarter view",
+    "wiki_visual_extract": ""
+  },
+  "common_box_turtle_4": {
+    "wiki_title": "Common box turtle",
+    "pose": "standing front-three-quarter view",
+    "wiki_visual_extract": ""
+  },
+  "gopher_snake_1": {
+    "wiki_title": "Gopher snake",
+    "pose": "coiled S-curve three-quarter view",
+    "wiki_visual_extract": "They are often yellow or cream in color with dark spots and a dark line across their face."
+  },
+  "gopher_snake_2": {
+    "wiki_title": "Gopher snake",
+    "pose": "loosely coiled three-quarter view",
+    "wiki_visual_extract": "They are often yellow or cream in color with dark spots and a dark line across their face."
+  },
+  "western_fence_lizard": {
+    "wiki_title": "Western fence lizard",
+    "pose": "crouching three-quarter view",
+    "wiki_visual_extract": ""
+  },
+  "eastern_fence_lizard": {
+    "wiki_title": "Eastern fence lizard",
+    "pose": "alert crouching three-quarter view",
+    "wiki_visual_extract": "The belly is white with black flecks, with some pale blue on the throat and belly. | The male is usually brown, and during the summer, has a more greenish-blue and black coloration on the sides of the belly and throat than the female."
+  }
+}

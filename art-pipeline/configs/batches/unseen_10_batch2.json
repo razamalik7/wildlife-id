@@ -1,0 +1,92 @@
+[
+  [
+    "01_island_fox",
+    "Island Fox",
+    "Urocyon littoralis",
+    42077,
+    "Mammalia",
+    "mammal_ground",
+    false
+  ],
+  [
+    "02_canada_lynx",
+    "Canada Lynx",
+    "Lynx canadensis",
+    41974,
+    "Mammalia",
+    "mammal_ground",
+    false
+  ],
+  [
+    "03_yellow_rumped_warbler",
+    "Yellow-rumped Warbler",
+    "Setophaga coronata",
+    145245,
+    "Aves",
+    "bird_perched",
+    true
+  ],
+  [
+    "04_snowy_egret",
+    "Snowy Egret",
+    "Egretta thula",
+    4940,
+    "Aves",
+    "bird_ground",
+    false
+  ],
+  [
+    "05_northern_flicker",
+    "Northern Flicker",
+    "Colaptes auratus",
+    18236,
+    "Aves",
+    "bird_perched",
+    true
+  ],
+  [
+    "06_eastern_milksnake",
+    "Eastern Milksnake",
+    "Lampropeltis triangulum",
+    515419,
+    "Reptilia",
+    "snake",
+    false
+  ],
+  [
+    "07_texas_spiny_lizard",
+    "Texas Spiny Lizard",
+    "Sceloporus olivaceus",
+    36202,
+    "Reptilia",
+    "lizard",
+    false
+  ],
+  [
+    "08_rough_skinned_newt",
+    "Rough-skinned Newt",
+    "Taricha granulosa",
+    27826,
+    "Amphibia",
+    "amphibian",
+    false
+  ],
+  [
+    "09_cownose_ray",
+    "Cownose Ray",
+    "Rhinoptera bonasus",
+    82385,
+    "Elasmobranchii",
+    "shark_ray",
+    false
+  ],
+  [
+    "10_whitetip_reef_shark",
+    "Whitetip Reef Shark",
+    "Triaenodon obesus",
+    52314,
+    "Elasmobranchii",
+    "shark_ray",
+    false
+  ]
+]

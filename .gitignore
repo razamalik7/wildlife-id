@@ -221,32 +221,57 @@ api/training_data_refined/
 api/training_data_cropped/
 training_data/
 
-# Ignore AI models (too large for GitHub LFS quota)
+# Ignore AI models & databases (too large for GitHub / git history)
 *.pth
 *.pt
+*.safetensors
+*.ckpt
+*.onnx
+*.db
+*.db-journal
 
-# Ignore user uploads
+# Ignore user uploads & api report pngs
 api/uploads/
 api/quarantine/
 api/quarantine_blur/
 api/quarantine_tiny/
 api/confusion_matrix*.png
+api/reports/*.png
 
 # Python junk
 __pycache__/
 *.pyc
 venv/
 .env
+
 # local secrets
 Github Token.txt
 Tokens-Local.txt
 
-# local tooling
+# local tooling & art-pipeline heavyweight runs/checkpoints
 .claude/
+art-pipeline/runs/
+art-pipeline/batch_run*/
+art-pipeline/anchors_*/
+art-pipeline/masters_new_anchors/
+art-pipeline/lora/venv/
+art-pipeline/lora/base/
+art-pipeline/lora/output/
+art-pipeline/lora/sd-scripts/
+art-pipeline/lora/eval_refs/
+art-pipeline/archive/logs/*.pdf
+art-pipeline/archive/logs/*.jpg
+art-pipeline/archive/style_review/*.jpg
+!art-pipeline/archive/style_review/combo_set.jpg
+!art-pipeline/archive/style_review/depth_ladder.jpg
+!art-pipeline/archive/style_review/founders_proposal.jpg
+!art-pipeline/archive/style_review/gap_classes.jpg
+!art-pipeline/archive/style_review/hare_marten_goat.jpg
+!art-pipeline/archive/style_review/matched_sets.jpg
+!art-pipeline/archive/style_review/three_sets.jpg
 art-pipeline/vetting/thumbs/
 art-pipeline/vetting/sheets/
 art-pipeline/batch_run/
-art-pipeline/lora/eval_refs/
 art-pipeline/funnel-venv/
 art-pipeline/vetting/funnel_cache/
 art-pipeline/vetting/axis_thumbs/

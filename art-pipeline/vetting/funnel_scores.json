@@ -1,0 +1,2442 @@
+{
+ "wood_duck": [
+  {
+   "photo_id": 116041318,
+   "score": 1.5590000000000002,
+   "fail": null
+  },
+  {
+   "photo_id": 661919361,
+   "score": 1.5190000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 189145490,
+   "score": 1.4829999999999999,
+   "fail": null
+  },
+  {
+   "photo_id": 355078425,
+   "score": 1.393,
+   "fail": null
+  },
+  {
+   "photo_id": 357513228,
+   "score": 1.331,
+   "fail": null
+  },
+  {
+   "photo_id": 161392051,
+   "score": 0.6990000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 666222630,
+   "score": 0.477,
+   "fail": null
+  },
+  {
+   "photo_id": 346246720,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 274995282,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 195503590,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 195513146,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 185575703,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 714155402,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 714023217,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713913015,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713849798,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 713966127,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713599838,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713540784,
+   "score": -10.0,
+   "fail": "no animal"
+  },
+  {
+   "photo_id": 713540754,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713348872,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 713348845,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 712868982,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 712831031,
+   "score": -10.0,
+   "fail": "multiple animals"
+  }
+ ],
+ "northern_shoveler": [
+  {
+   "photo_id": 684049351,
+   "score": 1.945,
+   "fail": null
+  },
+  {
+   "photo_id": 112302366,
+   "score": 1.814,
+   "fail": null
+  },
+  {
+   "photo_id": 342842647,
+   "score": 1.724,
+   "fail": null
+  },
+  {
+   "photo_id": 339740672,
+   "score": 1.5,
+   "fail": null
+  },
+  {
+   "photo_id": 112281590,
+   "score": 1.479,
+   "fail": null
+  },
+  {
+   "photo_id": 5654279,
+   "score": 1.331,
+   "fail": null
+  },
+  {
+   "photo_id": 471047143,
+   "score": 1.3250000000000002,
+   "fail": null
+  },
+  {
+   "photo_id": 684046694,
+   "score": 1.27,
+   "fail": null
+  },
+  {
+   "photo_id": 103688662,
+   "score": 1.161,
+   "fail": null
+  },
+  {
+   "photo_id": 605795875,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 355723746,
+   "score": -10.0,
+   "fail": "blurry"
+  },
+  {
+   "photo_id": 173324457,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 257489504,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 180273933,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 712405406,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 707642322,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 706789490,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 705517970,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 702587935,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 701197054,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 697956462,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 697955783,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 682389591,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 674443693,
+   "score": -10.0,
+   "fail": "multiple animals"
+  }
+ ],
+ "northern_pintail": [
+  {
+   "photo_id": 403026873,
+   "score": 1.6669999999999998,
+   "fail": null
+  },
+  {
+   "photo_id": 260957742,
+   "score": 1.528,
+   "fail": null
+  },
+  {
+   "photo_id": 61433634,
+   "score": 1.4729999999999999,
+   "fail": null
+  },
+  {
+   "photo_id": 668555830,
+   "score": 1.216,
+   "fail": null
+  },
+  {
+   "photo_id": 2821159,
+   "score": 1.178,
+   "fail": null
+  },
+  {
+   "photo_id": 707203379,
+   "score": 1.178,
+   "fail": null
+  },
+  {
+   "photo_id": 107403204,
+   "score": 0.746,
+   "fail": null
+  },
+  {
+   "photo_id": 353707135,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 182039479,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 341358020,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 462046363,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 464545165,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 341358039,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 12244812,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 703496684,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 701658777,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 693139301,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 683004837,
+   "score": -10.0,
+   "fail": "blurry"
+  },
+  {
+   "photo_id": 678053870,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 676851097,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 676738794,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 672354120,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 668448328,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 666264243,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  }
+ ],
+ "american_wigeon": [
+  {
+   "photo_id": 181378727,
+   "score": 1.974,
+   "fail": null
+  },
+  {
+   "photo_id": 13619358,
+   "score": 1.765,
+   "fail": null
+  },
+  {
+   "photo_id": 12858667,
+   "score": 1.629,
+   "fail": null
+  },
+  {
+   "photo_id": 459366773,
+   "score": 1.37,
+   "fail": null
+  },
+  {
+   "photo_id": 402608432,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 114696762,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 179665616,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 288752693,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 173324438,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 604000340,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 604000325,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 61983951,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 712427868,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 708537949,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 703496695,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 703022688,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 692490947,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 691639168,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 689499039,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 687866472,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 677538995,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 677512597,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 676446629,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 673096450,
+   "score": -10.0,
+   "fail": "multiple animals"
+  }
+ ],
+ "green-winged_teal": [
+  {
+   "photo_id": 176951502,
+   "score": 2.049,
+   "fail": null
+  },
+  {
+   "photo_id": 130420221,
+   "score": 1.92,
+   "fail": null
+  },
+  {
+   "photo_id": 708477246,
+   "score": 1.3039999999999998,
+   "fail": null
+  },
+  {
+   "photo_id": 108186568,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 608709086,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 178967596,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 608802788,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 459155599,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 265182122,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 344287880,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 605228340,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 105457794,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 449778446,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 708477693,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 705517672,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 697200143,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 693511298,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 689320638,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 687953273,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 687936171,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 687936166,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 687936168,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 687557679,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 684999790,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  }
+ ],
+ "american_robin": [
+  {
+   "photo_id": 59355578,
+   "score": 1.582,
+   "fail": null
+  },
+  {
+   "photo_id": 361987379,
+   "score": 1.456,
+   "fail": null
+  },
+  {
+   "photo_id": 465521426,
+   "score": 1.262,
+   "fail": null
+  },
+  {
+   "photo_id": 714117920,
+   "score": 0.916,
+   "fail": null
+  },
+  {
+   "photo_id": 713960384,
+   "score": 0.882,
+   "fail": null
+  },
+  {
+   "photo_id": 190992952,
+   "score": 0.536,
+   "fail": null
+  },
+  {
+   "photo_id": 100961420,
+   "score": -0.9189999999999999,
+   "fail": null
+  },
+  {
+   "photo_id": 370528121,
+   "score": -10.0,
+   "fail": "no animal"
+  },
+  {
+   "photo_id": 190120595,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 644663545,
+   "score": -10.0,
+   "fail": "blurry"
+  },
+  {
+   "photo_id": 137799056,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 18317130,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 344132941,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 157278949,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 714268880,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713936081,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 713935037,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713740368,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713703527,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713575262,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713571955,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713451747,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 713450569,
+   "score": -10.0,
+   "fail": "no animal"
+  },
+  {
+   "photo_id": 713450354,
+   "score": -10.0,
+   "fail": "no animal"
+  }
+ ],
+ "great_egret": [
+  {
+   "photo_id": 228311786,
+   "score": 1.3559999999999999,
+   "fail": null
+  },
+  {
+   "photo_id": 47058196,
+   "score": 1.292,
+   "fail": null
+  },
+  {
+   "photo_id": 512622421,
+   "score": 1.137,
+   "fail": null
+  },
+  {
+   "photo_id": 713840393,
+   "score": 1.102,
+   "fail": null
+  },
+  {
+   "photo_id": 50547563,
+   "score": 1.079,
+   "fail": null
+  },
+  {
+   "photo_id": 714017857,
+   "score": 1.021,
+   "fail": null
+  },
+  {
+   "photo_id": 714282537,
+   "score": 0.883,
+   "fail": null
+  },
+  {
+   "photo_id": 123196245,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 187489218,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 270960509,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 600057167,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 359337190,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 176315788,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 195512518,
+   "score": -10.0,
+   "fail": "blurry"
+  },
+  {
+   "photo_id": 91859442,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 714282613,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 714149446,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 714117842,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 714085316,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 714085135,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 714031948,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 713783449,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713763014,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713613568,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  }
+ ],
+ "downy_woodpecker": [
+  {
+   "photo_id": 31579590,
+   "score": 1.683,
+   "fail": null
+  },
+  {
+   "photo_id": 713413223,
+   "score": 1.577,
+   "fail": null
+  },
+  {
+   "photo_id": 458395355,
+   "score": 1.464,
+   "fail": null
+  },
+  {
+   "photo_id": 713062418,
+   "score": 1.4080000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 712837198,
+   "score": 1.376,
+   "fail": null
+  },
+  {
+   "photo_id": 635214136,
+   "score": 1.2690000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 605442925,
+   "score": 1.106,
+   "fail": null
+  },
+  {
+   "photo_id": 625789652,
+   "score": 0.679,
+   "fail": null
+  },
+  {
+   "photo_id": 169943089,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 185431996,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 182236304,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 299227026,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 298313537,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 473436459,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 613330861,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 714136201,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713903163,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713765362,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713480895,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713417217,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 712895521,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 712774401,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 712774482,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 712774274,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  }
+ ],
+ "mule_deer": [
+  {
+   "photo_id": 713493226,
+   "score": 0.8640000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 595176639,
+   "score": 0.781,
+   "fail": null
+  },
+  {
+   "photo_id": 713011247,
+   "score": 0.754,
+   "fail": null
+  },
+  {
+   "photo_id": 172829065,
+   "score": 0.5630000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 414988609,
+   "score": 0.538,
+   "fail": null
+  },
+  {
+   "photo_id": 713543237,
+   "score": 0.297,
+   "fail": null
+  },
+  {
+   "photo_id": 616385073,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 246604447,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 416799138,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 411060511,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 167851101,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 34815592,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 564337477,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 5888568,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 602859030,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 713667156,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713567468,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713507985,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 713284836,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 713019795,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713019766,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713019727,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713019707,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 712978559,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  }
+ ],
+ "muskrat": [
+  {
+   "photo_id": 711861445,
+   "score": 1.464,
+   "fail": null
+  },
+  {
+   "photo_id": 516417857,
+   "score": 1.196,
+   "fail": null
+  },
+  {
+   "photo_id": 14523326,
+   "score": 0.957,
+   "fail": null
+  },
+  {
+   "photo_id": 708323593,
+   "score": 0.8250000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 130384379,
+   "score": 0.7340000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 465962925,
+   "score": 0.164,
+   "fail": null
+  },
+  {
+   "photo_id": 332374139,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 147844114,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 659002925,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 199570496,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 164817134,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 119203664,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 476642919,
+   "score": -10.0,
+   "fail": "no animal"
+  },
+  {
+   "photo_id": 525392524,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 712729034,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 711578742,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 711128484,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 710392925,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 710156994,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 709409190,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 709409004,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 709347843,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 709298293,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 708545129,
+   "score": -10.0,
+   "fail": "no animal"
+  }
+ ],
+ "california_ground_squirrel": [
+  {
+   "photo_id": 270635081,
+   "score": 1.196,
+   "fail": null
+  },
+  {
+   "photo_id": 187319601,
+   "score": 0.886,
+   "fail": null
+  },
+  {
+   "photo_id": 564340276,
+   "score": 0.866,
+   "fail": null
+  },
+  {
+   "photo_id": 711223133,
+   "score": 0.852,
+   "fail": null
+  },
+  {
+   "photo_id": 712919451,
+   "score": 0.742,
+   "fail": null
+  },
+  {
+   "photo_id": 759411,
+   "score": 0.629,
+   "fail": null
+  },
+  {
+   "photo_id": 709256743,
+   "score": 0.598,
+   "fail": null
+  },
+  {
+   "photo_id": 712223518,
+   "score": 0.562,
+   "fail": null
+  },
+  {
+   "photo_id": 711693229,
+   "score": 0.524,
+   "fail": null
+  },
+  {
+   "photo_id": 318722949,
+   "score": 0.34,
+   "fail": null
+  },
+  {
+   "photo_id": 167230642,
+   "score": 0.052,
+   "fail": null
+  },
+  {
+   "photo_id": 104658973,
+   "score": -0.601,
+   "fail": null
+  },
+  {
+   "photo_id": 206836027,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 69526,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 621081897,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 211318873,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 574427514,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713358261,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 712978535,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 712916415,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 711693080,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 709717443,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 709716057,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 708792895,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  }
+ ],
+ "american_pika": [
+  {
+   "photo_id": 553527839,
+   "score": 1.281,
+   "fail": null
+  },
+  {
+   "photo_id": 216102387,
+   "score": 1.161,
+   "fail": null
+  },
+  {
+   "photo_id": 566893759,
+   "score": 0.9339999999999999,
+   "fail": null
+  },
+  {
+   "photo_id": 96018,
+   "score": 0.9089999999999999,
+   "fail": null
+  },
+  {
+   "photo_id": 44575496,
+   "score": 0.7979999999999999,
+   "fail": null
+  },
+  {
+   "photo_id": 68,
+   "score": 0.7330000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 576126020,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 423055,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 42239598,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 576125010,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 439910255,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 87951266,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713433149,
+   "score": -10.0,
+   "fail": "no animal"
+  },
+  {
+   "photo_id": 712089077,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 710760481,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 710131535,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 709323056,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 709248287,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 709219200,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 707389859,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 706448325,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 706438864,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 706436576,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 706427931,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  }
+ ],
+ "western_fence_lizard": [
+  {
+   "photo_id": 16514179,
+   "score": 1.395,
+   "fail": null
+  },
+  {
+   "photo_id": 134760538,
+   "score": 1.3800000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 713574852,
+   "score": 1.29,
+   "fail": null
+  },
+  {
+   "photo_id": 713553628,
+   "score": 1.1700000000000002,
+   "fail": null
+  },
+  {
+   "photo_id": 713521923,
+   "score": 1.07,
+   "fail": null
+  },
+  {
+   "photo_id": 713544651,
+   "score": 1.031,
+   "fail": null
+  },
+  {
+   "photo_id": 713531059,
+   "score": 1.0190000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 33735112,
+   "score": 0.871,
+   "fail": null
+  },
+  {
+   "photo_id": 714265977,
+   "score": 0.8640000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 299382499,
+   "score": 0.764,
+   "fail": null
+  },
+  {
+   "photo_id": 146025248,
+   "score": 0.63,
+   "fail": null
+  },
+  {
+   "photo_id": 579613074,
+   "score": 0.553,
+   "fail": null
+  },
+  {
+   "photo_id": 120158487,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 9589407,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 190738666,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 47489788,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 3918205,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 651127528,
+   "score": -10.0,
+   "fail": "animal overfills frame"
+  },
+  {
+   "photo_id": 714250367,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713609863,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713586637,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713586602,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713557386,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 713544579,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  }
+ ],
+ "pond_slider": [
+  {
+   "photo_id": 711519006,
+   "score": 1.3780000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 64270279,
+   "score": 1.2790000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 712302666,
+   "score": 1.066,
+   "fail": null
+  },
+  {
+   "photo_id": 713349657,
+   "score": 1.0630000000000002,
+   "fail": null
+  },
+  {
+   "photo_id": 714194027,
+   "score": 1.047,
+   "fail": null
+  },
+  {
+   "photo_id": 66948582,
+   "score": 0.664,
+   "fail": null
+  },
+  {
+   "photo_id": 5518581,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 20328829,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 520708759,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 192391854,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 351758482,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 309221669,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 304869291,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 421027415,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 378378800,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 17590929,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 713362855,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713349573,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713323654,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 713304824,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 712730406,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 711738373,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 711700563,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 711698795,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  }
+ ],
+ "gopher_snake": [
+  {
+   "photo_id": 323592233,
+   "score": 1.573,
+   "fail": null
+  },
+  {
+   "photo_id": 710781403,
+   "score": 1.347,
+   "fail": null
+  },
+  {
+   "photo_id": 712248784,
+   "score": 0.839,
+   "fail": null
+  },
+  {
+   "photo_id": 517919973,
+   "score": 0.829,
+   "fail": null
+  },
+  {
+   "photo_id": 508144892,
+   "score": 0.7430000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 712248723,
+   "score": 0.614,
+   "fail": null
+  },
+  {
+   "photo_id": 712964563,
+   "score": 0.45499999999999996,
+   "fail": null
+  },
+  {
+   "photo_id": 710743190,
+   "score": 0.24,
+   "fail": null
+  },
+  {
+   "photo_id": 463023670,
+   "score": -0.602,
+   "fail": null
+  },
+  {
+   "photo_id": 25171938,
+   "score": -0.766,
+   "fail": null
+  },
+  {
+   "photo_id": 511282342,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 293179436,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 667566710,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 72288799,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 197127210,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 488531833,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 93192620,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 712967772,
+   "score": -10.0,
+   "fail": "no animal"
+  },
+  {
+   "photo_id": 712967584,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 712160456,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 710432853,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 709448498,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 708819323,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 707612033,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  }
+ ],
+ "common_watersnake": [
+  {
+   "photo_id": 712730926,
+   "score": 1.288,
+   "fail": null
+  },
+  {
+   "photo_id": 278839486,
+   "score": 1.163,
+   "fail": null
+  },
+  {
+   "photo_id": 711202389,
+   "score": 1.162,
+   "fail": null
+  },
+  {
+   "photo_id": 505334889,
+   "score": 1.124,
+   "fail": null
+  },
+  {
+   "photo_id": 15458841,
+   "score": 1.018,
+   "fail": null
+  },
+  {
+   "photo_id": 710623384,
+   "score": 0.957,
+   "fail": null
+  },
+  {
+   "photo_id": 117650561,
+   "score": 0.908,
+   "fail": null
+  },
+  {
+   "photo_id": 711866818,
+   "score": 0.74,
+   "fail": null
+  },
+  {
+   "photo_id": 95043838,
+   "score": 0.6519999999999999,
+   "fail": null
+  },
+  {
+   "photo_id": 129941439,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 569682807,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 16623972,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 507423766,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 286763357,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 22532574,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 199318889,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 713909979,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713430185,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 712731014,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 712329937,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 712078879,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 712069599,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 711661514,
+   "score": -10.0,
+   "fail": "no animal"
+  },
+  {
+   "photo_id": 711189267,
+   "score": -10.0,
+   "fail": "animal overfills frame"
+  }
+ ],
+ "gopher_tortoise": [
+  {
+   "photo_id": 707464186,
+   "score": 1.7169999999999999,
+   "fail": null
+  },
+  {
+   "photo_id": 468566331,
+   "score": 1.5939999999999999,
+   "fail": null
+  },
+  {
+   "photo_id": 256804846,
+   "score": 1.4829999999999999,
+   "fail": null
+  },
+  {
+   "photo_id": 237429198,
+   "score": 1.479,
+   "fail": null
+  },
+  {
+   "photo_id": 712190917,
+   "score": 1.391,
+   "fail": null
+  },
+  {
+   "photo_id": 242222928,
+   "score": 1.369,
+   "fail": null
+  },
+  {
+   "photo_id": 118019897,
+   "score": 1.331,
+   "fail": null
+  },
+  {
+   "photo_id": 707556247,
+   "score": 1.232,
+   "fail": null
+  },
+  {
+   "photo_id": 110005701,
+   "score": 1.1700000000000002,
+   "fail": null
+  },
+  {
+   "photo_id": 702732278,
+   "score": 1.0939999999999999,
+   "fail": null
+  },
+  {
+   "photo_id": 51781424,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 32439507,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 23508192,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 139047729,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 114703343,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 395980509,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 714151765,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 712196658,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 709414155,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 705446719,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 705254494,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 704351558,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 703728535,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 702732174,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  }
+ ],
+ "american_toad": [
+  {
+   "photo_id": 291439207,
+   "score": 1.246,
+   "fail": null
+  },
+  {
+   "photo_id": 95383959,
+   "score": 1.22,
+   "fail": null
+  },
+  {
+   "photo_id": 713987356,
+   "score": 1.206,
+   "fail": null
+  },
+  {
+   "photo_id": 713537411,
+   "score": 1.2,
+   "fail": null
+  },
+  {
+   "photo_id": 714075373,
+   "score": 1.106,
+   "fail": null
+  },
+  {
+   "photo_id": 46547792,
+   "score": 0.98,
+   "fail": null
+  },
+  {
+   "photo_id": 572085247,
+   "score": 0.8740000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 156931883,
+   "score": 0.7829999999999999,
+   "fail": null
+  },
+  {
+   "photo_id": 206162493,
+   "score": 0.764,
+   "fail": null
+  },
+  {
+   "photo_id": 545339298,
+   "score": 0.63,
+   "fail": null
+  },
+  {
+   "photo_id": 713297084,
+   "score": 0.511,
+   "fail": null
+  },
+  {
+   "photo_id": 714159159,
+   "score": 0.446,
+   "fail": null
+  },
+  {
+   "photo_id": 429012182,
+   "score": -0.08,
+   "fail": null
+  },
+  {
+   "photo_id": 35315010,
+   "score": -10.0,
+   "fail": "animal overfills frame"
+  },
+  {
+   "photo_id": 138552412,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 80874003,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 268581398,
+   "score": -10.0,
+   "fail": "animal overfills frame"
+  },
+  {
+   "photo_id": 714222697,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713665287,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 713529448,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713494192,
+   "score": -10.0,
+   "fail": "no animal"
+  },
+  {
+   "photo_id": 713499824,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 713471059,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713194505,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  }
+ ],
+ "spring_peeper": [
+  {
+   "photo_id": 711425033,
+   "score": 1.2650000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 94628910,
+   "score": 1.178,
+   "fail": null
+  },
+  {
+   "photo_id": 712957151,
+   "score": 1.173,
+   "fail": null
+  },
+  {
+   "photo_id": 145242957,
+   "score": 1.0879999999999999,
+   "fail": null
+  },
+  {
+   "photo_id": 175917423,
+   "score": 1.045,
+   "fail": null
+  },
+  {
+   "photo_id": 208482353,
+   "score": 1.036,
+   "fail": null
+  },
+  {
+   "photo_id": 714020033,
+   "score": 0.948,
+   "fail": null
+  },
+  {
+   "photo_id": 714093071,
+   "score": 0.925,
+   "fail": null
+  },
+  {
+   "photo_id": 393833866,
+   "score": 0.8260000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 713332612,
+   "score": 0.741,
+   "fail": null
+  },
+  {
+   "photo_id": 711867713,
+   "score": 0.636,
+   "fail": null
+  },
+  {
+   "photo_id": 712440233,
+   "score": 0.515,
+   "fail": null
+  },
+  {
+   "photo_id": 489288668,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 262522141,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 189273975,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 220945267,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 96830148,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 406371498,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 299062524,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713878521,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 713212897,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 713172739,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 712973615,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 712624179,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  }
+ ],
+ "eastern_red-backed_salamander": [
+  {
+   "photo_id": 273453455,
+   "score": 1.463,
+   "fail": null
+  },
+  {
+   "photo_id": 706675203,
+   "score": 1.3450000000000002,
+   "fail": null
+  },
+  {
+   "photo_id": 705223923,
+   "score": 1.0979999999999999,
+   "fail": null
+  },
+  {
+   "photo_id": 708646072,
+   "score": 1.061,
+   "fail": null
+  },
+  {
+   "photo_id": 711258961,
+   "score": 1.006,
+   "fail": null
+  },
+  {
+   "photo_id": 258089771,
+   "score": 0.9139999999999999,
+   "fail": null
+  },
+  {
+   "photo_id": 350859696,
+   "score": 0.867,
+   "fail": null
+  },
+  {
+   "photo_id": 164124431,
+   "score": 0.7630000000000001,
+   "fail": null
+  },
+  {
+   "photo_id": 426383684,
+   "score": 0.746,
+   "fail": null
+  },
+  {
+   "photo_id": 705718651,
+   "score": 0.65,
+   "fail": null
+  },
+  {
+   "photo_id": 26664680,
+   "score": -0.37,
+   "fail": null
+  },
+  {
+   "photo_id": 253099346,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 460524219,
+   "score": -10.0,
+   "fail": "no animal"
+  },
+  {
+   "photo_id": 179205777,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 123199084,
+   "score": -10.0,
+   "fail": "animal cut off by image edge"
+  },
+  {
+   "photo_id": 117430055,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 105440588,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 711817649,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 709762007,
+   "score": -10.0,
+   "fail": "multiple animals"
+  },
+  {
+   "photo_id": 709711712,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 706244981,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 705290641,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 705289765,
+   "score": -10.0,
+   "fail": "animal too small in frame"
+  },
+  {
+   "photo_id": 705014823,
+   "score": -10.0,
+   "fail": "multiple animals"
+  }
+ ]
+}

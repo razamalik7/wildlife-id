@@ -1,0 +1,92 @@
+[
+  [
+    "01_long_tailed_weasel",
+    "Long-tailed Weasel",
+    "Neogale frenata",
+    1264431,
+    "Mammalia",
+    "mammal_ground",
+    false
+  ],
+  [
+    "02_hoary_marmot",
+    "Hoary Marmot",
+    "Marmota caligata",
+    46087,
+    "Mammalia",
+    "mammal_ground",
+    false
+  ],
+  [
+    "03_steller_sea_lion",
+    "Steller Sea Lion",
+    "Eumetopias jubatus",
+    41755,
+    "Mammalia",
+    "mammal_ground",
+    false
+  ],
+  [
+    "04_eastern_bluebird",
+    "Eastern Bluebird",
+    "Sialia sialis",
+    12942,
+    "Aves",
+    "bird_perched",
+    true
+  ],
+  [
+    "05_killdeer",
+    "Killdeer",
+    "Charadrius vociferus",
+    4793,
+    "Aves",
+    "bird_ground",
+    false
+  ],
+  [
+    "06_red_shouldered_hawk",
+    "Red-shouldered Hawk",
+    "Buteo lineatus",
+    5206,
+    "Aves",
+    "bird_perched",
+    true
+  ],
+  [
+    "07_common_five_lined_skink",
+    "Common Five-lined Skink",
+    "Plestiodon fasciatus",
+    73788,
+    "Reptilia",
+    "lizard",
+    false
+  ],
+  [
+    "08_western_ribbon_snake",
+    "Western Ribbon Snake",
+    "Thamnophis proximus",
+    60342,
+    "Reptilia",
+    "snake",
+    false
+  ],
+  [
+    "09_marbled_salamander",
+    "Marbled Salamander",
+    "Ambystoma opacum",
+    26736,
+    "Amphibia",
+    "amphibian",
+    false
+  ],
+  [
+    "10_spotted_eagle_ray",
+    "Spotted Eagle Ray",
+    "Aetobatus narinari",
+    49297,
+    "Elasmobranchii",
+    "shark_ray",
+    false
+  ]
+]

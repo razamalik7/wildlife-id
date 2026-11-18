@@ -7,85 +7,46 @@ sdk: docker
 app_port: 7860
 ---
 
-# aniML vision 🦁
+# AnimlVision (`wildlife-id`)
 
-A robust, full-stack application that uses **Computer Vision** (PyTorch) to identify wildlife species and a **Real-time Backend Proxy** to locate recent sightings in national parks.
+Full-stack wildlife identification monorepo combining a **Next.js 16 Anidex web app**, a **PyTorch hierarchical vision ensemble API (FastAPI on Hugging Face Spaces)**, a **1,777-species North American expansion catalog**, and an automated **SDXL v7 wildlife illustration pipeline**.
 
-![Project Banner](https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?q=80&w=2070&auto=format&fit=crop)
+## Live Deployments
+- **Frontend (Vercel):** [https://wildlife-id.vercel.app](https://wildlife-id.vercel.app)
+- **Inference API (Hugging Face Spaces):** [https://huggingface.co/spaces/raza44/aniML](https://huggingface.co/spaces/raza44/aniML)
 
-## 🚀 Live Demo
-- **Frontend**: [https://wildlife-id.vercel.app](https://wildlife-id.vercel.app) (Replace with your Vercel URL)
-- **AI Backend**: [https://huggingface.co/spaces/raza44/aniML](https://huggingface.co/spaces/raza44/aniML)
+## Repository Map
 
-## 🛠️ Tech Stack
+| Directory / File | Role | Guide |
+|---|---|---|
+| `animl.py` | Top-level developer CLI (`status`, `api`, `web`, `art`, `expansion`, `parks`) | — |
+| `frontend/` | Next.js 16 + Tailwind CSS v4 + Leaflet Anidex, camera ID & park maps | [package.json](frontend/package.json) |
+| `api/` | Production FastAPI backend + EfficientNet-B3 / ConvNeXt late-fusion inference | [api/README.md](api/README.md) |
+| `art-pipeline/` | Automated `v7` LoRA + MultiControlNet illustration & `v3` outline pipeline | [art-pipeline/README.md](art-pipeline/README.md) |
+| `expansion/` | 1,777-species expansion roster, scoping logic & observation counts | [expansion/README.md](expansion/README.md) |
+| `scripts/` | Offline park ID, NPS validation & taxonomy maintenance scripts | [scripts/README.md](scripts/README.md) |
+| `data/` | SQLite / Supabase schemas & local reference datasets | — |
+| `docs/` | System architecture & full directory structure documentation | [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) |
+| `Dockerfile` | Hugging Face Space Docker runtime (copies only `api/` runtime + `parks.json`) | [Dockerfile](Dockerfile) |
 
-### Frontend
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Maps**: Leaflet.js
-- **Auth**: Supabase Auth
+## Quickstart
 
-### Backend & AI
-- **API**: FastAPI (Python)
-- **Computer Vision**: PyTorch, TorchVision
-- **Architecture**: Late Fusion Ensemble (EfficientNet-B3 + ConvNeXt)
-- **Hosting**: Hugging Face Spaces (Docker)
-
-### Data
-- **Database**: Supabase (PostgreSQL)
-- **External API**: iNaturalist (Real-time Observation Data)
-
-## 💡 Key Features
-
-### 1. AI Species Identification
-Upload an image of an animal, and the custom-trained ensemble model (trained on 100+ North American species) identifies it with expert-level accuracy. It handles confusion pairs (e.g., Wolf vs. Coyote) using a specialized **Expert Override** logic.
-
-### 2. "Where to See" (Real-time Park Locator)
-Instead of relying on stale databases, the app uses a custom **Backend Proxy** to:
-- Fetch the last 600 raw observations of a species from iNaturalist.
-- Handle API rate-limiting and pagination securely.
-- Aggregate observations by valid park boundaries (National Parks).
-- Sort active hotspots by distance from the user.
-
-### 3. Smart Caching
-Uses Supabase to cache common queries, ensuring the application remains fast and responsive while minimizing external API load.
-
-## 🏗️ Architecture
-
-```mermaid
-graph LR
-    User[User] -->|Upload Image| FE[Next.js Frontend]
-    FE -->|POST /predict| AI["FastAPI Service (Hugging Face)"]
-    AI -->|Inference| Model[PyTorch Ensemble]
-    
-    User -->|Where to see?| FE
-    FE -->|GET /parks/recent| AI
-    AI -->|Proxy Request| iNat[iNaturalist API]
-    AI -->|Cache Hit/Miss| DB[(Supabase)]
-```
-
-## 📦 Local Development
-
-### 1. Clone & Install
+Check overall repo health (CPU-only):
 ```bash
-git clone https://github.com/razamalik7/wildlife-id.git
-cd wildlife-id
+python animl.py status
 ```
 
-### 2. Backend (FastAPI)
+Run the backend API (`http://127.0.0.1:8000`) and frontend (`http://localhost:3000`):
 ```bash
-cd api
-pip install -r requirements.txt
-python -m uvicorn main:app --reload
+python animl.py api
+python animl.py web
 ```
 
-### 3. Frontend (Next.js)
+Check art pipeline status or launch an unseen species illustration batch:
 ```bash
-cd frontend
-npm install
-npm run dev
+python animl.py art status
+python animl.py art run --batch unseen_batch2 --manifest art-pipeline/configs/batches/unseen_10_batch2.json --phase all
 ```
 
-## 📄 License
-MIT
+## License
+[MIT](LICENSE)
