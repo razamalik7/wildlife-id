@@ -3,16 +3,16 @@
 import { MapContainer, TileLayer, Marker, useMapEvents, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { useState, useEffect, useRef } from "react";
-import { MapPin, Check } from "lucide-react";
+import { useState, useEffect } from "react";
+import { MapPin, Check, Search } from "lucide-react";
+import { ParkRecord } from "@/lib/ecosystems";
 
-// Custom pin icon with a modern look
 const pinIcon = L.divIcon({
     className: "custom-pin-icon",
     html: `
     <div style="
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -20,62 +20,67 @@ const pinIcon = L.divIcon({
     ">
       <div style="
         position: absolute;
-        width: 60px;
-        height: 60px;
-        background: rgba(16, 185, 129, 0.2);
+        width: 58px;
+        height: 58px;
+        background: rgba(200, 75, 49, 0.25);
         border-radius: 50%;
         animation: pulse 2s infinite;
       "></div>
       <div style="
-        width: 20px;
-        height: 20px;
-        background: #10b981;
-        border: 3px solid white;
+        width: 22px;
+        height: 22px;
+        background: #C84B31;
+        border: 3px solid #FBF8F1;
+        outline: 2px solid #162A20;
         border-radius: 50%;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        box-shadow: 2px 2px 0px #162A20;
       "></div>
     </div>
     <style>
       @keyframes pulse {
         0% { transform: scale(0.8); opacity: 1; }
-        50% { transform: scale(1.2); opacity: 0.5; }
+        50% { transform: scale(1.25); opacity: 0.45; }
         100% { transform: scale(0.8); opacity: 1; }
       }
     </style>
   `,
-    iconSize: [40, 40],
-    iconAnchor: [20, 20],
+    iconSize: [42, 42],
+    iconAnchor: [21, 21],
 });
 
 interface Props {
     initialLat?: number;
     initialLng?: number;
     photoPreview?: string;
-    isConfirmed: boolean;  // Controlled by parent
+    isConfirmed: boolean;
     onConfirm: (lat: number, lng: number) => void;
-    onLocationChange?: () => void;  // Called when pin moves (invalidates confirmation)
+    onLocationChange?: () => void;
 }
 
-// Fix gray map bug
-function MapResizer() {
+function MapController({ flyTarget }: { flyTarget: [number, number] | null }) {
     const map = useMap();
     useEffect(() => {
         setTimeout(() => map.invalidateSize(), 100);
     }, [map]);
+
+    useEffect(() => {
+        if (flyTarget) {
+            map.flyTo(flyTarget, 10, { duration: 1.1 });
+        }
+    }, [flyTarget, map]);
+
     return null;
 }
 
-// Draggable marker handler
 function DraggableMarker({
     position,
     setPosition,
-    onMove
+    onMove,
 }: {
     position: L.LatLng;
     setPosition: (pos: L.LatLng) => void;
     onMove: () => void;
 }) {
-    // Also update on map click
     useMapEvents({
         click(e) {
             setPosition(e.latlng);
@@ -107,21 +112,48 @@ export default function ObservationLocationPicker({
     photoPreview,
     isConfirmed,
     onConfirm,
-    onLocationChange
+    onLocationChange,
 }: Props) {
-    // Default to center of US if no initial location
     const defaultLat = initialLat ?? 39.8283;
     const defaultLng = initialLng ?? -98.5795;
 
     const [position, setPosition] = useState<L.LatLng>(
         new L.LatLng(defaultLat, defaultLng)
     );
+    const [parks, setParks] = useState<ParkRecord[]>([]);
+    const [parkQuery, setParkQuery] = useState("");
+    const [flyTarget, setFlyTarget] = useState<[number, number] | null>(null);
+
+    useEffect(() => {
+        fetch("/parks.json")
+            .then((r) => r.json())
+            .then((data) => setParks(data))
+            .catch(() => {});
+    }, []);
+
+    const matchingParks =
+        parkQuery.trim().length > 1
+            ? parks
+                  .filter(
+                      (p) =>
+                          p.name.toLowerCase().includes(parkQuery.toLowerCase()) ||
+                          p.state.toLowerCase().includes(parkQuery.toLowerCase())
+                  )
+                  .slice(0, 6)
+            : [];
 
     const handlePinMove = () => {
-        // Notify parent that pin moved (invalidates confirmation)
         if (onLocationChange) {
             onLocationChange();
         }
+    };
+
+    const handleSelectPark = (park: ParkRecord) => {
+        const nextPos = new L.LatLng(park.lat, park.lng);
+        setPosition(nextPos);
+        setFlyTarget([park.lat, park.lng]);
+        setParkQuery("");
+        handlePinMove();
     };
 
     const handleConfirm = () => {
@@ -129,49 +161,85 @@ export default function ObservationLocationPicker({
     };
 
     return (
-        <div className="h-full w-full flex flex-col bg-stone-900 relative">
-            {/* Header */}
-            <div className="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-stone-900/95 via-stone-900/80 to-transparent p-4 pb-8">
+        <div className="h-full w-full flex flex-col bg-[#FBF8F1] relative border-2 border-[#162A20] rounded-2xl overflow-hidden tactile-shadow">
+            {/* Top Ranger Bar + Quick Park Search */}
+            <div className="bg-[#F7F3E8] border-b-2 border-[#162A20] p-3.5 z-20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                 <div className="flex items-center gap-3">
-                    <div className={`${isConfirmed ? 'bg-emerald-500' : 'bg-amber-500'} p-2 rounded-xl shadow-lg transition-colors`}>
-                        {isConfirmed ? <Check className="w-5 h-5 text-white" /> : <MapPin className="w-5 h-5 text-white" />}
-                    </div>
+                    {photoPreview && (
+                        <img
+                            src={photoPreview}
+                            alt="Field capture"
+                            className="w-12 h-12 object-cover rounded-lg border-2 border-[#162A20] tactile-shadow-sm shrink-0"
+                        />
+                    )}
                     <div>
-                        <h2 className="text-white font-bold text-lg">
-                            {isConfirmed ? 'Location Confirmed!' : 'Where did you spot this?'}
-                        </h2>
-                        <p className="text-stone-400 text-xs">
+                        <div className="flex items-center gap-2">
+                            <span
+                                className={`px-2 py-0.5 rounded-full text-[10px] font-mono-tech font-extrabold uppercase border border-[#162A20] ${
+                                    isConfirmed
+                                        ? "bg-[#234733] text-[#F4DE9B]"
+                                        : "bg-[#F4DE9B] text-[#162A20]"
+                                }`}
+                            >
+                                {isConfirmed ? "✓ STAMP LOCKED" : "STEP 02 · PIN SIGHTING"}
+                            </span>
+                            <span className="font-mono-tech text-xs font-bold text-[#5A655E]">
+                                {position.lat.toFixed(3)}°N, {Math.abs(position.lng).toFixed(3)}°W
+                            </span>
+                        </div>
+                        <h2 className="font-editorial text-2xl text-[#162A20] leading-tight mt-0.5">
                             {isConfirmed
-                                ? `${position.lat.toFixed(4)}, ${position.lng.toFixed(4)}`
-                                : 'Drag the pin or tap the map • Approximate is fine!'}
-                        </p>
+                                ? "Observation Coordinates Locked"
+                                : "Where did you spot this animal?"}
+                        </h2>
                     </div>
+                </div>
+
+                {/* Quick Park Search Box */}
+                <div className="relative w-full sm:w-64">
+                    <Search
+                        size={14}
+                        className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5A655E]"
+                    />
+                    <input
+                        type="text"
+                        value={parkQuery}
+                        onChange={(e) => setParkQuery(e.target.value)}
+                        placeholder="Jump to a National/State Park..."
+                        className="w-full pl-8 pr-3 py-1.5 bg-[#FBF8F1] border-2 border-[#162A20] rounded-full text-xs font-bold text-[#162A20] placeholder:text-[#5A655E] focus:outline-none"
+                    />
+                    {matchingParks.length > 0 && (
+                        <div className="absolute left-0 right-0 top-full mt-1 bg-[#FBF8F1] border-2 border-[#162A20] rounded-xl tactile-shadow overflow-hidden z-50">
+                            {matchingParks.map((p) => (
+                                <button
+                                    key={p.id}
+                                    type="button"
+                                    onClick={() => handleSelectPark(p)}
+                                    className="w-full text-left px-3 py-2 text-xs font-bold text-[#162A20] hover:bg-[#F4DE9B] border-b border-[#162A20]/10 last:border-none flex items-center justify-between cursor-pointer"
+                                >
+                                    <span>🏞️ {p.name}</span>
+                                    <span className="font-mono-tech text-[10px] text-[#5A655E]">
+                                        {p.state}
+                                    </span>
+                                </button>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
 
-            {/* Photo Preview Badge */}
-            {photoPreview && (
-                <div className="absolute top-20 left-4 z-10 bg-white/10 backdrop-blur-lg rounded-xl p-1.5 border border-white/20 shadow-xl">
-                    <img
-                        src={photoPreview}
-                        alt="Your photo"
-                        className="w-16 h-16 object-cover rounded-lg"
-                    />
-                </div>
-            )}
-
-            {/* Map */}
+            {/* Leaflet Map */}
             <div className="flex-1 relative z-0">
                 <MapContainer
                     center={[defaultLat, defaultLng]}
-                    zoom={initialLat ? 10 : 4}
+                    zoom={initialLat ? 9 : 4}
                     style={{ height: "100%", width: "100%" }}
                     scrollWheelZoom={true}
                 >
-                    <MapResizer />
+                    <MapController flyTarget={flyTarget} />
                     <TileLayer
-                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
-                        url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+                        attribution='Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase'
+                        url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}"
                     />
                     <DraggableMarker
                         position={position}
@@ -181,19 +249,17 @@ export default function ObservationLocationPicker({
                 </MapContainer>
             </div>
 
-            {/* Confirm Button - Only show if NOT confirmed */}
+            {/* Confirm Button Overlay */}
             {!isConfirmed && (
-                <div className="absolute bottom-6 left-4 right-4 z-10">
+                <div className="absolute bottom-4 left-4 right-4 z-10 flex justify-center pointer-events-none">
                     <button
+                        type="button"
                         onClick={handleConfirm}
-                        className="w-full py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-2xl font-bold text-lg shadow-2xl flex justify-center items-center gap-3 transition-all active:scale-95 border border-emerald-400/30"
+                        className="pointer-events-auto px-6 py-3 bg-[#234733] hover:bg-[#162A20] text-[#F4DE9B] rounded-full font-extrabold text-xs uppercase tracking-widest tactile-btn flex items-center gap-2 cursor-pointer"
                     >
-                        <Check className="w-5 h-5" />
-                        Confirm Location
+                        <Check className="w-4 h-4" />
+                        <span>Lock Sighting Location ({position.lat.toFixed(2)}°, {position.lng.toFixed(2)}°)</span>
                     </button>
-                    <p className="text-center text-stone-500 text-xs mt-2">
-                        {position.lat.toFixed(4)}, {position.lng.toFixed(4)}
-                    </p>
                 </div>
             )}
         </div>

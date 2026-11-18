@@ -1,35 +1,25 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AppProvider } from "@/lib/AppContext";
 import BottomNav from "@/components/BottomNav";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const viewport: Viewport = {
-  themeColor: "#10b981",
+  themeColor: "#162A20",
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
-  userScalable: false, // For app-like feel
-}
+  userScalable: false,
+};
 
 export const metadata: Metadata = {
-  title: "aniML vision - Wildlife Identification",
-  description: "AI-powered wildlife identification using computer vision",
+  title: "aniML vision — Field Press & Wildlife Collector Atlas",
+  description:
+    "Spot, scan, and collect North American wildlife — powered by OOGWAY computer vision.",
   manifest: "/manifest.json",
   icons: {
-    icon: "/icons/icon-192.png", // Fallback
-    apple: "/icons/icon-192.png", // For iOS
-  }
+    icon: "/icons/icon-192.png",
+    apple: "/icons/icon-192.png",
+  },
 };
 
 export default function RootLayout({
@@ -39,9 +29,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="antialiased bg-[#EAE3D2] text-[#162A20]">
         <AppProvider>
           {children}
           <BottomNav />

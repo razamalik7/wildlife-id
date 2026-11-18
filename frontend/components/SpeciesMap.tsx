@@ -6,7 +6,6 @@ import L from "leaflet";
 import { useEffect, useState } from "react";
 import { speciesIconUrl } from "@/lib/species";
 
-// Standard Blue Pin for "You are Here"
 const currentLocIcon = L.icon({
   iconUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png",
   shadowUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
@@ -16,34 +15,38 @@ const currentLocIcon = L.icon({
 
 interface Props {
   taxonId: number;
-  userLat?: number;  // Optional - only show marker if provided
-  userLng?: number;  // Optional - only show marker if provided
+  userLat?: number;
+  userLng?: number;
   animalName: string;
-  observations?: Array<{ lat: number, lng: number, date: Date }>;
+  observations?: Array<{ lat: number; lng: number; date: Date }>;
 }
 
-export default function SpeciesMap({ taxonId, userLat, userLng, animalName, observations = [] }: Props) {
-  // Center on observation location first, then user location, then default US
+export default function SpeciesMap({
+  taxonId,
+  userLat,
+  userLng,
+  animalName,
+  observations = [],
+}: Props) {
   const centerLat = observations[0]?.lat ?? userLat ?? 39.8;
   const centerLng = observations[0]?.lng ?? userLng ?? -98.5;
   const [hasIUCNRange, setHasIUCNRange] = useState(false);
 
-  // Check if IUCN range data exists for this taxon
   useEffect(() => {
     if (taxonId <= 0) return;
 
-    setHasIUCNRange(false); // Reset on taxon change
+    setHasIUCNRange(false);
 
-    // Try to fetch a single tile to see if range data exists
     const checkIUCN = async () => {
       try {
         const response = await fetch(
           `https://api.inaturalist.org/v1/taxon_ranges/${taxonId}/5/8/11.png`,
-          { method: 'HEAD' } // Just check if it exists, don't download
+          { method: "HEAD" }
         );
-        // If we get a 200 with content, range exists
-        const contentLength = response.headers.get('content-length');
-        setHasIUCNRange(response.ok && contentLength !== null && parseInt(contentLength) > 1000);
+        const contentLength = response.headers.get("content-length");
+        setHasIUCNRange(
+          response.ok && contentLength !== null && parseInt(contentLength) > 1000
+        );
       } catch {
         setHasIUCNRange(false);
       }
@@ -51,85 +54,78 @@ export default function SpeciesMap({ taxonId, userLat, userLng, animalName, obse
 
     checkIUCN();
   }, [taxonId]);
+
   const getAnimalIcon = () => {
     return L.icon({
       iconUrl: speciesIconUrl(animalName),
-      iconSize: [48, 48],
-      iconAnchor: [24, 24],
-      className: "drop-shadow-xl",  // Colorful, no grayscale
+      iconSize: [50, 50],
+      iconAnchor: [25, 25],
+      className: "cutout-animal-art",
     });
   };
 
   return (
-    <div className="h-full w-full rounded-xl overflow-hidden border border-stone-700 shadow-2xl relative z-0">
+    <div className="h-full w-full overflow-hidden relative z-0">
       <MapContainer
         center={[centerLat, centerLng]}
-        zoom={5}
+        zoom={4}
         style={{ height: "100%", width: "100%" }}
         scrollWheelZoom={true}
       >
         <LayersControl position="topright">
-
-          {/* BASE LAYERS */}
-          <LayersControl.BaseLayer name="Dark">
+          <LayersControl.BaseLayer checked name="Topographic Atlas">
             <TileLayer
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>'
-              url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+              url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}"
+              attribution="Tiles &copy; Esri, USGS, NPS"
             />
           </LayersControl.BaseLayer>
 
-          <LayersControl.BaseLayer checked name="Light">
+          <LayersControl.BaseLayer name="OpenStreetMap">
             <TileLayer
-              url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-              attribution='&copy; OSM'
+              url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution="&copy; OpenStreetMap contributors"
             />
           </LayersControl.BaseLayer>
 
           <LayersControl.BaseLayer name="Satellite">
             <TileLayer
               url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
-              attribution='Tiles &copy; Esri'
+              attribution="Tiles &copy; Esri"
             />
           </LayersControl.BaseLayer>
 
-          {/* SPECIES OVERLAY LAYERS */}
           {taxonId > 0 && (
             <>
-              {/* Native Range - Green Grid */}
               <LayersControl.Overlay checked name="🟩 Native Range">
                 <TileLayer
                   opacity={0.6}
-                  url={`https://api.inaturalist.org/v1/grid/{z}/{x}/{y}.png?taxon_id=${taxonId}&color=%2316a34a&captive=false&quality_grade=research&native=true&verifiable=true`}
+                  url={`https://api.inaturalist.org/v1/grid/{z}/{x}/{y}.png?taxon_id=${taxonId}&color=%23234733&captive=false&quality_grade=research&native=true&verifiable=true`}
                 />
               </LayersControl.Overlay>
 
-              {/* Introduced Range - Red Grid */}
               <LayersControl.Overlay checked name="🟥 Introduced Range">
                 <TileLayer
                   opacity={0.6}
-                  url={`https://api.inaturalist.org/v1/grid/{z}/{x}/{y}.png?taxon_id=${taxonId}&color=%23dc2626&captive=false&quality_grade=research&native=false&verifiable=true`}
+                  url={`https://api.inaturalist.org/v1/grid/{z}/{x}/{y}.png?taxon_id=${taxonId}&color=%23C84B31&captive=false&quality_grade=research&native=false&verifiable=true`}
                 />
               </LayersControl.Overlay>
 
-              {/* Heatmap View */}
-              <LayersControl.Overlay name="🔥 Heatmap">
+              <LayersControl.Overlay name="🔥 Density Heatmap">
                 <TileLayer
                   opacity={0.7}
-                  url={`https://api.inaturalist.org/v1/colored_heatmap/{z}/{x}/{y}.png?taxon_id=${taxonId}&color=%23f97316&captive=false&quality_grade=research&verifiable=true`}
+                  url={`https://api.inaturalist.org/v1/colored_heatmap/{z}/{x}/{y}.png?taxon_id=${taxonId}&color=%23E8B84B&captive=false&quality_grade=research&verifiable=true`}
                 />
               </LayersControl.Overlay>
 
-              {/* Exact Points */}
               <LayersControl.Overlay name="📍 Exact Sightings">
                 <TileLayer
                   opacity={1.0}
-                  url={`https://api.inaturalist.org/v1/points/{z}/{x}/{y}.png?taxon_id=${taxonId}&color=%23000000&captive=false&quality_grade=research&verifiable=true`}
+                  url={`https://api.inaturalist.org/v1/points/{z}/{x}/{y}.png?taxon_id=${taxonId}&color=%23162A20&captive=false&quality_grade=research&verifiable=true`}
                 />
               </LayersControl.Overlay>
 
-              {/* IUCN Range - Only show if data exists */}
               {hasIUCNRange && (
-                <LayersControl.Overlay name="🗺️ IUCN Range">
+                <LayersControl.Overlay name="🗺️ IUCN Range Polygon">
                   <TileLayer
                     opacity={0.5}
                     url={`https://api.inaturalist.org/v1/taxon_ranges/${taxonId}/{z}/{x}/{y}.png`}
@@ -138,45 +134,46 @@ export default function SpeciesMap({ taxonId, userLat, userLng, animalName, obse
               )}
             </>
           )}
-
         </LayersControl>
 
-        {/* Current Location - Only show if provided */}
         {userLat !== undefined && userLng !== undefined && (
           <Marker position={[userLat, userLng]} icon={currentLocIcon}>
-            <Popup>You are here</Popup>
+            <Popup>Your Current Location</Popup>
           </Marker>
         )}
 
-        {/* Your Observations */}
         {observations.map((obs, i) => (
           <Marker key={i} position={[obs.lat, obs.lng]} icon={getAnimalIcon()}>
             <Popup>
-              <div className="text-center">
-                <strong>{animalName}</strong><br />
-                Sighted: {obs.date.toLocaleDateString()}
+              <div className="text-center p-1">
+                <strong className="text-[#162A20] font-extrabold">{animalName}</strong>
+                <br />
+                <span className="font-mono-tech text-[11px] text-[#5A655E]">
+                  Spotted: {obs.date.toLocaleDateString()}
+                </span>
               </div>
             </Popup>
           </Marker>
         ))}
-
       </MapContainer>
 
-      {/* Legend */}
-      <div className="absolute bottom-4 left-4 bg-black/80 p-3 rounded-lg text-xs text-white z-[1000] border border-stone-600 shadow-xl">
-        <div className="flex flex-col gap-2">
+      {/* Archival Legend */}
+      <div className="absolute bottom-4 left-4 bg-[#FBF8F1]/95 p-3 rounded-xl text-xs text-[#162A20] z-[1000] border-2 border-[#162A20] tactile-shadow-sm font-mono-tech">
+        <div className="flex flex-col gap-1.5">
           <div className="flex items-center gap-2">
-            <div className="w-4 h-3 bg-green-500/60 border border-green-700"></div>
-            <span>Native Range</span>
+            <div className="w-4 h-3 bg-[#234733]/75 border border-[#162A20]"></div>
+            <span className="font-bold text-[11px]">Native Range</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="w-4 h-3 bg-red-500/60 border border-red-700"></div>
-            <span>Introduced</span>
+            <div className="w-4 h-3 bg-[#C84B31]/75 border border-[#162A20]"></div>
+            <span className="font-bold text-[11px]">Introduced / Invasive</span>
           </div>
-          {userLat !== undefined && userLng !== undefined && (
+          {observations.length > 0 && (
             <div className="flex items-center gap-2">
-              <img src="https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png" className="w-3 h-5" alt="pin" />
-              <span>You</span>
+              <span className="text-xs">🐾</span>
+              <span className="font-bold text-[11px]">
+                Your Sightings ({observations.length})
+              </span>
             </div>
           )}
         </div>

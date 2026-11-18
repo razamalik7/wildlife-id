@@ -1,26 +1,112 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-linen: #EAE3D2;
+  --bg-cotton: #F7F3E8;
+  --bg-card: #FBF8F1;
+  --spruce: #162A20;
+  --spruce-mid: #234733;
+  --rust: #C84B31;
+  --gold: #E8B84B;
+  --gold-pale: #F4DE9B;
+  --ink-muted: #5A655E;
+  --font-serif-editorial: 'Instrument Serif', Georgia, serif;
+  --font-display-poster: 'Big Shoulders Display', Impact, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: var(--bg-linen);
+  --color-foreground: var(--spruce);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-linen);
+  background-image: radial-gradient(rgba(22, 42, 32, 0.06) 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: var(--spruce);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+.font-editorial {
+  font-family: var(--font-serif-editorial), Georgia, serif;
+}
+
+.font-poster {
+  font-family: var(--font-display-poster), Impact, sans-serif;
+}
+
+.font-mono-tech {
+  font-family: var(--font-mono), monospace;
+}
+
+/* Tactile Option 31 / 39 Pill-Block Shadow Utilities */
+.tactile-shadow-sm {
+  box-shadow: 2px 2px 0px #162A20;
+}
+
+.tactile-shadow {
+  box-shadow: 3px 3px 0px #162A20;
+}
+
+.tactile-shadow-lg {
+  box-shadow: 5px 5px 0px #162A20;
+}
+
+.tactile-btn {
+  border: 2px solid #162A20;
+  box-shadow: 2px 2px 0px #162A20;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+.tactile-btn:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px #162A20;
+}
+
+.tactile-btn:active:not(:disabled) {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0px #162A20;
+}
+
+/* Woodcut Ghost C1 Silhouette Filter for Locked Species */
+.woodcut-ghost-art {
+  filter: brightness(0) saturate(100%) invert(13%) sepia(24%) saturate(995%) hue-rotate(103deg) brightness(92%) contrast(94%) drop-shadow(2px 2px 0px #E8B84B);
+  opacity: 0.78;
+}
+
+/* Cutout Animal Drop Shadow for Unlocked A3 & E2 Art */
+.cutout-animal-art {
+  filter: drop-shadow(0 8px 14px rgba(22, 42, 32, 0.28)) drop-shadow(0 2px 3px rgba(22, 42, 32, 0.2));
+}
+
+/* Dotted Un-Inked Parchment Surface for C1 Locked Cards */
+.parchment-dots {
+  background-color: #EFE9D8;
+  background-image: radial-gradient(rgba(22, 42, 32, 0.15) 1px, transparent 1px);
+  background-size: 10px 10px;
+}
+
+/* Cork / Linen Board Surface for Stage 3 Polaroid Wall */
+.polaroid-wall-surface {
+  background-color: #E5DEC9;
+  background-image: radial-gradient(rgba(22, 42, 32, 0.11) 1.25px, transparent 1.25px);
+  background-size: 14px 14px;
+}
+
+/* Custom Leaflet Popup Overrides in Option 39 Palette */
+.leaflet-popup-content-wrapper {
+  background: #FBF8F1 !important;
+  color: #162A20 !important;
+  border: 2px solid #162A20 !important;
+  border-radius: 14px !important;
+  box-shadow: 4px 4px 0px #162A20 !important;
+  padding: 2px !important;
+}
+
+.leaflet-popup-tip {
+  background: #162A20 !important;
 }
